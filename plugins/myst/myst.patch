@@ -1,0 +1,51 @@
+--- myst_old.py	2023-06-26 19:59:23.447605537 +0200
++++ myst.py	2023-06-26 23:41:20.177490223 +0200
+@@ -31,7 +31,6 @@
+ 
+ try:
+     import myst_parser
+-    import myst_parser.main
+ except ImportError:
+     myst_parser = None
+     nikola_extension = None
+@@ -63,7 +62,39 @@
+         if not is_two_file:
+             _, data = self.split_metadata(data, post, lang)
+         new_data, shortcodes = sc.extract_shortcodes(data)
+-        output = myst_parser.main.to_html(new_data)
++        
++        # this works for myst-parser versions <= 0.17.2
++        try:
++            from myst_parser.main import to_html
++            output = to_html(new_data)
++        except ImportError:
++            from docutils.core import publish_string
++            from myst_parser.docutils_ import Parser
++            output = publish_string(
++                source=new_data,
++                writer_name="html5",
++                settings_overrides={
++                    "myst_enable_extensions": [ # enable all extension
++                            "amsmath",
++                            "attrs_inline",
++                            "colon_fence",
++                            "deflist",
++                            "dollarmath",
++                            "fieldlist",
++                            "html_admonition",
++                            "html_image",
++                            "linkify",
++                            "replacements",
++                            "smartquotes",
++                            "strikethrough",
++                            "substitution",
++                            "tasklist",
++                        ],
++                    "embed_stylesheet": True,
++                    'output_encoding': 'unicode',
++                },
++                parser=Parser(),
++            )
+         output, shortcode_deps = self.site.apply_shortcodes_uuid(
+             output, shortcodes, filename=source_path, extra_context={"post": post}
+         )
