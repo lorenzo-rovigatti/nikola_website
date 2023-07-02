@@ -1,0 +1,19 @@
+The website builds well with Nikola v8.2.4.
+
+```
+pip3 install "nikola[extras]"
+pip3 install myst-parser
+pip3 install nanoid
+sudo npm install -g less
+```
+
+This is the list of plugins used:
+
+```
+nikola plugin -i myst
+nikola plugin -i publication_list
+nikola plugin -i less
+nikola theme -i bnw
+```
+
+**Nota Bene:** I have changed the way `publication_list` works: it now preprocesses the bibtex file to produce a unique id for each entry (to avoid repeated entries).
