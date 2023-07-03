@@ -11,11 +11,11 @@
 
 In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecchie note del corso. Per avere aggiornamenti più recenti iscrivetevi al [sito elearning](https://elearning.uniroma1.it/course/view.php?id=13879), password: `Fisica2`.
 
-## Materiale aggiuntivo:
+## Materiale aggiuntivo
 
 * <a href="link://slug/field-lines">Le linee del campo elettrostatico</a>
 
-## Vecchie note del corso:
+## Vecchie note del corso
 
 Qui sotto trovate delle vecchie note scritte per il corso di Chimica Industriale. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi non utilizzate queste note per studiare ma, al limite, per avere un'idea di ciò che si fa a lezione.
 
