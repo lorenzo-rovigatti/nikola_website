@@ -10,3 +10,7 @@
 -->
 
 In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecchie note del corso. Per avere aggiornamenti più recenti iscrivetevi al [sito elearning](https://elearning.uniroma1.it/course/view.php?id=13879), password: `Fisica2`.
+
+## Materiale aggiuntivo:
+
+* <a href="link://slug/field-lines">Le linee del campo elettrostatico</a>

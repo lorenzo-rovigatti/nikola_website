@@ -31,6 +31,15 @@ import os
 
 try:
     import myst_parser
+    
+    # this works for myst-parser versions <= 0.17.2
+    try:
+        from myst_parser.main import to_html
+        old_myst = True
+    except ImportError:
+        from docutils.core import publish_string
+        from myst_parser.docutils_ import Parser
+        old_myst = False
 except ImportError:
     myst_parser = None
     nikola_extension = None
@@ -63,13 +72,9 @@ class CompileMyst(PageCompiler):
             _, data = self.split_metadata(data, post, lang)
         new_data, shortcodes = sc.extract_shortcodes(data)
         
-        # this works for myst-parser versions <= 0.17.2
-        try:
-            from myst_parser.main import to_html
+        if old_myst:
             output = to_html(new_data)
-        except ImportError:
-            from docutils.core import publish_string
-            from myst_parser.docutils_ import Parser
+        else:
             output = publish_string(
                 source=new_data,
                 writer_name="html5",
@@ -92,6 +97,7 @@ class CompileMyst(PageCompiler):
                         ],
                     "embed_stylesheet": True,
                     'output_encoding': 'unicode',
+                    'myst_suppress_warnings': ["myst.header"]
                 },
                 parser=Parser(),
             )
