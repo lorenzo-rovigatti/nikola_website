@@ -9,5 +9,6 @@
 .. type: text
 -->
 
-* Laboratorio di calcolo (Fisica): [sito elearning](https://elearning.uniroma1.it/course/view.php?id=7743), password: `LabCalc`
-* [Fisica 2 (Chimica Industriale e Scienze Chimiche)](/fisica2)
+* <a href="link://slug/labcalc">Laboratorio di Calcolo</a>
+* <a href="link://slug/fisica2">Fisica 2 (Chimica Industriale e Scienze Chimiche)</a>
+
