@@ -14,6 +14,7 @@ In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecch
 ## Materiale aggiuntivo
 
 * <a href="link://slug/field-lines">Le linee del campo elettrostatico</a>
+* <a href="link://slug/ising">Ferromagneti e paramagneti: il modello di Ising</a>
 
 ## Vecchie note del corso
 
