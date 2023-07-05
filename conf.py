@@ -142,6 +142,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
+        (SITE_URL, "Home"),
         ("/didattica/", "Didattica"),
         ("/publications/", "Publications"),
         ("/rss.xml", "RSS feed"),
