@@ -4,3 +4,9 @@
     height: 220px;
     padding: 10px;
 } 
+
+.active a {
+  background: #fcf7f7;
+  text-shadow: none;
+  color: #304860;
+}
