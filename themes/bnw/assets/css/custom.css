@@ -10,3 +10,7 @@
   text-shadow: none;
   color: #304860;
 }
+
+.container img {
+  max-width: 800px;
+}

@@ -5,6 +5,7 @@ pip3 install "nikola[extras]"
 pip3 install myst-parser
 pip3 install nanoid
 pip3 install pybtex
+pip3 install linkify-it-py
 sudo npm install -g less
 ```
 
