@@ -43,11 +43,11 @@ from pybtex.style.template import href, tag, FieldIsMissing
 LOGGER = get_logger('scan_posts', STDERR_HANDLER)
 
 class Style(UnsrtStyle):
-    """The style for publication listing. It hyperlinks the title to the detail page if user sets it.
+    """The style for publication listing. It hyperlinks the title to the detail page if user sets it and abbreviate names.
     """
 
     def __init__(self, detail_page_url):
-        super().__init__()
+        super().__init__(abbreviate_names=True)
         self.detail_page_url = detail_page_url
 
     def format_title(self, e, which_field, as_sentence=True):
@@ -128,7 +128,7 @@ class PublicationList(Directive):
         detail_page_dir = self.options.get('detail_page_dir', 'papers')
         highlight_authors = self.options.get('highlight_author', None)
         if highlight_authors:
-            highlight_authors = highlight_authors.split(';')
+            highlight_authors = [author.strip().replace(' ', '&nbsp;') for author in highlight_authors.split(';')]
             
         style = Style(self.site.config['BASE_URL'] + detail_page_dir if detail_page_dir else None)
         self.state.document.settings.record_dependencies.add(*self.arguments)
@@ -176,8 +176,10 @@ class PublicationList(Directive):
                 html += '<h2 id="{}">{}<a href="javascript:scroll_to_year_list()">&uarr;</a></h2>\n<ul>'.format(cur_year, cur_year)
 
             entry.label = label  # Pass label to the style.
-            del entry.fields["note"]
-            del entry.fields["url"]
+            # delete some fields we do not want to show
+            for to_del in ["note", "url"]:
+                if to_del in entry.fields:
+                    del entry.fields[to_del]
             
             try:
                 formatted = list(style.format_entries((entry,)))[0]
@@ -185,11 +187,13 @@ class PublicationList(Directive):
                 entry.fields[e.field_name] = ""
                 formatted = list(style.format_entries((entry,)))[0]
             pub_html = formatted.text.render_as('html')
-            if highlight_authors:  # highlight one of several authors (usually oneself)
+            
+            if highlight_authors:
                 for highlight_author in highlight_authors:
-                    pub_html = pub_html.replace(
-                        highlight_author.strip().replace(' ', '&nbsp;'),
-                        '<strong>{}</strong>'.format(highlight_author), 1)
+                    with open("/tmp/prova", "w") as f:
+                        print("'" + highlight_author + "'", file=f)
+                    pub_html = pub_html.replace(highlight_author, '<strong>{}</strong>'.format(highlight_author), 1)
+                    
             html += '<li class="publication" style="padding-bottom: 1em;">' + pub_html
 
             extra_links = ""

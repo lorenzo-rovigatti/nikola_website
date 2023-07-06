@@ -16,9 +16,18 @@ In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecch
 * <a href="link://slug/field-lines">Le linee del campo elettrostatico</a>
 * <a href="link://slug/ising">Ferromagneti e paramagneti: il modello di Ising</a>
 
+## Esercizi
+
+1. <a href="link://slug/fisica2-esercizi-matematica">Ripasso di matematica</a>
+2. <a href="link://slug/fisica2-esercizi-elettrostatica">Elettrostatica</a>
+3. <a href="link://slug/fisica2-esercizi-corrente">Corrente elettrica</a>
+4. <a href="link://slug/fisica2-esercizi-magnetostatica">Magnetostatica</a>
+5. <a href="link://slug/fisica2-esercizi-elettromagnetismo">Elettromagnetismo</a>
+6. <a href="link://slug/fisica2-esercizi-onde">Onde elettromagnetiche</a>
+
 ## Vecchie note del corso
 
-Qui sotto trovate delle vecchie note scritte per il corso di Chimica Industriale. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi non utilizzate queste note per studiare ma, al limite, per avere un'idea di ciò che si fa a lezione.
+Qui sotto trovate delle vecchie note scritte per il corso di Chimica Industriale. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi non utilizzate queste note per studiare ma, al limite, per avere un'idea dettagliata del programma e del livello di approfondimento richiesto.
 
 1. <a href="link://slug/ripasso-di-matematica">Ripasso di matematica</a>
 2. <a href="link://slug/elettrostatica">Elettrostatica</a>

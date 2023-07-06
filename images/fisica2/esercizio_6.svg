@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="esercizio_5.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker1748"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1746"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-6-1"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path880-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-8"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path883-7"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="80.639748"
+     inkscape:cy="905.03647"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="993"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#e6e6e6;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path815"
+       cx="50.24667"
+       cy="57.526501"
+       rx="10.423512"
+       ry="30.735994"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 50.258492,59.39739 56.92841,34.504919"
+       id="path836"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:20.0000003%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="47.173073"
+       y="39.55262"
+       id="text840"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109"><tspan
+         sodipodi:role="line"
+         id="tspan838"
+         x="47.173073"
+         y="39.55262"
+         style="font-style:italic;font-size:8.81944466px;stroke-width:0.26458332px">R</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Lstart-6-1);marker-end:url(#Arrow1Lend-8)"
+       d="M 50.258492,49.105572 V 59.39739 h 10.323304"
+       id="path874-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/FISICA_II/2018/SCRITTO_2201/esercizio_2.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.33371592px;line-height:0%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Italic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.07467128"
+       x="57.140656"
+       y="63.841034"
+       id="text2194-2"
+       transform="scale(1.002239,0.997766)"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/FISICA_II/2018/SCRITTO_2201/esercizio_2.png"><tspan
+         sodipodi:role="line"
+         id="tspan2192-3"
+         x="57.140656"
+         y="63.841034"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.16721869px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Italic';stroke-width:0.07467128">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.33371592px;line-height:0%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Italic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.07467128"
+       x="45.686665"
+       y="51.517307"
+       id="text2198-7"
+       transform="scale(1.002239,0.997766)"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/FISICA_II/2018/SCRITTO_2201/esercizio_2.png"><tspan
+         sodipodi:role="line"
+         id="tspan2196-5"
+         x="45.686665"
+         y="51.517307"
+         style="font-size:6.16721869px;line-height:1.25;stroke-width:0.07467128">y</tspan></text>
+    <circle
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.28222224px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path6866"
+       cx="50.260536"
+       cy="59.390076"
+       r="0.73665416"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/FISICA_II/2018/SCRITTO_2201/esercizio_2.png" />
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.33371592px;line-height:0%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Italic';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.07467128"
+       x="41.949581"
+       y="63.15329"
+       id="text2194-2-8"
+       transform="scale(1.002239,0.997766)"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/FISICA_II/2018/SCRITTO_2201/esercizio_2.png"><tspan
+         sodipodi:role="line"
+         id="tspan2192-3-7"
+         x="41.949581"
+         y="63.15329"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.16721869px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Italic';stroke-width:0.07467128">z</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;marker-end:url(#marker1748)"
+       d="m 50.258493,59.397389 -5.846292,5.997699"
+       id="path1738"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="109"
+       inkscape:export-ydpi="109" />
+  </g>
+</svg>
