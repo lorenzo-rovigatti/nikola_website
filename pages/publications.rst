@@ -7,5 +7,5 @@
 .. description: 
 .. type: text
 
-.. publication_list:: files/scopus.bib files/joss.bib
+.. publication_list:: pages/scopus.bib pages/joss.bib
   :highlight_author: L. Rovigatti;

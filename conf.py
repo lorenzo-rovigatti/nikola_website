@@ -297,6 +297,11 @@ TIMEZONE = "Europe/Rome"
 # FILES_FOLDERS = {'files': ''}
 # Which means copy 'files' into 'output'
 
+FILES_FOLDERS = {
+    'files': '',
+    'pdfs': 'pdfs'
+}
+
 # One or more folders containing code listings to be processed and published on
 # the site. The format is a dictionary of {source: relative destination}.
 # Default is:
@@ -359,7 +364,7 @@ COMPILERS = {
 # If this is set to True, the DEFAULT_LANG version will be displayed for
 # untranslated posts.
 # If this is set to False, then posts that are not translated to a language
-# LANG will not be visible at all in the pages in that language.
+# LANG will not be visible at all in the pages in that language./favicon.ico
 # SHOW_UNTRANSLATED_POSTS = True
 
 # Nikola supports logo display.  If you have one, you can put the URL here.
@@ -935,10 +940,11 @@ IMAGE_FOLDERS = {'images': 'images'}
 # FAVICONS contains (name, file, size) tuples.
 # Used to create favicon link like this:
 # <link rel="name" href="file" sizes="size"/>
-# FAVICONS = (
-#     ("icon", "/favicon.ico", "16x16"),
-#     ("icon", "/icon_128x128.png", "128x128"),
-# )
+FAVICONS = (
+    ("icon", "/icon.png", "48x48"),
+    ("apple-touch-icon", "/icon_192.png", "48x48"),
+)
+
 
 # Show teasers (instead of full posts) in indexes? Defaults to False.
 # INDEX_TEASERS = False
