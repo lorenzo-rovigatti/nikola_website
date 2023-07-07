@@ -9,3 +9,5 @@
 
 .. publication_list:: pages/scopus.bib pages/joss.bib
   :highlight_author: L. Rovigatti;
+  :bibtex_dir:
+  :detail_page_dir:
