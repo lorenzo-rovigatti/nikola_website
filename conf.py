@@ -942,7 +942,7 @@ IMAGE_FOLDERS = {'images': 'images'}
 # <link rel="name" href="file" sizes="size"/>
 FAVICONS = (
     ("icon", "/icon.png", "48x48"),
-    ("apple-touch-icon", "/icon_192.png", "48x48"),
+    ("apple-touch-icon", "/icon-192.png", "48x48"),
 )
 
 
@@ -1091,9 +1091,11 @@ PRETTY_URLS = True
 # If you want support for the $.$ syntax (which may conflict with running
 # text!), just use this config:
 MATHJAX_CONFIG = """
-<script>
-MathJax = {
-    tex: {
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    "HTML-CSS": { linebreaks: { automatic: true } },
+    SVG: { linebreaks: { automatic: true } },
+    tex2jax: {
         inlineMath: [ 
             ['$','$'], 
             ["\\\(","\\\)"] 
@@ -1104,7 +1106,7 @@ MathJax = {
         ],
     },
     displayAlign: 'center',
-}
+});
 </script>
 """
 
