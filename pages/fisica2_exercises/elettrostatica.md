@@ -608,7 +608,7 @@ $$
 
 
 
-<img src="images/esercizio_17.png" style="zoom:50%;" />
+<img src="/images/fisica2/esercizio_17.png" style="zoom:50%;" />
 
 Un conduttore sferico scarico di raggio $R$ contiene due cavità sferiche, rispettivamente di raggio $r_a$ e $r_b$. Al centro delle cavità sono poste due cariche $q_a$ e $q_b$. Calcolare:
 
@@ -731,12 +731,12 @@ Calcolare
 
 Calcolare le stesse quantità se
 
-<img src="images/esercizio_21_1.png" style="zoom:33%;" />
+<img src="/images/fisica2/esercizio_21_1.png" style="zoom:33%;" />
 
 4. i conduttori 1 e 2 vengono collegati;
-<img src="images/esercizio_21_2.png" style="zoom:33%;" />
+<img src="/images/fisica2/esercizio_21_2.png" style="zoom:33%;" />
 5. i conduttori 3 e 4 vengono collegati;
-<img src="images/esercizio_21_3.png" style="zoom:33%;" />
+<img src="/images/fisica2/esercizio_21_3.png" style="zoom:33%;" />
 6. il conduttore 5 viene collegato a terra;
 
 ## Soluzione
