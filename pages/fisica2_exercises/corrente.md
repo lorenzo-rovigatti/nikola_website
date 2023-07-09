@@ -29,20 +29,20 @@ R = \rho \int_0^h \frac{dh}{\Sigma(h)} = \rho \int_0^h \frac{dh}{\pi (R_2^2 - R_
 $$
 2. Dobbiamo prima applicare la legge di Ohm per trovare la resistenza. Per farlo, però, dobbiamo prima calcolare la d.d.p. ai capi del conduttore:
 $$
-\Delta V = Eh = 10\, {\rm V}
+\Delta V = Eh = 10\\, {\rm V}
 $$
 Quindi:
 $$
-R = \frac{\Delta V}{i} = 20\, {\rm \Omega} = \rho \frac{h}{\pi (R_2^2 - R_1^2)}
+R = \frac{\Delta V}{i} = 20\\, {\rm \Omega} = \rho \frac{h}{\pi (R_2^2 - R_1^2)}
 $$
 e quindi la resistività vale:
 $$
-\rho = \frac{E \pi (R_2^2 - R_1^2)}{i} = 7.85 \times 10^{-5} \, \Omega{\rm m}
+\rho = \frac{E \pi (R_2^2 - R_1^2)}{i} = 7.85 \times 10^{-5} \\, \Omega{\rm m}
 $$
 
 # Esercizio 27
 
-Dato il circuito in figura e i valori $R_1 = 1.0\, \Omega$, $R_2 = 3.0\, \Omega$, $R_3 = 2.0\, \Omega$ and $R_4 = 2.0\, \Omega$,
+Dato il circuito in figura e i valori $R_1 = 1.0\\, \Omega$, $R_2 = 3.0\\, \Omega$, $R_3 = 2.0\\, \Omega$ and $R_4 = 2.0\\, \Omega$,
 
 <img src="../../images/fisica2/esercizio_27.png">
 
@@ -53,7 +53,7 @@ Dato il circuito in figura e i valori $R_1 = 1.0\, \Omega$, $R_2 = 3.0\, \Omega$
 
 1. $R_2$ ed $R_3$ sono in parallelo, e quindi si ha
 $$
-R_{\rm eq}^{(1)} = \frac{R_2 R_3}{R_2 + R_3} = 1.2 \, \Omega
+R_{\rm eq}^{(1)} = \frac{R_2 R_3}{R_2 + R_3} = 1.2 \\, \Omega
 $$
 $R_1$ e $R_{\rm eq}^{(1)}$ sono in serie, quindi
 $$
@@ -61,42 +61,42 @@ R_{\rm eq}^{(2)} = R_1 + R_{\rm eq}^{(1)} = 2.2 \Omega
 $$
 Restano solamente due resistori ($R_4$ e $R_{\rm eq}^{(2)}$), che sono collegati in parallelo:
 $$
-R_{\rm eq} = \frac{R_4 R_{\rm eq}^{(2)}}{R_4 + R_{\rm eq}^{(2)}} = 1.05 \, \Omega
+R_{\rm eq} = \frac{R_4 R_{\rm eq}^{(2)}}{R_4 + R_{\rm eq}^{(2)}} = 1.05 \\, \Omega
 $$
 2. Sappiamo che $\mathcal{P} = \Delta V i = R i^2 = \frac{\Delta V^2}{R}$. Per poter applicare queste relazioni dobbiamo prima trovare o le d.d.p. ai capi dei resistori, o le correnti che passano al loro interno o entrambi. Sappiamo che la corrente totale è data da:
 $$
-i = \frac{V_0}{R_{\rm eq}} = 5.73 \, {\rm A}
+i = \frac{V_0}{R_{\rm eq}} = 5.73 \\, {\rm A}
 $$
 Quella passante per $R_4$ vale
 $$
-i_4 = \frac{V_0}{R_4} = 3\, {\rm A}
+i_4 = \frac{V_0}{R_4} = 3\\, {\rm A}
 $$
 e quindi, per la condizione di stazionarietà, quella che passa nel ramo superiore (che, sempre per lo stesso principio, passa anche per $R_1$) vale
 $$
-i_1 = i - i_4 = 2.72\, {\rm A}
+i_1 = i - i_4 = 2.72\\, {\rm A}
 $$
 Quindi la d.d.p. ai capi di $R_1$ è:
 $$
-\Delta V_1 = R_1 i_1 = 2.71 \, {\rm V}
+\Delta V_1 = R_1 i_1 = 2.71 \\, {\rm V}
 $$
 Quindi la d.d.p. ai capi di $R_2$ ed $R_3$ vale:
 $$
-\Delta V_{\rm eq}^{(1)} = V_0 - \Delta V_1 = 3.27\, {\rm V}
+\Delta V_{\rm eq}^{(1)} = V_0 - \Delta V_1 = 3.27\\, {\rm V}
 $$
 per cui le correnti negli ultimi due resistori valgono:
 $$
 \begin{align}
-i_2 & = \frac{\Delta V_{\rm eq}^{(1)}}{R_2} = 1.09 \, {\rm A}\\\\
-i_3 & = \frac{\Delta V_{\rm eq}^{(1)}}{R_3} = 1.63 \, {\rm A}
+i_2 & = \frac{\Delta V_{\rm eq}^{(1)}}{R_2} = 1.09 \\, {\rm A}\\\\
+i_3 & = \frac{\Delta V_{\rm eq}^{(1)}}{R_3} = 1.63 \\, {\rm A}
 \end{align}
 $$
 **Nota Bene**: perché $i_2 + i_3 \neq i_1$? Perché tagliando i decimali finali stiamo sempre approssimando i valori numerici... Se calcolassimo tutte le quantità senza approssimare ad ogni passaggio e stampassimo *tutte* le cifre decimali vedremmo che le correnti verrebbero identiche. Dai valori delle correnti otteniamo la potenza:
 $$
 \begin{align}
-\mathcal{P}_1 & = R_1 i_1^2 = 7.4 \, {\rm W}\\\\
-\mathcal{P}_2 & = R_2 i_2^2 = 3.6 \, {\rm W}\\\\
-\mathcal{P}_3 & = R_3 i_3^2 = 8.7 \, {\rm W}\\\\
-\mathcal{P}_4 & = R_4 i_4^2 = 18 \, {\rm W}
+\mathcal{P}_1 & = R_1 i_1^2 = 7.4 \\, {\rm W}\\\\
+\mathcal{P}_2 & = R_2 i_2^2 = 3.6 \\, {\rm W}\\\\
+\mathcal{P}_3 & = R_3 i_3^2 = 8.7 \\, {\rm W}\\\\
+\mathcal{P}_4 & = R_4 i_4^2 = 18 \\, {\rm W}
 \end{align}
 $$
 
@@ -137,7 +137,7 @@ che, se risolto, dà $i_1 = -0.143 A$, $i_2 = -0.429$ e quindi $i_3 = i_1 - i_2 
 # Esercizio 28
 <small>MNV: esempio 5.9</small>
 
-Calcolare la corrente che scorre nel seguente circuito, composto da un'unica maglia ($\mathcal{E}_1 = 50$ V, $\mathcal{E}_2 = 100$ V, $R = 50\, \Omega$, $r_1 = 20\, \Omega$, $r_2 = 30\, \Omega$):
+Calcolare la corrente che scorre nel seguente circuito, composto da un'unica maglia ($\mathcal{E}_1 = 50$ V, $\mathcal{E}_2 = 100$ V, $R = 50\\, \Omega$, $r_1 = 20\\, \Omega$, $r_2 = 30\\, \Omega$):
 
 <img src="../../images/fisica2/esempio_kirchhoff_2.png">
 
@@ -152,7 +152,7 @@ $$
 e quindi la corrente vale:
 
 $$
-i = \frac{\mathcal{E}_1 - \mathcal{E}_2}{r_1 + r_2 + R} = -0.5 \, \mathrm{A}.
+i = \frac{\mathcal{E}_1 - \mathcal{E}_2}{r_1 + r_2 + R} = -0.5 \\, \mathrm{A}.
 $$
 
 Il segno negativo della corrente implica che il verso in cui scorre è opposto a quello che abbiamo scelto (quindi antiorario).
@@ -160,7 +160,7 @@ Il segno negativo della corrente implica che il verso in cui scorre è opposto a
 # Esercizio 29
 <small>MNV: esempio 5.10</small>
 
-Calcolare le correnti che scorrono nel seguente circuito, composto da due maglie($\mathcal{E}_1 = 18$ V, $\mathcal{E}_2 = 12$ V, $R_1 = 12\, \Omega$, $R_2 = 2\, \Omega$, $R_3 = 6\, \Omega$, $R_4 = 4 \, \Omega$):
+Calcolare le correnti che scorrono nel seguente circuito, composto da due maglie($\mathcal{E}_1 = 18$ V, $\mathcal{E}_2 = 12$ V, $R_1 = 12\\, \Omega$, $R_2 = 2\\, \Omega$, $R_3 = 6\\, \Omega$, $R_4 = 4 \\, \Omega$):
 
 <img src="../../images/fisica2/esempio_kirchhoff_3.png">
 
@@ -184,8 +184,8 @@ da cui ricaviamo:
 
 
 \begin{align}
-i_1 & = -0.8 \, {\rm A}\\\\
-i_2 & = -0.6 \, {\rm A}
+i_1 & = -0.8 \\, {\rm A}\\\\
+i_2 & = -0.6 \\, {\rm A}
 \end{align}
 
 per cui $i_1$ scorre in senso antiorario e $i_2$ scorre in senso orario. In $R_3$ scorre la corrente $i_3 = i_1 + i_2 = -1.4$ A, quindi dal basso verso l'alto.

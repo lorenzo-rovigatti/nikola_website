@@ -306,7 +306,7 @@ i_L(t) = \frac{\mathcal{E}_L}{R} = - \frac{\mathcal{E}}{R} e^{-\frac{t}{\tau}},
 $$
 
 ed è negativa perché si *oppone* alla corrente dovuta alla presenza del generatore.
-In assenza di induttori veri e propri $\tau$ è solitamente molto piccolo ($10^{-5}$ - $10^{-8}$ s), mentre può diventare anche dell'ordine del secondo in presenza di elementi con grandi induttanze. Ad esempio, per $R = 1\, \Omega$ e $L = 1$ H $\tau = 1$ s.
+In assenza di induttori veri e propri $\tau$ è solitamente molto piccolo ($10^{-5}$ - $10^{-8}$ s), mentre può diventare anche dell'ordine del secondo in presenza di elementi con grandi induttanze. Ad esempio, per $R = 1\\\, \Omega$ e $L = 1$ H $\tau = 1$ s.
 
 ### Apertura di un circuito induttivo
 
@@ -582,7 +582,7 @@ Mettendo insieme le quattro equazioni otteniamo le seguenti *equazioni di Maxwel
 
 $$
 \begin{align}
-\vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0} \qquad & \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}\\
+\vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0} \qquad & \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}\\\\
 \vec{\nabla} \cdot \vec{B} = 0 \qquad & \vec{\nabla} \times \vec{B} = \mu_0 \left( \vec{j} + \epsilon_0 \frac{\partial \vec{E}}{\partial t} \right).
 \end{align}
 $$

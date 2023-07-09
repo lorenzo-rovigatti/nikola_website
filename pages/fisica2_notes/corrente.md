@@ -14,7 +14,7 @@
 
 <small>MNV: paragrafo 5.1</small>
 
-Consideriamo i conduttori solidi. In questi materiali gli elettroni sono le uniche cariche libere e si muovono in uno spazio delimitato dal reticolo cristallino composto dagli ioni (atomi senza uno o più elettroni). Il numero di elettroni liberi è *molto grande* (fino a $\approx 1$ elettrone per atomo). La densità di elettroni, infatti, vale solitamente $n \approx 10^{28}\, \mathrm{elettroni} / $m$^3$. Se ricordiamo quanto vale una carica elementare ($e = 1.609 \times 10^{-19}$ C), vediamo come la quantità di carica "mobile" all'interno di un conduttore è enorme, dell'ordine di $10^9$ C!
+Consideriamo i conduttori solidi. In questi materiali gli elettroni sono le uniche cariche libere e si muovono in uno spazio delimitato dal reticolo cristallino composto dagli ioni (atomi senza uno o più elettroni). Il numero di elettroni liberi è *molto grande* (fino a $\approx 1$ elettrone per atomo). La densità di elettroni, infatti, vale solitamente $n \approx 10^{28}\\, \mathrm{elettroni} / $m$^3$. Se ricordiamo quanto vale una carica elementare ($e = 1.609 \times 10^{-19}$ C), vediamo come la quantità di carica "mobile" all'interno di un conduttore è enorme, dell'ordine di $10^9$ C!
 
 * In assenza di campo il "mare" di elettroni liberi si muove in maniera disordinata, e la velocità (vettoriale!) media dei portatori di carica è quindi nulla. 
 * In presenza di un campo elettrico (o, equivalentemente, di una differenza di potenziale) gli elettroni tenderanno ad avere una velocità media diversa da zero ed orientata lungo il campo. Prendiamo, ad esempio, due conduttori posti ad una d.d.p. $\Delta V \ne 0$. Se li colleghiamo (ad esempio con un sottile filo conduttore) gli elettroni si muoveranno dalla regione dove il potenziale è più basso a quella dove è più alto, finché non si ristabilisce l'equilibrio elettrostatico ($\Delta V = 0$). Questo flusso di cariche (dovuto ad una differenza di potenziale o, equivalentemente, alla presenza di un campo elettrico) è chiamato *corrente elettrica*.
@@ -51,7 +51,7 @@ Dove $\vec{v}_d$ è detta *velocità di deriva*. **Nota Bene:** La media delle v
 $\vec{v}_d$ è detta velocità di deriva perché è, in media, l'unica componente della velocità non nulla. Il suo effetto netto è quello di muovere gli elettroni lungo la direzione del campo. Stimiamo l'ordine di grandezza di $v_d$ sapendo che $l \sim 4 \times 10^{-8}$ m, $v = 10^6$ m/s, $e = -1.603 \times 10^{-19}$ C, $m = 9.1 \times 10^{-31}$ Kg e un campo elettrico tipico all'interno di un conduttore è dell'ordine di $10^{-2}$ V/m, quindi:
 
 $$
-v_d \approx 10^{-4}\, \mathrm{m / s} = 10^{-10} v
+v_d \approx 10^{-4}\\, \mathrm{m / s} = 10^{-10} v
 $$
 
 Il che dimostra (giustificando a posteriori le relazioni derivate sopra) come $v_d \ll v$.
@@ -218,7 +218,7 @@ Esiste una classe di materiali che hanno resistività così piccola da essere es
 # Resistori
 <small>MNV: paragrafo 5.5</small>
 
-Nei circuiti normali, la resistenza dei fili di collegamento con cui i diversi elementi vengono connessi è spesso trascurabile (un filo di rame di lunghezza $1$ cm e diametro $1$ mm ha $R \sim 2 \cdot 10^{-4}\, \Omega$). Nelle applicazioni reali, come vedremo, è però necessario avere a disposizione anche elementi caratterizzati da valori della resistenza determinati. Questi elementi sono detti *resistori* (più spesso chiamati *resistenze*) e sono indicati col simbolo:
+Nei circuiti normali, la resistenza dei fili di collegamento con cui i diversi elementi vengono connessi è spesso trascurabile (un filo di rame di lunghezza $1$ cm e diametro $1$ mm ha $R \sim 2 \cdot 10^{-4}\\, \Omega$). Nelle applicazioni reali, come vedremo, è però necessario avere a disposizione anche elementi caratterizzati da valori della resistenza determinati. Questi elementi sono detti *resistori* (più spesso chiamati *resistenze*) e sono indicati col simbolo:
 
 <img src="../../images/fisica2/resistore.png" width="200" />
 
@@ -374,8 +374,8 @@ Sostituendo questa relazione nelle precedenti troviamo:
 
 $$
 \begin{align}
-i(t) &= \frac{\mathcal{E}}{R}e^{-\frac{t}{RC}}\\
-\Delta V_C & = \mathcal{E} \left( 1 - e^{-\frac{t}{RC}} \right)\\
+i(t) &= \frac{\mathcal{E}}{R}e^{-\frac{t}{RC}}\\\\
+\Delta V_C & = \mathcal{E} \left( 1 - e^{-\frac{t}{RC}} \right)\\\\
 \Delta V_R & = \mathcal{E} e^{-\frac{t}{RC}}
 \end{align}
 $$
@@ -430,9 +430,9 @@ che integriamo di nuovo da 0 a $t$, con condizione iniziale $q(0) = q_0$, ottene
 
 $$
 \begin{align}
-q(t) & = q_0 e^{-\frac{t}{RC}}\\
-i(t) & = -\frac{q_0}{RC} e^{-\frac{t}{RC}}\\
-\Delta V_C & = \frac{q_0}{C} e^{-\frac{t}{RC}}\\
+q(t) & = q_0 e^{-\frac{t}{RC}}\\\\
+i(t) & = -\frac{q_0}{RC} e^{-\frac{t}{RC}}\\\\
+\Delta V_C & = \frac{q_0}{C} e^{-\frac{t}{RC}}\\\\
 \Delta V_R & = -\frac{q_0}{C} e^{-\frac{t}{RC}}
 \end{align}
 $$
@@ -509,7 +509,7 @@ $$
 Per le due maglie, invece, vale
 
 \begin{align}
-V_1 & = i_1 R_1 + i_3 R_3\\\\\\
+V_1 & = i_1 R_1 + i_3 R_3\\\\
 V_2 & = i_2 R_2 + i_3 R_3
 \end{align}
 

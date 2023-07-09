@@ -316,8 +316,8 @@ Calcolare l'espressione del campo elettrostatico date le seguenti espressioni de
 
 $$
 \begin{align}
-E_x & = -Az\\
-E_y & = 0\\
+E_x & = -Az\\\\
+E_y & = 0\\\\
 E_z & = A(4z - x)
 \end{align}
 $$
@@ -326,8 +326,8 @@ $$
 
 $$
 \begin{align}
-E_x & = -Ak\sin{(kx)}\\
-E_y & = \frac{A}{y}\\
+E_x & = -Ak\sin{(kx)}\\\\
+E_y & = \frac{A}{y}\\\\
 E_z & = - AB
 \end{align}
 $$
@@ -365,7 +365,7 @@ $$
 Notiamo che $W$ è negativo se $q$ e $q_0$ hanno lo stesso segno e positivo altrimenti: se le cariche hanno lo stesso segno l'energia potenziale del sistema *aumenta* e quindi la forza elettrostatica ha direzione opposta allo spostamento (e viceversa). Il lavoro fatto dalla forza esterna per "costruire" il sistema ha invece segno opposto, $W_{\rm ext} = - W$: se l'energia potenziale aumenta, la forza esterna (che è opposta a quella elettrostatica) e lo spostamento hanno lo stesso segno e viceversa.
 3. Sostituiamo i numeri nell'equazione precedente e troviamo
 $$
-W = 9.732 \times 10^{-4}\,\mathrm{J}
+W = 9.732 \times 10^{-4}\\,\mathrm{J}
 $$
 **Nota Bene:** il lavoro ha le stesse unità di misura dell'energia (perché?) e quindi si misura in Joule (J).
 
@@ -452,14 +452,14 @@ Dove $\tau(r )$ indica il volume racchiuso dalla superficie sferica (e cioè una
 1. Nel caso di densità superficiale, abbiamo
 $$
   \begin{align}
-  4\pi r^2 E(r ) & = 0 & \mathrm{per}\quad r < R\\\\\\
+  4\pi r^2 E(r ) & = 0 & \mathrm{per}\quad r < R\\\\
   4\pi r^2 E(r ) & = \frac{q}{\epsilon_0} & \mathrm{per}\quad r \geq R
   \end{align}
 $$
   Perché se $r < R$ le superfici sferiche non contengono alcuna carica, mentre per $r \geq R$ le superfici sferiche contengono *tutta* la carica $q$. Invertendo le relazioni appena scritte si trova
 $$
   \begin{align}
-  E(r ) & = 0 & \mathrm{per}\quad r < R\\\\\\
+  E(r ) & = 0 & \mathrm{per}\quad r < R\\\\
   E(r ) & = \frac{q}{4\pi \epsilon_0 r^2} & \mathrm{per}\quad r \geq R
   \end{align}
 $$
@@ -570,21 +570,21 @@ Due sfere conduttrici di raggio $R_1$ ed $R_2$ sono disposte ad una distanza $d$
 1. Quando colleghiamo due conduttori, la carica totale si redistribuisce sulle loro superfici (tralasciando la superficie del filo). In generale, il potenziale di due conduttori connessi deve essere lo stesso. Se lo calcoliamo sulla superficie questo vale:
 $$
 \begin{align}
-V_1 & = \frac{q_1}{4\pi\epsilon_0 R_1}\\
+V_1 & = \frac{q_1}{4\pi\epsilon_0 R_1}\\\\
 V_2 & = \frac{q_2}{4\pi\epsilon_0 R_2}
 \end{align}
 $$
 D'altro canto, per la conservazione della carica $Q = q_1 + q_2$, e quindi
 $$
 \begin{align}
-q_1 & = Q \frac{R_1}{R_1 + R_2}\\
+q_1 & = Q \frac{R_1}{R_1 + R_2}\\\\
 q_2 & = Q \frac{R_2}{R_1 + R_2}
 \end{align}
 $$
 2. In generale, collegare a terra significa porre il potenziale di quel conduttore a 0. Il potenziale totale sarà però dato da due contributi, uno dovuto alla sfera $R_1$ (distante $d$) ed uno dovuto alla carica indotta:
 $$
 \begin{align}
-V_1(d) &= \frac{Q}{4\pi\epsilon_0 d}\\
+V_1(d) &= \frac{Q}{4\pi\epsilon_0 d}\\\\
 V_2(R_2) &= \frac{q_2}{4\pi\epsilon_0 R_2}
 \end{align}
 $$
@@ -595,7 +595,7 @@ $$
 3. Se scolleghiamo $R_2$, la carica $q_2$ che inizialmente era indotta diventa fissa e, nell'ipotesi in cui $d$ è molto più grande delle dimensioni dei conduttori, si distribuisce in maniera uniforme sulla sfera. D'altro canto, collegando a terra $R_1$ questa si scarica e il suo potenziale vale $V = 0$. Siamo nelle stesse condizioni di prima, ma stavolta a parti  invertite. Con lo stesso procedimento troviamo che:
 $$
 \begin{align}
-V_2(d) &= \frac{q_2}{4\pi\epsilon_0 d}\\
+V_2(d) &= \frac{q_2}{4\pi\epsilon_0 d}\\\\
 V_1(R_1) &= \frac{q_1}{4\pi\epsilon_0 R_1}
 \end{align}
 $$
@@ -664,18 +664,16 @@ Gli elettrodi di $C_A$ e $C_B$ sono tenuti a differenze di potenziale $V_A = 10$
 
 Le differenze di potenziale ai capi dei tre condensatori valgono:
 
-$$
 \begin{align}
-V_A - V_C & = \frac{q_A}{C}\\
-V_B - V_C & = \frac{q_B}{2C}\\
-V_C & = \frac{q_C}{3C} = \frac{q_A + q_B}{3C} = \frac{CV_A - CV_C + 2CV_B - 2CV_C}{3C}
+V_A - V_C & = \frac{q_A}{C}\\\\
+V_B - V_C & = \frac{q_B}{2C}\\\\
+V_C & = \frac{q_C}{3C} = \frac{q_A + q_B}{3C}
 \end{align}
-$$
 
-Da cui si ricava che
+quindi
 
 $$
-V_C = \frac{V_A + 2V_B}{6} = 15\, \mathrm{V}
+V_C = \frac{C(V_A - V_C + 2V_B - 2V_C)}{3C} = \frac{V_A + 2V_B}{6} = 15 \\, \mathrm{V}.
 $$
 
 # Esercizio 20
@@ -709,8 +707,8 @@ $$
 2. Sostituiamo i valori nelle relazioni trovate precedentemente:
 $$
 \begin{align}
-q_1 & = -2.67 \times 10^{-8}\\
-q_2 & = 2.67 \times 10^{-8}\\
+q_1 & = -2.67 \times 10^{-8}\\\\
+q_2 & = 2.67 \times 10^{-8}\\\\
 q_3 & = 5.6 \times 10^{-9}
 \end{align}
 $$
@@ -828,7 +826,7 @@ $$
 questo perché le uniche cariche libere (cioè non dovute alla polarizzazione) sono quelle che si trovano sulla superficie del cilindro interno. Poiché $\vec{D} = \epsilon \vec{E} = \epsilon_0 \vec{E} + \vec{P}$ e quindi $\vec{P} = \epsilon_0 (\kappa - 1) \vec{E}$, si ha
 $$
 \begin{align}
-\vec{E} & = \frac{\sigma R_1}{\kappa_i \epsilon_0 r} \hat{r}\\
+\vec{E} & = \frac{\sigma R_1}{\kappa_i \epsilon_0 r} \hat{r}\\\\
 \vec{P} & = \frac{\kappa_i - 1}{\kappa_i} \frac{\sigma R_1}{r} \hat{r}
 \end{align}
 $$
@@ -863,7 +861,7 @@ $$
  nel caso in cui non lo sia (vedi sopra per l'espressione del campo). La differenza di potenziale totale è quindi diversa nei due casi e vale:
 $$
 \begin{align}
-\Delta V(r ) & = \Delta V_{1,3} + \Delta V_4(r )\\
+\Delta V(r ) & = \Delta V_{1,3} + \Delta V_4(r )\\\\
 \Delta V(r ) & = \Delta V_{1,3}
  \end{align}
 $$
@@ -880,7 +878,7 @@ Una nuvola temporalesca ha una forma approssimativamente rettangolare, con lati 
 Il sistema può essere visto come un condensatore piano di capacità:
 
 $$
-C = \frac{\epsilon_0 \Sigma}{h} = \frac{\epsilon_0 ab}{h} = 10.6 \times 10^{-8}\, \mathrm{F}
+C = \frac{\epsilon_0 \Sigma}{h} = \frac{\epsilon_0 ab}{h} = 10.6 \times 10^{-8}\\, \mathrm{F}
 $$
 
 **Nota Bene:** la costante dielettrica relativa dell'aria è praticamente uno, quindi possiamo utilizzare le espressioni valide nel vuoto.
@@ -888,17 +886,17 @@ $$
 La differenza di potenziale tra la terra (caricata positivamente) e la nuvola (caricata negativamente) vale:
 
 $$
-\Delta V = \frac{q}{C} = 7.5 \times 10^8\, \mathrm{V}
+\Delta V = \frac{q}{C} = 7.5 \times 10^8\\, \mathrm{V}
 $$
 
 1. La rigidità dielettrica è il massimo valore del campo elettrostatico che può essere applicato senza causare scariche (fulmini!). Calcoliamo il campo all'interno del "condensatore", utilizzando la solita espressione per i condensatori piani (molto approssimata in questo caso, perché?):
 $$
-E \simeq \Delta V / h = 1.5 \times 10^6\, \frac{\mathrm{V}}{\mathrm{m}}
+E \simeq \Delta V / h = 1.5 \times 10^6\\, \frac{\mathrm{V}}{\mathrm{m}}
 $$
 che è più bassa della rigidità dielettrica: niente fulmini (in questa approssimazione)!
 2. L'espressione dell'energia di un qualunque condensatore è $U_e = \frac{1}{2} q\Delta V$, quindi si ha:
 $$
-U_e = \frac{1}{2} q \Delta V = 3 \times 10^{10}\, \mathrm{J}
+U_e = \frac{1}{2} q \Delta V = 3 \times 10^{10}\\, \mathrm{J}
 $$
 
 # Esercizio 25
@@ -919,7 +917,7 @@ q_d = C_d \Delta V = \frac{\epsilon_0 \kappa ab}{3h} \Delta V
 $$
 2. Sostituiamo i valori dati nelle relazione trovata al punto precedente:
 $$
-q_d = \frac{4}{3} 113 \cdot 8.854 \times 10^{-12} \frac{0.1 \cdot 0.1}{0.002}\, \mathrm{C} = 0.667 \times 10^{-8} \, \mathrm{C}
+q_d = \frac{4}{3} 113 \cdot 8.854 \times 10^{-12} \frac{0.1 \cdot 0.1}{0.002}\\, \mathrm{C} = 0.667 \times 10^{-8} \\, \mathrm{C}
 $$
 
 # Esercizio 26
@@ -939,15 +937,15 @@ R = \rho \int_0^h \frac{dh}{\Sigma(h)} = \rho \int_0^h \frac{dh}{\pi (R_2^2 - R_
 $$
 2. Dobbiamo prima applicare la legge di Ohm per trovare la resistenza. Per farlo, però, dobbiamo prima calcolare la d.d.p. ai capi del conduttore:
 $$
-\Delta V = Eh = 10\, {\rm V}
+\Delta V = Eh = 10\\, {\rm V}
 $$
 Quindi:
 $$
-R = \frac{\Delta V}{i} = 20\, {\rm \Omega} = \rho \frac{h}{\pi (R_2^2 - R_1^2)}
+R = \frac{\Delta V}{i} = 20\\, {\rm \Omega} = \rho \frac{h}{\pi (R_2^2 - R_1^2)}
 $$
 e quindi la resistività vale:
 $$
-\rho = \frac{E \pi (R_2^2 - R_1^2)}{i} = 7.85 \times 10^{-5} \, \Omega{\rm m}
+\rho = \frac{E \pi (R_2^2 - R_1^2)}{i} = 7.85 \times 10^{-5} \\, \Omega{\rm m}
 $$
 
 # Esercizio 30
@@ -1005,14 +1003,14 @@ calcolare quale relazione debba sussistere tra le quattro capacità per far sì 
 La differenza di potenziale ai capi dei due rami è la stessa, sono cioè collegati in parallelo. Le capacità equivalenti dei due rami valgono:
 
 \begin{align}
-C_u &= \frac{C_1 C_2}{C_1 + C_2}\\\\\\
+C_u &= \frac{C_1 C_2}{C_1 + C_2}\\\\
 C_d &= \frac{C_3 C_4}{C_3 + C_4}
 \end{align}
 
 e quindi le cariche sui rami valgono:
 
 \begin{align}
-q_u &= \Delta V \frac{C_1 C_2}{C_1 + C_2}\\\\\\
+q_u &= \Delta V \frac{C_1 C_2}{C_1 + C_2}\\\\
 q_d &= \Delta V \frac{C_3 C_4}{C_3 + C_4}
 \end{align}
 
@@ -1103,7 +1101,7 @@ $$
 $$
 quindi
 $$
-q_c = 4 \pi \epsilon_0 c \Delta V = 19.5 \, {\rm nC}.
+q_c = 4 \pi \epsilon_0 c \Delta V = 19.5 \\, {\rm nC}.
 $$
 Il fatto che il conduttore sia mantenuto ad una certa d.d.p., quindi, fa sì che una quantità di carica $q_c - q = 9.5$ nC si trasferisca sulla sua superficie più esterna.
 2. All'interno della cavità il campo vale
@@ -1116,7 +1114,7 @@ P(r ) = \epsilon_0 ( \kappa(r ) - 1 ) E(r ) = \frac{q (r - a)}{4 \pi r^3}.
 $$
 Possiamo ora calcolare le densità di carica di polarizzazione usando la relazione $\sigma_p = \vec{P}(r ) \cdot \hat{n}$:
 \begin{align}
-\sigma_p(a) & = 0\\\\\\
-\sigma_p(b) & = P(b ) = 2.95 \, {\rm nC / m^2}
+\sigma_p(a) & = 0\\\\
+\sigma_p(b) & = P(b ) = 2.95 \\, {\rm nC / m^2}
 \end{align}
 3. Se i due conduttori vengono collegati, le cariche sulle due superfici interne si cancellano e quindi si avrà $q(a) = q(b) = 0$. D'altro canto, il conduttore più esterno è ancora posto ad una d.d.p. rispetto all'infinito, e quindi la sua carica non varia, risultando ancora $q_c = 19.5$ nC.

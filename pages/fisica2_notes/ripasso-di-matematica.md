@@ -91,8 +91,8 @@ Le coordinate sferiche $(r, \theta, \phi)$ sono legate a quelle cartesiane, $(x,
 $$
 \left\lbrace
 \begin{aligned}
-x &= r \sin(\theta) \cos(\phi)\\\\\\
-y &= r \sin(\theta) \sin(\phi)\\\\\\
+x &= r \sin(\theta) \cos(\phi)\\\\
+y &= r \sin(\theta) \sin(\phi)\\\\
 z &= r \cos(\theta)
 \end{aligned}
 \right.
@@ -115,7 +115,7 @@ Il discorso si semplica in 2D, dove si hanno solamente $r$ e $\theta$:
 $$
 \left\lbrace
 \begin{aligned}
-x &= r \cos(\theta)\\\\\\
+x &= r \cos(\theta)\\\\
 y &= r \sin(\theta)
 \end{aligned}
 \right.
