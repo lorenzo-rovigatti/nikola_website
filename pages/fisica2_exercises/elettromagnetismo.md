@@ -16,7 +16,7 @@
 
 <img src="../../images/fisica2/esercizio_53.png">
 
-Una spira quadrata rigida, di lato $l = 12$ cm e resistenza $R = 25\, \Omega$, viene trascinata con velocità orizzontale *costante*, $v=3$ m/s. La spira entra in una zona di larghezza $d = 2l$ in cui è presente un campo magnetico $B
+Una spira quadrata rigida, di lato $l = 12$ cm e resistenza $R = 25\\, \Omega$, viene trascinata con velocità orizzontale *costante*, $v=3$ m/s. La spira entra in una zona di larghezza $d = 2l$ in cui è presente un campo magnetico $B
 = 4.5$ T ortogonale alla spira ed uscente dal piano del disegno.
 Determinare:
 
@@ -51,7 +51,7 @@ W = \int_s \vec{F} \cdot d\vec{s},
 $$
 dove $s$ è lo spostamento fatto. in questo caso l'espressione della forza è quella trovata precedentemente, che è costante quando diversa da 0, mentre lo spostamento è nella direzione del moto, quindi antiparallelo alla forza stessa. $F$ è diversa da 0 unicamente quando la spira entra ed esce dalla regione di campo, e questo avviene per una lunghezza $l$ in entrambi i casi. Lo spostamento totale è quindi $s = 2l$, quindi il lavoro vale
 $$
-W = - 2 F l = -8.4\, {\rm mJ}
+W = - 2 F l = -8.4\\, {\rm mJ}
 $$
 4. Abbiamo visto a lezione che la carica totale che passa in una spira per effetto dell'induzione elettromagnetica è legata alla differenza di flusso del campo:
 $$
@@ -63,7 +63,7 @@ Poiché in questo caso $\Phi_1 = \Phi_2 = 0$, dato che la spira è fuori dalla r
 
 <img src="../../images/fisica2/esercizio_54.png">
 
-Una sbarretta conduttrice di massa $m=5$ g e di lunghezza $l=25$ cm scorre liberamente su due binari orizzontali ai quali è elettricamente connessa. I due binari sono connessi tra di loro da una resistenza $R=15\, \Omega$. Per un tratto di lunghezza $L=40$ cm i binari sono attraversati da un campo magnetico uniforme $B=2.5$ T diretto verticalmente ed uscente dal foglio (vedi disegno). La sbarretta arriva al tempo $t=0$ nella zona con campo magnetico con una velocità $v(0)=2.5$ m/s. Determinare
+Una sbarretta conduttrice di massa $m=5$ g e di lunghezza $l=25$ cm scorre liberamente su due binari orizzontali ai quali è elettricamente connessa. I due binari sono connessi tra di loro da una resistenza $R=15\\, \Omega$. Per un tratto di lunghezza $L=40$ cm i binari sono attraversati da un campo magnetico uniforme $B=2.5$ T diretto verticalmente ed uscente dal foglio (vedi disegno). La sbarretta arriva al tempo $t=0$ nella zona con campo magnetico con una velocità $v(0)=2.5$ m/s. Determinare
 
 1. il verso e l'intensità della corrente che fluisce nella barretta a $t = 0$;
 2. la carica fluita nel circuito sbarretta-rotaie-resistenza dopo che la sbarretta è uscita dalla zona con campo magnetico;
@@ -82,7 +82,7 @@ $$
 $$
 che calcolata in 0 vale $\mathcal{E}_i(0) = -l B v(0)$, da cui si ricava
 $$
-i = \frac{l b v(0)}{R} = 0.104\, {\rm A}
+i = \frac{l b v(0)}{R} = 0.104\\, {\rm A}
 $$
 2. La variazione di flusso a cui è sottoposta la spira è semplicemente
 $$
@@ -90,7 +90,7 @@ $$
 $$
 e quindi la carica è data dalla legge di Felici:
 $$
-q = \frac{\Delta \Phi}{R} = -0.017 \, {\rm C}.
+q = \frac{\Delta \Phi}{R} = -0.017 \\, {\rm C}.
 $$
 3. In questo caso la velocità con cui si muove la sbarretta non è costante poiché comincerà a rallentare non appena entrata nella regione di campo come conseguenza della presenza della forza di attrito elettromagnetico data da
 $$
@@ -102,18 +102,18 @@ v(t_u) = v(0) + \int_0^{t_u} a(t) dt = v(0) - \int_0^{t_u} \frac{l^2 B^2}{mR} v(
 $$
 che si può risolvere immediatamente per ottenere
 $$
-v(t) = v(0) - \frac{l^2 B^2 L}{mR} = 0.42\, {\rm m/s}
+v(t) = v(0) - \frac{l^2 B^2 L}{mR} = 0.42\\, {\rm m/s}
 $$
 4. Far fermare la sbarretta significa imporre $v(t) = 0$. Sostituendo questo valore nell'equazione precedente si trova
 $$
-L = \frac{v(0) mR }{l^2 B^2} = 0.48\, {m}
+L = \frac{v(0) mR }{l^2 B^2} = 0.48\\, {m}
 $$
 
 # Esercizio 55 
 
 <img src="../../images/fisica2/esercizio_55.png">
 
-In un piano inclinato di angolo $\theta=\pi / 6 = 30^\circ$ sono poste due rotaie parallele, distanti $l=10$ cm, di resistenza elettrica trascurabile e connesse elettricamente tra loro alla sommità. Su di esse può scorrere senza attrito una sbarretta conduttrice di massa $m=10$ g e resistenza elettrica $R=0.1\, \Omega$. Il tutto è immerso in un campo magnetico uniforme e costante, diretto verticalmente, di modulo $B=0.5$ T. Ad un certo istante la sbarretta viene lasciata libera di scivolare lungo il piano inclinato. Determinare:
+In un piano inclinato di angolo $\theta=\pi / 6 = 30^\circ$ sono poste due rotaie parallele, distanti $l=10$ cm, di resistenza elettrica trascurabile e connesse elettricamente tra loro alla sommità. Su di esse può scorrere senza attrito una sbarretta conduttrice di massa $m=10$ g e resistenza elettrica $R=0.1\\, \Omega$. Il tutto è immerso in un campo magnetico uniforme e costante, diretto verticalmente, di modulo $B=0.5$ T. Ad un certo istante la sbarretta viene lasciata libera di scivolare lungo il piano inclinato. Determinare:
 
 1. verso e intensità della corrente indotta nella spira individuata dal sistema rotaie-sbarretta in funzione della velocità della sbarretta.
 2. la velocità limite della sbarretta nel suo moto di scivolamento.
@@ -161,7 +161,7 @@ Una bobina rettangolare formata da $N = 100$ spire sovrapposte di lati $a = 1$ c
 
 1. Nella posizione data il campo e la normale alla bobina sono paralleli, quindi il flusso è la somma dei flussi che passano attraverso le $N$ spire, quindi
 $$
-\Phi(B) = N a b B = 0.02\, {\rm Wb}
+\Phi(B) = N a b B = 0.02\\, {\rm Wb}
 $$
 2. Se definiamo $\theta = \omega t$ l'angolo tra la normale alla bobina e il campo, il flusso vale
 $$
@@ -174,7 +174,7 @@ $$
 che è massimo quando $\theta = \omega t = \pi / 2$, cioè quando campo e bobina sono ortogonali.
 3. Utilizzando la formula di prima e imponendo $\mathcal{E}_i = 100$ V troviamo
 $$
-\omega = \frac{\mathcal{E}_i}{N a b B} = 5000 \, {\rm rad/sec}
+\omega = \frac{\mathcal{E}_i}{N a b B} = 5000 \\, {\rm rad/sec}
 $$
 
 # Esercizio 57
@@ -207,7 +207,7 @@ $$
 
 <img src="../../images/fisica2/esercizio_58.png">
 
-Una barra conduttrice, di massa $m=100$ g e resistenza $R = 500\, \Omega$, appoggia senza attrito su due binari orizzontali di resistenza trascurabile. La distanza tra i binari è $l=40$ cm e il sistema è immerso in un campo magnetico uniforme $B=0.8$T, perpendicolare ai binari ed alla barra (entrante nel foglio, vedi figura). All’istante $t=0$ la barra è ferma e tra i binari viene posto un generatore con la polarità indicata in figura.
+Una barra conduttrice, di massa $m=100$ g e resistenza $R = 500\\, \Omega$, appoggia senza attrito su due binari orizzontali di resistenza trascurabile. La distanza tra i binari è $l=40$ cm e il sistema è immerso in un campo magnetico uniforme $B=0.8$T, perpendicolare ai binari ed alla barra (entrante nel foglio, vedi figura). All’istante $t=0$ la barra è ferma e tra i binari viene posto un generatore con la polarità indicata in figura.
 
 * Se il generatore fornisce una corrente *costante* $i_0 = 0.2$ A calcolare:
   1. in che direzione si muove la sbarra;
@@ -263,12 +263,12 @@ che, dati i versi indicati in figura, ha direzione verso destra.
 	$$
 	Uguagliando le due correnti si ottiene
 	$$
-	v = \frac{\mathcal{E}_0}{l B} = 25\, {\rm m/s}
+	v = \frac{\mathcal{E}_0}{l B} = 25\\, {\rm m/s}
 	$$
 
 # Esercizio 59
 
-Un circuito è composto da una batteria di f.e.m. $\mathcal{E}$, da una resistenza $R = 0.1 \, \Omega$, da un'induttanza ($L = 9.44$ H) e da un interruttore, inizialmente chiuso. Al tempo zero l'interruttore viene aperto. Sapendo che nei primi $15$ s la corrente passa da $1.16$ A a $10.2$ mA. Determinare
+Un circuito è composto da una batteria di f.e.m. $\mathcal{E}$, da una resistenza $R = 0.1 \\, \Omega$, da un'induttanza ($L = 9.44$ H) e da un interruttore, inizialmente chiuso. Al tempo zero l'interruttore viene aperto. Sapendo che nei primi $15$ s la corrente passa da $1.16$ A a $10.2$ mA. Determinare
 
 1. il valore di $\mathcal{E}$;
 2. il valore della resistenza $R'$ presente tra i due poli dell'interruttore.
@@ -279,18 +279,18 @@ Un circuito è composto da una batteria di f.e.m. $\mathcal{E}$, da una resisten
 $$
 i(t) = i_{\infty} e^{-\frac{t}{\tau}},
 $$
-dove $i\_{\infty} = \frac{\mathcal{E}}{R}$ è il valore della corrente a circuito chiuso e $\tau = L / R'$. Dal testo si capisce che $i\_{\infty} = 1.16$ A e $i(15 \, {\rm s}) = 10.2$ mA. Utilizzando la prima relazione si trova
+dove $i\_{\infty} = \frac{\mathcal{E}}{R}$ è il valore della corrente a circuito chiuso e $\tau = L / R'$. Dal testo si capisce che $i\_{\infty} = 1.16$ A e $i(15 \\, {\rm s}) = 10.2$ mA. Utilizzando la prima relazione si trova
 $$
-\mathcal{E} = R i_{\infty} = 0.116 \, {\rm V}.
+\mathcal{E} = R i_{\infty} = 0.116 \\, {\rm V}.
 $$
-2. Sapendo che $i(15 \, {\rm s}) = 10.2$ mA e risolvendo per $R'$ si trova
+2. Sapendo che $i(15 \\, {\rm s}) = 10.2$ mA e risolvendo per $R'$ si trova
 $$
-R' = \frac{L}{15 \, {\rm s}} \log \left( \frac{i_{\infty}}{i(15 \, {\rm s})} \right) = 2.98 \, \Omega
+R' = \frac{L}{15 \\, {\rm s}} \log \left( \frac{i_{\infty}}{i(15 \\, {\rm s})} \right) = 2.98 \\, \Omega
 $$
 
 # Esercizio 60
 
-Un induttore ($L=4 \times 10^{-4}$ H) ed una resistenza ($R=5\, \Omega$) sono posti in serie ad un generatore di tensione ($\mathcal{E} = 200$ V) collegato tramite un interruttore, inizialmente aperto. Al tempo zero l'interruttore viene chiuso. Determinare
+Un induttore ($L=4 \times 10^{-4}$ H) ed una resistenza ($R=5\\, \Omega$) sono posti in serie ad un generatore di tensione ($\mathcal{E} = 200$ V) collegato tramite un interruttore, inizialmente aperto. Al tempo zero l'interruttore viene chiuso. Determinare
 
 1. il tempo che occorre affinché la corrente che fluisce nella resistenza raggiunga il 60% della corrente finale;
 2. l'energia accumulata nel campo magnetico dopo che la corrente ha raggiunto il suo valore massimo;
@@ -300,7 +300,7 @@ Un induttore ($L=4 \times 10^{-4}$ H) ed una resistenza ($R=5\, \Omega$) sono po
 
 1. La corrente finale è data dalla legge di Ohm e vale
 $$
-i_{\infty} = \frac{\mathcal{E}}{R} = 40\, {\rm A}.
+i_{\infty} = \frac{\mathcal{E}}{R} = 40\\, {\rm A}.
 $$
 Sapendo che la corrente varia con la legge temporale
 $$
@@ -308,23 +308,23 @@ i(t) = \frac{\mathcal{E}}{R} \left( 1 - e^{-\frac{t}{\tau}}\right),
 $$
 il tempo si trova imponendo $i(t) = 0.6 i\_{\infty}$ e risolvendo per $t$:
 $$
-t = - \frac{L}{R}\log(1 - 0.6) = 7.2 \times 10^{-6} \, {\rm s}
+t = - \frac{L}{R}\log(1 - 0.6) = 7.2 \times 10^{-6} \\, {\rm s}
 $$
 2. L'energia è data dalla relazione
 $$
-U = \frac{1}{2} L i_{\infty}^2 = 0.32 \, {\rm J}
+U = \frac{1}{2} L i_{\infty}^2 = 0.32 \\, {\rm J}
 $$
 3. Il valore si ottiene sostituendo $t = 3 L / R$ in $i(t)$, trovando
 
 $$
-i(3 L / R) = 38\, {\rm A}
+i(3 L / R) = 38\\, {\rm A}
 $$
 
 # Esercizio 61
 
 <img src="../../images/fisica2/esercizio_61.png">
 
-Una spira quadrata di resistenza $R = 10^{-3}\, \Omega$, massa $m = 10$ g e lato $l = 20$ cm viene lasciata cadere in una regione in cui è presente un campo di magnetico diretto lungo $\hat{y}$ avente modulo dipende dalla coordinata $z$:
+Una spira quadrata di resistenza $R = 10^{-3}\\, \Omega$, massa $m = 10$ g e lato $l = 20$ cm viene lasciata cadere in una regione in cui è presente un campo di magnetico diretto lungo $\hat{y}$ avente modulo dipende dalla coordinata $z$:
 $$
 B_y(z) = b z
 $$
@@ -355,9 +355,9 @@ F_{\rm tot} = \frac{l^3 b^2 v(t)}{R} h(t) - \frac{l^3 b^2 v(t)}{R} (h(t) + l) + 
 $$
 Quando la spira raggiunge la velocità limite si deve avere $F\_{\rm tot} = 0$, da cui si ottiene
 $$
-v_{\rm lim} = \frac{R mg}{l^4 b^2} = 0.015 \, {\rm m/s}
+v_{\rm lim} = \frac{R mg}{l^4 b^2} = 0.015 \\, {\rm m/s}
 $$
 3. Sostituendo il valore della velocità limite ottenuto precedentemente si trova
 $$
-i = \frac{l^2 b v_{\rm lim}}{R} = 1.2 \, {\rm A}
+i = \frac{l^2 b v_{\rm lim}}{R} = 1.2 \\, {\rm A}
 $$

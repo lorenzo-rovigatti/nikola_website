@@ -25,20 +25,20 @@ Si consideri un esperimento di Young effettuato con luce arancione di lunghezza 
 
 1. Nell'esperimento di Young la distanza tra i centri di due massimi consecutivi (anche detta **passo**) è $p = \frac{\lambda L}{d}$ e quindi
 $$
-d = \frac{\lambda L}{p} = 1 \, {\rm mm}
+d = \frac{\lambda L}{p} = 1 \\, {\rm mm}
 $$
 2. Usando la stessa formula del punto precedente troviamo
 $$
-\lambda_2 = \frac{p d}{L} = 1.18 \, {\rm \mu m} = 1180 \, {\rm nm}
+\lambda_2 = \frac{p d}{L} = 1.18 \\, {\rm \mu m} = 1180 \\, {\rm nm}
 $$
 3. Un'onda che passa in un mezzo avente indice di rifrazione diverso da uno subisce un cambiamento di lunghezza d'onda, che in questo caso diventa $\lambda_a = \frac{\lambda_1}{n_a}$. Utilizzando la relazione precedente troviamo quindi
 $$
-p_a = \frac{\lambda_a L}{d} = \frac{\lambda_1 L}{n_a d} = \frac{p}{n} = 0.28 \, {\rm mm}
+p_a = \frac{\lambda_a L}{d} = \frac{\lambda_1 L}{n_a d} = \frac{p}{n} = 0.28 \\, {\rm mm}
 $$
 
 4. La densità di frange non è altro che il numero di frange per unità di lunghezza, cioè l'inverso della spaziatura:
 $$
-D = \frac{1}{p_a} = 3.5 \, {\rm mm}^{-1} = 35 \, {\rm cm}^{-1}
+D = \frac{1}{p_a} = 3.5 \\, {\rm mm}^{-1} = 35 \\, {\rm cm}^{-1}
 $$
 
 # Esercizio 64
@@ -60,7 +60,7 @@ $$
 $$
 poiché consideriamo i minimi del secondo ordine ($m = 2$). Dalla relazione precedente possiamo ricavare la larghezza della fenditura:
 $$
-a = \frac{2 (\lambda_2 - \lambda_1) L}{\Delta x} = 20 \, {\rm \mu m}
+a = \frac{2 (\lambda_2 - \lambda_1) L}{\Delta x} = 20 \\, {\rm \mu m}
 $$
 3. In generale l'intensità della figura di diffrazione è data da
 $$

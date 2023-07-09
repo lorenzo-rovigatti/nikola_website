@@ -144,7 +144,7 @@ mg = ibB,
 $$
 e quindi
 $$
-B = \frac{mg}{ib} = 0.0196 \, {\rm T} = 196 \, {\rm G}
+B = \frac{mg}{ib} = 0.0196 \\, {\rm T} = 196 \\, {\rm G}
 $$
 
 # Esercizio 37
@@ -223,7 +223,7 @@ $$
 $$
 e risolvendo per i:
 $$
-i = \frac{mg}{A} \frac{d(d + a)}{ab} = 16.8 \, {\rm A}
+i = \frac{mg}{A} \frac{d(d + a)}{ab} = 16.8 \\, {\rm A}
 $$
 
 2. La risposta non cambia, perché la forza totale agente sulla spira non risente di un campo omogeneo (perché?).
@@ -303,13 +303,13 @@ Affinché l'effetto del campo magnetico controbilanci quello del campo elettrico
 Per trovare il modulo consideriamo che dal raggio di curvatura è possibile ottenere direttamente la velocità degli ioni, che vale
 
 $$
-v = \frac{rqB_0}{m} = 7.2 \times 10^{4} \, {\rm m/s}.
+v = \frac{rqB_0}{m} = 7.2 \times 10^{4} \\, {\rm m/s}.
 $$
 
 Ricordando che in un selettore di velocità quest'ultima è data dal rapporto tra i moduli dei campi si trova
 
 $$
-B = \frac{E}{v} = 0.035 \, {\rm T}
+B = \frac{E}{v} = 0.035 \\, {\rm T}
 $$
 
 # Esercizio 41
@@ -330,13 +330,13 @@ $$
 $$
 da cui si ottiene
 $$
-v_1 = \sqrt{\frac{2q\Delta V}{m_1}} = 1.4 \times 10^4 \, {\rm m / s}
+v_1 = \sqrt{\frac{2q\Delta V}{m_1}} = 1.4 \times 10^4 \\, {\rm m / s}
 $$
 I raggi di curvatura delle due traiettorie sono
 $$
 \begin{align}
-R_1 & = \frac{1}{2} d_1 = 140 \, {\rm mm}\\
-R_2 & = \frac{1}{2} d_2 = 196 \, {\rm mm}
+R_1 & = \frac{1}{2} d_1 = 140 \\, {\rm mm}\\\\
+R_2 & = \frac{1}{2} d_2 = 196 \\, {\rm mm}
 \end{align}
 $$
 
@@ -352,8 +352,8 @@ $$
 Abbiamo due equazioni in due incognite. Risolvendo il sistema otteniamo
 $$
 \begin{align}
-m_2 & = m_1 \left(\frac{R_2}{R_1}\right)^2 = 7.44 \times 10^{-26} \, {\rm Kg}\\
-v_2 & = v_1 \frac{R_1}{R_2} = 10^4\, {\rm m / s}
+m_2 & = m_1 \left(\frac{R_2}{R_1}\right)^2 = 7.44 \times 10^{-26} \\, {\rm Kg}\\\\
+v_2 & = v_1 \frac{R_1}{R_2} = 10^4\\, {\rm m / s}
 \end{align}
 $$
 
@@ -373,12 +373,12 @@ Una particella di carica $q = 50$ mC e massa $m = 20$ g entra al tempo $t = 0$ i
 
 1. Poiché la traiettoria presa dalla particella è una circonferenza di raggio $r = mv / qB$, la distanza è data dal suo diametro, cioè:
 $$
-d = 2 r = \frac{2 m v}{qB} = 26 \, {\rm m}
+d = 2 r = \frac{2 m v}{qB} = 26 \\, {\rm m}
 $$
 
 2. Il tempo trascorso nella regione col campo sarà metà del periodo del moto circolare uniforme, che vale $T = 2 \pi m / qB$, cioè:
 $$
-t = \frac{T}{2} = \frac{\pi m}{q B} = 5 \, {\rm s}
+t = \frac{T}{2} = \frac{\pi m}{q B} = 5 \\, {\rm s}
 $$
 
 3. La direzione del campo elettrostatico deve essere perpendicolare al campo magnetico, così da contrastare la forza di Lorentz. L'intensità si trova equagliando il modulo delle forze che ne risulterebbero, cioè:
@@ -387,7 +387,7 @@ q E = q v B
 $$
 e quindi
 $$
-E = v B = 2 \, {\rm \frac{V}{m}}
+E = v B = 2 \\, {\rm \frac{V}{m}}
 $$
 
 4. In un moto circolare uniforme la velocità angolare è costante ed è uguale all'angolo percorso nell'unità di tempo. Nel caso specifico di campo magnetico uniforme la velocità angolare vale
@@ -456,13 +456,13 @@ $$
 $$
 I segni che abbiamo trovato considerando il verso di $\vec{B}$ parallelo a $\hat{y}$ sono corretti, perché così facendo si trova che i due momenti hanno verso opposto, e quindi effettivamente $\hat{B} = \hat{y}$. Eguagliando i moduli dei due momenti possiamo ricavare il modulo del campo:
 $$
-B = \frac{\lambda g}{i}\frac{a + b}{a} \tan \theta_0  = 5.21 \cdot 10^{-3} \, {\rm T}.
+B = \frac{\lambda g}{i}\frac{a + b}{a} \tan \theta_0  = 5.21 \cdot 10^{-3} \\, {\rm T}.
 $$
 
 2. Il lavoro si ottiene integrando il momento meccanico tra $\theta = 0$ e $\theta = \theta_0$:
 
 $$
-W = iabB \int_0^{\theta_0} \cos \theta d\theta = iabB \sin \theta |_0^{\theta_0} = iabB \sin{\theta_0} = 1.3 \times 10^{-4} \, {\rm J}
+W = iabB \int_0^{\theta_0} \cos \theta d\theta = iabB \sin \theta |_0^{\theta_0} = iabB \sin{\theta_0} = 1.3 \times 10^{-4} \\, {\rm J}
 $$
 
 # Esercizio 45
@@ -482,12 +482,10 @@ Due fili conduttori molto lunghi orientati lungo l'asse $z$ sono posti a distanz
 
 1. La corrente che scorre nel filo alla sinistra dell'origine è uscente, mentre l'altra è entrante. Il modulo del campo è sempre dato da $\mu_0 i / 2 \pi r$, mentre il suo verso è determinato da $\hat{t} \times \hat{r}$, dove $\hat{t}$ è il versore tangente al filo nella direzione della corrente e $\hat{r} = \vec{r} / r$, dove $\vec{r}$ è il vettore che connette la sorgente di campo (e quindi il filo) al punto dove lo calcoliamo. Utilizzando queste relazioni troviamo che i due fili (di sinistra e di destra) genereranno i seguenti campi magnetici lungo l'asse $x$:
 
-$$
-  \begin{align}
-  \vec{B}_s(x, 0, 0) & = \frac{\mu_0 i}{2 \pi} \frac{\hat{y}}{x + a}\\
-  \vec{B}_d(x, 0, 0) & = -\frac{\mu_0 i}{2 \pi} \frac{\hat{y}}{x - a}
-  \end{align}
-$$
+\begin{align}
+\vec{B}_s(x, 0, 0) & = \frac{\mu_0 i}{2 \pi} \frac{\hat{y}}{x + a}\\\\
+\vec{B}_d(x, 0, 0) & = -\frac{\mu_0 i}{2 \pi} \frac{\hat{y}}{x - a}
+\end{align}
 
 **Nota Bene:** fate molta attenzione al segno del campo! Questo cambia a seconda che ci si trovi alla sinistra o alla destra del filo. Per il principio di sovrapposizione, il campo totale è semplicemente la somma dei due, quindi:
 $$
@@ -509,7 +507,7 @@ Lo stesso risultato si può ottenere calcolando in maniera più meccanica il cam
 3. Sostituendo i valori noti nella relazione appena calcolata si trova
 
 $$
-B(0, a, 0) = 5 \times 10^{-4} \, {\rm T} = 5 \, {\rm G}
+B(0, a, 0) = 5 \times 10^{-4} \\, {\rm T} = 5 \\, {\rm G}
 $$
 
 4. Se le correnti scorressero nello stesso verso, anche i due campi sarebbero orientati nella stessa maniera. Prendiamo entrambe le correnti uscenti. Lungo l'asse $x$ si avrebbe quindi
@@ -548,7 +546,7 @@ $$
 dove $\theta = \pi / 6$ è metà dell'angolo che sottende ogni lato e che, in un esagono, vale $60^\circ = \pi / 3$. Sostituendo nella relazione precedente si trova
 
 $$
-B = 6 B_s = 6\frac{\mu_0 i}{2 \pi r} = 12\frac{\mu_0 i}{2 \pi l} \tan\left( \frac{\pi}{6} \right) = 13.86 \, {\rm \mu T}
+B = 6 B_s = 6\frac{\mu_0 i}{2 \pi r} = 12\frac{\mu_0 i}{2 \pi l} \tan\left( \frac{\pi}{6} \right) = 13.86 \\, {\rm \mu T}
 $$
 
 # Esercizio 47
@@ -579,7 +577,7 @@ $$
 $$
 e risolvendo per i:
 $$
-i = \frac{2\pi mg}{\mu_0 i_f} \frac{d(d + a)}{a} = 16.8 \, {\rm A}
+i = \frac{2\pi mg}{\mu_0 i_f} \frac{d(d + a)}{a} = 16.8 \\, {\rm A}
 $$
 2. La risposta non cambia, perché la forza totale agente sulla spira non risente di un campo omogeneo (perché?).
 
@@ -700,7 +698,7 @@ $$
 da cui otteniamo l'intensità di corrente come
 
 $$
-i = \frac{mg}{l B_0} \tan \theta \approx 1.4 \, {\rm A}
+i = \frac{mg}{l B_0} \tan \theta \approx 1.4 \\, {\rm A}
 $$
 
 # Esercizio 51
@@ -724,7 +722,7 @@ $$
 e quindi otteniamo
 
 $$
-i = \frac{\lambda g}{B} \tan(\theta) = 1.89 \, {\rm A}
+i = \frac{\lambda g}{B} \tan(\theta) = 1.89 \\, {\rm A}
 $$
 
 # Esercizio 52
@@ -749,7 +747,7 @@ t_1 = t_2 = \frac{T}{2} = \frac{\pi m}{q B}
 $$
 e quindi, sostituendo,
 $$
-t_G = \frac{t_{\rm tot} - T}{2} = 2 \times 10^{-8} \, {\rm s}
+t_G = \frac{t_{\rm tot} - T}{2} = 2 \times 10^{-8} \\, {\rm s}
 $$
 Se disegniamo il sistema notiamo come $h$ sia semplicemente la differenza tra i diametri delle semicirconferenze disegnate dalla traiettoria della particella all'interno delle due regioni col campo, cioè:
 $$
@@ -757,7 +755,7 @@ h = 2r_2 - 2r_1 = 2 \frac{m}{qB} (v_2 - v_1)
 $$
 da cui si ricava
 $$
-v_2 - v_1 = \frac{hqB}{2m} = 2 \times 10^{6} \, {\rm m/s}.
+v_2 - v_1 = \frac{hqB}{2m} = 2 \times 10^{6} \\, {\rm m/s}.
 $$
 D'altronde, l'accelerazione tra le due griglie è costante e quindi possiamo scrivere
 $$
@@ -765,7 +763,7 @@ v_2 = v_1 + at_G = v_1 + \frac{q\Delta V}{md} t_G,
 $$
 dove abbiamo scritto l'accelerazione come la forza dovuta al campo elettrico, che vale $E = \Delta V / d$, diviso per la massa della particella, $a = q \Delta V / dm$. Risolvendo per $\Delta V$ si trova
 $$
-\Delta V = (v_2 - v_1) \frac{md}{qt_G} = 4.18 \times 10^4 \, {\rm V}
+\Delta V = (v_2 - v_1) \frac{md}{qt_G} = 4.18 \times 10^4 \\, {\rm V}
 $$
 
 2. Ora conosciamo solo la differenza tra le due velocità. Possiamo trovarne il valore assoluto scrivendo l'equazione del moto iniziale per la particella, per cui si ha, considerando $x(0) = 0$,
@@ -778,11 +776,11 @@ d = v_1 t_G + \frac{q \Delta V}{2md} t_G^2 = v_1 t_G + \frac{1}{2}(v_2 - v_1) t_
 $$
 da cui possiamo ricavare $v_1$:
 $$
-v_1 = \frac{d - \frac{1}{2}(v_2 - v_1) t_G}{t_G} = 10^6 \, {\rm m/s}
+v_1 = \frac{d - \frac{1}{2}(v_2 - v_1) t_G}{t_G} = 10^6 \\, {\rm m/s}
 $$
 e quindi $v_2$ vale:
 $$
-v_2 = (v_2 - v_1) + v_1 = 3 \times 10^6 \, {\rm m/s}
+v_2 = (v_2 - v_1) + v_1 = 3 \times 10^6 \\, {\rm m/s}
 $$
 
 # Esercizio 62
@@ -803,7 +801,7 @@ i_a B_b(d) - \lambda g \sin\theta = \frac{\mu_0 i_a i_b}{2 \pi d} - \lambda g \s
 $$
 e quindi
 $$
-i_a = \frac{2 \pi d \lambda g \sin \theta}{\mu_0 i_b} = 42.7 \, {\rm A}
+i_a = \frac{2 \pi d \lambda g \sin \theta}{\mu_0 i_b} = 42.7 \\, {\rm A}
 $$
 2. Poiché nei fili scorrono correnti opposte, i due contributi al campo in $O$ hanno la stessa direzione e lo stesso verso, che risulta essere ortogonale al piano inclinato e avere componente $\hat{y}$ positiva. Per quanto riguarda il modulo, questo è la somma dei moduli dei campi generati dai due fili, che si trovano dalla legge di Biot-Savart:
 \begin{align}
@@ -812,6 +810,6 @@ B_a(O) &= B_a(d/2) = \frac{\mu_0 i_a 2}{2 \pi d} = \frac{\mu_0 i_b}{\pi d}
 \end{align}
 e quindi
 $$
-B(O) = B_a(O) + B_b(O) = \frac{\mu_0}{\pi d} (i_a + i_b) = 2.5 \times 10^{-3} \, {\rm T}
+B(O) = B_a(O) + B_b(O) = \frac{\mu_0}{\pi d} (i_a + i_b) = 2.5 \times 10^{-3} \\, {\rm T}
 $$
 3. Poiché è parallelo al filo, il campo magnetico aggiunto non può esercitare alcuna forza su di esso e quindi il valore di $i_a$ non cambia.
