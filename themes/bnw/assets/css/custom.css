@@ -1,5 +1,5 @@
 /* CUSTOM LR STYLES */
-.portrait {
+#biography .portrait {
     float: left;
     height: 220px;
     padding: 10px;
