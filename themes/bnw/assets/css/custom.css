@@ -16,6 +16,15 @@
   height: auto; 
 }
 
+code {
+  border: 0;
+  background-color: transparent;
+}
+
+.codetable tr {
+  line-height: 16px;
+}
+
 /* collapsible divs */
 .accordion > input[type="checkbox"] {
   position: absolute;

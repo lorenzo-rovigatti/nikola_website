@@ -13,14 +13,16 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
 
 ## Compiti di esame
 
+**Nota Bene:** riporto qui solo le soluzioni relative alla parte in C.
+
 {{% accordion id="2022" label="A.A. 2022/2023" %}}
 <ul>
-    <li><a href="../pdfs/labcalc_exams/2022_valutata_1.pdf">Prima esercitazione valutata</a></li>
-    <li><a href="../pdfs/labcalc_exams/2022_valutata_2.pdf">Seconda esercitazione valutata</a></li>
-    <li><a href="../pdfs/labcalc_exams/2022_Gennaio.pdf">Gennaio</a></li>
-    <li><a href="../pdfs/labcalc_exams/2022_Febbraio.pdf">Febbraio</a></li>
-    <li><a href="../pdfs/labcalc_exams/2022_Maggio.pdf">Maggio</a></li>
-    <li><a href="../pdfs/labcalc_exams/2022_Giugno.pdf">Giugno</a></li>
-    <li>Luglio: <a href="/pdfs/labcalc_exams/2022_Luglio.pdf">testo</a> e <a href="/listings/polimeri.c.html">soluzioni</a></li>
+    <li>Prima esercitazione valutata: <a href="/pdfs/labcalc_exams/2022_valutata_1.pdf">testo</a> e <a href="link://listing/labcalc/2022_valutata_1.c">soluzione</a></li>
+    <li>Seconda esercitazione valutata: <a href="/pdfs/labcalc_exams/2022_valutata_2.pdf">testo</a> e <a href="link://listing/labcalc/2022_valutata_2.c">soluzione</a></li>
+    <li>Gennaio: <a href="/pdfs/labcalc_exams/2022_Gennaio.pdf">testo</a> e <a href="link://listing/labcalc/2022_Gennaio.c">soluzione</a></li>
+    <li>Febbraio: <a href="/pdfs/labcalc_exams/2022_Febbraio.pdf">testo</a> e <a href="link://listing/labcalc/2022_Febbraio.c">soluzione</a></li>
+    <li>Maggio: <a href="/pdfs/labcalc_exams/2022_Maggio.pdf">testo</a> e soluzioni <a href="link://listing/labcalc/2022_Maggio_1.c">parte 1</a> e <a href="link://listing/labcalc/2022_Maggio_2.c">parte 3</a></li>
+    <li>Giugno: <a href="/pdfs/labcalc_exams/2022_Giugno.pdf">testo</a> e soluzioni <a href="link://listing/labcalc/2022_Giugno_1.c">parte 1</a> e <a href="link://listing/labcalc/2022_Giugno_2.c">parte 3</a></li>
+    <li>Luglio: <a href="/pdfs/labcalc_exams/2022_Luglio.pdf">testo</a> e <a href="link://listing/labcalc/2022_Luglio.c">soluzione</a></li>
 </ul>
 {{% /accordion %}}
