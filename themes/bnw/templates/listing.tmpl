@@ -1,0 +1,19 @@
+## -*- coding: utf-8 -*-
+<%inherit file="base.tmpl"/>
+
+
+<%block name="content">
+    %if title:
+    <div class="post-header">
+        <div class="container">
+            <div class="title">
+                ${title|h} (<a href="${source_link}">scarica</a>)
+            </div>
+        </div>
+    </div>
+    %endif
+
+    % if code:
+    ${code}
+    % endif
+</%block>

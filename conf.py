@@ -25,7 +25,7 @@ SITE_URL = "https://www.roma1.infn.it/~rovigatl/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://www.roma1.infn.it/~rovigatl/"
 BLOG_EMAIL = "lorenzo.rovigatti@uniroma1.it"
-BLOG_DESCRIPTION = "Lorenzo Rovigatti's academic website"  # (translatable)
+BLOG_DESCRIPTION = "LR's (rarely updated) blog"  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -142,9 +142,10 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        (SITE_URL, "Home"),
+        ("/", "Home"),
         ("/didattica/", "Didattica"),
         ("/publications/", "Publications"),
+        ("/blog/", "Blog posts"),
         ("/rss.xml", "RSS feed"),
     ),
 }
