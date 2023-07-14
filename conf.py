@@ -146,7 +146,6 @@ NAVIGATION_LINKS = {
         ("/didattica/", "Didattica"),
         ("/publications/", "Publications"),
         ("/blog/", "Blog posts"),
-        ("/rss.xml", "RSS feed"),
     ),
 }
 
@@ -1095,7 +1094,6 @@ MATHJAX_CONFIG = """
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     "HTML-CSS": { linebreaks: { automatic: true } },
-    SVG: { linebreaks: { automatic: true } },
     tex2jax: {
         inlineMath: [ 
             ['$','$'], 
