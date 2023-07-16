@@ -55,7 +55,21 @@
     <ul class="nav">
     %for url, text in navigation_links[lang]:
         % if isinstance(url, tuple):
-            <!-- sub navigation not supported yet -->
+            <li>
+                <label for="drop-${text}" class="toggle">${text}</label>
+                <a href="#">${text}</a>
+                <input type="checkbox" id="drop-${text}"/>
+                
+                <ul>
+                    %for suburl, text in url:
+                        % if rel_link(permalink, suburl) == "#":
+                            <li><a href="${permalink}" class="active">${text}</a></li>
+                        %else:
+                            <li><a href="${suburl}">${text}</a></li>
+                        %endif
+                    %endfor
+                </ul>
+            </li>
         % else:
             % if rel_link(permalink, url) == "#":
                 <li class="active"><a href="${permalink}">${text}</a></li>

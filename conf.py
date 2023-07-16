@@ -144,7 +144,10 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/", "Home"),
         ("/didattica/", "Didattica"),
-        ("/publications/", "Publications"),
+        ((
+            ("/my-main-research-topics/", "Main topics"),
+            ("/publications/", "Publications"),
+        ), "Research"),
         ("/blog/", "Blog posts"),
     ),
 }

@@ -87,6 +87,135 @@ code {
   content: "\f078";
 }
 
+/* Dropdown menus */
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+nav ul > li {
+    position: relative;
+}
+nav ul ul {
+    display: none;
+    padding-left: 0px;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background-color: #6b5364;
+}
+
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+nav ul ul li {
+    display:list-item;
+    padding-bottom: 10px;
+}
+
+li > a:after { content:  ' ▼'; }
+li > a:only-child:after { content: ''; }
+
+@media all and (max-width : 768px) {
+
+    nav {
+        margin: 0;
+    }
+    
+    .toggle + a {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        text-decoration: none;
+        padding: 5px 5px;
+        margin: 0px 8px;
+        border: none;
+        text-shadow: 1px 1px 1px #416182;
+        text-align: right;
+        box-shadow: none;
+        color: #ece1de;
+        cursor: pointer;
+    }
+
+    .toggle:hover {
+        background-color: #000000;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked + ul {
+        display: block;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        
+    }
+
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        padding:14px 20px;
+        font-size:17px; 
+    }
+
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position:static;
+        color: #ffffff;
+    }
+        
+    /* Hide menus on hover */
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+        
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        padding-bottom: 0px;
+        padding-right: 5px;
+    }
+
+    nav ul ul li a {
+        border-right: 3px solid white;
+    }
+
+    }
+
+    @media all and (max-width : 330px) {
+
+    nav ul li {
+        display:block;
+        width: 94%;
+    }
+
+}
+
 /* myst's admonitions */
 html {
     --pst-font-size-icon: 1.5rem;
