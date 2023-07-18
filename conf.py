@@ -147,6 +147,7 @@ NAVIGATION_LINKS = {
         ((
             ("/my-main-research-topics/", "Main topics"),
             ("/publications/", "Publications"),
+            ("/funding/", "Funding"),
         ), "Research"),
         ("/blog/", "Blog posts"),
     ),

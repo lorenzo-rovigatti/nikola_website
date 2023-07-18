@@ -9,4 +9,10 @@
 .. type: text
 -->
 
-Work in progress
+This is a very incomplete list of my favourite research topics. Hopefully I'll expand each topic into the future.
+
+* Computational soft matter
+* Self-assembly and self-assembly *vs.* phase separation
+* Polymer and microgel systems
+* DNA-based materials
+* Dipolar fluids

@@ -18,9 +18,3 @@
 My research revolves around soft condensed matter and self assembly. In particular, I am interested in the phase behaviour of systems composed by anisotropically interacting nano- and micro-sized particles as well as (bio)polymeric constructs.
 
 My weapons of choice are computer simulations and theoretical approaches devised for the investigation of complex fluids.
-
-* Computational soft matter
-* Self-assembling systems
-* Polymer and microgel systems
-* DNA-based materials
-* Dipolar fluids

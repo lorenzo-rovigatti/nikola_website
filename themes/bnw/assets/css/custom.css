@@ -88,7 +88,6 @@ code {
 }
 
 /* Dropdown menus */
-
 .toggle,
 [id^=drop] {
     display: none;
@@ -98,11 +97,13 @@ nav ul > li {
 }
 nav ul ul {
     display: none;
+    padding-top: 10px;
     padding-left: 0px;
     position: absolute;
-    top: 40px;
+    top: 30px;
     left: 0px;
     background-color: #6b5364;
+    text-align: center;
 }
 
 nav ul li:hover > ul {
@@ -112,10 +113,11 @@ nav ul li:hover > ul {
 nav ul ul li {
     display:list-item;
     padding-bottom: 10px;
+    text-align: center;
 }
 
-li > a:after { content:  ' ▼'; }
-li > a:only-child:after { content: ''; }
+nav ul li > a:after { content:  ' ▼'; }
+nav ul li > a:only-child:after { content: ''; }
 
 @media all and (max-width : 768px) {
 
@@ -142,7 +144,9 @@ li > a:only-child:after { content: ''; }
     }
 
     .toggle:hover {
-        background-color: #000000;
+        background: #fcf7f7;
+        text-shadow: none;
+        color: #304860;
     }
 
     /* Display Dropdown when clicked on Parent Lable */
@@ -200,8 +204,8 @@ li > a:only-child:after { content: ''; }
         padding-bottom: 0px;
         padding-right: 5px;
     }
-
-    nav ul ul li a {
+    
+    nav ul ul li a, nav ul ul li a:hover {
         border-right: 3px solid white;
     }
 
