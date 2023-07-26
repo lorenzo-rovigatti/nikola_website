@@ -9,9 +9,10 @@
 .. type: text
 -->
 
-I am very grateful for the research support I have received throughout my career. I have been part of the following projects, which greatly helped me to carry out my resarch:
+I am very grateful for the research support I have received throughout my career. I have been PI or co-PI of the following projects, which greatly helped me to carry out my research:
 
 * 2023-2025: PI of the PRIN 2022 project *Efficient Light Harvesting with Self-assembled Peptide Nanostructures (LANTERN)*, from MUR (244,437 €). 
+* 2022-2023: Co-PI of the [CECAM/CCP5 sandpit](https://www.ccp5.ac.uk/cecam-ccp5-sandpits/) project *Calculation of Surface Free Energy of Molecular and Coarse- Grained Systems* (24,000 £).
 * 2022-2023: PI of the ISCRA B project *Understanding associative polymer networks: from minimal models to realistic systems (AssoPoN)*, from CINECA (71,800 GPU hours).
 * 2018-2021: Grantee of the Rita Levi Montalcini fellowship *A coarse-grained description for the non-classical nucleation of minerals from aqueous solutions*, from MIUR (211,173.66 €).
 * 2016-2017: Grantee of the Marie Skłodowska-Curie Individual Fellowship *The dynamics and rheology of self-assembled empty liquids: from patchy toy models to anisotropic realistic systems (DELTAS)*, from the European Research Council (183,454.80 €). See [here](https://cordis.europa.eu/project/id/702298) for additional details.
