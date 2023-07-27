@@ -19,16 +19,28 @@ These DNA-based materials are not only unique in their programmability, but also
 
 A DNA nanostar is a multi-branched DNA structure that is synthesized using the principles of DNA self-assembly. The branches of these nanostars are formed from double-stranded DNA, and they all converge at a central point, creating a star-like structure. The tips of the branches can be functionalised (for instance with single-stranded sticky ends) to endow the nanostars with the ability of forming inter-star bonds. DNA nanostars can range from a simple three-arm structure to more complex multi-branched systems.
 
-The unique geometrical properties of DNA nanostars, combined with the programmability of DNA, can be exploited for a wide range of applications, from biosensing and drug delivery to nanoelectronics and plasmonics. Moreover, DNA nanostars' size, shape, and functionality can be precisely controlled, making them a versatile tool in nanotechnology.
+The unique geometrical properties of DNA nanostars, combined with the programmability of DNA, can be exploited for a wide range of applications, from biosensing and drug delivery to nanoelectronics and plasmonics. Moreover, DNA nanostars' size, shape, and functionality can be precisely controlled, making them a versatile tool in nanotechnology. However, their size does not usually extend beyond a few tens of nanometers, and are in general rather flexible nanostructures. As a result, the class of materials they can assemble into is somewhat limited.
 
-Use the buttons below to load configurations of different DNA nanostars in [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around. 
+Use the buttons below to load configurations of different DNA nanostars in [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around.
 
-<button onclick="load_oxview_conf('{{% rel_url dst=/configurations/tetramer.top %}}', '{{% rel_url dst=/configurations/tetramer.dat %}}', 'oxview-frame')">A tetramer</button>
-<button onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer.top %}}', '{{% rel_url dst=/configurations/trimer.dat %}}', 'oxview-frame')">A trimer</button>
-<button onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer_tetramer.top %}}', '{{% rel_url dst=/configurations/trimer_tetramer.dat %}}', 'oxview-frame')">A trimer bonded with a tetramer</button>
+<fieldset id="nanostars" class="oxview-buttons" disabled>
+    <button onclick="load_oxview_conf('{{% rel_url dst=/configurations/tetramer.top %}}', '{{% rel_url dst=/configurations/tetramer.dat %}}', 'oxview-nanostars')">A tetramer</button>
+    <button onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer.top %}}', '{{% rel_url dst=/configurations/trimer.dat %}}', 'oxview-nanostars')">A trimer</button>
+    <button onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer_tetramer.top %}}', '{{% rel_url dst=/configurations/trimer_tetramer.dat %}}', 'oxview-nanostars')">Two bonded nanostars</button>
+    <button onclick="load_oxview_conf('{{% rel_url dst=/configurations/nanostar_fluid.top %}}', '{{% rel_url dst=/configurations/nanostar_fluid.dat %}}', 'oxview-nanostars')">Many bonded nanostars</button>
+</fieldset>
 
-<iframe width="99%" height="500"  src="https://sulcgroup.github.io/oxdna-viewer/" id="oxview-frame"></iframe>
+<iframe width="100%" height="500"  src="https://sulcgroup.github.io/oxdna-viewer/" id="oxview-nanostars" onload="enable_fieldset('nanostars')"></iframe>
 
 ## DNA origami
 
-One of the main characters of this field of research is the idea of DNA origami, where long strands of DNA are folded into desired shapes using shorter staple strands, resulting in structures that can range from simple 2D shapes to more complex 3D configurations. This technique provides an incredible level of control over the size, shape, and function of the materials being produced.
+One of the main characters of this field of research is the idea of DNA origami, where long strands of DNA are folded into desired shapes using shorter staple strands, resulting in structures that can range from simple 2D shapes to more complex 3D configurations. This technique provides an incredible level of control over the size, shape, and function of the materials being produced. These structures are bigger than nanostars (up to hundreds of nanometers in the case of tubular origami), and their mechanical properties can be tuned very finely.
+
+Use the buttons below to load configurations of different DNA origami [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around.
+
+<fieldset id="origami" class="oxview-buttons" disabled>
+    <button onclick="load_oxview_conf('{{% rel_url dst=/configurations/smiley.top %}}', '{{% rel_url dst=/configurations/smiley.dat %}}', 'oxview-origami')">A smiley</button>
+    <button onclick="load_oxview_conf('{{% rel_url dst=/configurations/tetrahedron.top %}}', '{{% rel_url dst=/configurations/tetrahedron.dat %}}', 'oxview-origami')">A tetrahedron</button>
+</fieldset>
+
+<iframe width="100%" height="500"  src="https://sulcgroup.github.io/oxdna-viewer/" id="oxview-origami" onload="enable_fieldset('origami')"></iframe>

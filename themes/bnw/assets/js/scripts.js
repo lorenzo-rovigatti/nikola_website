@@ -35,18 +35,22 @@ function scroll_to_year_list() {
 
 /* load configurations into oxview */
 function load_oxview_conf(configuration, topology, frame_id) {
-    inbox_settings = ["Monomer", "Origin"]
-    let t_files = [configuration, topology];
-    let t_blobs = []
-    for (let i = 0; i < t_files.length; i++){
-        let f = new XMLHttpRequest();
-        f.open("GET", t_files[i], false);
-        f.onreadystatechange = function () {
-            t_blobs.push(new Blob([f.responseText], {type : 'text/plain'}));
-        }
-        f.send(null)
+  inbox_settings = ["Monomer", "Origin"]
+  let t_files = [configuration, topology];
+  let t_blobs = []
+  for(let i = 0; i < t_files.length; i++){
+    let f = new XMLHttpRequest();
+    f.open("GET", t_files[i], false);
+    f.onreadystatechange = function () {
+        t_blobs.push(new Blob([f.responseText], {type : 'text/plain'}));
     }
-    let t_ext = ["top", "dat"];
-    const frame = document.getElementById(frame_id);
-    frame.contentWindow.postMessage({message : 'iframe_drop', files: t_blobs, ext: t_ext, inbox_settings: inbox_settings}, "https://sulcgroup.github.io/oxdna-viewer/");
+    f.send(null)
+  }
+  let t_ext = ["top", "dat"];
+  const frame = document.getElementById(frame_id);
+  frame.contentWindow.postMessage({message : 'iframe_drop', files: t_blobs, ext: t_ext, inbox_settings: inbox_settings}, "https://sulcgroup.github.io/oxdna-viewer/");
+}
+
+function enable_fieldset(fieldset_id) {
+  document.getElementById(fieldset_id).disabled = false;
 }
