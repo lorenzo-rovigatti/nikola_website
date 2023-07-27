@@ -21,11 +21,12 @@ A DNA nanostar is a multi-branched DNA structure that is synthesized using the p
 
 The unique geometrical properties of DNA nanostars, combined with the programmability of DNA, can be exploited for a wide range of applications, from biosensing and drug delivery to nanoelectronics and plasmonics. Moreover, DNA nanostars' size, shape, and functionality can be precisely controlled, making them a versatile tool in nanotechnology.
 
-Use the buttons below to load configurations of different DNA nanostars in [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around.
+Use the buttons below to load configurations of different DNA nanostars in [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around. 
 
-<button onclick="load_oxview_conf('/configurations/tetramer.top', '/configurations/tetramer.dat', 'oxview-frame')">A tetramer</button>
-<button onclick="load_oxview_conf('/configurations/trimer.top', '/configurations/trimer.dat', 'oxview-frame')">A trimer</button>
-<button onclick="load_oxview_conf('/configurations/trimer_tetramer.top', '/configurations/trimer_tetramer.dat', 'oxview-frame')">A trimer bonded with a tetramer</button>
+<button onclick="load_oxview_conf({{% rel_url dst=/configurations/tetramer.top %}}, {{% rel_url dst=/configurations/tetramer.dat %}}, 'oxview-frame')">A tetramer</button>
+<button onclick="load_oxview_conf({{% rel_url dst=/configurations/trimer.top %}}, {{% rel_url dst=/configurations/trimer.dat %}}, 'oxview-frame')">A trimer</button>
+<button onclick="load_oxview_conf({{% rel_url dst=/configurations/trimer_tetramer.top %}}, {{% rel_url dst=/configurations/trimer_tetramer.dat %}}, 'oxview-frame')">A trimer bonded with a tetramer</button>
+
 <iframe width="99%" height="500"  src="https://sulcgroup.github.io/oxdna-viewer/" id="oxview-frame"></iframe>
 
 ## DNA origami
