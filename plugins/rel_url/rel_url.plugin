@@ -1,0 +1,12 @@
+[Core]
+Name = rel_url
+Module = rel_url
+
+[Nikola]
+PluginCategory = Shortcode
+
+[Documentation]
+Author = Lorenzo Rovigatti
+Version = 0.1
+Website = https://www.roma1.infn.it/~rovigatl/
+Description = Generate a relative URL
