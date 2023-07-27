@@ -25,6 +25,35 @@ code {
   line-height: 16px;
 }
 
+.oxview-buttons {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.oxview-buttons button {
+  background-color: #6b5364;
+  border: 2px solid #6b5364;
+  color: #fcf7f7;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 100%;
+}
+
+.oxview-buttons button:disabled {
+  opacity: 0.3;
+}
+
+.oxview-buttons button:hover {
+  background: #fcf7f7;
+  text-shadow: none;
+  color: #304860;
+}
+
 /* collapsible divs */
 .accordion > input[type="checkbox"] {
   position: absolute;
