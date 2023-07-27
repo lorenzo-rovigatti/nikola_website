@@ -14,6 +14,7 @@ var header = document.querySelector("header");
 var headroom  = new Headroom(header);
 headroom.init(); 
 
+/* used in the page displaying the list of publications */
 function scroll_to_year_list() {
   headroom.freeze()
   const element = document.getElementById("publication-year-list");
@@ -30,4 +31,22 @@ function scroll_to_year_list() {
       currPageXOffset = window.pageXOffset;
       currPageYOffset = window.pageYOffset;
   }, 50);
+}
+
+/* load configurations into oxview */
+function load_oxview_conf(configuration, topology, frame_id) {
+    inbox_settings = ["Monomer", "Origin"]
+    let t_files = [configuration, topology];
+    let t_blobs = []
+    for (let i = 0; i < t_files.length; i++){
+        let f = new XMLHttpRequest();
+        f.open("GET", t_files[i], false);
+        f.onreadystatechange = function () {
+            t_blobs.push(new Blob([f.responseText], {type : 'text/plain'}));
+        }
+        f.send(null)
+    }
+    let t_ext = ["top", "dat"];
+    const frame = document.getElementById(frame_id);
+    frame.contentWindow.postMessage({message : 'iframe_drop', files: t_blobs, ext: t_ext, inbox_settings: inbox_settings}, "https://sulcgroup.github.io/oxdna-viewer/");
 }
