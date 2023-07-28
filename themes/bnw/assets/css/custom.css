@@ -32,6 +32,10 @@ code {
   padding: 10px;
 }
 
+.oxview-buttons iframe {
+    margin-top: 10px;
+}
+
 .oxview-buttons button {
   background-color: #6b5364;
   border: 2px solid #6b5364;
