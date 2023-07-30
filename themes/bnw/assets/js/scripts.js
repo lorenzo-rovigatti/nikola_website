@@ -34,18 +34,18 @@ function scroll_to_year_list() {
 }
 
 /* load configurations into oxview */
-function load_oxview_conf(configuration, topology, frame_id) {
-  const frame = document.getElementById(frame_id);
+function load_oxview_conf(configuration, topology, frame_id, view_settings={"Box" : false, "Arrows" : true}) {
+  const frame = document.getElementById(frame_id, );
   const fieldset_id = frame.parentNode.id;
   
   set_buttons_status(fieldset_id, true); // disable the buttons
   frame.src += ''; // reload the iframe to refresh the oxview scene 
   
   frame.onload = function(event) {
-    inbox_settings = ["Monomer", "Origin"]
+    inbox_settings = ["Strand", "Origin"]
     let t_files = [configuration, topology];
     let t_blobs = []
-    for(let i = 0; i < t_files.length; i++){
+    for(let i = 0; i < t_files.length; i++) {
       let f = new XMLHttpRequest();
       f.open("GET", t_files[i], false);
       f.onreadystatechange = function () {
@@ -55,7 +55,7 @@ function load_oxview_conf(configuration, topology, frame_id) {
     }
     let t_ext = ["top", "dat"];
     
-    event.target.contentWindow.postMessage({message : 'iframe_drop', files: t_blobs, ext: t_ext, inbox_settings: inbox_settings}, "https://sulcgroup.github.io/oxdna-viewer/");
+    event.target.contentWindow.postMessage({message : 'iframe_drop', files: t_blobs, ext: t_ext, inbox_settings: inbox_settings, view_settings: view_settings}, "https://sulcgroup.github.io/oxdna-viewer/");
     
     set_buttons_status(fieldset_id, false); // enable the buttons
   };

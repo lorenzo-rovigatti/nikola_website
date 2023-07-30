@@ -24,23 +24,23 @@ The unique geometrical properties of DNA nanostars, combined with the programmab
 Use the buttons below to load configurations of different DNA nanostars in [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around.
 
 <fieldset id="nanostars" class="oxview-buttons">
-    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/tetramer.top %}}', '{{% rel_url dst=/configurations/tetramer.dat %}}', 'oxview-nanostars')">A tetramer</button>
-    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer.top %}}', '{{% rel_url dst=/configurations/trimer.dat %}}', 'oxview-nanostars')">A trimer</button>
-    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer_tetramer.top %}}', '{{% rel_url dst=/configurations/trimer_tetramer.dat %}}', 'oxview-nanostars')">Two bonded nanostars</button>
-    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/nanostar_fluid.top %}}', '{{% rel_url dst=/configurations/nanostar_fluid.dat %}}', 'oxview-nanostars')">Many bonded nanostars</button>
+    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/tetramer.top %}}', '{{% rel_url dst=/configurations/tetramer.dat %}}', 'oxview-nanostars', {'Arrows' : false})">A tetramer</button>
+    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer.top %}}', '{{% rel_url dst=/configurations/trimer.dat %}}', 'oxview-nanostars', {'Arrows' : false})">A trimer</button>
+    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/trimer_tetramer.top %}}', '{{% rel_url dst=/configurations/trimer_tetramer.dat %}}', 'oxview-nanostars', {'Arrows' : false})">Two bonded nanostars</button>
+    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/nanostar_fluid.top %}}', '{{% rel_url dst=/configurations/nanostar_fluid.dat %}}', 'oxview-nanostars', {'Box' : true, 'Arrows' : false})">Many bonded nanostars</button>
     <br/>
     <iframe width="100%" height="500" src="https://sulcgroup.github.io/oxdna-viewer/" id="oxview-nanostars" onload="set_buttons_status('nanostars', false)"></iframe>
 </fieldset>
 
 ## DNA origami
 
-One of the main characters of this field of research is the idea of DNA origami, where long strands of DNA are folded into desired shapes using shorter staple strands, resulting in structures that can range from simple 2D shapes to more complex 3D configurations. This technique provides an incredible level of control over the size, shape, and function of the materials being produced. These structures are bigger than nanostars (up to hundreds of nanometers in the case of tubular origami), and their mechanical properties can be tuned very finely.
+One of the main characters of this field of research is DNA origami, composed by long strands of DNA that are folded into desired shapes using shorter staple strands, resulting in structures that can range from simple 2D shapes to more complex 3D configurations. This technique provides an incredible level of control over the size, shape, and function of the materials being produced. These structures are bigger than nanostars (up to hundreds of nanometers in the case of tubular origami), and their mechanical properties can be tuned very finely.
 
 Use the buttons below to load configurations of different DNA origami [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around.
 
 <fieldset id="origami" class="oxview-buttons">
-    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/smiley.top %}}', '{{% rel_url dst=/configurations/smiley.dat %}}', 'oxview-origami')">A smiley</button>
-    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/tetrahedron.top %}}', '{{% rel_url dst=/configurations/tetrahedron.dat %}}', 'oxview-origami')">A tetrahedron</button>
+    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/smiley.top %}}', '{{% rel_url dst=/configurations/smiley.dat %}}', 'oxview-origami', {'Arrows' : false})">A smiley</button>
+    <button disabled onclick="load_oxview_conf('{{% rel_url dst=/configurations/tetrahedron.top %}}', '{{% rel_url dst=/configurations/tetrahedron.dat %}}', 'oxview-origami', {'Arrows' : false})">A tetrahedron</button>
     <iframe disabled width="100%" height="500"  src="https://sulcgroup.github.io/oxdna-viewer/" id="oxview-origami" onload="set_buttons_status('origami', false)"></iframe>
 </fieldset>
 
