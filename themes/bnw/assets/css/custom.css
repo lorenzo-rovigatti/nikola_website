@@ -21,6 +21,11 @@ code {
   background-color: transparent;
 }
 
+video {
+  display: block;
+  margin: 0 auto;
+}
+
 .codetable tr {
   line-height: 16px;
 }
