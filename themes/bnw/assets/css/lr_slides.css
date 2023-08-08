@@ -1,0 +1,157 @@
+.reveal .spacing-1-top {
+    margin-top: 1em;
+}
+
+.reveal .spacing-1-bottom {
+    margin-bottom: 1em;
+}
+
+.reveal .footer {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    font-size: 0.5em;
+    text-align: center;
+}
+
+.reveal .checkbox-list { 
+    list-style-type: none; 
+}
+
+.reveal .checkbox-list li::before { 
+    content: "\2610"; margin-right: 0.5em;     
+}
+
+.reveal .block-title {
+    border: 5px solid #586e75;
+    margin: auto;
+    padding: 5px 0 5px 0;
+    margin: 5px 0 5px 0;
+    background-color: #abb;
+    font-size: 120%;
+    color: #fdf6e3;
+}
+
+.reveal ul {
+    margin: 5px;
+}
+
+.reveal p {
+    text-align: justify;
+}
+
+.reveal table {
+    border: 1px solid black;
+}
+
+.reveal th {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.reveal td {
+    border: 1px solid black;
+}
+
+.reveal blockquote{
+  margin:10px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:0.1em 20px 0.1em 35px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background: #EDEDED77;
+}
+
+.reveal blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#78C0A8;
+  font-size:2em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.reveal blockquote::after{
+  content: '';
+}
+
+.reveal .hljs {
+    font-size: 130%;
+    line-height: 1.3em;
+}
+
+.reveal .flex-container {
+    display: flex;
+}
+
+.reveal .flex-col {
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+code {
+    background: rgba(0,0,0,0.1);
+}
+
+.warning {
+    background: #FFCCCB;
+    background-image: url(./FIGURE/warning.webp);
+    background-position: 5px 3px;
+    background-repeat: no-repeat;
+    border: 1px solid red;
+    padding: 10px 10px 10px 45px;
+    margin-top: 10px;
+}
+
+.focus {
+    background: #CCFFCB;
+    background-image: url(./FIGURE/lampadina.webp);
+    background-position: 5px 3px;
+    background-repeat: no-repeat;
+    border: 1px solid green;
+    padding: 10px 10px 10px 45px;
+    margin-top: 10px;
+}
+
+.arrow {
+  float: left;
+  transform: rotate(270deg);
+}
+
+.line {
+  margin-top: 14px;
+  background: linear-gradient(90deg, #9198e5, #e66465);
+  height: 10px;
+  float: left;
+}
+
+.point {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #e66465;
+  float: right;
+}
+
+.show-spaces {
+  substrings: replace(" " "\t", "␣" "→→→→") prepend("\n", "↵");
+}
+
+.reveal pre code {
+    max-height: 600px;
+}
+
+.reveal pre table {
+    border: 0;
+}
+
+.reveal .all-width {
+    width: 100%;
+}
+ 

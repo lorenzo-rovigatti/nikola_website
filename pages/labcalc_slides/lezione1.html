@@ -1,0 +1,654 @@
+<!--
+.. title: Lezione 1
+.. slug: labcalc_lezione1
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+# Benvenuti!
+                        
+<div style="text-align: center">
+<canvas id="canvas" style="margin:auto"></canvas>
+</div>
+
+---
+
+# Laboratorio di Calcolo A.A. 2022/2023
+
+
+## Canale A-De
+
+### Lorenzo Rovigatti / Riccardo Mazzarello
+
+---
+
+# Canale giusto?
+
+* Riservato agli studenti con cognome A-De (per ora!)
+* I cambi canale sono possibili ma accettati solo per **validi motivi**
+* La richiesta va fatta alla segreteria didattica (Sonia Riosa): sonia.riosa@uniroma1.it
+
+---
+
+# Organizzazione
+
+* Parte del corso si svolgerà in aula
+* Parte del corso si svolgerà in laboratorio, dove **voi** vi eserciterete
+* Metà classe si eserciterà il mercoledì, metà il giovedì
+* Svolgerete le esercitazioni in gruppi la cui composizione verrà decisa **da noi**
+* Se tutto va come deve il corso terminerà entro Natale
+
+---
+
+# Orario
+
+## Lezioni frontali in Aula 3
+
+* Giovedì 14-16
+* Venerdì 10-11
+
+## Esercitazioni
+
+* Turno **A**: Mercoledì 14-17 in laboratorio (Aula 217-218 del II piano)
+* Turno **B**: Giovedì 9-12 in Aula 17 (Laboratori "Bruno Pontecorvo", Via Tiburtina 205)
+
+<div class="focus">
+Le esercitazioni cominceranno il 5 Ottobre
+</div>
+
+---
+
+# Laboratori di Via Tiburtina
+
+<img src="/images/labcalc_slides/via_tiburtina.png" height=500>
+
+---
+
+# Docenti
+
+* Docente in aula + esercitazione Mercoledì: Prof. Lorenzo Rovigatti 
+    * lorenzo.rovigatti@uniroma1.it
+    * Ricevimento (previa prenotazione): Martedì 11-12
+* Esercitazione Giovedì: Prof. Riccardo Mazzarello
+    * riccardo.mazzarello@uniroma1.it
+    * Ricevimento (previa prenotazione): Giovedì 12-13 (dopo l'esercitazione)
+    
+---
+
+# Come scrivere un'email
+
+<table>
+    <tr>
+        <th>Da</th>
+        <td>pincopallo.42839183@studenti.uniroma1.it</td>
+    </tr>
+    
+    <tr>
+        <th>A</th>
+        <td>lorenzo.rovigatti@uniroma1.it</td>
+    </tr>
+    
+    <tr>
+        <th>Oggetto</th>
+        <td class="highlight-red fragment">LABCALC: richiesta ricevimento</td>
+    </tr>
+    
+    <tr>
+        <th>Testo</th>
+        <td>
+            <p>Caro [Gentile] professore,</p>
+            
+            <p>le scrivo per chiederle delucidazioni riguardo a [...] lei sarebbe disponibile il giorno [...]</p>
+            
+            <p>saluti [cordiali saluti],</p>
+            
+            <p>Pinco Pallo</p>
+        </td>
+    </tr>
+</table>
+
+---
+
+# Informazioni pratiche - 1
+
+## Il corso
+
+Lo scopo del corso è fornire nozioni di base 
+
+* di programmazione (in linguaggio C e Python)
+* di gestione di un computer in ambiente Linux
+
+Al II anno questi concetti verranno applicati alla risoluzione di problemi scientifici.
+
+## Libro di testo
+
+Il corso è basato sul libro **"Programmazione scientifica"**, L. Barone, E. Marinari, G. Organtini, F. Ricci-Tersenghi, Pearson Education
+
+---
+
+# Informazioni pratiche - 2
+
+## Strumenti necessari
+
+* Un computer
+* Un compilatore C
+* Python 3
+* Un editor di testo
+* Un terminale Linux
+
+## Come esercitarsi a casa
+
+* Avete **Windows**: usate la macchina virtuale del corso (vedi sito del corso)
+* Avete un portatile **Apple**: potete facilmente installare il necessario, oppure usare la macchina virtuale
+* Avete **Linux** installato: probabilmente avete già tutto il necessario
+
+---
+
+# Informazioni pratiche - 3
+
+## Modalità di esame
+
+* L’esame consiste in una **prova pratica di programmazione** della durata di 3 ore, nella quale viene richiesto di creare un programma che risolva un semplice problema fisico o matematico.
+* Potrete svolgere una esercitazione valutata che dà diritto a un bonus di punti utilizzabile per uno dei due appelli della sessione invernale (a scelta dello studente).
+
+### Criteri del bonus:
+
+* assente o $< 18$: **+0 punti**
+* $18 \leq$ voto $< 24$ : **+1 punto**
+* $24 \leq$ voto $< 26$ : **+2 punti**
+* $26 \leq$ voto $< 28$ : **+3 punti**
+* $28 \leq$ voto $< 30$ : **+4 punti**
+* voto $\geq 32$: si può verbalizzare direttamente il voto
+
+---
+
+# Informazioni pratiche - 4
+
+## Date di appello (aka date degli esami)
+
+* Sessione invernale:
+    * 19-20 Gennaio 2023
+    * 2-3 Febbraio 2023
+* Sessione estiva:
+    * 23 Giugno 2023
+    * 07 Luglio 2023
+* Sessione autunnale:
+    * 14 Settembre 2023
+* Appelli straordinari di Maggio e Novembre (riservati a studenti fuoricorso, lavoratori, con figli a carico o diversamente abili): da concordare
+
+---
+
+# Informazioni pratiche - 5
+
+Tutte queste informazioni (più le slide, il programma svolto, i testi delle esercitazioni e degli esami degli anni passati e molto altro) si trovano sul sito del corso: <a href="https://elearning.uniroma1.it/course/view.php?id=7743">https://elearning.uniroma1.it/course/view.php?id=7743</a>
+
+<img src="/images/labcalc_slides/qr_code.png" height=300>
+
+<div class="fragment focus">La chiave per iscriversi è <b>LabCalc</b> (attenzione alle maiuscole). Non dimenticatevi di compilare il questionario che trovate linkato in cima alla pagina!</div>
+
+---
+
+## Come ci si prepara all'esame?
+
+Il corso è concettualmente più semplice di Analisi e Geometria, ma **non va sottovalutato** perché, essendo un corso applicato, richiede **costanza e pratica**.
+
+1. Venite in laboratorio
+2. Esercitatevi **tutte le settimane**, specialmente se non avete conoscenze di base di programmazione
+3. Sfruttate l'orario di ricevimento
+
+---
+
+# Cosa significa programmare?
+
+1. Formalizzare e quindi risolvere un problema riducendolo a una serie di problemi più semplici
+2. Tradurre la formalizzazione *algoritmica* in un linguaggio di programmazione comprensibile da un calcolatore
+
+<div class="focus">
+Questi due passi sono <strong>distinti</strong> e, in generale, <strong>indipendenti</strong>
+</div>
+
+<div class="fragment spacing-1-top">
+
+# Perché programmare?
+
+Ormai qualunque ambito scientifico richiede conoscenze di programmazione:
+
+* Analisi di grandi moli di dati
+* Simulazioni numeriche
+* Risoluzione di equazioni non risolvibili analiticamente
+
+</div>
+
+---
+
+# Esempi: onde gravitazionali
+
+<div class="r-stack" style="float:left">
+    <img class="fragment fade-out" data-fragment-index="0" src="/images/labcalc_slides/gw_sim.jpg" height=500>
+    <img class="fragment current-visible" data-fragment-index="0" src="/images/labcalc_slides/gw_1.png" height=500>
+    
+    <div class="fragment">
+        <img src="/images/labcalc_slides/gw_2.png" height=400 style="float: left">    
+        <video class="fragment" width="280" style="float: right; margin-left:100px" controls>
+            <source src="/images/labcalc_slides/gw_movie.webm">
+        </video>
+    </div>
+</div>
+
+---
+
+# Esempi: phase-change materials
+
+* Transizioni veloci e reversibili tra frasi disordinata e cristallina (ordinata)
+* Le simulazioni permettono di capire &amp; predirne il comportamento
+
+<img src="/images/labcalc_slides/pcm.png" width="700">
+    
+<br/>
+Tantissime possibili applicazioni, ad esempio
+<br/>
+
+* memorie non volatili (Intel Optane)
+* dischi ottici Blu-ray riscrivibili
+* computazione neuromorfica
+
+---
+
+# Esempi: nanotecnologia basata su DNA
+
+<iframe width="840" height="483" src="https://www.youtube.com/embed/W8fw1V_iwg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+# Prima regola aurea del corso
+
+<div class="focus fragment">
+<h2>I computer si attengono strettamente ai comandi che date loro</h2></div>
+
+<blockquote class="fragment">
+Vai all'alimentari e compra una bottiglia di latte, e se ci sono le uova prendine una dozzina.
+</blockquote>
+
+<div class="fragment">
+
+* Voi tornereste (probabilmente) con una bottiglia di latte e 12 uova
+* Un computer tornerebbe con 12 bottiglie di latte
+</div>
+
+---
+
+# Lingue e linguaggi di programmazione
+
+* Le lingue umane sono ambigue $\to$ non vanno bene per comunicare con le macchine
+* I computer sono macchine semplici con cui si comunica tramite operazione logico-matematiche
+
+Da qui la necessità di risolvere i problemi in maniera *algoritmica* e di tradurre queste risoluzioni in maniera da rimuovere **ogni possibile ambiguità**
+
+---
+
+#  Un esempio di problema
+
+Qual è il valore più grande nella seguente sequenza numerica?
+
+<div style="margin: 20px; word-spacing: 0.3em; font-size: 140%">
+10 12 3 <span style="color: red">27</span> 4 18 11 22 8
+</div>
+
+1. Bisogna **sempre** cominciare con il **capire il problema**
+2. Poi si può riflettere su **come risolvere il problema**
+3. Infine si traduce la soluzione in una forma che sia **comprensibile** ad un computer
+
+---
+
+# Un esempio di soluzione algoritmica
+
+<div style="margin: 20px; word-spacing: 0.3em; font-size: 140%">
+10 12 3 <span style="color: red">27</span> 4 18 11 22 8
+</div>
+
+```text
+più_grande = -infinito
+
+per ogni numero nella sequenza:
+    se numero è maggiore di più_grande:
+        più_grande = numero
+        
+stampa più_grande
+```
+
+---
+
+# Traduzione in Python
+
+```python [1|2|4-6|8]
+sequence = [10, 12, 3, 27, 4, 18, 11, 22, 8]
+largest_number = -float('inf')
+
+for number in sequence:
+    if number > largest_number:
+        largest_number = number
+        
+print("Il numero più grande della sequenza è", largest_number)
+```
+
+che, se **eseguito**, dà
+
+```bash
+$ python3 codice.py
+Il numero più grande della sequenza è 27
+```
+
+---
+
+# Traduzione in C
+
+```c []
+#include <stdio.h>
+#include <limits.h>
+
+int main() {
+    int sequence[8] = {10, 12, 3, 4, 18, 11, 22, 8};
+    int i, largest_number = INT_MIN;
+    
+    for(i = 0; i < 8; i++) {
+        if(sequence[i] > largest_number) {
+            largest_number = sequence[i];
+        }
+    }
+    printf("Il numero più grande della sequenza è %d\n", largest_number);
+
+    return 0;
+}
+```
+
+che, se **compilato ed eseguito**, dà
+
+```bash
+$ gcc -o codice codice.c
+$ ./codice
+Il numero più grande della sequenza è 27
+```
+
+---
+
+# Esercizi per casa
+
+Trovate una soluzione ai seguenti problemi in maniera **algoritmica**:
+
+1. Dati tre numeri (positivi e/o negativi), ordinarli dal più grande al più piccolo
+2. Dire per ciascun valore contenuto in una lista di numeri se questo è pari o dispari
+3. Ricerca lineare: trovare un numero specifico all'interno di una lista
+
+**Nota Bene:** Operazioni e confronti si vanno fra non più di **due** operandi alla volta!
+
+**La prova del nove:** "testate" le vostre soluzioni con colleghi/fratelli/amici/fidanzati compiacenti: riescono a risolvere i problemi utilizzando il vostro algoritmo?
+
+---
+
+# Cosa è un computer?
+
+Definiamo computer (o *elaboratore*) una macchina che
+
+* Acquisice dati in ingresso (*input*) tramite
+    * Mouse e tastiera
+    * Un'interfaccia di rete
+    * Una webcam
+    * ...
+* Immagazzina i dati nella memoria
+* Elabora i dati
+* Fornisce il risultato dell'elaborazione (*output*)
+    * A schermo
+    * Salvandoli in memoria
+    * Ad una stampante
+    * ...
+
+<div class="fragment focus">
+Con questa definizione  smartphone e tablet sono (ovviamente) degli elaboratori!
+</div>
+
+---
+
+# Come funziona un computer?
+
+I computer attuali utilizzano segnali elettrici per rappresentare 
+
+* i dati su cui operano (musica, testo, numeri)
+* le operazioni che svolgono (operazioni aritmetiche, manipolazione di immagini, rendering 3D)
+
+In un computer *ogni* informazione è rappresentata da una sequenza di zeri e uni (codice binario), poiché questi si possono facilmente associare allo stato di componenti elettriche. Ad esempio:
+
+|1|0|
+|--|--|
+|Nel filo passa corrente| Nel filo non passa corrente|
+|Il condensatore è carico|Il condensatore è scarico|
+
+---
+
+# I bit
+
+* Il singolo elemento a cui può essere associato lo stato 0 o 1 è detto **bit** (*binary digit*)
+* Consideriamo un sistema composto da $N$ elementi indipendenti: ognuno rappresenta un bit, e quindi il sistema rappresenta $N$ bit e può trovarsi in $2^N$ stati diversi. Ad esempio:
+    * 1 bit $\to$ 2 stati: 0 e 1
+    * 2 bit $\to$ 4 stati: 00, 01, 10, 11
+    * 3 bit $\to$ 8 stati: 000, 001, 010, 100, 011, 101, 110, 111
+    * 4 bit $\to$ 16 stati: 0000, 0001, 0010, 0100, 1000, 0011, ..., 1111
+    * *ecc*
+
+<div class="focus fragment"><h2>
+In un computer tutto è rappresentato da numeri
+</h2></div>
+
+---
+
+# OK ma come si rappresentano i numeri?
+
+Definiamo *cifre* i simboli utilizzati in una rappresentazione:
+
+<ol>
+    <li>
+    Un numero è la somma e/o differenza dei simboli che lo compongono $\to$ sistema additivo o additivo/sottrattivo
+        <ul>
+            <li>Esempio: numeri romani: X = 10, XX = 20, XC = 90</li>
+        </ul>
+    </li>
+    
+    <li class="fragment">
+    Le cifre che compongono un numero hanno un valore che dipende dalla loro posizione $\to$ sistema posizionale
+        <ul>
+            <li>Esempio: sistema decimale: $1234 = 1 \cdot 10^3 + 2 \cdot 10^2 + 3 \cdot 10^1 + 4 \cdot 10^0$</li>
+        </ul>
+    </li>
+</ol>
+    
+---
+
+# Sistemi posizionali: generalizzazione
+
+* La base $b$ è il numero di simboli (cifre) usato per rappresentare i numeri. Nel sistema decimale $b = 10$.
+* Un numero $a$ composto da $M$ cifre $\lbrace c_i \rbrace$ si esprime come
+$$
+a = \sum_{i = 0}^{M - 1} c_i b^i = c_0 b^0 + c_1 b^1 + \ldots + c_{M-1}b^{M-1}
+$$
+* Le operazioni fra interi sfruttano la proprietà distributiva di somma e moltiplicazione:
+<p>
+\begin{align*}
+\color{red}{123} + \color{blue}{45} &amp; = \color{red}{1} \cdot 10^2 + \color{red}{2}\cdot 10^1 + \color{red}{3}\cdot 10^0 + \color{blue}{4} \cdot 10^1 + \color{blue}{5} \cdot 10^0 = \\
+&amp; = \color{red}{1} \cdot 10^2 + (\color{red}{2} + \color{blue}{4})\cdot 10^1 + (\color{red}{3} + \color{blue}{5})\cdot 10^0 = 168
+\end{align*}
+</p>
+
+---
+
+# Il sistema binario
+
+> Al mondo ci sono **10** tipi di persone: quelle che capiscono la rappresentazione binaria e quelle che non la capiscono.
+
+* Nel sistema binario $b = 2$
+* Le cifre sono **0** e **1**
+* Contiamo in binario:
+$0, 1, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010, 1100, 1101, 1110, 1111, \ldots$
+* Sfruttiamo la formula vista prima. Dato un numero $a$ in binario
+$$
+a = \sum_{i = 0}^{M - 1} c_i s^i = c_0 2^0 + c_1 2^1 + \ldots c_{M-1}b^{M-1}
+$$
+
+<div class="fragment focus">
+D'ora in poi usiamo i pedici per indicare la base di un numero: $1100_2 = 12_{10}$.
+</div>
+
+---
+
+# Una precisazione
+
+Quanti gattini ci sono in questa immagine?
+
+<img src="/images/labcalc_slides/four_kittens.jpg" height=350>
+
+<div class="fragment warning">Un numero è <strong>indipendente</strong> dalla rappresentazione che usate. Chiamate quel numero $4_{10}$, $100_2$, IV, ma sempre quattro è!</div>
+
+---
+
+# Conversioni
+
+## Binario $\to$ decimale
+
+Usiamo la rappresentazione in potenze:
+
+<p>
+\begin{align*}
+1101_2 &amp; = 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = \\
+&amp; = 8_{10} + 4_{10} + 0_{10} + 1_{10} \\
+&amp; = 13_{10}
+\end{align*}
+</p>
+
+---
+
+# Conversioni
+
+## Decimale $\to$ binario
+
+Dato $N_i$, definiamo 
+
+<p>\begin{align*}
+N_{i+1} &amp; \equiv \left\lfloor \frac{N_i}{b} \right\rfloor\\
+r_i &amp; \equiv N_i - \left\lfloor \frac{N_i}{b} \right\rfloor b = N_i - N_{i+1}b
+\end{align*}</p>
+
+quindi
+
+$$
+N_i = r_i + N_{i+1} b = r_i + b (r_{i+1} + N_{i+2}b) = r_i + b r_{i+1} + b^2 r_{i+2} + b^3 N_{i+3} = \ldots
+$$
+
+Quindi per un numero generico $N_0$, se $k$ è l'indice per cui $N_k < b$
+
+$$
+N_0 = b^0 \cdot r_0 + b^1 \cdot r_1 + b^2 \cdot r_2 + \ldots + b^k \cdot r_k
+$$
+
+---
+
+# Conversioni
+
+## Decimale $\to$ binario
+
+In poche parole, dividiamo ripetutamente il numero da convertire per $2$ e usiamo i resti nella formula precedente. Esempio, $N_0 = 10_{10}$:
+
+<p>\begin{align*}
+N_0 = 10_{10}, r_0 &amp; = \textrm{resto di } (N_0/2) = 0\\
+N_1 = \left\lfloor \frac{10_{10}}{2} \right\rfloor = 5_{10}, r_1 &amp; = \textrm{resto di } (N_1/2) = 1\\
+N_2 = \left\lfloor \frac{5_{10}}{2} \right\rfloor = 2_{10}, r_2 &amp; = \textrm{resto di } (N_2/2) = 0\\
+N_3 = \left\lfloor \frac{2_{10}}{2} \right\rfloor = 1_{10}, r_3 &amp; = \textrm{resto di } (N_3/2) = 1\\
+\end{align*}</p>
+
+quindi $10_{10} = 0 \cdot b^0 + 1 \cdot b^1 + 0 \cdot b^2 + 1 \cdot b^3 = 1010_2$.
+
+**Nota Bene:** le cifre binarie si trovano ordinando i resti da destra a sinistra
+
+---
+
+# Somme e sottrazioni
+
+Si fanno in colonna come per la base 10, applicando le stesse "regole". Per la somma:
+
+* $0 + 0 = 0$
+* $1 + 0 = 0 + 1 = 1$
+* $1 + 1 = \color{red}{1}0$, quindi **0** con riporto di **1**
+
+Facciamo un esempio, $11011 + 00101$
+
+<img src="/images/labcalc_slides/somma.png" height=200>
+
+Effettivamente $11011_2 = 27_{10}$, $00101_2 = 5_{10}$ e $100000_2 = 32_{10}$.
+
+---
+
+# Somme e sottrazioni
+
+Per la sottrazione:
+
+* $0 - 0 = 0$
+* $1 - 0 = 1$
+* $1 - 1 = 0$
+* $\color{red}{^1}0 - 1 = 1$
+
+Facciamo un esempio, $1100 - 0011$
+
+<img src="/images/labcalc_slides/sottrazione.png" height=200>
+
+Effettivamente $1100_2 = 12_{10}$, $0011_2 = 3_{10}$ e $1001_2 = 9_{10}$.
+
+---
+
+# Notazione esadecimale - teoria
+
+* La notazione binaria è "ingombrante": il numero di cifre è $2-3$ volte maggiore rispetto alla base 10
+* Se scegliamo una base $B = b^m$ le regole di conversioni tra le basi sono semplici.
+
+Uno stesso numero si può esprimere nelle due basi come:
+
+$$
+e_0 B^0 + e_1 B^1 + \ldots e_j B^j = d_0 b^0 + d_1 b^1 + \ldots d_k b^k
+$$
+
+se dividiamo a sinistra e a destra per $B$ otteniamo come resti:
+
+$$
+e_0 = d_0 b^0 + d_1 b^1 + \ldots + d_{m-1} b^{m-1}
+$$
+
+Applicando divisioni successive si trova la relazione tra la cifra $i$-esima in base $B$ e $m$ cifre in base $b$:
+
+$$
+e_i = d_{im} b^{im} + d_{im + 1} b^{im + 1} + \ldots + d_{im + m-1} b^{im + m-1}
+$$
+
+---
+
+# Notazione esadecimale - pratica
+
+* Se scegliamo $m = 4$, $B = 2^4 = 16_{10}$ $\to$ rappresentazione *esadecimale*
+* Le cifre che si usano sono $0 1 2 3 4 5 6 7 8 9 A B C D E F$
+* Per distinguere i numeri esadecimali da quelli decimali (oltre a usare il pedice 16 o 10) si usa la convenzione di usare 0x come prefisso:
+    * 0xFDA ($ = 4058_{10}$) o 0x123 ($ = 291_{10}$) sono numeri esadecimali
+* Le conversioni sono semplici: una cifra esadecimale $\leftrightarrow$ quattro cifre binarie:
+    * $4F_{16} = 0100 \\, 1111_2$
+    * $0100 \\, 1110 \\, 0000 \\, 0011_2 = 4E03_{16}$
+* Somma e sottrazione usano le stesse regole (riporti, *ecc*)
+
+---
+
+# Qualche esercizio
+
+* $11000101_2 - 110111_2$
+* $1F_{16} + 35_{16}$
+* $E3_{16} - 79_{16}$
+* $A0_{16} = x_2 = y_{10}$
+* $159_{10} = x_2 = y_{16}$

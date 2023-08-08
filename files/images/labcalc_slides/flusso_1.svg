@@ -1,0 +1,1862 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="flusso.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1474186"
+     inkscape:cx="69.285959"
+     inkscape:cy="514.63344"
+     inkscape:window-width="1920"
+     inkscape:window-height="1109"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path61651" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path61654" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-9-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-4-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1-8-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0-8-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1-8-2-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0-8-2-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-5-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-6-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-5-8-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-6-5-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-1-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-0-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0-3-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8-1-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-1-5-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-0-9-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0-3-7-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8-1-5-4" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="opacity:1;fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path31"
+       cx="23.881161"
+       cy="22.202799"
+       rx="13.659321"
+       ry="5.0881104"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/ellisse.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468"
+       width="25.030857"
+       height="11.618413"
+       x="11.594913"
+       y="37.928169"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/rettangolo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.52386;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1572"
+       width="14.547028"
+       height="14.511059"
+       x="64.36055"
+       y="35.527428"
+       transform="matrix(0.84185251,0.53970766,-0.83888911,0.54430236,0,0)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/rombo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1572-5"
+       width="19.82523"
+       height="19.765572"
+       x="64.265686"
+       y="-46.606613"
+       transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <g
+       id="g60099"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0.75173134,0,0,0.75347131,75.13267,-6.1006277)"
+       style="stroke-width:1.32873">
+      <ellipse
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.664363;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path31-3"
+         cx="138.78036"
+         cy="19.103853"
+         rx="19.192001"
+         ry="6.3815894"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/ellisse.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.81944px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.351558"
+         x="128.5278"
+         y="22.071594"
+         id="text3624"><tspan
+           sodipodi:role="line"
+           id="tspan3622"
+           style="font-size:8.81944px;stroke-width:0.351558"
+           x="128.5278"
+           y="22.071594">Inizio</tspan></text>
+    </g>
+    <g
+       id="g61577"
+       transform="matrix(0.75173134,0,0,0.75347131,74.768149,-6.1006277)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       style="stroke-width:1.32873">
+      <ellipse
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.664363;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path31-3-1"
+         cx="139.26527"
+         cy="90.707275"
+         rx="19.192001"
+         ry="6.3815894"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/ellisse.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.81944px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.351558"
+         x="131.51741"
+         y="93.675018"
+         id="text3624-2"><tspan
+           sodipodi:role="line"
+           id="tspan3622-7"
+           style="font-size:8.81944px;stroke-width:0.351558"
+           x="131.51741"
+           y="93.675018">Fine</tspan></text>
+    </g>
+    <g
+       id="g52126"
+       transform="matrix(0.75173134,0,0,0.75347131,74.423204,-6.8980515)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       style="stroke-width:1.32873">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.664361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6"
+         width="26.208309"
+         height="10.785468"
+         x="126.61999"
+         y="33.368042"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/rettangolo.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.351558"
+         x="130.31824"
+         y="37.744774"
+         id="text11485"><tspan
+           sodipodi:role="line"
+           id="tspan11483"
+           style="font-size:5.29167px;stroke-width:0.351558"
+           x="130.31824"
+           y="37.744774">Leggi T<tspan
+   style="font-size:65%;baseline-shift:sub;stroke-width:0.351558"
+   id="tspan59281">f</tspan></tspan><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.351558"
+           x="130.31824"
+           y="42.242695"
+           id="tspan15381"> in input</tspan></text>
+    </g>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-2"
+       width="26.208309"
+       height="10.785468"
+       x="116.56212"
+       y="37.198444"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="117.49284"
+       y="44.371815"
+       id="text11485-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"><tspan
+         sodipodi:role="line"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="117.49284"
+         y="44.371815"
+         id="tspan15381-7">istruzioni 2</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6"
+       width="26.208309"
+       height="10.785468"
+       x="51.369579"
+       y="37.198444"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-0"
+       width="34.616131"
+       height="10.785468"
+       x="78.800285"
+       y="65.309647"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="52.514606"
+       y="44.371815"
+       id="text11485-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"><tspan
+         sodipodi:role="line"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="52.514606"
+         y="44.371815"
+         id="tspan80130">istruzioni 1</tspan></text>
+    <g
+       id="g52120"
+       transform="matrix(0.75173134,0,0,0.75347131,74.165439,-5.7019158)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       style="stroke-width:1.32873">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.664361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-7"
+         width="26.208309"
+         height="10.785468"
+         x="126.96288"
+         y="49.131657"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/rettangolo.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.351558"
+         x="129.69275"
+         y="54.045494"
+         id="text38376"><tspan
+           sodipodi:role="line"
+           id="tspan38374"
+           style="font-size:5.29167px;stroke-width:0.351558"
+           x="129.69275"
+           y="54.045494">Converti</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.351558"
+           x="129.69275"
+           y="58.543415"
+           id="tspan38378">in Celsius</tspan></text>
+    </g>
+    <g
+       id="g60115"
+       transform="matrix(0.75173134,0,0,0.75347131,75.13267,-5.3032039)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       style="stroke-width:1.32873">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.664361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-7-3"
+         width="26.208309"
+         height="10.785468"
+         x="125.67621"
+         y="66.101547"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/rettangolo.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.351558"
+         x="127.80071"
+         y="72.708717"
+         id="text38376-5"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.351558"
+           x="127.80071"
+           y="72.708717"
+           id="tspan38378-2">Stampa T<tspan
+   style="font-size:65%;baseline-shift:sub;stroke-width:0.351558"
+   id="tspan55391">c</tspan></tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-8)"
+       d="m 179.14772,52.778581 v 4.263061"
+       id="path61643-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 179.14772,13.323004 v 4.263061"
+       id="path61643"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20)"
+       d="m 96.108354,2.3743833 v 5.65789"
+       id="path61643-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-8)"
+       d="m 96.108354,58.850879 v 5.65789"
+       id="path61643-3-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-6)"
+       d="m 179.14772,26.593518 v 4.263061"
+       id="path61643-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-2)"
+       d="m 179.14772,39.54173 v 4.263061"
+       id="path61643-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_conversione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="82.116135"
+       y="19.854059"
+       id="text69833"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"><tspan
+         sodipodi:role="line"
+         id="tspan69831"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="82.116135"
+         y="19.854059">condizione</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 79.004475,18.467739 H 64.164882 v 18.25352"
+       id="path82594"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-9)"
+       d="m 113.31521,18.408469 h 14.83959 v 18.25352"
+       id="path82594-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 64.164684,47.882789 v 11.02077 h 64.016746 v -10.9876"
+       id="path82892"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-8-5)"
+       d="m 149.37953,173.74034 v 2.67692"
+       id="path61643-3-5-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 121.13125,169.92079 v 3.83789 h 56.61098 v -3.82634"
+       id="path82892-1"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <g
+       id="g172140"
+       transform="translate(-3.4817092,-14.311219)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-8-5-8)"
+         d="m 53.454641,220.4982 v 3.53025"
+         id="path61643-3-5-1-7"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 25.206361,216.67865 v 3.83789 H 81.81734 v -3.82634"
+         id="path82892-1-4"
+         sodipodi:nodetypes="cccc"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:8.81944px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="55.311859"
+       y="180.54338"
+       id="text84979"><tspan
+         sodipodi:role="line"
+         id="tspan84977"
+         style="stroke-width:0.264583"
+         x="55.311859"
+         y="180.54338" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="80.638214"
+       y="72.483025"
+       id="text101333"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"><tspan
+         sodipodi:role="line"
+         id="tspan101331"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="80.638214"
+         y="72.483025">altre istruzioni</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="64.164879"
+       y="17.409418"
+       id="text120473"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"><tspan
+         sodipodi:role="line"
+         id="tspan120471"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="64.164879"
+         y="17.409418">vero</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="114.30786"
+       y="17.489748"
+       id="text122853"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_condizione.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"><tspan
+         sodipodi:role="line"
+         id="tspan122851"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="114.30786"
+         y="17.489748">falso</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1572-5-5"
+       width="19.82523"
+       height="19.765572"
+       x="116.85254"
+       y="59.178936"
+       transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-6"
+       width="26.208309"
+       height="10.785468"
+       x="5.4709339"
+       y="116.33655"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-0-5"
+       width="34.616131"
+       height="10.785468"
+       x="32.901638"
+       y="144.44774"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="6.6159616"
+       y="123.50992"
+       id="text11485-1-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="6.6159616"
+         y="123.50992"
+         id="tspan80130-9">istruzioni 1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3)"
+       d="m 50.209707,81.512479 v 5.65789"
+       id="path61643-3-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-8-1)"
+       d="m 50.209707,107.49519 v 36.15167"
+       id="path61643-3-5-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="36.217487"
+       y="98.992157"
+       id="text69833-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan69831-5"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="36.217487"
+         y="98.992157">condizione</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63)"
+       d="M 33.105827,97.605834 H 18.266235 v 18.253516"
+       id="path82594-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 18.266037,127.02088 v 11.02077 h 31.909048"
+       id="path82892-4"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="34.739567"
+       y="151.62112"
+       id="text101333-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan101331-4"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="34.739567"
+         y="151.62112">altre istruzioni</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="18.26623"
+       y="96.547516"
+       id="text120473-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="18.26623"
+         y="96.547516">vero</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="-128.69473"
+       y="49.286018"
+       id="text122853-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan122851-7"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="-128.69473"
+         y="49.286018">falso</tspan></text>
+    <g
+       id="g153174"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0.88431494,0,0,0.88449951,34.212152,-12.55446)"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4"
+         width="26.208309"
+         height="10.785468"
+         x="91.225723"
+         y="121.77628"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="91.841583"
+         y="128.42049"
+         id="text11485-1-6-2"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="91.841583"
+           y="128.42049"
+           id="tspan80130-9-0">stampa msg</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-8)"
+       d="m 149.30016,69.035203 v 5.004401"
+       id="path61643-3-3-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-8-1-8)"
+       d="M 149.30016,92.016844 V 106.56271"
+       id="path61643-3-5-7-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-8-1-8-2)"
+       d="m 149.39122,124.72415 v 14.54587"
+       id="path61643-3-5-7-8-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g139575"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0.88431494,0,0,0.88449951,34.212152,-12.55446)"
+       style="stroke-width:1.1307">
+      <g
+         id="g139569"
+         style="stroke-width:1.1307">
+        <rect
+           style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.607937;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1572-5-5-1"
+           width="19.82523"
+           height="19.765572"
+           x="173.91573"
+           y="24.039719"
+           transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+           inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+           inkscape:export-xdpi="202.67999"
+           inkscape:export-ydpi="202.67999" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="118.28897"
+         y="110.40949"
+         id="text69833-4-9"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan69831-5-2"
+           style="font-size:6.35px;stroke-width:0.299164"
+           x="118.28897"
+           y="110.40949">voto &lt; 18</tspan></text>
+    </g>
+    <g
+       id="g139569-9"
+       transform="translate(-80.165031,72.837313)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1572-5-5-1-8"
+         width="19.82523"
+         height="19.765572"
+         x="173.91573"
+         y="24.039719"
+         transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="40.476612"
+       y="182.6245"
+       id="text69833-4-9-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan69831-5-2-8"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="40.476612"
+         y="182.6245">n è pari</tspan></text>
+    <g
+       id="g139583"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0.88431494,0,0,0.88449951,34.212152,-12.55446)"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.607937;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1572-5-5-1-7"
+         width="19.82523"
+         height="19.765572"
+         x="210.95923"
+         y="61.194103"
+         transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="118.20323"
+         y="147.4301"
+         id="text69833-4-9-2"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan69831-5-2-7"
+           style="font-size:6.35px;stroke-width:0.299164"
+           x="118.20323"
+           y="147.4301">voto &lt; 24</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4)"
+       d="M 134.17495,83.326772 H 121.05206 V 94.240384"
+       id="path82594-2-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <g
+       id="g128672"
+       transform="matrix(0.88431494,0,0,0.88449951,34.348739,39.939665)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-0-5-9"
+         width="34.616131"
+         height="10.785468"
+         x="112.8356"
+         y="155.17914"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="114.67353"
+         y="162.35252"
+         id="text101333-7-4"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan101331-4-9"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="114.67353"
+           y="162.35252">altre istruzioni</tspan></text>
+    </g>
+    <g
+       id="g128672-4"
+       transform="matrix(0.88431494,0,0,0.88449951,-65.063575,134.28325)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-0-5-9-0"
+         width="34.616131"
+         height="10.785468"
+         x="112.8356"
+         y="155.17914"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="114.67353"
+         y="162.35252"
+         id="text101333-7-4-5"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan101331-4-9-9"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="114.67353"
+           y="162.35252">altre istruzioni</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="121.06468"
+       y="82.325119"
+       id="text120473-4-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="scale(0.99989564,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="121.06468"
+         y="82.325119">vero</tspan></text>
+    <g
+       id="g153174-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="matrix(0.88431494,0,0,0.88449951,-67.088026,85.293361)"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4-0"
+         width="26.208309"
+         height="10.785468"
+         x="91.225723"
+         y="121.77628"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="91.841583"
+         y="128.42049"
+         id="text11485-1-6-2-4"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="91.841583"
+           y="128.42049"
+           id="tspan80130-9-0-4">stampa pari</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-1)"
+       d="M 32.874772,181.17459 H 19.751882 V 192.0882"
+       id="path82594-2-6-44"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="19.753931"
+       y="180.16273"
+       id="text120473-4-5-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="scale(0.99989562,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-6"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="19.753931"
+         y="180.16273">vero</tspan></text>
+    <g
+       id="g153179"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0.88431494,0,0,0.88449951,34.212152,-12.55446)"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4-5"
+         width="26.208309"
+         height="10.785468"
+         x="91.225723"
+         y="158.73244"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="91.841583"
+         y="165.37665"
+         id="text11485-1-6-2-9"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="91.841583"
+           y="165.37665"
+           id="tspan80130-9-0-7">stampa msg</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-7)"
+       d="m 134.17494,116.01446 h -13.1229 v 10.91362"
+       id="path82594-2-6-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="121.06467"
+       y="115.00951"
+       id="text120473-4-5-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="scale(0.99989564,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-7"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="121.06467"
+         y="115.00951">vero</tspan></text>
+    <g
+       id="g153184"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0.88431494,0,0,0.88449951,34.212152,-12.55446)"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4-6"
+         width="26.208309"
+         height="10.785468"
+         x="91.225723"
+         y="195.46024"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="91.841583"
+         y="202.10445"
+         id="text11485-1-6-2-3"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="91.841583"
+           y="202.10445"
+           id="tspan80130-9-0-9">stampa msg</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-3)"
+       d="m 134.266,148.50019 h -13.1229 v 10.91362"
+       id="path82594-2-6-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="121.15575"
+       y="147.49185"
+       id="text120473-4-5-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="scale(0.99989564,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-1"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="121.15575"
+         y="147.49185">vero</tspan></text>
+    <g
+       id="g153184-8"
+       transform="matrix(0.88431494,0,0,0.88449951,79.080377,-12.60689)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4-6-5"
+         width="26.208309"
+         height="10.785468"
+         x="91.225723"
+         y="195.46024"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="91.841583"
+         y="202.10445"
+         id="text11485-1-6-2-3-0"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="91.841583"
+           y="202.10445"
+           id="tspan80130-9-0-9-9">stampa msg</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-3-0)"
+       d="m 164.0134,148.44775 h 13.12288 v 10.91362"
+       id="path82594-2-6-4-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="164.62462"
+       y="147.43942"
+       id="text120473-4-5-8-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="scale(0.99989564,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-1-8"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="164.62462"
+         y="147.43942">falso</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-6-4-6-5-5"
+       width="28.174404"
+       height="9.5397415"
+       x="62.924755"
+       y="192.94516"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.67999px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="63.47599"
+       y="198.80121"
+       id="text11485-1-6-2-3-0-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="scale(0.99989564,1.0001044)"><tspan
+         sodipodi:role="line"
+         style="font-size:4.67999px;stroke-width:0.264583"
+         x="63.47599"
+         y="198.80121"
+         id="tspan80130-9-0-9-9-6">stampa dispari</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-3-0-3)"
+       d="m 67.185508,181.11531 h 13.12288 v 10.91362"
+       id="path82594-2-6-4-6-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="67.786621"
+       y="180.10358"
+       id="text120473-4-5-8-3-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="scale(0.99989562,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-1-8-7"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="67.786621"
+         y="180.10358">falso</tspan></text>
+    <g
+       id="g139569-9-3"
+       transform="translate(-80.170758,111.81543)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1572-5-5-1-8-1"
+         width="19.82523"
+         height="19.765572"
+         x="173.91573"
+         y="24.039719"
+         transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+    </g>
+    <g
+       id="g139569-9-3-7"
+       transform="translate(-49.841025,133.10525)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1572-5-5-1-8-1-7"
+         width="19.82523"
+         height="19.765572"
+         x="173.91573"
+         y="24.039719"
+         transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="43.496635"
+       y="222.22491"
+       id="text69833-4-9-4-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan69831-5-2-8-9"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="43.496635"
+         y="222.22491">n &gt; 0</tspan></text>
+    <g
+       id="g188373"
+       transform="translate(-3.4817092,-14.311219)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4-0-4"
+         width="23.176399"
+         height="9.5397415"
+         x="17.060226"
+         y="246.29376"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.67999px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+         x="17.606678"
+         y="252.67336"
+         id="text11485-1-6-2-4-3"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"
+         transform="scale(0.99989564,1.0001044)"><tspan
+           sodipodi:role="line"
+           style="font-size:4.67999px;stroke-width:0.264583"
+           x="17.606678"
+           y="252.67336"
+           id="tspan80130-9-0-4-3">stampa &gt; 0</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-1-5)"
+       d="m 32.869045,220.15271 h -13.12289 v 10.91361"
+       id="path82594-2-6-44-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="19.748201"
+       y="219.13678"
+       id="text120473-4-5-7-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="scale(0.99989562,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-6-6"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="19.748201"
+         y="219.13678">vero</tspan></text>
+    <g
+       id="g188373-3"
+       transform="translate(26.848024,6.9785964)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4-0-4-0"
+         width="23.176399"
+         height="9.5397415"
+         x="17.060226"
+         y="246.29376"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.67999px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+         x="17.606678"
+         y="252.67336"
+         id="text11485-1-6-2-4-3-3"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"
+         transform="scale(0.99989564,1.0001044)"><tspan
+           sodipodi:role="line"
+           style="font-size:4.67999px;stroke-width:0.264583"
+           x="17.606678"
+           y="252.67336"
+           id="tspan80130-9-0-4-3-0">stampa &lt; 0</tspan></text>
+    </g>
+    <g
+       id="g195389"
+       transform="translate(0,0.20120687)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-4-0-4-0-6"
+         width="24.389574"
+         height="9.5397415"
+         x="88.131271"
+         y="253.07115"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:4.67999px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+         x="88.685143"
+         y="259.45004"
+         id="text11485-1-6-2-4-3-3-9"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"
+         transform="scale(0.99989563,1.0001044)"><tspan
+           sodipodi:role="line"
+           style="font-size:4.67999px;stroke-width:0.264583"
+           x="88.685143"
+           y="259.45004"
+           id="tspan80130-9-0-4-3-0-2">stampa == 0</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-1-5-6)"
+       d="m 63.198778,241.44253 h -13.12289 v 10.91361"
+       id="path82594-2-6-44-3-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="50.081104"
+       y="240.42438"
+       id="text120473-4-5-7-8-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="scale(0.99989562,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-6-6-5"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="50.081104"
+         y="240.42438">vero</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-3-0-3-7)"
+       d="m 67.179781,220.09343 h 13.122884 v 10.91362"
+       id="path82594-2-6-4-6-2-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="67.780899"
+       y="219.07762"
+       id="text120473-4-5-8-3-1-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="scale(0.99989562,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-1-8-7-9"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="67.780899"
+         y="219.07762">falso</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-63-4-3-0-3-7-2)"
+       d="m 97.509514,241.38325 h 13.122876 v 10.91362"
+       id="path82594-2-6-4-6-2-8-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="98.113792"
+       y="240.36522"
+       id="text120473-4-5-8-3-1-8-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="scale(0.99989562,1.0001044)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-0-1-8-7-9-5"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="98.113792"
+         y="240.36522">falso</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="-105.60847"
+       y="148.49876"
+       id="text122853-0-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0,-1.0001044,0.99989564,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan122851-7-8"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="-105.60847"
+         y="148.49876">falso</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6.23999px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="-138.0045"
+       y="148.51138"
+       id="text122853-0-4-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       transform="matrix(0,-1.0001044,0.99989564,0,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan122851-7-8-0"
+         style="font-size:6.23999px;stroke-width:0.264583"
+         x="-138.0045"
+         y="148.51138">falso</tspan></text>
+    <g
+       id="g139583-1"
+       transform="matrix(0.88431494,0,0,0.88449951,34.303209,19.931264)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.607937;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1572-5-5-1-7-5"
+         width="19.82523"
+         height="19.765572"
+         x="210.95923"
+         y="61.194103"
+         transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="118.20323"
+         y="147.4301"
+         id="text69833-4-9-2-9"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan69831-5-2-7-4"
+           style="font-size:6.35px;stroke-width:0.299164"
+           x="118.20323"
+           y="147.4301">voto &lt; 28</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       d="m 133.96915,182.1716 -20.61037,0.023 V 99.845304 h 1.54399"
+       id="path162167"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 121.46545,137.51595 v 3.34274 h -7.49572"
+       id="path163466"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_esclusivo.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="73.826363"
+       y="243.51474"
+       id="text179719"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan179717"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="73.826363"
+         y="243.51474">n &lt; 0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 19.78296,241.64492 V 276.1643 H 33.986401"
+       id="path196463"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 54.045056,262.99807 v 7.84898"
+       id="path196467"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 100.27733,263.00516 v 13.21498 H 65.676702"
+       id="path196469"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_if_inclusivo.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+  </g>
+</svg>

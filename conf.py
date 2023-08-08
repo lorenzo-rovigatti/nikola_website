@@ -250,7 +250,7 @@ PAGES = (
     ("pages/*.md", "", "page.tmpl"),
     ("pages/*.rst", "", "page.tmpl"),
 #    ("pages/*.txt", "pages", "page.tmpl"),
-#    ("pages/*.html", "pages", "page.tmpl"),
+    ("pages/*.html", "pages", "page.tmpl"),
 )
 
 

@@ -1,3 +1,4 @@
 assets/css/all-nocdn.css=bnw-generated.css,font-awesome.min.css,rst.css,code.css,custom.css
 assets/css/all.css=bnw-generated.css,font-awesome.min.css,rst.css,code.css,custom.css
+assets/css/slides.css=solarized.css,lr_slides.css,a11y-dark.css
 assets/js/all-nocdn.js=jquery-1.10.2.min.js,headroom.min.js,scripts.js
