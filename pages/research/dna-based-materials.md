@@ -12,7 +12,7 @@
 # Introduction
 
 <div style="float:left">
-<img src="/images/research/DNA_cartoon.png">
+  <img src="/images/research/DNA_cartoon.png">
 </div>
 
 The usual way of looking at {{% wikipedia article=DNA %}}  (deoxyribonucleic acid) is to consider it "just" an instruction manual, a huge recipe book if you will, that tells your body how to make you. This book, the genetic code, which is in essentially every cell of your body, contains chapters (known as genes) that hold the recipes (or instructions) for making everything about you, from your hair color to your height. These instructions are written in a special code made up of just four letters called nucleotides: adenine (A), thymine (T), guanine (G), and cytosine (C). Each nucleotide is composed of a sugar and a phosphate, common to all four, and of a base that is unique to the each type of nucleotide. The DNA that is stored in the cell is composed of two very long molecules (also known as *DNA single strands*) that pair up to create a twisting ladder structure called a double helix. The two strands are held together by hydrogen bonds, which are particular types of attractive bonds that can connect pairs of compatible nucleotides - A with T and C with G - to form a *base pair*. The image on the left, taken from Wikipedia, shows a cartoon of the DNA double helix.
