@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="flusso_2.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.6226949"
+     inkscape:cx="117.3973"
+     inkscape:cy="572.19627"
+     inkscape:window-width="1920"
+     inkscape:window-height="1109"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path61651" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path61654" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-9-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-4-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1-8-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0-8-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-1-8-2-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-0-8-2-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-5-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-6-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-8-5-8-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-4-6-5-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-1-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-0-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0-3-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8-1-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-1-5-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-0-9-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-63-4-3-0-3-7-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-20-3-6-8-1-5-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-93"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-60" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-26"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-93-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-60-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker31634"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path31632" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-26-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-1-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3-2-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7-0-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3-9"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3-9-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7-5-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3-9-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7-5-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-20-3-3-9-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path61654-2-6-7-5-2" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:8.81944px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="55.311859"
+       y="180.54338"
+       id="text84979"><tspan
+         sodipodi:role="line"
+         id="tspan84977"
+         style="stroke-width:0.264583"
+         x="55.311859"
+         y="180.54338" /></text>
+    <g
+       id="g16098"
+       transform="translate(-32.324383,0.12419728)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6"
+         width="26.208309"
+         height="10.785468"
+         x="49.48893"
+         y="40.32299"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+         x="52.221458"
+         y="47.496361"
+         id="text11485-1-6"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.264583"
+           x="52.221458"
+           y="47.496361"
+           id="tspan80130-9">istruzioni</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3)"
+       d="M 30.217191,3.2400113 V 8.8979018"
+       id="path61643-3-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="-38.766594"
+       y="28.941256"
+       id="text120473-4-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-02"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="-38.766594"
+         y="28.941256">vero</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="92.03923"
+       y="41.241676"
+       id="text120473-4-2-93"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-02-7"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="92.03923"
+         y="41.241676">vero</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="79.072548"
+       y="196.4919"
+       id="text120473-4-2-93-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan120471-3-02-7-1"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="79.072548"
+         y="196.4919">vero</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="48.735828"
+       y="18.518524"
+       id="text122853-0-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan122851-7-9"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="48.735828"
+         y="18.518524">falso</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="33.233562"
+       y="196.71167"
+       id="text122853-0-7-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan122851-7-9-0"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="33.233562"
+         y="196.71167">falso</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="-58.478119"
+       y="117.24442"
+       id="text122853-0-7-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan122851-7-9-4"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="-58.478119"
+         y="117.24442">falso</tspan></text>
+    <g
+       id="g128672-1"
+       transform="matrix(0.88431494,0,0,0.88449951,-84.81929,-78.489621)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-0-5-9-2"
+         width="34.616131"
+         height="10.785468"
+         x="112.8356"
+         y="155.17914"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="114.67353"
+         y="162.35252"
+         id="text101333-7-4-7"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan101331-4-9-0"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="114.67353"
+           y="162.35252">altre istruzioni</tspan></text>
+    </g>
+    <g
+       id="g128672-1-47"
+       transform="matrix(0.88431494,0,0,0.88449951,3.124566,-76.327888)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       style="stroke-width:1.1307">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.565349;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-0-5-9-2-6"
+         width="34.616131"
+         height="10.785468"
+         x="112.8356"
+         y="155.17914"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.299164"
+         x="114.67353"
+         y="162.35252"
+         id="text101333-7-4-7-5"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan101331-4-9-0-6"
+           style="font-size:5.29167px;stroke-width:0.299164"
+           x="114.67353"
+           y="162.35252">altre istruzioni</tspan></text>
+    </g>
+    <g
+       id="g1322"
+       transform="translate(-19.992516,-78.272468)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1572-5-5"
+         width="19.82523"
+         height="19.765572"
+         x="116.85254"
+         y="59.178936"
+         transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+         x="36.217487"
+         y="98.992157"
+         id="text69833-4"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan69831-5"
+           style="font-size:6.35px;stroke-width:0.264583"
+           x="36.217487"
+           y="98.992157">condizione</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 30.320181,29.180439 v 10.33279"
+       id="path1440"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 16.988359,45.947904 H 7.4177212 V 19.366439 h 4.4632428"
+       id="path16331"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-1)"
+       d="M 101.38651,37.696111 H 91.815873 V 15.517876 l 12.749557,0"
+       id="path16331-5"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-26)"
+       d="M 47.424065,19.274137 H 61.504992 V 63.833175 H 46.103429"
+       id="path16331-8"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_while.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <g
+       id="g16098-7"
+       transform="translate(55.948795,-29.950937)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1468-6-6-6-3"
+         width="26.208309"
+         height="10.785468"
+         x="49.48893"
+         y="40.32299"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+         x="52.221458"
+         y="47.496361"
+         id="text11485-1-6-6"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           style="font-size:5.29167px;stroke-width:0.264583"
+           x="52.221458"
+           y="47.496361"
+           id="tspan80130-9-1">istruzioni</tspan></text>
+    </g>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-6-3-4"
+       width="26.208309"
+       height="10.785468"
+       x="48.258896"
+       y="113.81621"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="54.62413"
+       y="120.98958"
+       id="text11485-1-6-6-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="54.62413"
+         y="120.98958"
+         id="tspan80130-9-1-3">k = 50</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-6-3-7"
+       width="26.208309"
+       height="10.785468"
+       x="48.258896"
+       y="132.29729"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="55.269711"
+       y="139.47066"
+       id="text11485-1-6-6-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="55.269711"
+         y="139.47066"
+         id="tspan80130-9-1-6">N = k</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-6-3-8"
+       width="26.208309"
+       height="10.785468"
+       x="48.258896"
+       y="150.77838"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="50.837948"
+       y="157.95175"
+       id="text11485-1-6-6-43"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="50.837948"
+         y="157.95175"
+         id="tspan80130-9-1-1">Stampa N</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1468-6-6-6-3-9"
+       width="26.208309"
+       height="10.785468"
+       x="48.258896"
+       y="169.25946"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.29167px;line-height:0.85;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="55.166527"
+       y="176.43283"
+       id="text11485-1-6-6-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         style="font-size:5.29167px;stroke-width:0.264583"
+         x="55.166527"
+         y="176.43283"
+         id="tspan80130-9-1-0">k -= 5</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3)"
+       d="m 118.54188,3.6768673 v 5.657891"
+       id="path61643-3-3-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3-6)"
+       d="m 61.36305,105.35474 v 7.21844"
+       id="path61643-3-3-2-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3-9)"
+       d="m 61.36305,125.08315 v 6.26119"
+       id="path61643-3-3-2-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3-9-4)"
+       d="m 61.36305,143.57849 v 6.26119"
+       id="path61643-3-3-2-0-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3-9-1)"
+       d="m 61.36305,162.03341 v 6.26119"
+       id="path61643-3-3-2-0-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3-9-7)"
+       d="m 61.36305,180.51414 v 6.26119"
+       id="path61643-3-3-2-0-26"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3-2)"
+       d="m 118.54188,21.078684 v 5.791072"
+       id="path61643-3-3-2-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264582px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend-20-3-3-2-4)"
+       d="M 118.59336,47.548239 V 60.091388"
+       id="path61643-3-3-2-6-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <g
+       id="g1322-5"
+       transform="translate(68.280664,-59.90467)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_do.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999">
+      <rect
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1572-5-5-0"
+         width="19.82523"
+         height="19.765572"
+         x="116.85254"
+         y="59.178936"
+         transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999" />
+      <text
+         xml:space="preserve"
+         style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+         x="36.217487"
+         y="98.992157"
+         id="text69833-4-3"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_solo_if.png"
+         inkscape:export-xdpi="202.67999"
+         inkscape:export-ydpi="202.67999"><tspan
+           sodipodi:role="line"
+           id="tspan69831-5-6"
+           style="font-size:6.35px;stroke-width:0.264583"
+           x="36.217487"
+           y="98.992157">condizione</tspan></text>
+    </g>
+    <g
+       id="g60099"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       transform="matrix(0.75173134,0,0,0.75347131,-42.962499,85.749538)"
+       style="stroke-width:1.32873">
+      <ellipse
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.664363;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path31-3"
+         cx="138.78036"
+         cy="19.103853"
+         rx="19.192001"
+         ry="6.3815894"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/ellisse.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.81944px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.351558"
+         x="128.5278"
+         y="22.071594"
+         id="text3624"><tspan
+           sodipodi:role="line"
+           id="tspan3622"
+           style="font-size:8.81944px;stroke-width:0.351558"
+           x="128.5278"
+           y="22.071594">Inizio</tspan></text>
+    </g>
+    <g
+       id="g61577"
+       transform="matrix(0.75173134,0,0,0.75347131,0.51361893,129.29017)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"
+       style="stroke-width:1.32873">
+      <ellipse
+         style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.664363;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path31-3-1"
+         cx="139.26527"
+         cy="90.707275"
+         rx="19.192001"
+         ry="6.3815894"
+         inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/ellisse.png"
+         inkscape:export-xdpi="127"
+         inkscape:export-ydpi="127" />
+      <text
+         xml:space="preserve"
+         style="font-size:8.81944px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.351558"
+         x="131.51741"
+         y="93.675018"
+         id="text3624-2"><tspan
+           sodipodi:role="line"
+           id="tspan3622-7"
+           style="font-size:8.81944px;stroke-width:0.351558"
+           x="131.51741"
+           y="93.675018">Fine</tspan></text>
+    </g>
+    <rect
+       style="fill:none;fill-opacity:0.157498;stroke:#000000;stroke-width:0.537664;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1572-5-5-8"
+       width="19.82523"
+       height="19.765572"
+       x="223.4077"
+       y="153.2235"
+       transform="matrix(0.86792701,0.49669177,-0.86533733,0.50118988,0,0)"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';stroke-width:0.264583"
+       x="53.073151"
+       y="199.05141"
+       id="text69833-4-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999"><tspan
+         sodipodi:role="line"
+         id="tspan69831-5-2"
+         style="font-size:6.35px;stroke-width:0.264583"
+         x="53.073151"
+         y="199.05141">k == 0</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 78.518416,197.60585 H 89.801694"
+       id="path34732"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="M 44.207683,197.66461 H 31.862654 v -50.9574 h 28.874122"
+       id="path34847"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/flusso_esercizio.png"
+       inkscape:export-xdpi="202.67999"
+       inkscape:export-ydpi="202.67999" />
+  </g>
+</svg>

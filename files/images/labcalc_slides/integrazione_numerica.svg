@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1384"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="integrazione_numerica.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1386"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.6226949"
+     inkscape:cx="55.771421"
+     inkscape:cy="857.52411"
+     inkscape:window-width="1920"
+     inkscape:window-height="1109"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1381">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1411" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mstart"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1417" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path30740" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path30734" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-7-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-7-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-36"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-75" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-36-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-75-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-6-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-36-2-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-75-9-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5-3-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-6-6-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-36-2-7-5"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-75-9-5-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-6-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-36-2-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-75-9-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-5-6-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-6-9-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Mend-36-2-3-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path30740-75-9-7-1" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444444px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="102.99203"
+       y="72.264076"
+       id="text4115"><tspan
+         sodipodi:role="line"
+         id="tspan4113"
+         style="stroke-width:0.264583;font-size:5.64444444px" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="105.04763"
+       y="146.05092"
+       id="text10059-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan10057-2"
+         style="font-style:normal;font-size:7.05556px;stroke-width:0.264583"
+         x="105.04763"
+         y="146.05092">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="10.853832"
+       y="116.89725"
+       id="text13949-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan13947-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Time Roman';-inkscape-font-specification:'Time Roman,  Italic';stroke-width:0.264583"
+         x="10.853832"
+         y="116.89725">f(x)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-5)"
+       d="m 23.617279,157.38594 v -44.4862"
+       id="path42394-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-36-2)"
+       d="M 15.890512,141.08379 H 105.0524"
+       id="path42394-3-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 28.269383,129.02132 c 5.855731,-0.0318 9.870537,5.56451 15.298643,11.48745 25.176517,27.47165 27.555439,-13.61253 51.862232,-15.4814"
+       id="path51189-6"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 28.291022,129.0428 v 12.10111"
+       id="path53127-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="26.89395"
+       y="147.62811"
+       id="text55213-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan55211-2"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="26.89395"
+         y="147.62811">a</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.430258,125.02737 v 16.05897"
+       id="path57688-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="93.995338"
+       y="147.5791"
+       id="text65901-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan65899-2"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="93.995338"
+         y="147.5791">b</tspan></text>
+    <path
+       style="fill:#91d7e4;fill-opacity:0.8;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 58.211584,149.66604 c -3.781346,-0.24755 -7.892698,-2.67536 -12.696603,-7.49754 l -0.814877,-0.81797 h 13.48399 c 11.452703,0 13.479078,0.008 13.45139,0.0563 -0.07247,0.12505 -1.633326,1.81008 -2.396847,2.58754 -2.850671,2.90268 -5.085525,4.46288 -7.500385,5.23619 -1.101505,0.35274 -2.379837,0.5106 -3.526668,0.43553 z"
+       id="path4086"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.8;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 28.373778,135.05265 v -5.76796 h 0.27622 c 1.727941,0 3.959783,0.87604 5.851252,2.29672 1.775542,1.3336 3.142507,2.69273 6.527009,6.48958 1.324814,1.48622 2.001986,2.23759 2.321936,2.57638 l 0.163613,0.17324 h -7.570015 -7.570015 z"
+       id="path4125"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.8;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 72.886921,140.79805 c 0,-0.0303 2.608894,-3.01467 3.514587,-4.0204 3.063946,-3.40234 5.487866,-5.64719 7.95619,-7.36843 2.49294,-1.73839 4.98563,-2.90163 7.63438,-3.56264 1.01377,-0.25299 1.89226,-0.40511 3.10046,-0.53687 l 0.25477,-0.0278 v 7.76935 7.76934 h -11.2302 c -6.176601,0 -11.230187,-0.0102 -11.230187,-0.0226 z"
+       id="path4361"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 37.927596,134.22647 v 6.75263"
+       id="path5577"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 47.41474,144.25032 v -3.1387"
+       id="path5579"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 56.28175,141.04826 v 8.33594"
+       id="path5581"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 66.213967,141.25236 v 5.85763"
+       id="path5583"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 76.009155,136.86337 v 4.01788"
+       id="path5585"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 85.508927,128.44171 v 12.52957"
+       id="path5587"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="104.87572"
+       y="90.12867"
+       id="text10059-1-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan10057-2-5"
+         style="font-style:normal;font-size:7.05556px;stroke-width:0.264583"
+         x="104.87572"
+         y="90.12867">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="10.681923"
+       y="60.974991"
+       id="text13949-7-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan13947-0-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Time Roman';-inkscape-font-specification:'Time Roman,  Italic';stroke-width:0.264583"
+         x="10.681923"
+         y="60.974991">f(x)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-3)"
+       d="M 23.445371,101.46368 V 56.977477"
+       id="path42394-9-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-36-2-7)"
+       d="M 15.718604,85.161527 H 104.8805"
+       id="path42394-3-3-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 28.097475,73.099057 c 5.855731,-0.0318 9.870537,5.56451 15.298643,11.48745 25.176522,27.471653 27.555442,-13.61253 51.86224,-15.4814"
+       id="path51189-6-2"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 28.119114,73.120537 v 12.10111"
+       id="path53127-0-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="26.72204"
+       y="91.705849"
+       id="text55213-6-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan55211-2-9"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="26.72204"
+         y="91.705849">a</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.258358,69.105107 v 16.05897"
+       id="path57688-6-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="93.823441"
+       y="91.656837"
+       id="text65901-9-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan65899-2-0"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="93.823441"
+         y="91.656837">b</tspan></text>
+    <path
+       style="fill:#91d7e4;fill-opacity:0.8;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 58.039676,93.743777 c -3.781346,-0.24755 -7.892698,-2.67536 -12.696603,-7.49754 l -0.814877,-0.81797 h 13.48399 c 11.452704,0 13.479074,0.008 13.451394,0.0563 -0.0725,0.12505 -1.63333,1.81008 -2.39685,2.58754 -2.85067,2.90268 -5.085526,4.46288 -7.500386,5.23619 -1.101505,0.35274 -2.379837,0.51061 -3.526668,0.43553 z"
+       id="path4086-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.8;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 28.20187,79.130387 v -5.76796 h 0.27622 c 1.727941,0 3.959783,0.87604 5.851252,2.29672 1.775542,1.3336 3.142507,2.69273 6.527009,6.48958 1.324814,1.48622 2.001986,2.23759 2.321936,2.57638 l 0.163613,0.17324 H 35.771885 28.20187 Z"
+       id="path4125-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.8;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 72.71501,84.875787 c 0,-0.0303 2.608905,-3.01467 3.514595,-4.0204 3.06395,-3.40234 5.48787,-5.64719 7.956193,-7.36843 2.49294,-1.73839 4.98563,-2.90163 7.63438,-3.56264 1.01377,-0.25299 1.89226,-0.40511 3.10046,-0.53687 l 0.25477,-0.0278 v 7.76934 7.76935 h -11.2302 c -6.176603,0 -11.230198,-0.0102 -11.230198,-0.0226 z"
+       id="path4361-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_colori.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="104.63947"
+       y="36.450253"
+       id="text10059-1-3-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan10057-2-5-6"
+         style="font-style:normal;font-size:7.05556px;stroke-width:0.264583"
+         x="104.63947"
+         y="36.450253">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="10.445665"
+       y="7.2965727"
+       id="text13949-7-6-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan13947-0-2-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Time Roman';-inkscape-font-specification:'Time Roman,  Italic';stroke-width:0.264583"
+         x="10.445665"
+         y="7.2965727">f(x)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-3-8)"
+       d="M 23.209115,47.785262 V 3.2990613"
+       id="path42394-9-9-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-36-2-7-5)"
+       d="M 15.482348,31.483112 H 104.64425"
+       id="path42394-3-3-1-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 27.861219,19.420642 c 5.855731,-0.0318 9.870537,5.56451 15.298643,11.48745 25.176522,27.47165 27.555442,-13.61253 51.862244,-15.4814"
+       id="path51189-6-2-2"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 27.882858,19.442122 v 12.10111"
+       id="path53127-0-7-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="26.485783"
+       y="38.027431"
+       id="text55213-6-0-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan55211-2-9-1"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="26.485783"
+         y="38.027431">a</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.022106,15.426692 v 16.05897"
+       id="path57688-6-3-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="93.587189"
+       y="37.97842"
+       id="text65901-9-6-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_funzione.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan65899-2-0-4"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="93.587189"
+         y="37.97842">b</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="35.976288"
+       y="146.07179"
+       id="text9268"><tspan
+         sodipodi:role="line"
+         id="tspan9266"
+         style="stroke-width:0.264583" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="36.710331"
+       y="144.77753"
+       id="text35018"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan35016"
+         style="stroke-width:0.264583"
+         x="36.710331"
+         y="144.77753">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan48310">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="45.546165"
+       y="138.68324"
+       id="text36558"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan36556"
+         style="stroke-width:0.264583"
+         x="45.546165"
+         y="138.68324">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan51600">2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="54.874954"
+       y="138.68324"
+       id="text39076"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan39074"
+         style="stroke-width:0.264583"
+         x="54.874954"
+         y="138.68324">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan54938">3</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="64.416763"
+       y="138.68324"
+       id="text40686"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan40684"
+         style="stroke-width:0.264583"
+         x="64.416763"
+         y="138.68324">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan59056">4</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="74.881508"
+       y="144.77753"
+       id="text43308"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan43306"
+         style="stroke-width:0.264583"
+         x="74.881508"
+         y="144.77753">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan62292">5</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="83.997101"
+       y="144.77753"
+       id="text44874"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan44872"
+         style="stroke-width:0.264583"
+         x="83.997101"
+         y="144.77753">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan66068">6</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="104.24968"
+       y="199.3604"
+       id="text10059-1-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan10057-2-52"
+         style="font-style:normal;font-size:7.05556px;stroke-width:0.264583"
+         x="104.24968"
+         y="199.3604">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="10.055877"
+       y="170.20673"
+       id="text13949-7-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan13947-0-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Time Roman';-inkscape-font-specification:'Time Roman,  Italic';stroke-width:0.264583"
+         x="10.055877"
+         y="170.20673">f(x)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-6)"
+       d="m 22.819323,210.69541 v -44.4862"
+       id="path42394-9-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-36-2-3)"
+       d="M 15.092556,194.39326 H 104.25444"
+       id="path42394-3-3-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 27.471427,182.33079 c 5.855731,-0.0318 9.870537,5.56451 15.298643,11.48745 25.176517,27.47165 27.555439,-13.61253 51.862229,-15.4814"
+       id="path51189-6-4"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 27.493066,182.09998 v 12.3534"
+       id="path53127-0-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="26.095995"
+       y="200.93759"
+       id="text55213-6-07"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan55211-2-8"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="26.095995"
+         y="200.93759">a</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 94.632298,178.10842 v 16.28739"
+       id="path57688-6-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="93.197395"
+       y="200.88858"
+       id="text65901-9-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan65899-2-8"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="93.197395"
+         y="200.88858">b</tspan></text>
+    <path
+       style="fill:#91d7e4;fill-opacity:0.2460385;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 57.413628,202.97551 c -3.781346,-0.24755 -7.892698,-2.67536 -12.696603,-7.49754 L 43.902148,194.66 h 13.48399 c 11.452703,0 13.479078,0.008 13.45139,0.0563 -0.07247,0.12505 -1.633326,1.81008 -2.396847,2.58754 -2.850671,2.90268 -5.085525,4.46288 -7.500385,5.23619 -1.101505,0.35274 -2.379837,0.5106 -3.526668,0.43553 z"
+       id="path4086-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.25179368;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 27.575822,188.36212 v -5.76796 h 0.27622 c 1.727941,0 3.959783,0.87604 5.851252,2.29672 1.775542,1.3336 3.142507,2.69273 6.527009,6.48958 1.324814,1.48622 2.001986,2.23759 2.321936,2.57638 l 0.163613,0.17324 h -7.570015 -7.570015 z"
+       id="path4125-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.25331852;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 72.088965,194.10752 c 0,-0.0303 2.608894,-3.01467 3.514587,-4.0204 3.063946,-3.40234 5.487866,-5.64719 7.956187,-7.36843 2.49294,-1.73839 4.98563,-2.90163 7.63438,-3.56264 1.01377,-0.25299 1.89226,-0.40511 3.10046,-0.53687 l 0.25477,-0.0278 v 7.76935 7.76934 h -11.2302 c -6.176598,0 -11.230184,-0.0102 -11.230184,-0.0226 z"
+       id="path4361-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 37.12964,187.53594 v 6.75263"
+       id="path5577-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 46.616784,197.55979 v -3.1387"
+       id="path5579-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 55.483794,194.35773 v 8.33594"
+       id="path5581-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 65.416011,194.56183 v 5.85763"
+       id="path5583-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75.211199,190.17284 v 4.01788"
+       id="path5585-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 84.710973,181.75119 v 12.57918"
+       id="path5587-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="35.912373"
+       y="198.08701"
+       id="text35018-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan35016-2"
+         style="stroke-width:0.264583"
+         x="35.912373"
+         y="198.08701">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan48310-6">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="44.748207"
+       y="191.99272"
+       id="text36558-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan36556-4"
+         style="stroke-width:0.264583"
+         x="44.748207"
+         y="191.99272">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan51600-9">2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="54.077"
+       y="191.99272"
+       id="text39076-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan39074-0"
+         style="stroke-width:0.264583"
+         x="54.077"
+         y="191.99272">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan54938-4">3</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="63.618809"
+       y="191.99272"
+       id="text40686-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan40684-7"
+         style="stroke-width:0.264583"
+         x="63.618809"
+         y="191.99272">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan59056-1">4</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="74.083557"
+       y="198.08701"
+       id="text43308-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan43306-2"
+         style="stroke-width:0.264583"
+         x="74.083557"
+         y="198.08701">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan62292-7">5</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="83.19915"
+       y="198.08701"
+       id="text44874-2"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan44872-2"
+         style="stroke-width:0.264583"
+         x="83.19915"
+         y="198.08701">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan66068-6">6</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 28.291022,129.0428 H 23.673233"
+       id="path68452"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 37.927597,134.22647 H 23.763695"
+       id="path68454"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="14.237858"
+       y="128.92316"
+       id="text70606"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan70604"
+         style="stroke-width:0.264583"
+         x="14.237858"
+         y="128.92316">f(x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan75684">0</tspan>)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="14.237858"
+       y="135.03226"
+       id="text73172"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_intervalli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan73170"
+         style="stroke-width:0.264583"
+         x="14.237858"
+         y="135.03226">f(x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan73834">1</tspan>)</tspan></text>
+    <rect
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect77668"
+       width="9.6365738"
+       height="12.18859"
+       x="27.493065"
+       y="182.09998"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect77670"
+       width="9.4871416"
+       height="6.8851557"
+       x="37.129642"
+       y="187.53593"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect77672"
+       width="8.863677"
+       height="3.444382"
+       x="46.616783"
+       y="194.4211"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect77674"
+       width="9.9322176"
+       height="8.1318398"
+       x="55.483795"
+       y="194.56183"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect77676"
+       width="9.795188"
+       height="6.2287397"
+       x="65.416008"
+       y="194.56183"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect77678"
+       width="9.499774"
+       height="4.1575298"
+       x="75.211197"
+       y="190.17284"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <rect
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect77680"
+       width="9.838376"
+       height="12.378881"
+       x="84.710968"
+       y="181.95149"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_rettangoli.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="104.25298"
+       y="253.8707"
+       id="text10059-1-4-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan10057-2-52-9"
+         style="font-style:normal;font-size:7.05556px;stroke-width:0.264583"
+         x="104.25298"
+         y="253.8707">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="10.059174"
+       y="224.71703"
+       id="text13949-7-5-4"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan13947-0-4-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:'Time Roman';-inkscape-font-specification:'Time Roman,  Italic';stroke-width:0.264583"
+         x="10.059174"
+         y="224.71703">f(x)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-5-6-1)"
+       d="m 22.822621,265.20571 v -44.4862"
+       id="path42394-9-7-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-36-2-3-6)"
+       d="M 15.095854,248.90356 H 104.25773"
+       id="path42394-3-3-4-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 27.474725,236.84109 c 5.855731,-0.0318 9.870537,5.56451 15.298643,11.48745 25.176517,27.47165 27.555439,-13.61253 51.862226,-15.4814"
+       id="path51189-6-4-1"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 27.496364,236.61028 v 12.3534"
+       id="path53127-0-3-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="26.099291"
+       y="255.44789"
+       id="text55213-6-07-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan55211-2-8-1"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="26.099291"
+         y="255.44789">a</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.165;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 94.635594,232.61872 v 16.28739"
+       id="path57688-6-6-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="93.200699"
+       y="255.39888"
+       id="text65901-9-8-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan65899-2-8-9"
+         style="font-size:7.05556px;stroke-width:0.264583"
+         x="93.200699"
+         y="255.39888">b</tspan></text>
+    <path
+       style="fill:#91d7e4;fill-opacity:0.246039;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 57.416926,257.48581 c -3.781346,-0.24755 -7.892698,-2.67536 -12.696603,-7.49754 l -0.814877,-0.81797 h 13.48399 c 11.452703,0 13.479078,0.008 13.45139,0.0563 -0.07247,0.12505 -1.633326,1.81008 -2.396847,2.58754 -2.850671,2.90268 -5.085525,4.46288 -7.500385,5.23619 -1.101505,0.35274 -2.379837,0.5106 -3.526668,0.43553 z"
+       id="path4086-4-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.251794;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 27.57912,242.87242 v -5.76796 h 0.27622 c 1.727941,0 3.959783,0.87604 5.851252,2.29672 1.775542,1.3336 3.142507,2.69273 6.527009,6.48958 1.324814,1.48622 2.001986,2.23759 2.321936,2.57638 l 0.163613,0.17324 H 35.149135 27.57912 Z"
+       id="path4125-3-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#ffa197;fill-opacity:0.253319;stroke:none;stroke-width:0.499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.8"
+       d="m 72.092263,248.61782 c 0,-0.0303 2.608894,-3.01467 3.514587,-4.0204 3.063946,-3.40234 5.487864,-5.64719 7.956184,-7.36843 2.49294,-1.73839 4.98563,-2.90163 7.63438,-3.56264 1.01377,-0.25299 1.89226,-0.40511 3.10046,-0.53687 l 0.25477,-0.0278 v 7.76935 7.76934 h -11.2302 c -6.176595,0 -11.230181,-0.0102 -11.230181,-0.0226 z"
+       id="path4361-1-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 37.132938,242.04624 v 6.75263"
+       id="path5577-4-7"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 46.620082,252.07009 v -3.1387"
+       id="path5579-9-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 55.487092,248.86803 v 8.33594"
+       id="path5581-2-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 65.419309,249.07213 v 5.85763"
+       id="path5583-0-5"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 75.214497,244.68314 v 4.01788"
+       id="path5585-6-6"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 84.714274,236.26149 v 12.57918"
+       id="path5587-8-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="35.915672"
+       y="252.59731"
+       id="text35018-9-9"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan35016-2-4"
+         style="stroke-width:0.264583"
+         x="35.915672"
+         y="252.59731">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan48310-6-8">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="44.751503"
+       y="246.50302"
+       id="text36558-6-1"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan36556-4-2"
+         style="stroke-width:0.264583"
+         x="44.751503"
+         y="246.50302">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan51600-9-9">2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="54.080299"
+       y="246.50302"
+       id="text39076-5-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan39074-0-9"
+         style="stroke-width:0.264583"
+         x="54.080299"
+         y="246.50302">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan54938-4-0">3</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="63.622108"
+       y="246.50302"
+       id="text40686-8-8"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan40684-7-8"
+         style="stroke-width:0.264583"
+         x="63.622108"
+         y="246.50302">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan59056-1-5">4</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="74.086853"
+       y="252.59731"
+       id="text43308-7-0"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan43306-2-9"
+         style="stroke-width:0.264583"
+         x="74.086853"
+         y="252.59731">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan62292-7-6">5</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:'Time Roman';-inkscape-font-specification:'Time Roman, ';stroke-width:0.264583"
+       x="83.202446"
+       y="252.59731"
+       id="text44874-2-3"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999"><tspan
+         sodipodi:role="line"
+         id="tspan44872-2-8"
+         style="stroke-width:0.264583"
+         x="83.202446"
+         y="252.59731">x<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan66068-6-5">6</tspan></tspan></text>
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.80000007;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 27.474725,236.84109 v 12.09692 h 9.687951 v -6.75204 z"
+       id="path84332"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.80000007;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 46.62008,252.07009 8.879176,5.4534 v -8.60932 h -8.82365 z"
+       id="path84336"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.80000007;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 55.499256,257.52349 9.920052,-2.59373 v -6.03107 h -9.921391 z"
+       id="path84338"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.80000007;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 75.214495,244.68314 v 4.25758 h 9.541502 v -12.79845 z"
+       id="path84687"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.80000007;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 84.755997,248.94072 v -12.79845 l 9.879597,-3.29513 v 16.05897 z"
+       id="path84689"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 37.162676,242.18597 9.51293,6.7282 -9.51293,0.0238 z"
+       id="path1444"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.80000007;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 46.675606,248.91417 -0.05553,3.15592 -9.457404,-3.13212"
+       id="path1446"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;fill-opacity:0.8;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 65.419308,254.92976 9.567345,-5.95948 -9.567345,0.10185 z"
+       id="path1641"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+    <path
+       style="fill:#b3b3b3;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.80000007;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 75.214495,248.70102 v -4.01788 l -9.795187,4.21555"
+       id="path1643"
+       inkscape:export-filename="/home/lorenzo/Dropbox/ROMA/INSEGNAMENTO/LAB_CALC/2022/SLIDE/FIGURE/integrazione_trapezi.png"
+       inkscape:export-xdpi="276.76999"
+       inkscape:export-ydpi="276.76999" />
+  </g>
+</svg>

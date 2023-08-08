@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="linguaggi_programmazione.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3265">
+      <stop
+         style="stop-color:#b2a8ff;stop-opacity:1"
+         offset="0"
+         id="stop3261" />
+      <stop
+         style="stop-color:#9dff80;stop-opacity:1"
+         offset="1"
+         id="stop3263" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3245"
+       osb:paint="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3241" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3243" />
+    </linearGradient>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path873"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;"
+       inkscape:isstock="true">
+      <path
+         id="path867"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path873-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path873-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-9-0"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path873-1-9"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-9-0-0"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path873-1-9-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3265"
+       id="linearGradient3554"
+       x1="155.15921"
+       y1="35.0625"
+       x2="188.04314"
+       y2="35.0625"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-54.895829,-192.98094)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3265"
+       id="linearGradient3625"
+       x1="88.053108"
+       y1="7.1993032"
+       x2="87.838058"
+       y2="133.25436"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="334.72484"
+     inkscape:cy="868.67891"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1095"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-9-0-0)"
+       d="M 65.607189,44.907479 V 96.582654"
+       id="path862-2-3-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67" />
+    <g
+       id="g3617"
+       style="fill-opacity:1;fill:url(#linearGradient3625)"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122">
+      <rect
+         ry="1.1464819"
+         y="120.29187"
+         x="35.136444"
+         height="13.363476"
+         width="107.50816"
+         id="rect815"
+         style="opacity:1;fill:url(#linearGradient3625);fill-opacity:1.0;stroke:none;stroke-width:0.29300264;stroke-miterlimit:4;stroke-dasharray:0.58600525, 0.29300261999999999;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="1.1464819"
+         y="97.932549"
+         x="40.14463"
+         height="13.363476"
+         width="97.491791"
+         id="rect815-6"
+         style="opacity:1;fill:url(#linearGradient3625);fill-opacity:1.0;stroke:none;stroke-width:0.27901968;stroke-miterlimit:4;stroke-dasharray:0.55803934, 0.27901967000000000;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="1.1464819"
+         y="75.627785"
+         x="48.460106"
+         height="13.363476"
+         width="80.86084"
+         id="rect815-6-2"
+         style="opacity:1;fill:url(#linearGradient3625);fill-opacity:1.0;stroke:none;stroke-width:0.25410894;stroke-miterlimit:4;stroke-dasharray:0.50821786, 0.25410892000000002;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="1.1464819"
+         y="53.364986"
+         x="54.602219"
+         height="13.363476"
+         width="68.576614"
+         id="rect815-6-2-7"
+         style="opacity:1;fill:url(#linearGradient3625);fill-opacity:1.0;stroke:none;stroke-width:0.23401237;stroke-miterlimit:4;stroke-dasharray:0.46802475, 0.23401236000000000;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="1.1464819"
+         y="30.573021"
+         x="58.85445"
+         height="13.363476"
+         width="60.072151"
+         id="rect815-6-2-7-6"
+         style="opacity:1;fill:url(#linearGradient3625);fill-opacity:1.0;stroke:none;stroke-width:0.21902183;stroke-miterlimit:4;stroke-dasharray:0.43804366, 0.21902181000000001;stroke-dashoffset:0;stroke-opacity:1" />
+      <rect
+         ry="1.1464819"
+         y="7.3652849"
+         x="35.136444"
+         height="13.363476"
+         width="107.50816"
+         id="rect815-9"
+         style="opacity:1;fill:url(#linearGradient3625);fill-opacity:1.0;stroke:none;stroke-width:0.29300264;stroke-miterlimit:4;stroke-dasharray:0.58600526, 0.29300261999999999;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777778px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="68.090759"
+       y="130.44806"
+       id="text819"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67"><tspan
+         sodipodi:role="line"
+         id="tspan817"
+         x="68.090759"
+         y="130.44806"
+         style="stroke-width:0.26458332">Hardware</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777778px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="42.802902"
+       y="107.59613"
+       id="text857"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67"><tspan
+         sodipodi:role="line"
+         id="tspan855"
+         x="42.802902"
+         y="107.59613"
+         style="stroke-width:0.26458332">Linguaggio macchina</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 86.339189,111.98065 v 6.99256"
+       id="path862"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-3)"
+       d="m 91.441863,119.74937 v -6.99256"
+       id="path862-6"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777778px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="67.713524"
+       y="85.56012"
+       id="text1629"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67"><tspan
+         sodipodi:role="line"
+         id="tspan1627"
+         x="67.713524"
+         y="85.56012"
+         style="stroke-width:0.26458332">Assembly</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-9)"
+       d="m 88.890526,89.470866 v 6.99256"
+       id="path862-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-9-0)"
+       d="m 88.890526,67.39706 v 6.992561"
+       id="path862-2-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777805px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="57.338985"
+       y="62.957146"
+       id="text2418"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67"><tspan
+         sodipodi:role="line"
+         id="tspan2416"
+         x="57.338985"
+         y="62.957146"
+         style="stroke-width:0.26458332">C, C++, Fortran</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="61.176456"
+       y="40.391964"
+       id="text2439"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67"><tspan
+         sodipodi:role="line"
+         id="tspan2437"
+         x="61.176456"
+         y="40.391964"
+         style="stroke-width:0.26458332">Python, Julia</tspan></text>
+    <rect
+       style="opacity:1;fill:url(#linearGradient3554);fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3546"
+       width="32.883926"
+       height="9.4494047"
+       x="100.2634"
+       y="-162.64314"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="165.55357"
+       y="131.63542"
+       id="text3558"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67"><tspan
+         sodipodi:role="line"
+         id="tspan3556"
+         x="165.55357"
+         y="131.63542"
+         style="stroke-width:0.26458332">basso livello</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="165.5536"
+       y="104.98811"
+       id="text3562"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122.67"
+       inkscape:export-ydpi="122.67"><tspan
+         sodipodi:role="line"
+         id="tspan3560"
+         x="165.5536"
+         y="104.98811"
+         style="stroke-width:0.26458332">alto livello</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777805px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="49.022499"
+       y="16.957438"
+       id="text3605"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122"><tspan
+         sodipodi:role="line"
+         id="tspan3603"
+         x="49.022499"
+         y="16.957438"
+         style="stroke-width:0.26458332">Linguaggio naturale</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:0;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="21.593405"
+       y="-88.395493"
+       id="text3609"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/lorenzo/linguaggi_programmazione.png"
+       inkscape:export-xdpi="122"
+       inkscape:export-ydpi="122"><tspan
+         sodipodi:role="line"
+         id="tspan3607"
+         x="21.593405"
+         y="-88.395493"
+         style="stroke-width:0.26458332">...</tspan></text>
+  </g>
+</svg>

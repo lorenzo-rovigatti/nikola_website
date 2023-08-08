@@ -11,6 +11,14 @@
 
 Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearning.uniroma1.it/course/view.php?id=7743), password: `LabCalc`.
 
+## Materiale didattico
+
+{{% accordion id="slides" label="Slide delle lezioni" %}}
+<ul>
+    <li><a href="link://slug/labcalc_lezione1">Prima lezione</a></li>
+</ul>
+{{% /accordion %}}
+
 ## Compiti di esame
 
 **Nota Bene:** riporto qui solo le soluzioni relative alla parte in C.
