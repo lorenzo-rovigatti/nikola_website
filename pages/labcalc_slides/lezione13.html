@@ -1,0 +1,506 @@
+<!--
+.. title: Lezione 13
+.. slug: labcalc_lezione13
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+# Array multidimensionali
+                    
+* Abbiamo visto gli array "unidimensionali": sequenze di elementi omogenei
+    * Strutture dati che associano un indice ad un elemento (o casella di memoria)
+* Generalizzando il concetto otteniamo gli array "multidimensionali"
+    * Strutture dati che associano $n$ indici ad un elemento
+    
+```C [1-3|5-7]
+int uni[10]; // 10 elementi
+uni[0] = 5;
+uni[9] = 4;
+
+int multi[10][20][30]; // 10 * 20 * 30 elementi
+multi[0][0][0] = 2;
+multi[3][12][5] = -1;
+```
+
+---
+
+# Array multidimensionali &amp; memoria
+
+* Dobbiamo pensare sempre alla memoria come a una sequenza di celle consecutive
+* Anche gli array multidimensionali sono memorizzati sequenzialmente
+* L'organizzazione però è differente: in figura un array bidimensionale<!-- .element class="fragment" data-fragment-index="0" -->
+    * Può essere considerato un array di array: i `multi[i]` (`i` $\in [0,2]$) sono array unidimensionali di lunghezza 4
+    
+
+<div class="r-stack">
+<div class="fragment" data-fragment-index="0" style="margin-top:-12px; margin-left:138px">
+    <img class="fragment fade-out" src="/images/labcalc_slides/array_multidimensionali_memoria_1.png" width=684 data-fragment-index="1">
+</div>
+<img class="fragment current-visible" src="/images/labcalc_slides/array_multidimensionali_memoria_2.png" width=650 data-fragment-index="1">
+<img class="fragment" src="/images/labcalc_slides/array_multidimensionali_memoria_3.png" width=650>
+</div>
+
+---
+
+# Ancora sull'organizzazione in memoria
+
+<ul>
+<li>Consideriamo <code>int multi[N][M]</code></li>
+<li>In memoria l'elemento <span style="color:red"><code>multi[i][j]</code></span> è posto tra <span style="color:blue"><code>multi[i][j - 1]</code></span> e <span style="color:yellow"><code>multi[i][j + 1]</code></span>
+    <ul>
+    <li class="fragment" data-fragment-index="0"> a meno che <code>j == 0</code>, in quel caso l'elemento precedente è <span style="color:blue"><code>multi[i - 1][M - 1]</code></span></li>
+    <li class="fragment" data-fragment-index="1"> a meno che <code>j == M - 1</code>, in quel caso l'elemento seguente è <span style="color:yellow"><code>multi[i + 1][0]</code></span></li>
+    </ul>
+</ul>
+    
+<div class="flex-container">
+<div class="flex-col">
+    <img class="fragment semi-fade-out" data-fragment-index="0" src="/images/labcalc_slides/array_multidimensionali_index_1.png" width=300>
+</div>
+<div class="flex-col">
+    <div class="fragment semi-fade-out" data-fragment-index="1">
+        <img class="fragment" data-fragment-index="0" src="/images/labcalc_slides/array_multidimensionali_index_2.png" width=300>
+    </div>
+</div>
+<div class="flex-col">
+    <img class="fragment" data-fragment-index="1" src="/images/labcalc_slides/array_multidimensionali_index_3.png" width=300>
+</div>
+</div>
+
+---
+
+# Indicizzare un array multidimensionale
+
+* In un array bidimensionale il <span style="color: blue">primo indice</span> seleziona la riga, il <span style="color: red">secondo</span> la colonna
+
+<div style="float: left">
+    <img src="/images/labcalc_slides/array_multidimensionali_esempio.png" width=300></br>
+    
+</div>
+
+<ul style="margin-top: 80px">
+    <li class="fragment"><code>multi[<span style="color: blue">2</span>][<span style="color: red">3</span>] == 1</code></li>
+    <li class="fragment"><code>multi[<span style="color: blue">1</span>][<span style="color: red">1</span>] == -99</code></li>
+    <li class="fragment"><code>multi[<span style="color: blue">3</span>][<span style="color: red">2</span>] == ???</code> ERRORE!</li>
+    <li class="fragment"><code>multi[<span style="color: blue">0</span>][<span style="color: red">4</span>] == 45</code>, perché?<br/>
+    <img class="fragment" src="/images/labcalc_slides/array_multidimensionali_esempio_2.png" width=500></li>
+</ul>
+
+<div class="fragment warning">
+Il compilatore vi dà la memoria, ma non si interessa di come la gestite!
+</div>
+
+---
+
+# Inizializzare array multidimensionali
+
+<div class="flex-container">
+<div class="flex-col">
+
+```C
+int multi[2][3] = {{3, 25, -12}, {45, -99, 3}};
+// oppure
+int multi[2][3] = {3, 25, -12, 45, -99, 3};
+```
+<!-- .element style="width:100%; margin-top:50px" -->
+</div>
+<div class="flex-col">
+<img src="/images/labcalc_slides/array_multidimensionali_init_1.png" width=200>
+</div>
+</div>
+
+<div class="flex-container fragment">
+<div class="flex-col">
+
+```C
+int multi[2][3] = {{0}, {0}};
+// oppure
+int multi[2][3] = {0};
+```
+<!-- .element style="width:100%; margin-top:50px" -->
+</div>
+<div class="flex-col">
+<img src="/images/labcalc_slides/array_multidimensionali_init_2.png" width=200>
+</div>
+</div>
+
+<div class="flex-container fragment">
+<div class="flex-col">
+
+```C
+int multi[2][3] = {{1}, {2}};
+```
+<!-- .element style="width:100%; margin-top:70px" -->
+</div>
+<div class="flex-col">
+<img src="/images/labcalc_slides/array_multidimensionali_init_3.png" width=200>
+</div>
+</div>
+
+---
+
+# Inizializzare array multidimensionali con cicli
+
+* Poniamo che `N` e `M` siano valori definiti tramite macro
+
+```C [|5,6|7]
+int i, j;
+double dati[N][M];
+srand48(591823);
+
+for(i = 0; i < N; i++) {
+    for(j = 0; j < M; j++) {
+        dati[i][j] = 2.0 * drand48() - 1.0; // numeri in [-1, 1)
+    }
+}
+```
+
+```C [|4,5|6,7]
+int i, j;
+double dati[N][M];
+
+for(i = 0; i < N; i++) {
+    for(j = 0; j < M; j++) {
+        printf("dati[%d][%d] = ", i, j);
+        scanf("%lf", &(dati[i][j]));
+    }
+}
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Stampa di array multidimensionali
+
+```C [|6,7|8|10]
+int i, j;
+double multi[N][M];
+
+... // qui l'array viene inizializzato
+
+for(i = 0; i < N; i++) {
+    for(j = 0; j < M; j++) {
+        printf("%12.6lf ", multi[i][j]); // stampiamo tutta una riga, ordinatamente!
+    }
+    printf("\n"); // andiamo a capo dopo ogni riga!
+}
+```
+
+```bash
+$ ./es_array_multi
+    0.194815   -0.103943   -0.100315   -0.988201
+    -0.744305    0.506917    0.447213    0.744336
+    0.900985    0.815782    0.397513    0.916261
+```
+<!-- .element class="fragment" -->
+
+<div class="fragment focus">
+Esercizio per casa: dato un array <code>dati[N][M]</code>, stampate la sua trasposta: le colonne come righe e le righe come colonne
+</div>
+
+---
+
+# Esempio di array bidimensionali - prodotto tra matrici
+
+* Definiamo $\hat A$ e $\hat B$ di dimensioni $L\times M$ e $M\times N$, (es: $L = N = 2$, $M = 3$)
+
+<div class="flex-container">
+<div class="flex-col" style="margin-top: 22px">
+$$
+\hat A = \begin{pmatrix}
+a_{00} & a_{01} & a_{02}\\
+a_{10} & a_{11} & a_{12}
+\end{pmatrix}
+$$
+</div>
+<div class="flex-col">
+$$
+\hat B = \begin{pmatrix}
+b_{00} & b_{01}\\
+b_{10} & b_{11}\\
+b_{20} & b_{21}
+\end{pmatrix}
+$$
+</div>
+</div>
+
+* Definiamo $\hat C \equiv \hat A \cdot \hat B$. Sappiamo che $\hat C$ sarà una matrice $L \times N = 2 \times 2$
+* L'elemento $i,j$ di $\hat C$ è il prodotto tra la riga $i$ di $\hat A$ e la colonna $j$ di $\hat B$:
+
+$$
+C_{ij} = \sum_{k=1}^M A_{ik} B_{kj} = A_{i0} B_{0j} + A_{i1} B_{1j} + A_{i2} + B_{2j}
+$$
+
+<div class="fragment focus">
+Codifichiamo il prodotto in C applicando questa formula agli array bidimensionali
+</div>
+
+---
+
+# Implementazione del prodotto tra matrici
+
+$$
+C_{ij} = \sum_{k=1}^M A_{ik} B_{kj}
+$$
+
+* Quanti cicli servono? Tre!
+    * Un ciclo che iteri sulle $L$ righe di $\hat C$ $\to$ riga $i$
+    * Per ogni riga, un ciclo che iteri sui suoi $N$ elementi $\to$ elemento $C_{ij}$
+    * Per ogni $C_{ij}$, un ciclo che sommi i prodotti degli elementi di $\hat A$ e $\hat B$
+    
+```C [|1|2|5-7|8]
+int i, j, k;
+double A[L][M], B[M][N], C[L][N];
+... // inizializzazioni
+
+for(i = 0; i < L; i++) {
+    for(j = 0; j < N; j++) {
+        for(k = 0; k < M; k++) {
+            ... // qui faremo la somma
+        }
+    }
+}
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Codice completo
+
+```C [|2-4|8-10|12-14|15|21-26]
+#include <stdio.h>
+#define L 2
+#define M 3
+#define N 2
+
+int main(void){
+    int i, j, k;
+    int A[L][M] = {{0,-1,1}, {1,1,-1}}; // in un programma "vero" possiamo prendere A e B da input
+    int B[M][N] = {{1,1}, {1,-1}, {0,1}};
+    int C[L][N] = {0}; // IMPORTANTE: tutti gli elementi di C devono essere inizializzati a 0
+    
+    for(i = 0; i < L; i++) {
+        for(j = 0; j < N; j++) {
+            for(k = 0; k < M; k++) {
+                C[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    
+    printf("Il risultato del prodotto tra matrici è:\n");
+    for(i = 0; i < L; i++) {
+        for(j = 0; j < N; j++) {
+            printf("%3d\t", C[i][j]);
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+<!-- .element style="font-size: 47%" -->
+
+---
+
+# Output ed esercizi
+
+```bash
+$ ./es_prodotto_matrici
+Il risultato del prodotto tra matrici è:
+-1       2
+    2      -1
+```
+
+<div class="fragment">
+
+1. Modificate il programma in modo che possa agire su matrici `double` (mantendendo la stampa ordinata)
+2. Modificate il programma in modo che prenda le matrici $\hat A$ e $\hat B$ dallo standard input
+3. Scrivete un programma che sommi o sottragga due matrici: attenzione alle dimensioni!
+</div>
+
+---
+
+# I puntatori
+
+<img src="/images/labcalc_slides/pericolo.png" width=450>
+
+<div class="fragment focus">
+Solo se non vi esercitate!
+</div>
+
+---
+
+# I puntatori - cosa sono
+
+* Un puntatore è un tipo di variabile particolare che contiene un indirizzo di memoria
+* Un indirizzo di memoria è un intero positivo, espresso in esadecimale: `0xFF03929A`
+* I puntatori hanno un **tipo**: il **tipo** di variabile che si trova all'indirizzo puntato
+* Vediamo alcuni esempi<!-- .element class="fragment" -->
+    
+```C [1|2|3]
+int *a; // puntatore a intero
+double *b; // puntatore a double
+unsigned int *c; // puntatore ad unsigned int
+```
+<!-- .element class="fragment" -->
+
+<div class="fragment">
+
+* La dichiarazione di un puntatore ha la seguente sintassi: `tipo *nome;`
+* `tipo` è il **tipo** di variabile di cui si vuole immagazzinare l'indirizzo
+* `*` dice al compilatore che la variabile è un puntatore
+* Il `nome` identifica il puntatore, che è una variabile a tutti gli effetti!
+</div>
+
+---
+
+# I puntatori - come si usano
+
+* L'uso dei puntatori è associato a due **operatori unari**:
+    * L'operatore di indirizzamento `&` restitusce l'indirizzo di memoria della variabile a cui è applicato: ricordate `scanf("%d", &a);`?
+    * L'operatore di dereferenziazione `*` restituisce il valore contenuto nell'indirizzo di memoria a cui è applicato
+
+```C [1|2|3|5|6]
+int *p;      // puntatore a un intero
+int val = 3; // variabile normale
+p = &val;    // p ora contiene l'indirizzo di val
+
+printf("L'indirizzo di val è %p, p == %p\n", &val, p);
+printf("Il contenuto di val è %d, *p == %d\n", val, *p);
+```
+<!-- .element class="fragment" -->
+
+<img src="/images/labcalc_slides/puntatore.png" width=350 style="margin:0" class="fragment">
+
+```text
+$ ./es_puntatori
+L'indirizzo di val è 0x7ffd0bbf543c, p == 0x7ffd0bbf543c
+Il contenuto di val è 3, *p == 3
+```
+<!-- .element class="fragment" -->
+
+---
+
+# I puntatori - a cosa servono
+
+* I puntatori permettono di lavorare direttamente con la memoria
+* Abbiamo già incontrato indirizzi di memoria:
+    * `scanf`: usare i puntatori è l'**unico modo** per scrivere funzioni che modifichino le variabili passate come parametri
+    * array: la variabile definita come array è l'indirizzo di memoria della prima casella<!-- .element class="fragment" data-fragment-index="1" -->
+
+<div class="r-stack">
+
+<div class="fragment fade-out" data-fragment-index="1">
+
+```C []
+int val;
+int *p = &val;
+printf("Inserire un numero: ");
+scanf("%d", p);                  // equivalente a scanf("%d", &val);
+printf("Hai inserito %d\n", *p); // equivalente a printf("Hai inserito %d\n", val);
+```
+<!-- .element style="width: 100%" -->
+
+```text
+$ ./es_puntatori_scanf
+Inserire un numero: 123
+Hai inserito 123
+```
+<!-- .element style="width: 100%" class="fragment" data-fragment-index="0" -->
+</div>
+
+<div class="fragment" data-fragment-index="1">
+
+```C [|3|4|5|6]
+int dati[5] = {10, 3, 2, -1, 0};
+
+printf("dati == %p, &dati[0] == %p\n", dati, &dati[0]);
+printf("dati[0] == %d\n", dati[0]);
+*dati = 12; // equivalente a dati[0] = 12;
+printf("dati[0] == %d\n", dati[0]);
+```
+<!-- .element style="width: 100%" -->
+
+```text
+$ ./es_puntatori_array
+dati == 0x7ffe882dad10, &dati[0] == 0x7ffe882dad10
+dati[0] == 10
+dati[0] == 12
+```
+<!-- .element style="width: 100%" class="fragment" data-fragment-index="2" -->
+</div>
+
+</div>
+
+<div class="fragment focus">
+Oggi e nelle prossime lezioni vedremo tantissimi usi dei puntatori!
+</div>
+
+---
+
+# Come non farsi troppo male con i puntatori
+
+* Assicuratevi che il compilatore non dia *warning* (e questo vale sempre...)
+* Dereferenziare puntatori non inizializzati è un errore **molto** comune
+* Il simbolo `*` ha significati diversi a seconda del contesto:
+    * Nella dichiarazione di variabili identifica i puntatori, `int *p`
+    * Dereferenziazione, se si trova accanto a una variabile che contiene un indirizzo, `*p = 5;` oppure `int a = *p;`
+    * Se usato come operatore binario, moltiplica i valori su cui agisce, `int c = a * b`;
+
+<div class="fragment focus">
+Gli operatori unari <code>*</code> e <code>&</code> hanno la precedenza sugli operatori binari
+</div>
+
+<div class="fragment">
+
+Qualche esempio interessante:
+
+```C [1|2|4|5|6|7]
+int *p, val; // p è un puntatore a intero, val un intero
+*p = 5;      // ERRORE, p non è inizializzato, probabile segmentation fault
+
+p = &val;    // ora p punta a val
+*p = 5;      // qui inizializziamo val
+printf("%d\n", val * *p);   // cosa stampa? *p ha la precedenza...
+printf("%d\n", p == *(&p)); // cosa stampa? anche i puntatori sono variabili...
+```
+</div>
+
+---
+
+# Altri esempi con i puntatori
+
+```C [1,2|4,5|7,8|10-12|14-16|]
+int val = 5;
+int *p = &val;
+
+val = 3;
+printf("1) val == %d, *p == %d\n", val, *p);
+
+*p = val * 2;
+printf("2) val == %d, *p == %d\n", val, *p);
+
+int *q = p; // più puntatori possono puntare allo stesso indirizzo
+*q = -1;
+printf("3) val == %d, *p == %d, *q == %d\n", val, *p, *q);
+
+void *r = p; // il tipo "void *" può puntare a qualsiasi indirizzo di memoria
+printf("4) *r == %d\n", *r); // ERRORE DI COMPILAZIONE "invalid use of void expression"
+printf("4) *r == %d\n", *((int *) r)); // brutto ma efficace
+```
+
+```text
+$ ./es_puntatori_2
+1) val == 3, *p == 3
+2) val == 6, *p == 6
+3) val == -1, *p == -1, *q == -1
+4) *r == -1
+```
+<!-- .element class="fragment" -->
+                
