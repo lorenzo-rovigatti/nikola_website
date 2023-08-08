@@ -46,8 +46,10 @@ class WikipediaShortcodePlugin(ShortcodePlugin):
             msg = req_missing(['wikipediaapi'], 'use the wikipedia shortcode', optional=True)
             return self._error(msg)
         
-        wiki_api = wikipediaapi.Wikipedia("Lorenzo Rovigatti (lorenzo.rovigatti@gmail.com)", lang)
+        wiki_api = wikipediaapi.Wikipedia("{0} ({1})".format(self.site.config['BLOG_AUTHOR'], self.site.config['BLOG_AUTHOR']), lang)
         wiki_page = wiki_api.page(article)
+        
+        self.logger.info(self.site.config['BLOG_AUTHOR'])
         
         if not wiki_page.exists():
             return self._error('Wikipedia page "{0}" not found'.format(article))
