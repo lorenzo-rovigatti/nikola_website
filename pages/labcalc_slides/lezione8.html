@@ -1,0 +1,244 @@
+<!--
+.. title: Lezione 8
+.. slug: labcalc_lezione8
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+# Il preprocessore - direttiva `#define`
+                    
+* Il preprocessore effettua sostituzioni sul codice sorgente prima della compilazione
+* Vediamo come definire delle *macro*, che sono simboli elaborati **dal preprocessore**
+* Una macro è un simbolo $X$ a cui associamo un valore o un'espressione $Y$
+* Il preprocessore sostituisce $Y$ ad $X$ in tutto il codice sorgente
+
+```C [|2|6,7]
+#include <stdio.h>
+#define MOLT 10  // <-- è buona norma usare il maiuscolo per i nomi delle macro
+
+int main() {
+    double a = 3.0;
+    double b = a * MOLT;                   // -> double b = a * 10;
+    printf("%lf * %d = %lf\n", a, MOLT, b);// -> printf("%lf * %d = %lf\n", a, 10, b);
+
+    return 0;
+}
+```
+
+```bash
+$ gcc -o es_define es_define.c
+$ ./es_define
+3.000000 * 10 = 30.000000
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Macro: come e perché
+
+* Sono comode per definire quantità che utilizziamo più volte all'interno di un codice
+* Il preprocessore sostituisce *bovinamente* $Y$ a $X$
+
+```C [|2|6,7]
+#include <stdio.h>
+#define MOLT 10 + 5
+
+int main() {
+    double a = 3.0;
+    double b = a * MOLT;                   // -> double b = a * 10 + 5;
+    printf("%lf * %d = %lf\n", a, MOLT, b);// -> printf("%lf * %d = %lf\n", a, 10 + 5, b);
+
+    return 0;
+}
+```
+
+```bash [|2,3]
+$ gcc -o es_define_2 es_define_2.c
+$ ./es_define_2
+3.000000 * 15 = 35.000000
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment warning">
+Usate <strong>le parentesi</strong> per racchiudere il contenuto della macro ed evitare disastri, <code>#define MOLT (10 + 5)</code>
+</div>
+
+---
+
+# Definire le macro al momento della compilazione
+
+* Una macro può essere definita (ma non *ridefinita*) al momento di compilare con `-D`:
+
+```bash [1|2-5]
+$ gcc -o es_define_2 es_define_2.c -DMOLT=20
+es_define_2.c:2: warning: "MOLT" redefined
+    2 | #define MOLT 10 + 5
+    | 
+<command-line>: this is the location of the previous definition
+```
+
+```C
+#include <stdio.h>
+
+int main() {
+    double a = 3.0;
+    double b = a * MOLT;
+    printf("%lf * %d = %lf\n", a, MOLT, b);
+
+    return 0;
+}
+```
+<!-- .element: class="fragment" -->
+
+```bash [1|2-3]
+$ gcc -o es_define_3 es_define_3.c -DMOLT=20
+$ ./es_define_3
+3.000000 * 20 = 60.000000
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Macro che contengono parametri
+
+* È possibile definire macro complesse che contengono uno o più parametri
+* Un esempio classico (e molto usato): `#define SQR(x) ((x) * (x))`
+* Ecco un esempio completo:
+
+```C [|2,3|9,10]
+#include <stdio.h>
+#define SQR(x) ((x) * (x))
+#define SUM_SQR(x, y) ((x) * (x)) + ((y) * (y))
+
+int main() {
+    double n1,n2;
+    printf("Inserire due numeri razionali\n");
+    scanf("%lf %lf", &n1, &n2);
+    printf("I quadrati dei due numeri sono %.3lf %.3lf\n", SQR(n1), SQR(n2));
+    printf("La somma dei quadrati dei due numeri è %.3lf\n", SUM_SQR(n1, n2));
+    
+    return 0;
+}
+```
+
+```bash
+$ ./es_macro
+Inserire due numeri razionali
+3.4 5.1
+I quadrati dei due numeri sono 11.560 26.010
+La somma dei quadrati dei due numeri è 37.570
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Che differenza c'è tra una macro e una funzione?
+
+* Una macro viene *espansa* dal preprocessore $\to$ `SQR(x)` è vista dal compilatore come `(x) * (x)`
+* Una funzione è compilata a parte e viene chiamata al momento dell'esecuzione del programma
+* Differenza di prestazioni (chiamare una funzione "costa" tempo)
+* "Rule of thumb": usate le macro per operazioni **molto** semplici
+
+<div class="fragment warning">
+Per ora non dovete preoccuparvi delle prestazioni: capire cosa rallenta il vostro codice è complicato e spesso anche controintuitivo
+</div>
+
+---
+
+# Macro predefinite
+
+* Il compilatore e i file *header* che includete definiscono **tantissime** macro
+* Alcune di queste possono essere usate a scopi di diagnostica o di *log*:
+    * `__FILE__` è il nome del file 
+    * `__LINE__` è il numero della riga del file in cui si trova
+    * `__DATE__` contiene la data (di compilazione)
+    * `__TIME__` contiene l'ora attuale (di compilazione)
+    
+```C
+#include <stdio.h>
+
+int main() {
+    printf("Questo file è stato compilato il %s alle %s\n", __DATE__, __TIME__);
+    return 0;
+}
+```
+
+```bash
+$ ./es_macro_pred
+Questo file è stato compilato il Aug 20 2022 alle 10:25:11
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Il preprocessore - `#ifdef`, `#else`, `#endif`, ...
+
+* Il preprocessore può includere o meno parte del codice sorgente a seconda della presenza o meno di macro specifiche
+* Solo la parte inclusa verrà compilata!
+* In parole povere: se la data macro `MIA_MACRO` è definita, allora includi questo blocco di codice, altrimenti includi quest'altro
+* Per effettuare questa *compilazione condizionata* si usano le direttive
+    * `#ifdef NOMEMACRO` il codice che segue verrà incluso se `NOMEMACRO` esiste
+    * `#ifndef NOMEMACRO` il codice che segue verrà incluso se `NOMEMACRO` **non** esiste
+    * `#else` il codice che segue verrà incluso se la condizione precedente è falsa
+    * `#endif` chiude il blocco aperto con `#ifdef` o `#ifndef`
+    * `#undef NOMEMACRO` *cancella* `NOMEMACRO`: da qui in poi è come se `NOMEMACRO` non fosse mai stata definita
+
+---
+
+# Un esempio completo
+
+```c [1-10|11-13,17|14-17]
+#include <stdio.h>
+
+int main() {
+    double T_input, T_output;              
+    double offset = 32;
+    double conv = 5. / 9.;
+    
+    printf("Inserire la temperatura in input:\n");
+    scanf("%lf", &T_input);
+
+#ifdef F_TO_C
+    T_output = (T_input - offset) * conv;  
+    printf("La temperatura in Celsius è %lf\n", T_output);
+#else
+    T_output = T_input / conv + offset;  
+    printf("La temperatura in Fahrenheit è %lf\n", T_output);
+#endif
+    
+    return 0;
+}
+```
+<!-- .element: style="max-height:600px" -->
+
+---
+
+# Eseguiamo entrambe le "versioni"
+
+* Definiamo al momento della compilazione la macro `F_TO_C`:
+
+```bash [1|2-4]
+$ gcc -o es_condizionata es_condizionata.c -DF_TO_C
+Inserire la temperatura in input:
+96.8
+La temperatura in Celsius è 36.000000
+```
+
+<div class="fragment">
+
+* Senza la definizione la parte di codice compilata è l'altra:
+
+```bash [1|2-4]
+$ gcc -o es_condizionata es_condizionata.c
+Inserire la temperatura in input:
+36
+La temperatura in Fahrenheit è 96.800000
+```
+
+</div>

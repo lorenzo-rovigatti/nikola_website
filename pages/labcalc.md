@@ -11,11 +11,37 @@
 
 Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearning.uniroma1.it/course/view.php?id=7743), password: `LabCalc`.
 
-## Materiale didattico
+## Materiale presentato in aula
 
 {{% accordion id="slides" label="Slide delle lezioni" %}}
 <ul>
-    <li><a href="link://slug/labcalc_lezione1">Prima lezione</a></li>
+    <li><a href="link://slug/labcalc_lezione1">Prima lezione:</a> introduzione al corso, accenno sui  sistemi posizionali, sistemi di numerazione decimale, binario ed esadecimale. Conversioni da un sistema a un altro.  Somme e sottrazioni di numeri binari.</li>
+    <li><a href="link://slug/labcalc_lezione2">Seconda lezione:</a> rappresentazione di numeri negativi, complemento a due e in eccesso.</li>
+    <li><a href="link://slug/labcalc_lezione3">Terza lezione:</a> virgola mobile e IEEE754, problemi di arrotondamento, CPU, dispositivi I/O, ASCII e UNICODE, RAM.</li>
+    <li><a href="link://slug/labcalc_lezione4">Quarta lezione:</a> linguaggio macchina, linguaggi di alto livello, compilatore e interprete, introduzione al C.</li>
+    <li><a href="link://slug/labcalc_lezione5">Quinta lezione:</a> introduzione al C: variabili, tipi e cast, operatori aritmetici, incremento e decremento.</li>
+    <li><a href="link://slug/labcalc_lezione6">Sesta lezione:</a> il preprocessore (solo #include), input/output e printf.</li>
+    <li><a href="link://slug/labcalc_lezione7">Settima lezione:</a> scanf, operatori logici e relazionali, priorità degli operatori, librerie matematiche, il linker.</li>
+    <li><a href="link://slug/labcalc_lezione8">Ottima lezione:</a> #define e compilazione condizionata.</li>
+    <li><a href="link://slug/labcalc_lezione9">Nona lezione:</a> diagrammi di flusso, teorema di Bohm-Jacopini, if/else, for/while/do.</li>
+    <li><a href="link://slug/labcalc_lezione10">Decima lezione:</a> array unidimensionali.</li>
+    <li><a href="link://slug/labcalc_lezione11">Undicesima lezione:</a> bubblesort, ricerca binaria su array ordinati, numeri pseudocasuali, algoritmo lineare congruenziale.</li>
+    <li><a href="link://slug/labcalc_lezione12">Dodicesima lezione:</a> istogramma di valori interi e reali.</li>
+    <li><a href="link://slug/labcalc_lezione13">Tredicesima lezione:</a> array multidimensionali, esempi con matrici, introduzione ai puntatori.</li>
+    <li><a href="link://slug/labcalc_lezione14">Quattordicesima lezione:</a> input/output su file.</li>
+    <li><a href="link://slug/labcalc_lezione15">Quindicesima lezione:</a> puntatori e array unidimensionali, qualificatore const, puntatori e array multidimensionali.</li>
+    <li><a href="link://slug/labcalc_lezione16">Sedicesima lezione:</a> introduzione alle funzioni.</li>
+    <li><a href="link://slug/labcalc_lezione17">Diciassettesima lezione:</a> librerie, personali, argomenti passati by reference e by value, introduzione alle stringhe.</li>
+    <li><a href="link://slug/labcalc_lezione18">Diciottesima lezione:</a> getchar, putchar, array multidimensionali di stringhe.</li>
+    <li><a href="link://slug/labcalc_lezione19">Diciannovesima lezione:</a> manipolazione di stringhe, lettura di stringhe da file, integrazione numerica: rettangoli e trapezi.</li>
+    <li><a href="link://slug/labcalc_lezione20">Ventesima lezione:</a> integrazione Monte Carlo.</li>
+</ul>
+{{% /accordion %}}
+
+{{% accordion id="additional_slides" label="Slide aggiuntive" %}}
+<ul>
+    <li><a href="link://slug/labcalc_linux">Introduzione a Linux</a></li>
+    <li><a href="link://slug/labcalc_python_lab">Introduzione rapida a Python</a></li>
 </ul>
 {{% /accordion %}}
 

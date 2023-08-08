@@ -1,0 +1,248 @@
+<!--
+.. title: Lezione 4
+.. slug: labcalc_lezione4
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+# Linguaggio macchina
+                        
+<pre class="text"><code data-trim data-noescape>
+    10111000 01001000 01100101 01101100 01101100
+    10100011 00000000 00010000 00000000 00000110
+    10111000 01101111 00101100 00100000 01010111
+    10100011 00000100 00010000 00000000 00000110
+    10111000 01101111 01110010 01101100 01100100
+    10100011 00001000 00010000 00000000 00000110
+    10111000 00100001 00001010 00000000 00000000
+    10100011 00001100 00010000 00000000 00000110
+    10111001 00000000 00010000 00000000 00000110
+    10111010 00010000 00000000 00000000 00000000
+    10111011 00000001 00000000 00000000 00000000
+    10111000 00000100 00000000 00000000 00000000
+    11001101 10000000
+    10111000 00000001 00000000 00000000 00000000
+    11001101 10000000
+</code></pre>
+
+* La CPU esegue operazioni specificate in linguaggio macchina
+* Sia le istruzioni da eseguire che i dati su cui operare sono rappresentati in binario
+* Se siete curiosi sul libro di testo trovate un esempio più comprensibile!<!-- .element: class="fragment"  -->
+
+---
+
+# Linguaggi di programmazione
+
+* Scrivere in linguaggio macchina non è pratico
+* Esiste una *gerarchia* di linguaggi di programmazione
+    * Basso livello $\to$ vicino all'hardware
+    * Alto livello $\to$ vicino al "linguaggio naturale"
+
+<img class="fragment" src="/images/labcalc_slides/linguaggi_programmazione.png" width="500">
+
+---
+
+# Assembly
+
+È un linguaggio le cui istruzioni hanno una corrispondenza biunivoca (con qualche eccezione) con le istruzioni elementari del linguaggio macchina
+
+```assembly
+global _start
+section .text
+
+_start:
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, msg
+    mov rdx, msglen
+    syscall
+    mov rax, 60
+    mov rdi, 0
+    syscall
+
+section .rodata
+    msg: db "Hello, world!", 10
+    msglen: equ $ - msg
+```
+
+Forse un po' meglio del linguaggio macchina (cfr. prima slide)...
+
+---
+
+# Tradurre in linguaggio macchina
+
+* Il codice che scrivete è detto *codice sorgente*
+* La CPU esegue solo linguaggio macchina
+* Qualunque altro programma deve essere *tradotto* in linguaggio macchina
+* Ad esempio il codice sorgente precedente in assembly richiede i seguenti comandi:
+```bash
+$ nasm -f elf64 -o hello.o hello.s
+$ ld -o hello hello.o
+```
+* A questo punto abbiamo creato un *eseguibile*: un file che può essere eseguito
+```bash [1|2]
+$ ./hello
+Hello, world!
+```
+
+---
+
+# Compilatori &amp; interpreti
+
+La traduzione in linguaggio macchina può avvenire tramite compilazione o interpretazione
+
+<div class="flex-container">
+
+<div class="flex-col fragment">
+
+## Compilazione
+
+* Il *compilatore* trasforma il vostro codice in un eseguibile
+* Una volta compilato, il vostro codice può essere eseguito
+* Il processo di compilazione va ripetuto dopo ogni modifica al codice
+
+```bash
+$ gcc -o hello hello.c
+$ ./hello
+Hello, world
+$ ./hello
+Hello, world
+```
+
+</div>
+
+<div class="flex-col fragment">
+
+## Interpretazione
+
+* L'*interprete* esegue il vostro codice riga per riga
+* L'interprete va chiamato ogni volta che volete eseguire il vostro programma
+
+```bash
+$ python3 hello.py
+Hello, world
+$ python3 hello.py
+Hello, world
+```
+</div>
+
+</div>
+
+---
+
+# In questo corso: C e Python
+
+* C è un linguaggio compilato
+    * Vantaggi: veloce, standard per programmi di sistema e, in parte, codici scientifici
+    * Svantaggi: basso livello, sintassi complicata, "vecchio"
+* Python è un linguaggio interpretato<!-- .element: class="fragment" data-fragment-index="1" -->
+    * Vantaggi: espressivo, tantissime librerie anche per uso scientifico, standard per il machine learning
+    * Svantaggi: "lento"
+* Useremo principalmente il C, che verrà sviluppato durante il corso del prossimo anno<!-- .element: class="fragment" -->
+* Usaremo Python principalmente per fare grafici (utile per il laboratorio di meccanica del prossimo semestre)<!-- .element: class="fragment" -->
+
+---
+
+# Introduzione al C
+
+* Il programma si scrive come un insieme di file di testo
+* Convenzionalmente i codici sorgente del C hanno estensioni `.c` e `.h`
+* Una volta scritto il codice, il programma va compilato
+    * Esistono tanti compilatori. Noi useremo `gcc` ([*GNU C Compiler*](https://gcc.gnu.org/))
+* Apriamo un editor di testo, scriviamo il seguente programma e salviamolo come `hello.c`
+
+```c
+#include <stdio.h>
+
+int main() {
+    // sommiamo degli interi e stampiamo il risultato
+    int a = 2;
+    int b = 3;
+    int sum = a + b;
+    printf("Hello world, a + b = %d\n", sum);
+    
+    return 0;
+}
+```
+
+---
+
+# Come si compila un programma in C?
+
+* Aprite un editor di testo (emacs, gedit, TextEdit per il Mac, *ecc*)
+* Scrivete il codice di esempio
+* Salvate il file usando l'estensione `.c` (es: `prova.c`)
+    * Alcuni editor non lo permettono: rinominate il file o lasciatelo così, non è grave
+* La compilazione si esegue da terminale con il comando
+
+```bash
+$ gcc -o prova prova.c
+```
+* Nel comando precedente
+    * `gcc` è il comando che *invoca* il compilatore
+    * `-o prova` dice a `gcc` di chiamare il file eseguibile `prova`
+    * `prova.c` è il codice sorgente che vogliamo compilare
+
+---
+
+# Come si compila un programma in C?
+
+Studiate sempre l'*output* del compilatore: potrebbe contenere eventuali errori che impediscono la compilazione. Ad esempio togliamo il `;` alla riga 7:
+
+```bash
+$ gcc -o prova prova.c
+roba.c: In function ‘main’:
+roba.c:8:5: error: expected ‘,’ or ‘;’ before ‘printf’
+    8 |     printf("Hello world, a + b = %d\n", sum);
+        |     ^~~~~~
+```
+
+* Usate `ls -l` per controllare se l'eseguibile esiste e a che ora è stato compilato
+* Se c'è allora potete eseguirlo:
+
+```bash [1|2]
+$ ./prova
+Hello world, a + b = 5
+```
+
+* Una volta compilato può essere eseguito quante volte volete
+
+```bash [1-2|3-4]
+$ ./prova
+Hello world, a + b = 5
+$ ./prova
+Hello world, a + b = 5
+```
+
+---
+
+# Analizziamo il nostro primo programma
+
+Questo codice contiene già *quasi* tutto quello che dovrete imparare:
+* Direttive del preprocessore: `#include`
+* Dichiarazione di funzioni: in questo caso `main()`
+* Commenti: la riga che comincia con `//`
+* Dichiarazione e inizializzazione di variabili: `a`, `b` e `sum`
+* Istruzioni per la manipolazione dei dati: `sum = a + b`
+* Chiamata di funzione (`printf()`)
+
+```c [1|3,11|4|5-7|8|10]
+#include <stdio.h>
+
+int main() {
+    // sommiamo degli interi e stampiamo il risultato
+    int a = 2;
+    int b = 3;
+    int sum = a + b;
+    printf("Hello world, a + b = %d\n", sum);
+    
+    return 0;
+}
+```  
+                        

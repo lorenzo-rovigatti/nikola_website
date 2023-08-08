@@ -1,0 +1,620 @@
+<!--
+.. title: Lezione 17
+.. slug: labcalc_lezione17
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+# Librerie personali
+                    
+* Per scrivere programmi complicati è bene utilizzare un approccio *modulare*
+* Si suddivide il problema in sotto-problemi che vengono affrontati tramite funzioni
+* Se il numero di funzioni cresce è bene dividere il codice in più file
+    * Si mettono le definizioni in un file header (es. `libreria.h`)
+    * Si mettono i corpi delle funzioni in un file `.c` (es. `libreria.c`)
+    * Si include l'header all'inizio del file che utilizzerà le funzioni con `#include "libreria.h"`
+    * Si compila tutto assieme: `gcc -o eseguibile main.c libreria.c`
+    
+<div class="fragment warning">
+Nell'<code>#include</code> dovete usare le virgolette e non i simboli minore e maggiore!
+</div>
+    
+<div class="focus fragment">
+Questa procedura si generalizza a un numero qualsiasi di librerie!
+</div>
+
+---
+
+# Un esempio di libreria
+
+<div class="flex-container">
+<div class="flex-col">
+
+```C
+/* my_random.h */
+int random_int(int min, int max);
+double random_double(double min, double max);
+```
+<!-- .element style="width:100%" -->
+
+```C
+/* my_random.c */
+#include "my_random.h"
+
+int random_int(int min, int max) {
+    // corpo della funzione
+}
+
+double random_double(double min, double max) {
+    // corpo della funzione
+}
+```
+<!-- .element style="width:100%" class="fragment" -->
+</div>
+
+<div class="flex-col">
+
+```C
+#include "my_random.h"
+
+int main() {
+    int my_int = random_int(4, 10);
+    /* resto del codice*/
+}
+```
+<!-- .element class="fragment" -->
+
+```bash
+$ gcc -o mio_exe main.c my_random.c
+$ ./mio_exe
+```
+<!-- .element class="fragment" -->
+</div>
+</div>
+
+<div class="fragment focus">
+Sotto al cofano il linker compila separatamente <code>main.c</code> e <code>my_random.c</code> e poi unisce insieme i codici oggetto risultanti
+</div>
+
+---
+
+# Considerazioni sulle funzioni - 1
+
+* Una funzione può essere chiamata all'interno di qualunque altra funzione
+    
+```C [|7,13|]
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "my_random.h"
+
+int pari_dispari(int min, int max) {
+    return (random_int(min, max) % 2); // chiamiamo una funzione della nostra libreria
+}
+
+int main() {
+    srand48(time(NULL));
+    
+    int result = pari_dispari(3, 15);
+    
+    /* fa qualcosa con result */
+    
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+<div class="fragment focus">
+Una funzione può persino chiamare se stessa!
+</div>
+
+---
+
+# Considerazioni sulle funzioni - 2
+
+* Le funzioni possono restituire un solo valore (tramite il `return`)
+* Cambiare il valore di un parametro all'interno di una funzione **non** ha effetto fuori dalla funzione $\to$ questo concetto si chiama passaggio *by value* (per valore)
+
+```C [3-6|9-10|]
+#include <stdio.h>
+
+double square(double x) {
+    x *= x; // cambiamo il valore del parametro
+    return x;
+}
+
+int main() {
+    double num = 3.0, num_sqr = square(num);
+    printf("%lf^2 == %lf\n", num, num_sqr);
+    return 0;
+}
+```
+
+```bash
+$ ./es_passaggio
+3.000000^2 == 9.000000
+```
+<!-- .element class="fragment" -->
+
+<div class="warning fragment">Come fa <code>scanf()</code> a modificare il valore delle variabili che gli passiamo?</div>
+
+---
+
+# Passaggio *by value* e *scope*
+
+* Una variabile esiste **solamente** tra le parentesi graffe più interne che la circondano
+* Variabili con nomi uguali ma scope diversi non hanno **nessun** legame fra di loro
+
+```C [|5,6|5,6,11|14|]
+#include <stdio.h>
+#include <math.h>
+
+double ipotenusa(double cat1, double cat2) {
+    // questa x è diversa da quella del main!
+    double x = sqrt(cat1 * cat1 + cat2 * cat2);
+    return x;
+}
+
+int main() {
+    double x = 4.0;
+    double y = 3.0;
+    
+    printf("sqrt(%lf^2 + %lf^2) == %lf\n", x, y, ipotenusa(x, y));
+    
+    return 0;
+}
+```
+
+```bash
+$ ./funzioni_scope
+sqrt(4.000000^2 + 3.000000^2) == 5.000000
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Passaggio *by reference* (per riferimento)
+
+* Passando un indirizzo a una funzione, questa lo può dereferenziare e accedere al contenuto della casella di memoria, sia in lettura che in scrittura
+
+```C [3-7|10-13]
+#include <stdio.h>
+
+void swap(double *x, double *y) {
+    double tmp = *x;
+    *x = *y;
+    *y = tmp;
+}
+
+int main() {
+    double a = 2.0, b = -5.3;
+    printf("Prima: a = %lf, b = %lf\n", a, b);
+    swap(&a, &b); // <-- passiamo alla funzione gli indirizzi delle variabili!
+    printf("Dopo: a = %lf, b = %lf\n", a, b);
+    
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+```bash
+$ ./es_by_reference
+Prima: a = 2.000000, b = -5.300000
+Dopo: a = -5.300000, b = 2.000000
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Cosa succede?
+
+<img src="/images/labcalc_slides/by_reference_initial.png" width=500 style="margin-bottom:0">
+<img class="fragment" src="/images/labcalc_slides/by_reference_final.png" width=500 style="margin-top:0">
+
+<div class="focus fragment">Con il passaggio <em>by reference</em> la funzione può modificare più variabili (e quindi superare il limite di un solo <code>return</code>)</div>
+
+<div class="focus fragment">Ecco perché <code>scanf()</code> prende gli indirizzi delle variabili!</div>
+
+---
+
+# Array come argomenti di funzioni
+
+* Abbiamo visto che un array è un puntatore "costante" alla prima casella di memoria
+* L'informazione sulla lunghezza dell'array va passata a parte!
+```C
+void print_int_array(int *array, int n) {
+    int i;
+    for(i = 0; i < n; i++) {
+        printf("%d %d\n", i, array[i]);
+    }
+}
+```
+* In alternativa si può usare `int array[]` per rendere esplicita la natura del parametro
+```C
+void print_int_array(int array[], int n) {
+    int i;
+    for(i = 0; i < n; i++) {
+        printf("%d %d\n", i, array[i]);
+    }
+}
+```
+
+<div class="warning fragment">
+Modificare il contenuto di array passati a una funzione ha effetto anche al di fuori della funzione!
+</div>
+
+---
+
+# Array multidimensionali come argomenti di funzioni
+
+* Nella lista dei parametri, un array multidimensionale deve avere tutte le dimensioni specificate tranne la prima
+
+```C [|3,9|4,10|]
+#define LEN 10
+
+void inizializza(double my_array[][LEN]);
+void inizializza_wrong(double my_array[][]);
+
+int main() {
+    double a[10][LEN];
+    
+    inizializza(a);
+    inizializza_wrong(a);
+    return 0;
+}
+
+// qui le implementazioni
+```
+
+```text
+parametro_multi.c:6:31: error: array type has incomplete element type ‘double[]’
+    6 | void inizializza_wrong(double my_array[][]);
+parametro_multi.c: In function ‘main’:
+parametro_multi.c:14:20: error: type of formal parameter 1 is incomplete
+    14 |  inizializza_wrong(a);
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Esempio: una funzione per il bubblesort
+
+```C [|1,14|5,6,12,13|7-11|]
+void bubblesort(int data[], int n){
+    int i, tmp;
+    int *pd;
+
+    for(i = 0; i < n - 1; i++){
+        for(pd = data; pd < (data + n - 1 - i); pd++){
+            if(*pd > *(pd + 1)) {
+                tmp = *(pd + 1);
+                *(pd + 1) = *pd;
+                *pd = tmp;
+            }
+        }
+    }
+}
+```
+
+<div class="fragment focus">
+
+* La funzione usa un puntatore per accedere alle caselle di memoria
+* Provate a riscrivere la stessa funzione indicizzando l'array
+</div>
+
+---
+
+# La visibilità delle variabili
+
+* Lo *scope* di una variabile ne definisce l'ambito di visibilità
+* Variabili definite in blocchi di codice diversi possono avere lo stesso nome ma si riferiscono a zone di memoria differenti
+* Una variabile definita all'esterno di qualunque funzione è detta *globale*
+* Una variabile globale è visibile in qualunque funzione definita nello stesso file
+
+```C [|3|6|10-11|]
+#include <stdio.h>
+
+int x = 3;
+
+void stampa_x() {
+    printf("%d\n", x);
+}
+
+int main() {
+    printf("%d\n", x); // stampa "3"
+    stampa_x(); // stampa "3"
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Perché non è bene usare variabili globali
+
+* Le variabili locali *nascondono* quelle globali
+```C
+int x = 3;
+void stampa_x() {
+    int x = 4;
+    printf("%d\n", x); // stampa 4
+}
+```
+* Una funzione dovrebbe modificare unicamente i parametri passati per riferimento<!-- .element class="fragment" -->
+    * Non farlo significa rendere il codice illeggibile
+    * Esempio: chi mai potrebbe aspettarsi che x venga cambiata da una funzione che non prende parametri?
+    ```C
+    void stampa_x() {
+        x = 4;
+        printf("%d\n", x); // stampa 4
+    }
+    ```
+
+<div class="warning fragment">
+In programmi lunghi è facile perdere traccia delle variabili globali: non usatele mai per evitare bug insidiosissimi
+</div>
+
+---
+
+# I caratteri in C
+
+* I caratteri sono rappresentati tramite codice ASCII (8 bit $\to$ 1 carattere)
+* Il tipo di dato associato è il `char` (interi a 8 bit)
+* Le lettere maiuscole dell'alfabeto hanno codici $\in [65,90]$
+* Le lettere minuscole dell'alfabeto hanno codici $\in [97,122]$
+* I caratteri che rappresentano i numeri hanno codici $\in [48,57]$
+
+<div class="flex-container">
+<div class="flex-col">
+
+```C
+#include <stdio.h>
+
+int main() {
+    char c1 = 'a';
+    char c2 = 'A';
+    char c3 = '5';
+    printf("CODICE CARATTERE\n");
+    printf("%d   ->   %c\n", c1, c1);
+    printf("%d   ->   %c\n", c2, c2);
+    printf("%d   ->   %c\n", c3, c3);
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+</div>
+
+<div class="flex-col">
+
+```bash
+$ ./es_char
+CODICE CARATTERE
+97   ->   a
+65   ->   A
+53   ->   5
+```
+<!-- .element class="fragment" -->
+</div>
+</div>
+
+---
+
+# Le stringhe
+
+* In C insiemi di caratteri (frasi, parole) sono immagazzinati in *stringhe*
+* Una stringa è una sequenza di `char` che termina con il **carattere di fine stringa** `\0`
+* Le stringhe sono rappresentate da array unidimensionali di `char`
+
+```C [|3,7|9-11|12|14|]
+#include <stdio.h>
+#include <stdlib.h>
+#define LEN 10
+
+int main() {
+    srand48(481923);
+    char stringa[LEN];
+    int i;
+    for(i = 0; i < LEN - 1; i++) {
+        stringa[i] = drand48() * (91 - 65) + 65;
+    }
+    stringa[LEN - 1] = '\0'; // l'ultimo carattere deve essere quello di fine stringa
+    
+    printf("%s\n", stringa); // stampa "VCZBCOCKF"
+    
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Un altro esempio
+
+```C [|4-10|]
+#include <stdio.h>
+
+int main() {
+    char parola[5];
+    
+    parola[0] = 'c';
+    parola[1] = 'i';
+    parola[2] = 'a';
+    parola[3] = 'o';
+    parola[4] = '\0';
+    
+    printf("%s\n", parola); // stampa "ciao"
+
+    return 0;
+}
+```
+
+<div class="fragment warning">
+Per contenere una stringa di <code>N</code> caratteri serve un array di lunghezza <code>>= N + 1</code> 
+</div>
+
+---
+
+# Una stringa può contenere qualunque carattere ASCII
+
+```C [|6|7|9|17|18|]
+#include <stdio.h>
+
+int main() {
+    char stringa[20];
+    
+    stringa[0] = 'U';
+    stringa[1] = 'n';
+    stringa[2] = 'a';
+    stringa[3] = ' ';
+    stringa[4] = 's';
+    stringa[5] = 't';
+    stringa[6] = 'r';
+    stringa[7] = 'i';
+    stringa[8] = 'n';
+    stringa[9] = 'g';
+    stringa[10] = 'a';
+    stringa[11] = '!';
+    stringa[12] = '\0';
+
+    printf("%s\n", stringa); // stampa "una stringa!"
+    
+    return 0;
+}
+```
+
+---
+
+# Inizializzare le stringhe
+
+* Una stringa può essere inizializzata come qualsiasi altro array (senza dimenticare `\0`)
+```C
+char parola[5] = {'c', 'i', 'a', 'o', '\0'};
+```
+* Possiamo usare una sintassi "speciale" usando i doppi apici
+```C
+char altra_parola[5] = "ciao"; // <-- aggiunge automaticamente '\0' alla fine
+```
+* Possiamo utilizzare un ciclo (cosa conterrà `parolona`?)
+```C
+char parolona[10] = {0}; // inizializzando tutto a 0 possiamo limitare i guai
+for(i = 0; i < 9; i++) {
+    parolona[i] = 65 + i;
+}
+parolona[9] = '\0'; // non strettamente necessario se abbiamo inizializzato a 0
+```
+
+```bash
+$ ./es_ciclo_stringa
+ABCDEFGHI
+```
+<!-- .element class="fragment" -->
+
+<div class="warning fragment">
+<code>\0</code> corrisponde a 0 in codice ASCII!
+</div>
+
+---
+
+# Modificare una stringa dopo la sua definizione
+
+* I metodi con `""` e `{}` si possono utilizzare solo al momento della definizione!
+```C []
+int main() {
+    char parola[5];
+    parola = "ciao";
+    parola = {'c', 'i', 'a', 'o'};
+    return 0;
+}
+```
+
+```bash
+$ gcc -o es_init_sbagliato es_init_sbagliato.c
+prova.c: In function ‘main’:
+prova.c:5:9: error: assignment to expression with array type
+    3 |  parola = "ciao";
+        |         ^
+prova.c:6:11: error: expected expression before ‘{’ token
+    4 |  parola = {'c', 'i', 'a', 'o'};
+        |
+```
+
+<div class="fragment focus">
+Per modificare una stringa dopo l'inizializzazione bisogna cambiare il contenuto dell'array casella per casella (o chiamare funzioni che lo facciano)
+</div>
+
+---
+
+# Perché esiste il carattere di fine stringa?
+
+* Un array di `char` **non è** una stringa, ma *può* contenere una stringa
+* Se l'array contiene un `'\0'` allora tutto quello che lo precede è una stringa
+<img src="/images/labcalc_slides/string_null.png" width=500 style="margin-bottom:0">
+* Se l'array non contiene `'\0'` allora è solo un array
+<img src="/images/labcalc_slides/string_no_null.png" width=500>
+
+<div class="fragment warning">
+Le funzioni che lavorano con le stringhe si aspettano di trovare un <code>'\0'</code>: se non c'è il risultato è <em>undefined behaviour</em>
+</div>
+
+---
+
+# Una funzione che restituisce la lunghezza di una stringa
+
+```C [|4-9|]
+#include <stdio.h>
+
+int lunghezza_stringa(char stringa[]) { // avremmo potuto usare "char *stringa"
+    int lunghezza = 0;
+    char *carattere = stringa;
+    while(*carattere != '\0') {
+        lunghezza++;
+        carattere++;
+    }
+    
+    return lunghezza;
+}
+```
+<div class="fragment">
+
+* La funzione conta quanti caratteri ci sono prima di `'\0'`
+* Non sappiamo quanto sia lungo l'array: se non contiene `'\0'` andremo *out of bounds*, cioè oltre la regione di memoria assegnata all'array $\to$ *undefined behaviour*
+</div>
+
+---
+
+# Usiamo la nostra funzione
+
+```C [|4-10|12-13|]
+// qui gli include e la definizione di lunghezza_stringa
+
+int main() {
+    char ciao[5] = "ciao";
+    char ciao2[50] = "ciao";
+    char frase[50] = "Nel mezzo del cammin...";
+    
+    printf("lunghezza ciao: %d\n", lunghezza_stringa(ciao));   // stampa 4
+    printf("lunghezza ciao2: %d\n", lunghezza_stringa(ciao2)); // stampa 4
+    printf("lunghezza frase: %d\n", lunghezza_stringa(frase)); // stampa 23
+    
+    char ciao3[4] = {'c', 'i', 'a', 'o'};
+    printf("lunghezza ciao3: %d\n", lunghezza_stringa(ciao3)); // oh no!
+    
+    return 0;
+}
+```
+
+```bash
+$ ./es_lunghezza_stringa
+lunghezza ciao: 4
+lunghezza ciao2: 4
+lunghezza frase: 23
+lunghezza ciao3: 8
+```
+<!-- .element class="fragment" -->
+                
