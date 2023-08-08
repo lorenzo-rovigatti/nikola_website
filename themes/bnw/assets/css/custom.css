@@ -21,6 +21,11 @@ code {
   background-color: transparent;
 }
 
+/* I don't know who or what adds <s> tags to html tags containing equal signs */
+code s {
+    text-decoration: none;
+}
+
 video {
   display: block;
   margin: 0 auto;
@@ -28,6 +33,32 @@ video {
 
 .codetable tr {
   line-height: 16px;
+}
+
+/* Table of contents */
+#table-of-contents {
+  border-color: #c9c9c9;
+  border-radius: .25rem;
+  box-shadow: 0 .2rem .5rem #d8d8d8,0 0 .0625rem #d8d8d8 !important;
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+}
+
+nav.contents p.topic-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0 0 .5rem;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+nav.contents ul.simple {
+    margin: 0;
+    padding-left: 2rem;
+    line-height: 1.2em;
+}
+
+nav.contents > :last-child {
+    margin-bottom: 0;
 }
 
 /* wikipedia tooltips */
