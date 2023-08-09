@@ -15,6 +15,6 @@
 
 # My research
 
-My research revolves around soft condensed matter and self assembly. In particular, I am interested in the phase behaviour of systems composed by anisotropically interacting nano- and micro-sized particles as well as (bio)polymeric constructs.
+My research revolves around soft condensed matter and self assembly. In particular, I am interested in the phase behaviour of systems composed by anisotropically interacting nano- and micro-sized particles as well as (bio)polymeric constructs. Head <a href="link://slug/my-main-research-topics">here</a> if you are curious.
 
-My weapons of choice are computer simulations and theoretical approaches devised for the investigation of complex fluids.
+For my research I use computer simulations and theoretical approaches devised for the investigation of complex fluids. All my codes are [open source](https://github.com/lorenzo-rovigatti) (even this [website](https://github.com/lorenzo-rovigatti/nikola_website)). Feel free to contact me (see the footer below&#8595;) if you have any questions!
