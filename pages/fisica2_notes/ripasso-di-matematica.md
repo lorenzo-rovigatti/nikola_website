@@ -10,6 +10,11 @@
 .. has_math: true
 -->
 
+```{contents} Indice
+:depth: 2
+:backlinks: none
+```
+
 # Vettori
 
 Le grandezze fisiche si distinguono essenzialmente in due grandi classi. Quelle che risultano completamente definite quando se ne conosce la sola misura rientrano nella categoria delle grandezze scalari. Tecnicamente, queste sono quantità che non dipendono in alcun modo dal sistema di riferimento che consideriamo. Tra le quantità che *non* posseggono questa qualità abbiamo i vettori, che ruotano insieme al sistema di riferimento. Nel corso avremo a che fare con vettori tridimensionali , cioè oggetti aventi tre componenti, solitamente definiti nello spazio cartesiano $\mathbb{R}^3$. Quando vedrete vettori bidimensionali, questi sono da intendere vettori tridimensionali la cui terza componente è la stessa per tutti (per esempio 0): è una semplificazione utile che di permette di studiare più facilmente fenomeni che avvengono su di un piano.
@@ -142,7 +147,7 @@ Alcune relazioni utili legate alle derivate (*a*, *b* e *c* sono scalari):
 
 ## Integrali
 
-Per quel che concerne l'argomento del corso, l'integrale può essere visto come una somma di tanti (infiniti) contributi molto piccoli (infinitesimi). Integrali e derivate sono intimamente connessi tramite il cosiddetto [teorema fondamentale del calcolo integrale](https://it.wikipedia.org/wiki/Teorema_fondamentale_del_calcolo_integrale). Questo afferma che, data una funzione $f(x)$ continua in un intervallo $(a, b)$, si può scrivere (in quello stesso intervallo) 
+Per quel che concerne l'argomento del corso, l'integrale può essere visto come una somma di tanti (infiniti) contributi molto piccoli (infinitesimi). Integrali e derivate sono intimamente connessi tramite il cosiddetto {{% wikipedia article="teorema fondamentale del calcolo integrale" override_lang="it" %}}. Questo afferma che, data una funzione $f(x)$ continua in un intervallo $(a, b)$, si può scrivere (in quello stesso intervallo) 
 
 $$F(x) = \int_a^x f(x') dx',$$
 

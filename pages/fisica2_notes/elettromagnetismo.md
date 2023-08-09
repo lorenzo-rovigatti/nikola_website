@@ -10,6 +10,11 @@
 .. has_math: true
 -->
 
+```{contents} Indice
+:depth: 2
+:backlinks: none
+```
+
 # Campi elettrici e magnetici variabili nel tempo
 
 * Cariche elettriche fisse generano il campo elettrostatico conservativo $\vec{E}$.

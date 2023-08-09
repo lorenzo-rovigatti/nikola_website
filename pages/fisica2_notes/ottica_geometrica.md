@@ -10,6 +10,11 @@
 .. has_math: true
 -->
 
+```{contents} Indice
+:depth: 2
+:backlinks: none
+```
+
 # Ottica geometrica
 
 La luce ha una doppia natura: ondulatoria e corpuscolare. Per quel che concerne questo corso, noi siamo interessati specificamente a descrivere la luce come un'*onda*. Abbiamo in effetti già visto che gli effetti più interessanti (come rifrazione, interferenza e diffrazione) si possono spiegare considerando la natura ondulatoria della luce, così come si ottiene risolvendo le equazioni di Maxwell. D'altro canto in alcuni contesti è sufficiente utilizzare i concetti di rifrazione e riflessione per comprendere il comportamento della luce. In questi casi si descrive la luce come un insieme di *raggi luminosi* che si possono considerare semirette che escono dalla sorgente ed interagiscono con degli strumenti ottici che incontrano sulla loro strada. In particolare, in questa lezione ci interessa capire come i raggi, che partono da sorgenti di luce, subiscano i fenomeni di rifrazione e di riflessione e formino *immagini*, ad esempio sul fondo del nostro occhio o sul sensore di uno strumento di laboratorio.

@@ -10,6 +10,11 @@
 .. has_math: true
 -->
 
+```{contents} Indice
+:depth: 2
+:backlinks: none
+```
+
 # La corrente elettrica
 
 <small>MNV: paragrafo 5.1</small>

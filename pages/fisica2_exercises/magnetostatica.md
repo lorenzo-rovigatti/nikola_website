@@ -18,9 +18,30 @@ Il prodotto vettoriale tra i due vettori $\vec{a}$ e $\vec{b}$ gode delle seguen
 
 * $\vec{a} \times \vec{b} = -\vec{b} \times \vec{a}$;
 * $|\vec{a} \times \vec{b}| = ab \sin(\theta)$, dove $\theta$ è l'angolo tra i due vettori;
-	* $\vec{a} \times \vec{b} = 0$ se $\vec{a}$ e $\vec{b}$ sono paralleli, cioè se vale $\vec{a} \cdot \vec{b} = 0$;
-	* Il modulo del prodotto vettoriale è massimo quando $\theta = \pi / 2$, cioè quando i vettori sono ortogonali;
+  * $\vec{a} \times \vec{b} = 0$ se $\vec{a}$ e $\vec{b}$ sono paralleli, cioè se vale $\vec{a} \cdot \vec{b} = 0$;
+  * Il modulo del prodotto vettoriale è massimo quando $\theta = \pi / 2$, cioè quando i vettori sono ortogonali;
 * Se $\vec{c} = \vec{a} \times \vec{b}$, allora $\vec{c} \cdot \vec{b} = 0$ e $\vec{c} \cdot \vec{a} = 0$, cioè il prodotto vettoriale tra due vettori è un vettore che è ortogonale ad entrambi
+
+Il prodotto vettoriale è anche bilineare: se $\vec{a}$, $\vec{b}$ e $\vec{c}$ sono vettori e $k$ è uno scalare allora valgono le seguenti proprietà
+
+* $(k \vec{a}) \times \vec{b} = k(\vec{a} \times \vec{b}) = \vec{a} \times (k\vec{b})$
+* $(\vec{a} + \vec{c}) \times \vec{b} = \vec{a} \times \vec{b} + \vec{c} \times \vec{b}$
+* $\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$
+
+:::{warning}
+Il prodotto vettoriale **non è** associativo, quindi
+
+$$
+\vec{a} \times (\vec{b} \times \vec{c}) \neq (\vec{a} \times \vec{b}) \times \vec{c}
+$$
+
+ma si ha invece
+
+$$
+\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c}) \vec{b} - (\vec{a} \cdot \vec{b}) \vec{c}
+$$
+
+:::
 
 Un sistema di riferimento cartesiano può essere
 

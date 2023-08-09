@@ -10,6 +10,11 @@
 .. has_math: true
 -->
 
+```{contents} Indice
+:depth: 2
+:backlinks: none
+```
+
 # Campo magnetico e forza magnetica
 <small>MNV: paragrafo 6.1</small>
 
@@ -66,7 +71,7 @@ $$
 F = |q| v B \sin \theta.
 $$
 
-La forza è quindi nulla quando $\vec{v}$ e $\vec{B}$ sono paralleli e massima quando sono ortogonali. Direzione e verso sono invece dati dal versore generato dal prodotto vettoriale tra la velocità e il campo magnetico, che si può calcolare con la regola della [mano destra](https://it.wikipedia.org/wiki/Regola_della_mano_destra). Ricordiamo le seguenti proprietà del prodotto vettoriale $\vec{c} = \vec{a} \times \vec{b}$:
+La forza è quindi nulla quando $\vec{v}$ e $\vec{B}$ sono paralleli e massima quando sono ortogonali. Direzione e verso sono invece dati dal versore generato dal prodotto vettoriale tra la velocità e il campo magnetico, che si può calcolare con la {{% wikipedia article="regola della mano destra" override_lang="it" %}}. Il prodotto vettoriale è stato discusso <a href="link://slug/fisica2-esercizi-magnetostatica#il-prodotto-vettoriale">qui</a>. Qui ricordiamo le seguenti proprietà del prodotto vettoriale $\vec{c} = \vec{a} \times \vec{b}$:
 
 1. $| \vec{a} \times \vec{b} | = ab\sin{ \theta}$
 2. $\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}$
