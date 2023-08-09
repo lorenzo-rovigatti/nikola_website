@@ -41,15 +41,18 @@ class WikipediaShortcodePlugin(ShortcodePlugin):
         self.logger.error(msg)
         return '<div class="text-error">{}</div>'.format(msg)
 
-    def handler(self, article, text=None, site=None, data=None, lang='en', post=None):
+    def handler(self, article, text=None, override_lang=None, site=None, data=None, lang='en', post=None):
         if wikipediaapi is None:
             msg = req_missing(['wikipediaapi'], 'use the wikipedia shortcode', optional=True)
             return self._error(msg)
         
+        if override_lang is not None:
+            lang = override_lang
+        
         wiki_api = wikipediaapi.Wikipedia("{0} ({1})".format(self.site.config['BLOG_AUTHOR'], self.site.config['BLOG_AUTHOR']), lang)
         wiki_page = wiki_api.page(article)
         
-        self.logger.info(self.site.config['BLOG_AUTHOR'])
+        self.logger.info(override_lang)
         
         if not wiki_page.exists():
             return self._error('Wikipedia page "{0}" not found'.format(article))

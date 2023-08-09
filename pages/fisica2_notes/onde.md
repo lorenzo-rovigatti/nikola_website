@@ -10,6 +10,11 @@
 .. has_math: true
 -->
 
+```{contents} Indice
+:depth: 2
+:backlinks: none
+```
+
 # Onde elettromagnetiche
 
 Le onde sono fenomeni fisici comuni che appaiono in molti contesti ogniqualvolta una o più quantità fisiche si propagano nel tempo e nello spazio. In generale, sono onde quelle perturbazioni, non necessariamente periodiche, che si propagano con una velocità ben definita. Nonostante la fenomenologia diversa, tutti i tipi di onde posseggono caratteristiche generali che ne permettono una descrizione matematica unificata.
@@ -26,12 +31,16 @@ Nel caso del campo elettromagnetico, abbiamo visto come le equazioni di Maxwell 
 \vec{\nabla} \cdot \vec{B} = 0 \qquad & \vec{\nabla} \times \vec{B} = \mu_0 \epsilon_0 \frac{\partial \vec{E}}{\partial t}.
 \end{align}
 
-Queste equazioni ammettono due classi di soluzioni: 
+Queste equazioni (dette omogenee) ammettono due classi di soluzioni: 
 
 * $\vec{E} = 0$ e $\vec{B} = 0$;
 * i due campi sono diversi da zero e variabili sia nel tempo che nello spazio.
 
-Quest'ultima classe di soluzioni descrive le *onde elettromagnetiche*. Deriviamo una soluzione delle equazioni di Maxwell nell'ipotesi in cui i campi siano costanti (spazialmente) su di un piano ortogonale alla direzione lungo cui l'onda si propaga. Orientiamo il nostro sistema di riferimento in modo tale da avere $\hat{x}$ come direzione di propagazione, chiaramente ortogonale al piano $(y, z)$. Poiché assumiamo che i campi siano costanti lungo $y$ e $z$, le loro derivate parziali lungo queste direzioni saranno anch'esse nulle, cioè
+Quest'ultima classe di soluzioni descrive le *onde elettromagnetiche*. Per risolvere le equazioni di Maxwell omogenee alcuni libri (tra cui il Mazzoldi-Nigro-Voci) utilizzano un procedimento un po' laborioso che riporto qui sotto, ma che noi non vedremo in dettaglio.
+
+{{% accordion id="derivazione_lunga" label="Derivazione del libro" %}}
+
+Deriviamo una soluzione delle equazioni di Maxwell nell'ipotesi in cui i campi siano costanti (spazialmente) su di un piano ortogonale alla direzione lungo cui l'onda si propaga. Orientiamo il nostro sistema di riferimento in modo tale da avere $\hat{x}$ come direzione di propagazione, chiaramente ortogonale al piano $(y, z)$. Poiché assumiamo che i campi siano costanti lungo $y$ e $z$, le loro derivate parziali lungo queste direzioni saranno anch'esse nulle, cioè
 
 \begin{align}
 \frac{\partial E_\alpha}{\partial y} = \frac{\partial E_\alpha}{\partial z} = 0\\\\
@@ -68,7 +77,45 @@ $$
 \frac{\partial^2 E_y}{\partial x^2} = \epsilon_0 \mu_0 \frac{\partial^2 E_y}{\partial t^2}.
 $$
 
-Applicando lo stesso procedimento troviamo relazioni identiche per $E_z$, $B_y$ e $B_z$. Questa equazione differenziale è nota come *equazione di d'Alembert*, spesso scritta nella forma 
+Applicando lo stesso procedimento troviamo relazioni identiche per $E_z$, $B_y$ e $B_z$.
+
+{{% /accordion %}}
+
+Vediamone una derivazione più semplice (e anche più generale). Partendo dalla legge di Faraday in forma locale e applicando il rotore ad entrambi i membri si trova
+
+$$
+\vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = -\vec{\nabla} \times \frac{\partial \vec{B}}{\partial t} = -\frac{\partial \vec{\nabla} \times \vec{B}}{\partial t}.
+$$
+
+Sostituendo la forma locale della legge di Ampère-Maxwell nel membro di destra otteniamo
+
+$$
+\vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = - \mu_0 \epsilon_0 \frac{\partial ^2 \vec{E}}{\partial t^2}.
+$$
+
+Ricordando che il rotore è un prodotto vettoriale tra l'operatore nabla e un campo vettoriale, possiamo applicare una nota identità del <a href="link://slug/fisica2-esercizi-magnetostatica#il-prodotto-vettoriale">prodotto vettoriale</a>, $\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c}) \vec{b} - (\vec{a} \cdot \vec{b}) \vec{c}$, che nel nostro caso diventa
+
+$$
+\vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = - (\vec{\nabla} \cdot \vec{\nabla}) \vec{E} = -\nabla^2 \vec{E}
+$$
+
+perché $\vec{\nabla} \cdot \vec{E} = 0$ (*cfr.* la prima equazione di Maxwell, cioè la forma locale della legge di Gauss omogenea). Uguagliando questo risultato al valore del membro di destra trovato prima si ottiene
+
+$$
+\nabla^2 \vec{E} = \mu_0 \epsilon_0 \frac{\partial ^2 \vec{E}}{\partial t^2}.
+$$
+
+Applicando lo stesso procedimento si ottiene un'identica equazione per $\vec{B}$. Ricordando che le equazioni vettoriali sono valide componente per componente, le relazioni che abbiamo trovato corrispondono alle sei equazioni differenziali seguenti:
+
+$$
+\begin{array}{lll}
+\frac{\partial^2 E_x}{\partial x^2} = \mu_0 \epsilon_0 \frac{\partial ^2 E_x}{\partial t^2} & \qquad & \frac{\partial^2 B_x}{\partial x^2} = \mu_0 \epsilon_0 \frac{\partial ^2 B_x}{\partial t^2}\\\\
+\frac{\partial^2 E_y}{\partial y^2} = \mu_0 \epsilon_0 \frac{\partial ^2 E_y}{\partial t^2} & & \frac{\partial^2 B_y}{\partial y^2} = \mu_0 \epsilon_0 \frac{\partial ^2 B_y}{\partial t^2}\\\\
+\frac{\partial^2 E_z}{\partial z^2} = \mu_0 \epsilon_0 \frac{\partial ^2 E_z}{\partial t^2} & & \frac{\partial^2 B_z}{\partial z^2} = \mu_0 \epsilon_0 \frac{\partial ^2 B_z}{\partial t^2}
+\end{array}
+$$
+
+Questo tipo di equazione differenziale è nota come *equazione di d'Alembert*, spesso scritta nella forma 
 
 $$
 \frac{\partial^2 f}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 f}{\partial t^2}
@@ -79,7 +126,7 @@ dove $v$ è detta velocità di propagazione dell'onda. Nel caso specifico delle 
 ## Onde piane
 <small>MNV: paragrafi 10.1, 10.2</small>
 
-L'equazione di d'Alembert è anche detta *equazione delle onde piane* proprio perché ammette come soluzioni delle funzioni che assumono valore costante sul piano ortogonale alla direzione di propagazione, qui presa come $\hat{x}$. Si può dimostrare infatti come l'equazione di d'Alembert sia soddisfatta solamente da funzioni del tipo
+L'equazione di d'Alembert è anche detta *equazione delle onde piane* proprio perché ammette come soluzioni delle funzioni che assumono valore costante sul piano ortogonale alla direzione di propagazione, che qui scegliamo essere $\hat{x}$. Si può dimostrare infatti come l'equazione di d'Alembert sia soddisfatta solamente da funzioni del tipo
 
 $$
 f(x, t) = f(x \pm vt).
@@ -696,7 +743,7 @@ $$
 \rho = \frac{1}{\alpha_{\rm min}}.
 $$
 
-Questa limitazione pone seri limiti alle osservazioni che è possibile fare utilizzando microscopi, lenti fotografiche e telescopi. Questi limiti possono essere superati solo *indirettamente* utilizzando tecniche di [https://en.wikipedia.org/wiki/Super-resolution_microscopy](microscopia a super-risoluzione), che sono valsi a Eric Betzig, W.E. Moerner e Stefan Hell il premio Nobel per la Chimica nel 2014.
+Questa limitazione pone seri limiti alle osservazioni che è possibile fare utilizzando microscopi, lenti fotografiche e telescopi. Questi limiti possono essere superati solo *indirettamente* utilizzando tecniche di {{% wikipedia article="Super-resolution_microscopy" text="microscopia a super-risoluzione" %}}, che sono valsi a Eric Betzig, W.E. Moerner e Stefan Hell il premio Nobel per la Chimica nel 2014.
 
 # Interferenza tra molte sorgenti coerenti
 

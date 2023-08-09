@@ -10,6 +10,11 @@
 .. has_math: true
 -->
 
+```{contents} Indice
+:depth: 2
+:backlinks: none
+```
+
 # Introduzione
 
 L'interazione elettromagnetica è una delle forze fondamentali della natura come, ad esempio, quella gravitazionale. Se consideriamo solamente la forza elettrica, troviamo che questa è **molto** più forte della forza di gravità. In effetti, è così forte che se il numero di elettroni (carichi negativamente) e di protoni (carichi positivamente) di due persone poste a distanza di mezzo metro differisse di appena l'1%, si genererebbe una forza tale da poter sollevare un peso pari a quello della Terra!

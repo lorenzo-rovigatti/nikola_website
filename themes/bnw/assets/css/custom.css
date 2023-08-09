@@ -36,7 +36,7 @@ video {
 }
 
 /* Table of contents */
-#table-of-contents {
+.contents {
   border-color: #c9c9c9;
   border-radius: .25rem;
   box-shadow: 0 .2rem .5rem #d8d8d8,0 0 .0625rem #d8d8d8 !important;
@@ -204,8 +204,9 @@ nav.contents > :last-child {
 }
 
 .accordion > input[type="checkbox"]:checked ~ .content {
-  padding: 5px;
-  border: 1px solid #e8e8e8;
+  padding: 10px;
+  border-left: 2px solid #e8e8e8;
+  box-shadow: 0 0.2rem 0.5rem #e8e8e8, 0 0 0.0625rem #e8e8e8 !important;
   border-top: 0;
 }
 
@@ -241,14 +242,15 @@ nav.contents > :last-child {
 }
 
 /* Dropdown menus */
-.toggle,
+header .toggle,
 [id^=drop] {
     display: none;
 }
-nav ul > li {
+header nav ul > li {
     position: relative;
 }
-nav ul ul {
+
+header nav ul ul {
     display: none;
     padding-top: 10px;
     padding-left: 0px;
@@ -259,31 +261,30 @@ nav ul ul {
     text-align: center;
 }
 
-nav ul li:hover > ul {
+header nav ul li:hover > ul {
     display:inherit;
 }
 
-nav ul ul li {
+header nav ul ul li {
     display:list-item;
     padding-bottom: 10px;
     text-align: center;
 }
 
-nav ul li > a:after { content:  ' ▼'; }
-nav ul li > a:only-child:after { content: ''; }
+header nav ul li > a:after { content:  ' ▼'; }
+header nav ul li > a:only-child:after { content: ''; }
 
 @media all and (max-width : 768px) {
-
-    nav {
+    header nav {
         margin: 0;
     }
     
-    .toggle + a {
+    header .toggle + a {
         display: none;
     }
 
     /* Stylinf the toggle lable */
-    .toggle {
+    header .toggle {
         display: block;
         text-decoration: none;
         padding: 5px 5px;
@@ -296,69 +297,70 @@ nav ul li > a:only-child:after { content: ''; }
         cursor: pointer;
     }
 
-    .toggle:hover {
+    header .toggle:hover {
         background: #fcf7f7;
         text-shadow: none;
         color: #304860;
     }
 
     /* Display Dropdown when clicked on Parent Lable */
-    [id^=drop]:checked + ul {
+    header [id^=drop]:checked + ul {
         display: block;
     }
 
     /* Change menu item's width to 100% */
-    nav ul li {
+    header nav ul li {
         display: block;
         width: 100%;
     }
 
-    nav ul ul .toggle,
-    nav ul ul a {
+    header nav ul ul .toggle,
+    header nav ul ul a {
         padding: 0 40px;
     }
 
-    nav ul ul ul a {
+    header nav ul ul ul a {
         padding: 0 80px;
     }
 
-    nav a:hover,
-    nav ul ul ul a {
+    header nav a:hover,
+    header nav ul ul ul a {
         
     }
 
-    nav ul li ul li .toggle,
-    nav ul ul a {
+    header nav ul li ul li .toggle,
+    header nav ul ul a {
         padding:14px 20px;
         font-size:17px; 
     }
 
-    nav ul li ul li .toggle,
-    nav ul ul a {
+    header nav ul li ul li .toggle,
+    header nav ul ul a {
         
     }
 
     /* Hide Dropdowns by Default */
-    nav ul ul {
+    header nav ul ul {
         float: none;
         position:static;
         color: #ffffff;
     }
         
     /* Hide menus on hover */
-    nav ul ul li:hover > ul,
-    nav ul li:hover > ul {
+    header nav ul ul li:hover > ul,
+    header nav ul li:hover > ul {
         display: none;
     }
         
-    nav ul ul li {
+    header nav ul ul li {
         display: block;
         width: 100%;
         padding-bottom: 0px;
         padding-right: 5px;
     }
     
-    nav ul ul li a, nav ul ul li a:hover {
+    header nav ul ul li a, 
+    header nav ul ul li a:hover {
         border-right: 3px solid white;
     }
 
@@ -366,7 +368,7 @@ nav ul li > a:only-child:after { content: ''; }
 
     @media all and (max-width : 330px) {
 
-    nav ul li {
+    header nav ul li {
         display:block;
         width: 94%;
     }
