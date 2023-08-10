@@ -35,6 +35,8 @@ ${zzz.html_headstart()}
         </script>
     </head>
     <body>
+        <a class="back_button" href="#" onclick="history.back()"></a>
+    
         <div class="reveal">
             <div class="slides">
                 <section data-markdown>
@@ -42,7 +44,6 @@ ${zzz.html_headstart()}
                         ${post.text()}                      
                     </textarea>
                 </section>
-                
             </div>
         </div>
 
@@ -53,29 +54,23 @@ ${zzz.html_headstart()}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/math/math.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/zoom/zoom.min.js"></script>
         <script>
-            // More info about initialization & config:
-            // - https://revealjs.com/initialization/
-            // - https://revealjs.com/config/
-            Reveal.initialize({
-                hash: true,
-                
-                math: {
-                    mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
-                    config: 'TeX-AMS_HTML-full',
-                    // pass other options into `MathJax.Hub.Config()`
-                    //TeX: { Macros: { RR: "{\\bf R}" } }
-                },
-                
-                markdown: {
-                    smartypants: true
-                },
-                
-                slideNumber: 'c/t',
-                showSlideNumber: 'all',
+        Reveal.initialize({
+            hash: true,
+            
+            math: {
+                mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+            },
+            
+            markdown: {
+                smartypants: true
+            },
+            
+            slideNumber: 'c/t',
+            showSlideNumber: 'all',
 
-                // Learn about plugins: https://revealjs.com/plugins/
-                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealZoom ]
-            });
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealZoom ]
+        });
         </script>
     </body>
 </html>

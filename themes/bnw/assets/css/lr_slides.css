@@ -1,3 +1,18 @@
+a.back_button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999 !important;
+}
+
+a.back_button:before {
+    content: "\f060";
+    font-family: 'fontawesome';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 110%;
+}
+
 .reveal .spacing-1-top {
     margin-top: 1em;
 }
@@ -19,7 +34,8 @@
 }
 
 .reveal .checkbox-list li::before { 
-    content: "\2610"; margin-right: 0.5em;     
+    content: "\2610"; 
+    margin-right: 0.5em;     
 }
 
 .reveal .block-title {
