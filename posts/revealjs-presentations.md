@@ -91,6 +91,33 @@ Reveal.initialize({
 </script>
 ```
 
+:::{tip}
+I have added the following link to help the user go back to the "normal" part of the website
+
+```html
+<a class="back_button" href="#" onclick="history.back()"></a>
+```
+
+The link is fixed in the topmost left corner and is styled as an arrow with the following CSS code:
+
+```css
+a.back_button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999 !important;
+}
+
+a.back_button:before {
+    content: "\f060";
+    font-family: 'fontawesome';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 110%;
+}
+```
+:::
+
 # The presentation page file
 
 Since we use HTML files to store presentations styled with reveal.js, we first need to make sure that HTML pages are enabled in the `conf.py` file. The relevant part of my configuration is as follows:
