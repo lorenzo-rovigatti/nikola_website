@@ -1,0 +1,20 @@
+<!--
+.. title: Scientific talks
+.. slug: talks
+.. date: 2023-07-02 21:41:48 UTC+02:00
+.. tags: 
+.. category: talks
+.. link: 
+.. description: 
+.. type: text
+-->
+
+Here you can find the slides of selected seminars I delivered during the years (after I switched to [reveal.js](https://revealjs.com/) to prepare my presentations).
+
+## 2023
+
+* <a href="link://slug/andalo_2023">Designing a fully-entropic phase separation in associative polymers</a> (invited talk at the [XVI International Workshop on Complex Systems](https://event.unitn.it/complexsystems2023/))
+
+## 2022
+
+* <a href="link://slug/nanoseminars_2022">Designer protein assemblies with tunable phase diagrams in living cells</a> (invited online talk for the [Nanoseminar series](https://www.uu.nl/en/events/nanoseminar-21-january-dr-lorenzo-rovigatti-sapienza-university-of-rome) organised by the Utrecth University)
