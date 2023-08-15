@@ -52,14 +52,20 @@ Within the `<body>` element there is the reveal.js HTML boilerplate, where `${po
 ```html
 <div class="reveal">
     <div class="slides">
-        <section data-markdown>
-            <textarea data-template>
-                ${post.text()}
-            </textarea>
-        </section>
+            % if post.meta('is_html') and post.meta('is_html') == 'true':
+            ${post.text()}
+            % else:
+            <section data-markdown>
+                <textarea data-template>
+                    ${post.text()}
+                </textarea>
+            </section>
+            % endif
     </div>
 </div>
 ```
+
+I tend to write my teaching slides with markdown and my talks directly in HTML. With the structure above, an HTML presentation should contain a `.. is_html: true` metadata to be correctly displayed.
 
 Finally, just before `</body>` there is the import and initialisation of reveal.js's javascript machinery:
 
@@ -148,6 +154,10 @@ We then create a new HTML page (with `nikola new_page -f html` for instance) and
 ```
 
 where the most important bit is `.. template: reveal.tmpl`, where we override the default template.
+
+:::{tip}
+Don't forget to set `.. is_html: true` if the presentation is not written in markdown (*i.e*. if you use `<section></section>` tags for each slide)
+:::
 
 The rest of the file should contain the presentation text. Here is an example:
 
