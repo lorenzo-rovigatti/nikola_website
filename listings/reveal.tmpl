@@ -39,11 +39,15 @@ ${zzz.html_headstart()}
     
         <div class="reveal">
             <div class="slides">
-                <section data-markdown>
+                 % if post.meta('is_html') and post.meta('is_html') == 'true':
+                 ${post.text()}
+                 % else:
+                 <section data-markdown>
                     <textarea data-template>
-                        ${post.text()}                      
+                        ${post.text()}
                     </textarea>
                 </section>
+                 % endif
             </div>
         </div>
 
