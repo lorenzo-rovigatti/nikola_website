@@ -279,9 +279,9 @@ class PublicationList(Directive):
             html += '</ul>'
             
         # create a list of years that can be used to jump around the page more easily
-        year_list = '<ul id="publication-year-list" style="list-style-type:none;">\n'
-        year_list += "\n".join(['<li style="display:inline"><a href="#{}">{}</a></li>'.format(year, year) for year in years]) + '\n'
-        year_list += '<ul>\n'
+        year_list = '<ul id="publication-year-list">\n'
+        year_list += "\n".join(['<li><a href="#{}">{}</a></li>'.format(year, year) for year in years]) + '\n'
+        year_list += '</ul>\n'
 
         final_html = '<div id="publication-list">\n'
         final_html += year_list
