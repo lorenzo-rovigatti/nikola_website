@@ -290,6 +290,7 @@ header nav ul ul li {
     display:list-item;
     padding-bottom: 10px;
     text-align: center;
+    white-space: nowrap;
 }
 
 header nav ul li > a:after { content:  ' ▼'; }

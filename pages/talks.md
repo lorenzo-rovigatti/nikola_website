@@ -1,5 +1,5 @@
 <!--
-.. title: Scientific talks
+.. title: Selected scientific talks
 .. slug: talks
 .. date: 2023-07-02 21:41:48 UTC+02:00
 .. tags: 
@@ -18,3 +18,7 @@ Here you can find the slides of selected seminars I delivered during the years (
 ## 2022
 
 * <a href="link://slug/nanoseminars_2022">Designer protein assemblies with tunable phase diagrams in living cells</a> (invited online talk for the [Nanoseminar series](https://www.uu.nl/en/events/nanoseminar-21-january-dr-lorenzo-rovigatti-sapienza-university-of-rome) organised by the Utrecth University)
+
+## 2021
+
+* <a href="link://slug/trento_2021">Managing multiple simulations, some tricks of the trade &amp; more</a> (invited talk for the [High-Performance Computing summer school](https://mas.unitn.it/schools/hpc-school-2021) organised by the University of Trento). 
