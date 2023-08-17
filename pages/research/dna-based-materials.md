@@ -50,7 +50,7 @@ Use the buttons below to load configurations of different DNA nanostars in [oxVi
 
 # DNA origami
 
-One of the main characters of this field of research is {{% wikipedia article="DNA origami" %}},  composed by long strands of DNA that are folded into desired shapes using short strands, resulting in structures that can range from simple 2D shapes to more complex 3D configurations. This technique, introduced by [P. W. K. Rothemund in 2006](https://doi.org/10.1038/nature04586), provides an incredible level of control over the size (up to hundreds of nanometers in some cases), shape, mechanics and function of the structures produced.
+One of the main characters of this field of research is {{% wikipedia article="DNA origami" %}},  composed by long strands of DNA that are folded into desired shapes using short strands, resulting in structures that can range from simple 2D shapes to more complex 3D configurations. This technique, introduced by {{% doi https://doi.org/10.1038/nature04586 text="P. W. K. Rothemund in 2006" %}}, provides an incredible level of control over the size (up to hundreds of nanometers in some cases), shape, mechanics and function of the structures produced. 
 
 The short movie below shows the basic idea of DNA origami: the desired structure (here a smiley face) is formed by a long strand, also known as the *scaffold* - usually of a viral origin, here depicted in red - held in place by short *staple* strands, which appear one after the other in the second part of the movie.
 

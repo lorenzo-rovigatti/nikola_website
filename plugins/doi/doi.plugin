@@ -1,0 +1,12 @@
+[Core]
+Name = doi
+Module = doi
+
+[Nikola]
+PluginCategory = Shortcode
+
+[Documentation]
+Author = Lorenzo Rovigatti
+Version = 0.1
+Website = https://plugins.getnikola.com/doi
+Description = Add an HTML element containing the author list, title and publication year associated to a given DOI
