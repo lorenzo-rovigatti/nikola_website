@@ -116,7 +116,7 @@ code {
 
 .warning {
     background: #FFCCCB;
-    background-image: url(./FIGURE/warning.webp);
+    background-image: url(../../images/warning.webp);
     background-position: 5px 3px;
     background-repeat: no-repeat;
     border: 1px solid red;
@@ -126,7 +126,7 @@ code {
 
 .focus {
     background: #CCFFCB;
-    background-image: url(./FIGURE/lampadina.webp);
+    background-image: url(../../images/lampadina.webp);
     background-position: 5px 3px;
     background-repeat: no-repeat;
     border: 1px solid green;
