@@ -59,7 +59,7 @@ The short movie below shows the basic idea of DNA origami: the desired structure
 </video>
 
 :::{tip}
-Use the buttons below to load configurations of different DNA origami in [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around. Additional details about the leaf-spring engine can be found [here](https://www.biorxiv.org/content/10.1101/2021.12.22.473833v1).
+Use the buttons below to load configurations of different DNA origami in [oxView](https://sulcgroup.github.io/oxdna-viewer/) and use your mouse to zoom in/out or look around. Additional details about the leaf-spring engine can be found {{% doi 10.1101/2022.11.17.516898 text="here" %}}. 
 :::
 
 <fieldset id="origami" class="oxview-buttons">
