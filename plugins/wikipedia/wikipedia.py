@@ -27,6 +27,8 @@
 from nikola.plugin_categories import ShortcodePlugin
 from nikola.utils import req_missing
 
+from html import escape
+
 try:
     import wikipediaapi
 except ImportError:
@@ -36,6 +38,7 @@ class WikipediaShortcodePlugin(ShortcodePlugin):
     """Return an HTML element containing the summary of a Wikipedia article that can be styled as a tooltip"""
     
     name = "wikipedia"
+    options = "data-tooltip-persistent=\"true\" data-tooltip-maxwidth=\"300px\""
     
     def _error(self, msg):
         self.logger.error(msg)
@@ -63,6 +66,21 @@ class WikipediaShortcodePlugin(ShortcodePlugin):
         summary = wiki_page.summary.split('\n')[0]
         # and remove the "(listen);" and surrounding whitespace
         summary = "".join(x.strip() for x in summary.split("(listen);"))
+        
+        tooltip = """
+        <span class="wikipedia_summary">
+        <a href="{0}" target="_blank" class="wikipedia_wordmark">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Wikipedia_wordmark.svg">
+            <span class="wikipedia_icon"></span>
+        </a>
+        {2}
+        </span>""".format(url, text, summary)
+                
+        tooltip = escape(tooltip)
+                
+        html = "<a href=\"{0}\" target=\"_blank\" data-tooltip=\"{2}\" {3}>{1}</a>".format(url, text, tooltip, WikipediaShortcodePlugin.options)
+        
+        return html, []
         
         tooltip = """
         <span class="wikipedia_tooltip"><a href="{0}" target="_blank">{1}</a>

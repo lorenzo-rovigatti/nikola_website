@@ -83,107 +83,27 @@ nav.contents > :last-child {
 }
 
 /* doi tooltips */
-/* wikipedia tooltips */
-.doi_tooltip {
-  cursor: help;
-  position: relative;
-}
-
-.doi_tooltip .doi_title {
+.doi_title {
   font-style: italic;
 }
 
-.doi_tooltip .doi_text {
-  background: #fff;
-  font-size: 80%;
-  line-height: normal;
-  display: inline;
-  position: absolute;
-  top: 99%;
-  left: 0;
-  right: 0;
-  margin-top: 15px;
-  opacity: 0;
-  padding: .5em 1em;
-  pointer-events: none;
-  width: 300px;
-  transform: translateY(10px);
-  transition: all 0.25s ease-out;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-  z-index: 999 !important;
-}
-
-/* This bridges the gap so you can mouse into the tooltip without it disappearing */
-.doi_tooltip .doi_text:before {
-  top: -20px;
-  content: " ";
-  display: block;
-  height: 20px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-/* a CSS upper triangle */
-.doi_tooltip .doi_text:after {
-  border-left: solid transparent 10px;
-  border-right: solid transparent 10px;
-  border-bottom: solid #fff 10px;
-  top: -10px;
-  content: " ";
-  height: 0;
-  left: 0;
-  position: absolute;
-  width: 0;
-}
-
-.doi_tooltip:hover .doi_text {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0px);
-}
-
 /* wikipedia tooltips */
-.wikipedia_tooltip {
-  cursor: help;
-  position: relative;
-}
-
-.wikipedia_tooltip .wikipedia_summary {
-  background: #fff;
-  font-size: 80%;
-  line-height: normal;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 99%;
-  margin-top: 15px;
-  opacity: 0;
-  padding: .5em 1em;
-  pointer-events: none;
-  width: 300px;
-  transform: translateY(10px);
-  transition: all 0.25s ease-out;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-  z-index: 999 !important;
-}
-
-#post-main a.wikipedia_wordmark {
+.html5tooltip-text a.wikipedia_wordmark {
     display: block;
     border-bottom: 1px solid black;
     padding-bottom: 2px;
     margin-bottom: 5px;
 }
 
-#post-main a.wikipedia_wordmark:hover {
+.html5tooltip-text a.wikipedia_wordmark:hover {
     background-color: white; /* overwrites the main hover style */
 }
 
-#post-main a.wikipedia_wordmark img {
+.html5tooltip-text a.wikipedia_wordmark img {
     height: 25px;
 }
 
-#post-main a.wikipedia_wordmark .wikipedia_icon:after { 
+.html5tooltip-text a.wikipedia_wordmark .wikipedia_icon:after { 
    content: '\f08e';
    color: #304860;
    font-family: 'fontawesome';
@@ -194,36 +114,6 @@ nav.contents > :last-child {
    float: right;
    text-decoration:none;
 } 
-
-/* This bridges the gap so you can mouse into the tooltip without it disappearing */
-.wikipedia_tooltip .wikipedia_summary:before {
-  top: -20px;
-  content: " ";
-  display: block;
-  height: 20px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-
-/* a CSS upper triangle */
-.wikipedia_tooltip .wikipedia_summary:after {
-  border-left: solid transparent 10px;
-  border-right: solid transparent 10px;
-  border-bottom: solid #fff 10px;
-  top: -10px;
-  content: " ";
-  height: 0;
-  left: 0;
-  position: absolute;
-  width: 0;
-}
-
-.wikipedia_tooltip:hover .wikipedia_summary {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0px);
-}
 
 /* oxview iframes and related controls */
 .oxview-buttons {

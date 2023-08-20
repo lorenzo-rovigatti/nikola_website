@@ -27,6 +27,8 @@
 from nikola.plugin_categories import ShortcodePlugin
 from nikola.utils import req_missing
 
+from html import escape
+
 try:
     from crossref.restful import Works
 except ImportError:
@@ -36,6 +38,7 @@ class DoiShortcodePlugin(ShortcodePlugin):
     """Return an HTML element containing the author list, title and publication year associated to a given DOI that can be styled as a tooltip"""
     
     name = "doi"
+    options = "data-tooltip-persistent=\"true\" data-tooltip-maxwidth=\"300px\""
     
     def _error(self, msg):
         self.logger.error(msg)
@@ -59,14 +62,14 @@ class DoiShortcodePlugin(ShortcodePlugin):
         authors = ", ".join([f"{author['given']} {author['family']}" for author in work['author']])
         title = work['title'][0]
         year = work['created']['date-parts'][0][0]
-
-        tooltip = """
-        <span class="doi_tooltip"><a href="{0}" target="_blank">{1}</a>
-            <span class="doi_text">
-                <span class="doi_authors">{2} ({3})</span>. 
-                <span class="doi_title">{4}</span>. 
-                <a href="{0}" target="_blank">{5}</a>
-            </span>
-        </span>""".format(doi_url, text, authors, year, title, work['DOI'])
         
-        return tooltip, []
+        tooltip = """
+        <span class="doi_authors">{2} ({3})</span>. 
+        <span class="doi_title">{4}</span>. 
+        <a href="{0}" target="_blank">{5}</a>""".format(doi_url, text, authors, year, title, work['DOI'])
+                
+        tooltip = escape(tooltip)
+                
+        html = "<a href=\"{0}\" target=\"_blank\" data-tooltip=\"{2}\" {3}>{1}</a>".format(doi_url, text, tooltip, DoiShortcodePlugin.options)
+        
+        return html, []
