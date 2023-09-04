@@ -14,6 +14,7 @@ Here you can find the slides of selected seminars I delivered during the years (
 ## 2023
 
 * <a href="link://slug/andalo_2023">Designing a fully-entropic phase separation in associative polymers</a> (invited talk at the [XVI International Workshop on Complex Systems](https://event.unitn.it/complexsystems2023/))
+* <a href="link://slug/londra_2023">A physicist's perspective on publishing open source software</a> (second focus group meeting of the Simulation and Interfacial Free Energy Techniques Group)
 
 ## 2022
 
