@@ -13,7 +13,7 @@
 
 
 <!-- .slide: data-background-image="../../images/talks/londra_2023/background.png" data-background-size="90%" data-background-opacity="0.15" -->
-
+                    
 # A physicist's perspective on publishing open source software<!-- .element: style="font-size: 190%" -->
 
 <div style="height:80px"></div>
@@ -121,7 +121,7 @@ Your mileage may vary, but
 
 ## Idealistic reasons<!-- .element: class="block-title"-->
 
-* Available code can greatly help other researches
+* Available code can greatly help other researchers
 * Sharing is (should be?) at the core of scientific progress
 * People can more easily reproduce ($=$ check) your results
 
@@ -135,6 +135,10 @@ Your mileage may vary, but
     * Makes it easier to collaborate with other people
 * If people use your code you get recognition &amp; citations
     
+</div>
+
+<div class="fragment" style="position:fixed; z-index:2; top:30%; width:100%; border: 2px solid black; background-color: white">
+<img src="/images/talks/londra_2023/water_wars.png" style="height:300">
 </div>
 
 ---
@@ -324,7 +328,7 @@ Note that the evaluation of math keys and run conditions require the use of Pyth
 For instance, I use <a href="https://www.sphinx-doc.org/en/master/">sphinx</a> and a <a href="https://github.com/demonico85/cleaving/blob/master/.github/workflows/build-docs.yml">github CI workflow</a> to generate &amp; publish my documentation online
 </div>
 
-<div class="fragment" style="position:absolute; z-index:2; top:0%; width:100%">
+<div class="fragment" style="position:absolute; z-index:2; top:0%; width:100%; border: 2px solid black; background-color: white">
 <img src="/images/talks/londra_2023/cleaving_docs.png" style="width:100%">
 </div>
 
@@ -361,6 +365,17 @@ Tests are useful for several reasons
 <div class="fragment" style="position:absolute; z-index:2; top:0%; width:100%">
 <img src="/images/talks/londra_2023/oxDNA_tests.png" style="border: 2px solid black;width:500px;">
 </div>
+
+---
+
+# Continuous integration
+
+* Modern hosting platforms let you run custom scripts, automatically or manually
+* On GitHub, you use "Actions" to test the code or build the docs after code changes
+* [Here](https://github.com/demonico85/cleaving/actions) is the list of actions run on the CLEAVING repo
+* Here is a recent list of CI workflows run on the oxDNA repo:
+
+<img src="/images/talks/londra_2023/CI.png" class="fragment" style="width:550px">
 
 </div>
 
