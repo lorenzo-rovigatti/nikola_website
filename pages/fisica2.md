@@ -90,7 +90,7 @@ In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecch
 <ul>
     <li><a href="../pdfs/fisica2_exams/2022_Gennaio.pdf">Gennaio</a></li>
     <li><a href="../pdfs/fisica2_exams/2022_Febbraio.pdf">Febbraio</a></li>
-    <li><a href="../pdfs/fisica2_exams/2022_Maggio.pdf">Maggio</a></li>
+    <li><a href="../pdfs/fisica2_exams/2022_Aprile.pdf">Aprile</a></li>
     <li><a href="../pdfs/fisica2_exams/2022_Giugno.pdf">Giugno</a></li>
     <li><a href="../pdfs/fisica2_exams/2022_Luglio.pdf">Luglio</a></li>
 </ul>
