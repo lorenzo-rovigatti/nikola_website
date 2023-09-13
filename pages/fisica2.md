@@ -93,12 +93,13 @@ In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecch
     <li><a href="../pdfs/fisica2_exams/2022_Aprile.pdf">Aprile</a></li>
     <li><a href="../pdfs/fisica2_exams/2022_Giugno.pdf">Giugno</a></li>
     <li><a href="../pdfs/fisica2_exams/2022_Luglio.pdf">Luglio</a></li>
+    <li><a href="../pdfs/fisica2_exams/2022_Settembre.pdf">Settembre</a></li>
 </ul>
 {{% /accordion %}}
 
-## Vecchie note del corso
+## Note del corso
 
-Qui sotto trovate delle vecchie note scritte per il corso di Chimica Industriale. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi queste note non vanno utilizzate per studiare ma, al limite, per avere un'idea dettagliata del programma e del livello di approfondimento richiesto.
+Qui sotto trovate delle note che ho compilato negli anni. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi queste note non vanno utilizzate per studiare ma, al limite, per avere un'idea dettagliata del programma e del livello di approfondimento richiesto.
 
 1. <a href="link://slug/ripasso-di-matematica">Ripasso di matematica</a>
 2. <a href="link://slug/elettrostatica">Elettrostatica</a>
