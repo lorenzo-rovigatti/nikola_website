@@ -2,12 +2,13 @@ a.back_button {
     position: fixed;
     top: 20px;
     left: 20px;
+    text-decoration: none;
     z-index: 999 !important;
 }
 
 a.back_button:before {
     content: "\f060";
-    font-family: 'fontawesome';
+    font-family: FontAwesome;
     font-weight: normal;
     font-style: normal;
     font-size: 110%;

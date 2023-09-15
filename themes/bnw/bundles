@@ -1,4 +1,6 @@
 assets/css/all-nocdn.css=bnw-generated.css,font-awesome.min.css,rst.css,code.css,custom.css,html5tooltips.css,html5tooltips.animation.css
 assets/css/all.css=bnw-generated.css,font-awesome.min.css,rst.css,code.css,custom.css
-assets/css/slides.css=solarized.css,lr_slides.css,a11y-dark.css
+assets/css/reset_reveal.css=reset.css,reveal.css
+assets/css/slides.css=solarized.css,lr_slides.css,a11y-dark.css,font-awesome.min.css
 assets/js/all-nocdn.js=jquery-1.10.2.min.js,headroom.min.js,scripts.js,html5tooltips.js
+assets/js/reveal-full.js=reveal.js/reveal.js,reveal.js/notes.js,reveal.js/markdown.js,reveal.js/highlight.js,reveal.js/math.js,reveal.js/zoom.js
