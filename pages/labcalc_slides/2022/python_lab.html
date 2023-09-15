@@ -1,0 +1,527 @@
+<!--
+.. title: Introduzione rapida a Python
+.. slug: labcalc_python_lab_2022
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+<!-- .slide: data-background-image="/images/labcalc_slides/background.png" data-background-size="60%" data-background-opacity="0.2" -->
+
+# Un'introduzione a Python
+
+### Corso di Laboratorio di Calcolo
+
+#### Seconda esercitazione, 12-13 Ottobre 2022
+
+---
+
+# Linguaggi di programmazione
+
+* Dal punto di vista teorico, *tutti* i linguaggi di programmazione sono equivalenti$^*$
+* Questo è vero anche dal punto di vista pratico?
+
+<img style="margin:auto; display: block" src="/images/labcalc_slides/linguaggi.png" height="400px" class="fragment fade-in"><br/>
+
+<small>$^*$ ce lo dice la matematica (cercare <em>Turing completeness</em> se siete curiosi)</small>
+
+---
+
+# Cosa cambia?
+
+## Un parallelo (approssimato) con le lingue
+
+* Gli esseri umani possono comunicare tra di loro usando una lingua qualsiasi
+* Alcuni concetti sono più facilmente esprimibili in lingue particolari:<!-- .element class="fragment" -->
+    * lo scozzese ha 421 parole legate alla neve
+    * il galego ha più di 70 parole per descrivere la pioggia
+* Alcuni concetti non esistono in alcune lingue:<!-- .element class="fragment" -->
+    * una lingua aborigena non usa la distinzione spaziale "destra/sinistra"
+    * una lingua amazzonica non ha parole specifiche per indicare i numeri
+    
+---
+
+# C *vs.* Python
+
+<div class="flex-container">
+
+<div class="flex-col">
+<h4>C</h4>
+
+<ul>
+<li class="fragment fade-in" data-fragment-index="0">
+Prolisso
+
+``` C []
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Guarda mamma, programmo\n");
+    return 0;
+}
+```
+<!-- .element style="width:100%" -->
+
+</li>
+<li class="fragment fade-in" data-fragment-index="1">
+Compilato
+
+<pre><code data-trim>
+$ gcc -o codice codice.c
+$ ./codice
+Guarda mamma, programmo
+</code></pre>
+</li>
+<li class="fragment fade-in" data-fragment-index="2">"Veloce"</li>
+</ul>
+</div>
+    
+<div class="flex-col">
+    <h4>Python</h4>
+    
+    <ul>
+        <li class="fragment fade-in" data-fragment-index="0">
+            Conciso
+            
+            <pre style="width:100%"><code data-trim data-line-numbers>
+                print("Guarda mamma, programmo")
+                # niente da fare qui...
+                # o qui...
+                # o qui...
+                # o qui...
+                # e neanche qui!
+            </code></pre>
+        </li>
+        <li class="fragment fade-in" data-fragment-index="1">
+            Interpretato
+            
+            <pre><code data-trim>
+                $ python3 codice.py
+                Guarda mamma, programmo
+                # ho scritto meno!
+            </code></pre>
+        </li>
+        <li class="fragment fade-in" data-fragment-index="2">"Lento"</li>
+    </ul>
+</div>
+</div>
+
+<img src="/images/labcalc_slides/" class="fragment fade-in" data-fragment-index="2" height="110px">
+
+---
+
+# Quale usare?
+
+<div class="flex-container">
+    <div class="flex-col">
+        <h4>C</h4>
+        
+        <div style="color: green">
+            <ul class="fragment fade-in">
+                <li>Performance</li>
+                <li>Manipolazione diretta della memoria</li>
+                <li>Portabilità</li>
+            </ul>
+        </div>
+        
+        <div class="spacer"></div>
+        
+        <div style="color: red">
+            <ul class="fragment fade-in">
+                <li>Manipolazione diretta della memoria</li>
+                <li>Verbosità</li>
+                <li>Programmazione procedurale</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="flex-col">
+        <h4>Python</h4>
+        
+        <div style="color: green">
+            <ul class="fragment fade-in">
+                <li>Espressività</li>
+                <li>Enorme ecosistema di librerie</li>
+                <li>Multiparadigma</li>
+            </ul>
+        </div>
+        
+        <div class="spacer"></div>
+        
+        <div style="color: red">
+            <ul class="fragment fade-in">
+                <li>Performance</li>
+                <li>Consumo eccessivo di memoria</li>
+                <li>Dinamico $\to$ difficile da debuggare</li>
+            </ul>
+        </div>
+    </div>
+    
+</div>
+    
+<div class="fragment fade-in" style="margin-top: 2em">
+    <h2>Il verdetto</h2>
+    
+    <ul>
+        <li>C per codici/librerie dove la performance è fondamentale</li>
+        <li>Python per tutto il resto (prototipi, analisi, <em>ecc.</em>)</li>
+    </ul>
+</div>
+
+---
+
+# Qualche definizione
+
+* Con *Python* si indica sia il linguaggio di programmazione che l'interprete
+* Esistono molte versioni di Python
+* Esistono differenze tra le diverse versioni di Python
+* Le differenze maggiori ci sono tra Python 2.x (che è stato abbandonato nel 2020) e Python 3.x
+* Noi utilizzeremo unicamente Python 3.x (x > 4)
+
+---
+
+# C *vs.* Python - secondo atto
+
+* Tutto ciò che si può fare in C si può fare anche in Python
+* Non avete accesso *diretto* alla memoria
+* Niente punti e virgola
+* Niente parentesi graffe per definire blocchi di codice
+* I commenti cominciano con `#`
+* L'indentazione è obbligatoria
+
+``` python
+# questo programma stampa le lettere contenute nella parola "ciao"
+for c in "ciao":
+    # i ":" definiscono un nuovo blocco di codice finché le righe 
+    # hanno il "rientro" (indentazione) il blocco non termina
+    print(c)
+    
+print("fatto") # <-- non c'è più il rientro: blocco finito
+```
+
+<div class="fragment warning">
+Se sbagliate l'indentazione l'interprete restituirà un <code>IndentationError</code>
+</div>
+
+---
+
+# Eseguire codice Python
+
+* Python è *interpretato*: il codice viene eseguito da un interprete
+* Possiamo eseguire il codice in due modi:
+    * Direttamente nell'interprete
+    ```bash [1|2-3]
+    $ python3
+    >>> print("ciao")
+    ciao
+    ```
+    * Passando all'interprete un file contenente i comandi
+    ```bash [1-2|3-4]
+    $ cat ciao.py
+    print("ciao")
+    $ python3 ciao.py
+    ciao
+    ```
+    
+---
+
+# Il modulo `matplotlib`
+
+* In Python le librerie si chiamano *moduli*
+* I moduli vanno importati tramite il comando `import` (simile a `#include`)
+* `matplotlib` è un modulo che permette di preparare grafici scientifici
+* Esempio: scriviamo il seguente codice in un file `es_matplot.py` ed eseguiamolo
+
+```python
+import matplotlib.pyplot as plt # pyplot mostra i grafici a schermo
+
+plt.plot([1, 2, 3, 4])
+plt.show()
+```
+
+<img src="/images/labcalc_slides/matplot.png" width="350" class="fragment" style="margin:0">
+
+---
+
+# La toolbar di `matplotlib`
+
+<img src="/images/labcalc_slides/toolbar.png" width="600">
+
+* Mostra l'area del grafico originale
+* Undo/Redo della visualizzazione
+* Navigazione all'interno del grafico
+* Zoom di una porzione rettangolare del grafico
+* Personalizzazione del grafico
+* Salvataggio/esportazione della figura
+
+<div class="fragment focus">
+Provate a usare questi pulsanti durante l'esercitazione!
+</div>
+
+---
+
+# Graficare $y = f(x)$
+
+Possiamo definire *liste* di numeri per graficare una quantità in funzione di un'altra
+
+```python
+import matplotlib.pyplot as plt
+
+x = [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+y = [16, 9, 4, 1, 0, 1, 4, 9, 16]
+
+plt.plot(x, y) # NOTA BENE: x e y devono avere la stessa lunghezza
+plt.show()
+```
+
+<img src="/images/labcalc_slides/parabola.png" width="350" class="fragment" style="margin:0">
+
+---
+
+# Graficare funzioni più complicate
+
+* Le liste `x` e `y` si possono inizializzare più facilmente usando funzioni esterne
+* Il modulo più comune per fare queste operazioni è `numpy`, spesso importato come `np`
+* Ecco come si può generare una parabola usando `numpy`
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np # possiamo definire un alias per il modulo
+
+x = np.linspace(-4, 4, 50, endpoint=True)
+y = x**2
+
+plt.plot(x, y, 'o')
+plt.show()
+```
+
+<img src="/images/labcalc_slides/parabola_numpy.png" width="300" class="fragment" style="margin:0">
+
+---
+
+# Cosa abbiamo fatto?
+
+```python []
+x = np.linspace(-4, 4, 50, endpoint=True)
+y = x**2
+
+plt.plot(x, y, 'o')
+```
+
+* `linspace` genera una lista di 50 numeri nell'intervallo tra -4 e 4 (estremi compresi perché `endpoint=True`)
+* La seconda riga eleva al quadrato ogni elemento di `x` e mette il risultato in `y`
+* Il terzo parametro di `plot` dice a `matplotlib` di graficare i dati con dei cerchietti
+
+---
+
+# Leggere da file
+
+Possiamo inizializzare le liste di valori da uno o più file usando `np.loadtxt`:
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ascisse, ordinate = np.loadtxt("mio_file.dat", unpack=True, usecols=(0, 1))
+plt.plot(ascisse, ordinate, 'o')
+plt.show()
+```
+
+* `unpack=True` fa sì che i dati vengano divisi in colonne, così da associare `ascisse` alla prima colonna e `ordinate` alla seconda
+* `usecols=(0, 1)` fa sì che solo le prime due colonne vengano lette
+
+<div class="fragment warning">
+Se il numero di liste a sinistra dell'uguale non è uguale al numero di colonne lette tramite <code>usecols</code> il programma darà errore
+</div>
+
+---
+
+# Esempio di lettura da file
+
+```bash [1-6|7]
+$ cat mio_file.dat
+-4 16 -2
+-2 4 -1 
+0 0 0
+2 4 1
+4 16 2
+$ python3 leggi.py
+```
+
+<img src="/images/labcalc_slides/lettura_file.png" width="300" class="fragment" style="margin:0">
+
+<div class="fragment focus">
+Cosa succede se cambiate <code>usecols=(0, 1)</code> con <code>usecols=(0, 2)</code>?
+</div>
+
+---
+
+# Salvare il grafico su file
+
+* Il grafico si può salvare "manualmente" usando il pulsante nella toolbar
+* Si può usare la funzione `plt.savefig("nomefile.png")
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ascisse, ordinate = np.loadtxt("mio_file.dat", unpack=True, usecols=(0, 1))
+plt.plot(ascisse, ordinate, 'o')
+plt.savefig("grafico.png") # <-- salva la figura in "grafico.png"
+plt.show()
+```
+
+<div class="fragment focus">
+Se volete salvare il grafico potete anche omettere <code>plt.show()</code>
+</div>
+
+---
+
+# Più curve sullo stesso grafico
+
+* Ogni volta che chiamate `plt.plot` aggiungete una curva sul grafico
+* `plt.show` e/o `plt.savefig` vanno sempre chiamati per ultimi!
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-2 * np.pi, 2 * np.pi, 100, endpoint=True)
+sinx = np.sin(x)
+cosx = np.cos(x)
+
+plt.plot(x, sinx)
+plt.plot(x, cosx)
+plt.show()
+```
+
+<img src="/images/labcalc_slides/multiple_curves.png" width="300" class="fragment" style="margin:0">
+
+---
+
+# Personalizzare i grafici
+
+* `plt.plot()` accetta parametri opzionali per personalizzare l'aspetto delle curve
+* Trovate una lista dei parametri nell'ultima pagina dell'esercitazione
+* Un esempio completo
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-4, 4, 50, endpoint=True)
+y = x**2
+
+plt.title("Una parabola")
+plt.xlabel("Ascisse")
+plt.ylabel("Ordinate")
+plt.plot(x, y, ">g--", label="La mia parabola")
+plt.legend()
+plt.show()
+```
+
+---
+
+# Personalizzare i grafici - tipo linea
+
+* Il tipo di linea si cambia con `linestyle='style'`, dove `style` può essere
+    * `-` $\to$ linea intera
+    * `--` $\to$ linea tratteggiata
+    * `.-` $\to$ linea puntata-tratteggiata
+    * `:` $\to$ linea puntata
+    
+<img src="/images/labcalc_slides/linestyle.png" width="400" class="fragment">
+
+---
+
+# Personalizzare i grafici - spessore linea
+
+* Lo spessore della linea si cambia con `linewidth=X`, dove `X` è un numero intero
+* In questo esempio ho usato `linewidth=1`, `2`, `3` e `4` per le quattro curve
+
+<img src="/images/labcalc_slides/linewidth.png" width="400" class="fragment">
+
+---
+
+# Personalizzare i grafici - tipo simboli
+
+* Il tipo di simbolo si sceglie con `marker='tipo'`, dove `tipo` è uno dei simboli supportati
+
+<img src="/images/labcalc_slides/marker.png" width="400" class="fragment">
+
+---
+
+# Personalizzare i grafici - colori
+
+* Di default ogni curva viene colorata in maniera diversa
+* Il colore può essere scelgo con `color='C'`, dove `C` specifica il colore
+    * `b` è blue
+    * `g` è verde
+    * `r` è rosso
+    * ...
+
+<img src="/images/labcalc_slides/color.png" width="400" class="fragment">
+
+---
+
+# Personalizzare i grafici - notazione compatta
+
+* `linestyle`, `marker` e `color` si possono specificare insieme nel terzo argomento di `plt.plot()`
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-4, 4, 50, endpoint=True)
+y = x**2
+
+plt.plot(x, y, 'g<-.') # '<-.g' avrebbe avuto lo stesso risultato
+plt.show()
+```
+
+<img src="/images/labcalc_slides/compatta.png" width="350" class="fragment" style="margin:0">
+
+---
+
+# Personalizzare i grafici - l'intervallo degli assi
+
+* `xlim` e `ylim` impostano l'intervallo degli assi x e y
+
+```python
+[...] # qui i comandi per inizializzare x e y
+
+plt.xlim(-2, 2)
+plt.ylim(0, 10)
+plt.plot(x, y)
+plt.show()
+```
+
+<img src="/images/labcalc_slides/axis_range.png" width="350" class="fragment" style="margin:0">
+
+---
+
+# Personalizzare i grafici - titolo, etichette e legenda
+
+* Usate `plt.title`, `plt.xlabel`, `plt.ylabel` e `plt.legend` per aggiungere etichette al grafico, agli assi e alle curve
+
+```python
+[...] # qui i comandi per inizializzare x e y
+
+plt.title("Una parabola")
+plt.xlabel("Ascisse")
+plt.ylabel("Ordinate")
+plt.plot(x, y, label="La mia parabola")
+plt.legend() # da chiamare sempre dopo plt.plot!
+plt.show()
+```
+
+<img src="/images/labcalc_slides/etichette.png" width="350" class="fragment" style="margin:0">
+
+---
+
+# Ricordatevi che tutte queste informazioni si trovano anche sul prontuario Python scaricabile dal sito!

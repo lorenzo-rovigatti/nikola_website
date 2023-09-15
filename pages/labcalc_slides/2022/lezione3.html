@@ -1,0 +1,424 @@
+<!--
+.. title: Lezione 3
+.. slug: labcalc_lezione3_2022
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+# Sistemi di rappresentazione
+                        
+* L'hardware del computer permette di manipolare unicamente sequenze di 0 e 1
+* Come vengono *rappresentate* le altre "entità" che un computer manipola?
+    * Interi negativi
+    * Numeri razionali<!-- .element class="fragment highlight-red" -->
+    * Testo
+    * Immagini
+    * Video
+    * ...
+    
+<p>
+In ognuno di questi casi è necessario scegliere un insi<!--
+.. title: Lezione 2
+.. slug: labcalc_lezione2
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->eme di regole ($=$ sistema di rappresentazione) che metta in relazione un certo numero di bit con l'oggetto che si vuole rappresentare</p>
+
+---
+
+# Rappresentazione dei numeri decimali - virgola "fissa"
+
+In un sistema posizionale, numeri razionali con $L$ cifre decimali e $M$ cifre a sinistra della virgola si esprimono generalizzando quanto visto per gli interi:
+
+$$
+a = \sum_{i = -L}^{M - 1} c_i b^i = c_{-L} b^{-L} + c_{-L+1} b^{-L+1} + \ldots + c_{0}b^{0} + c_{1}b^{1} + \ldots + c_{M-1}b^{M-1}
+$$
+
+* Esempio in base 10: $45.127_{10} = 4 \cdot 10^1 + 5 \cdot 10^0 + 1 \cdot 10^{-1} + 2 \cdot 10^{-2} + 7 \cdot 10^{-3}$
+* Esempio in base 2: $1001.01_2 = 1 \cdot 2^3 + 0 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 + 0 \cdot 2^{-1} + 1 \cdot 2^{-2} = 9.25_{10}$
+
+<div class="fragment spacing-1-top">
+Con $n$ bit, se ne usiamo $M$ per la parte intera e $K = n - M$ per la parte decimale
+
+* Il numero più grande rappresentabile è $\approx 2^M$
+* Numero minore di $0 \to$ sprechiamo $M$ bit
+* Numero intero $\to$ sprechiamo $K$ bit
+</div>
+
+---
+
+# Rappresentazione dei numeri decimali - virgola mobile
+
+* Dato un numbero di $n$ bit, i numeri rappresentabili sono al più $2^n$
+* Con la virgola "fissa" questi sono distribuiti in piccolo intervallo. Come ampliarlo?
+* Consideriamo la *notazione scientifica*: $85.3 = 8.53 \cdot 10^1 = 0.853 \cdot 10^2$
+* Nel caso sopra $0.853$ è detta *mantissa* e $2$ è l'esponente
+* Somme e sottrazioni si eseguono <span class="fragment highlight-red">eguagliando gli esponenti</span> e operando sulle mantisse:
+    * $85.3 + 0.7 = 8.53 \cdot 10^1 + 0.07 \cdot 10^1 = (8.53 + 0.07) \cdot 10^1 = 86.0$<!-- .element class="fragment" -->
+    * $1.1 - 11.2 = 0.11 \cdot 10^1 - 1.12 \cdot 10^1 = (0.11 - 1.12) \cdot 10^1 = -10.1$<!-- .element class="fragment" -->
+* Dobbiamo scegliere una convenzione: trasformiamo in binario $8.53 \cdot 10^1$ o $0.853 \cdot 10^2$?<!-- .element class="fragment" -->
+
+---
+
+# Rappresentazione dei numeri decimali - standard IEEE 754
+
+### $\color{red}{32}/\color{blue}{64}$ bit
+
+* Il bit più significativo rappresenta il segno (0 positivo, 1 negativo)
+* I successivi $\color{red}{8}/\color{blue}{11}$ bit rappresentano l'esponente $a$ in eccesso a $\color{red}{127}/\color{blue}{1023}$
+* Gli ultimi $\color{red}{23}/\color{blue}{52}$ bit rappresentano la mantissa in *forma normale*:
+    * Si scrive il numero in forma $1.m \cdot 2^a \to m$ è la mantissa in forma normale
+* Se l'esponente è composto da tutti zeri il numero viene interpretato come $0.m \cdot 2^{-127}$<!-- .element class="fragment" -->
+    * si possono rappresentare numeri più piccoli ($2^{-149} \approx 10^{-45}$ invece di $\approx 2^{-127} \approx 6 \cdot 10^{-39}$ per numeri a 32 bit)<!-- .element class="fragment" -->
+    
+---
+
+# Rappresentazione dei numeri decimali - standard IEEE 754
+    
+## Numeri razionali a 32 bit (singola precisione):
+
+<img src="/images/labcalc_slides/float.png" width=900>
+
+## Numeri razionali a 64 bit (doppia precisione):
+
+<img src="/images/labcalc_slides/double.png" width=900>
+
+---
+
+# Notazione IEEE 754: un esempio
+
+Consideriamo il numero $0.15625$
+
+* Tradotto in binario (virgola "fissa") diventa $0.00101$
+* Trasformato in forma normale diventa $1.01 \cdot 2^{-3} \to$ $m = 01$, $a = -3$
+* Il segno è positivo $\to$ il bit più significativo ha valore $0$
+* L'esponente $a = -3$ diventa $01111100_2 = 124_{10}$ in eccesso a 127
+* La mantissa è semplicemente $01$ seguito da tutti $0$
+
+<img src="/images/labcalc_slides/float_example.png" width=900>
+
+---
+
+# Notazione IEEE 754: casi speciali
+
+<div>
+    <img style="margin: 0" src="/images/labcalc_slides/float_zero.png" width=800>
+    <span style="position: relative;top:-10px;font-size:140%">$ = +0$</span>
+    
+    <img style="margin: 0" src="/images/labcalc_slides/float_zero_minus.png" width=800>
+    <span style="position: relative;top:-10px;font-size:140%">$ = -0$</span>
+</div>
+
+<div class="fragment spacing-1-top">
+    <img style="margin: 0" src="/images/labcalc_slides/float_infinity.png" width=780>
+    <span style="position: relative;top:-10px;font-size:140%">$ = +\infty$</span>
+    
+    <img style="margin: 0" src="/images/labcalc_slides/float_infinity_minus.png" width=780>
+    <span style="position: relative;top:-10px;font-size:140%">$ = -\infty$</span>
+</div>
+
+<div class="fragment spacing-1-top">
+    Valore non reale (come $\sqrt{-1}$), detto NaN (not a number)
+    <img src="/images/labcalc_slides/float_nan.png" width=910>
+</div>
+
+---
+
+# Problemi di arrotondamento - esempio 1
+
+Dati $n$ bit, possiamo rappresentare solo $2^n$ numeri: tutti gli altri vengono *approssimati* al numero rappresentabile più vicino.
+
+Sommare numeri non rappresentabili esattamente può dare risultati imprevedibili:
+
+```text [1|2]
+>>> 0.1 + 0.2
+0.30000000000000004
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Problemi di arrotondamento - esempio 2
+
+Sommare due numeri IEEE754 significa prima eguagliare gli esponenti e poi sommare le mantisse risultanti.
+
+Se i numeri differiscono molto, la mantissa del minore perde di precisione e può arrivare persino a valere $0$:
+
+```python [1-2|3]
+>>> import numpy as np
+>>> np.float32(4000000000) + np.float32(1)
+4000000000.0
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment warning">
+Dobbiamo "obbligare" Python a usare numeri a 32 bit nella maniera convoluta mostrata sopra, perché di default usa numeri a 64 bit
+</div>
+
+---
+
+# Problemi di arrotondamento - esempio 3
+
+Se due numeri sono molto simili uno all'altro, calcolare la loro differenza può portare ad errori anche molto grandi:
+
+```python [1-2|3]
+>>> import numpy as np
+>>> np.float32(100.00002) - np.float32(100.00001)
+1.5258789e-05
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment">
+<h2>Possibili soluzioni</h2>
+
+* **Non usare <ins>mai</ins>** numeri a virgola mobile a 32 bit, ma solo quelli a 64 bit
+* Riformulare la soluzione per tenere conto di questi problemi
+    * Se $x$ e $y$ sono simili, $x^2 - y^2$ si può riscrivere come $(x+y)(x-y)$.
+</div>
+
+<div class="fragment warning">La rappresentazione di numeri decimali è una enorme fonte di <em>bug</em>!</div>
+
+---
+
+# Com'è fatto un computer?
+
+<img src="/images/labcalc_slides/computer.png" width="550">
+
+<div class="focus">
+Dal punto di vista <em>logico</em>, smartphone, tablet <em>ecc</em> sono identici
+</div>
+
+---
+
+# Architettura di Von Neumann
+
+<img src="/images/labcalc_slides/von_neumann.png" width="700">
+
+---
+
+# Architettura di Von Neumann
+
+* La CPU (*Central Processing Unit*) esegue le istruzioni dei programmi
+* La *memoria centrale* o *RAM* (*Random Access Memory*) contiene le informazioni necessarie all'esecuzione del programma
+    * Sia i dati che le istruzioni per operare su di essi sono contenuti in RAM
+* Le periferiche e le memorie di massa servono per il cosiddetto *input/output*
+    * input: trasformano segnali esterni (pressione dei tasti, riprese video, *ecc*) in segnali elettrici interpretabili come codice binario
+    * output: operano il processo inverso, trasformando il codice binario in un formato utile all'utente (suono, video, stampa)
+    * memorie di massa: hanno caratteristiche sia di input che di output
+* Il *bus* (dal latino *omnibus*) è il canale tramite cui le componenti comunicano
+
+---
+
+# Una CPU al microscopio
+
+<img src="/images/labcalc_slides/CPU_foto.png" width="550">
+
+---
+
+# La CPU
+
+<ul style="width: 62%">
+    <li>L'unità di controllo coordina tutte le attività del computer, prelevando, decodificando ed eseguendo le istruzioni dei programmi
+        <ul>
+            <li>La CPU contiene un circuito (il clock) che scandisce nel tempo la trasmissione dati e la sequenza delle operazioni che la UC svolge</li>
+        </ul>
+    </li>
+    <li>I registri sono unità di memoria piccole ma velocissime che contengono sia informazioni necessarie al funzionamento della CPU (ad esempio l'indirizzo di memoria della prossima istruzione da eseguire), che i dati su cui la CPU deve operare</li>
+    <li>L'ALU (Arithmetic Logic Unit) svolge operazioni sia aritmetiche che logiche sui dati prelevati dai registri</li>
+</ul>
+
+<img src="/images/labcalc_slides/CPU.png" style="float: left; width: 30%">
+
+---
+
+# Esempio di input/output (I/O): la tastiera
+
+<img src="/images/labcalc_slides/keyboard.jpg">
+
+* La pressione di uno o più tasti chiude un circuito
+* Il circuito chiuso è associato a un codice binario memorizzato sulla tastiera
+* Il codice viene inviato alla CPU, che lo interpreta
+* Come vengono interpretati (cioè cosa *rappresentano*) i codici della tastiera?
+* Tramite gli standard ASCII e UNICODE<!-- .element: class="fragment" -->
+
+---
+
+# Sistemi di rappresentazione
+
+* L'hardware del computer permette di manipolare unicamente sequenze di 0 e 1
+* Come vengono *rappresentate* le altre "entità" che un computer manipola?
+    * Interi negativi
+    * Numeri razionali
+    * Testo<!-- .element style="color:red" -->
+    * Immagini
+    * Video
+    * ...
+    
+<p>
+In ognuno di questi casi è necessario scegliere un insieme di regole ($=$ sistema di rappresentazione) che metta in relazione un certo numero di bit con l'oggetto che si vuole rappresentare</p>
+
+---
+
+# Lo standard ASCII
+
+* Lo standard associa 7 bit $\leftrightarrow$ un carattere
+* Per "comodità" sui sistemi moderni i caratteri sono immagazzinati in 8 bit (1 byte)
+* Dei $2^8 = 256$ possibili caratteri 
+    * i primi 128 ($[0, 127]$) sono regolamentati dallo standard
+    * gli ultimi 128 ($[128,255]$) dipendono dalle opzioni di sistema (ASCII "esteso")
+* Il "nuovo" standard UNICODE permette di rappresentare $\approx 10^6$ caratteri (es: ω, ぢ, 😑)<!-- .element: class="fragment" -->
+    * In C il supporto per UNICODE richiede librerie esterne ($\leftarrow$ non ne faremo uso)<!-- .element: class="fragment" -->
+    * In Python e in linguaggi "moderni" è incluso automaticamente<!-- .element: class="fragment" -->
+* In C useremo i primi 128 caratteri dello standard ASCII<!-- .element: class="fragment" -->
+
+---
+
+# Lo standard ASCII - esempi 1
+
+|Binario|Decimale|Simbolo|
+|-|-|-|
+|$0000 \\; 0000$|0|Carattere "*null*", `\0`|
+|...|...|...|
+|$0000 \\; 0111$|7|<span class="fragment highlight-red">Bell (campanella)</span>|
+|...|...|...|
+|$0000 \\; 1001$|9|Tab, `\t`|
+|$0000 \\; 1010$|10|Fine riga, `\n`|
+|...|...|...|
+|$0010 \\; 0000$|32|Spazio|
+|$0010 \\; 0001$|33|!|
+
+---
+
+# Lo standard ASCII - esempi 2
+
+|Binario|Decimale|Simbolo|
+|-|-|-|
+|$0011 \\; 0000$|48|0 (numero)|
+|$0011 \\; 0001$|49|1|
+|...|...|...|
+|$0100 \\; 0001$|65|A|
+|$0100 \\; 0010$|66|B|
+|...|...|...|
+|$0101 \\; 1010$|90|Z|
+|...|...|...|
+|$0110 \\; 0001$|97|a|
+|$0110 \\; 0010$|98|b|
+|...|...|...|
+|$0111 \\; 1010$|122|z|
+
+---
+
+# Esempi con Python
+
+* `chr(intero)` converte un intero decimale in carattere usando il codice ASCII
+* `ord(carattere)` converte un carattere in intero decimale usando il codice ASCII
+
+```python [1,2|3,4|5,6]
+>>> chr(48)
+'0'
+>>> chr(9)
+'\t'
+>>> chr(101)
+'e'
+```
+
+```python [1,2|3,4|5,6]
+>>> ord('b')
+98
+>>> ord('B')
+66
+>>> ord('5')
+53
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Memoria centrale (RAM)
+
+* Contiene i dati e le operazioni da eseguire
+* È "volatile": se togliete l'alimentazione al computer il contenuto viene perso
+* È composta da *celle*
+* Ogni cella è composta da "interruttori" a due stati, $\to$ un interruttore $=$ un bit
+* A ogni cella è associato un <span class="fragment highlight-red">"indirizzo"</span> tramite cui leggere o scrivere il suo contenuto
+* Ogni cella è composta da 8 "interruttori", $\to$ una cella $=$ 1 byte
+
+<div class="fragment warning">
+Gli indirizzi sono numeri binari, che di solito si visualizzano come numeri esadecimali. In C si possono manipolare (vedremo cosa significa).
+</div>
+
+---
+
+# Come leggere la memoria: un esempio
+
+Ecco il contenuto dei 32 bit (4 celle) che cominciano all'indirizzo 0x7fffc5748e00:
+
+|Indirizzo|Contenuto|
+|-|-|
+|0x7fffc5748e00|01000011|
+|0x7fffc5748e01|01101001|
+|0x7fffc5748e02|01100001|
+|0x7fffc5748e03|01001111|
+
+<div style="text-align: center">
+$\downarrow$<br/>
+01000011&nbsp;01101001&nbsp;01100001&nbsp;01001111
+</div>
+
+<div class="fragment spacing-1-top">
+Cosa rappresentano questi bit? Dipende da come li interpretiamo:
+
+* virgola mobile a 32 bit: $1.0000110465 \cdot 10^{30}$<!-- .element: class="fragment" -->
+* intero a 32 bit: 1900671836<!-- .element: class="fragment" -->
+* 4 interi di 8 bit ognuno: $67, 105, 97, 79$<!-- .element: class="fragment" -->
+* 4 caratteri ASCII: 'C', 'i', 'a', 'O'<!-- .element: class="fragment" -->
+</div>
+
+---
+
+# Come appare un programma in memoria?
+
+<pre class="text"><code data-trim data-noescape>
+<span style="color:#bf79db">10111000</span> <span class="fragment highlight-red" data-fragment-index="2">01001000 01100101 01101100 01101100</span><span class="fragment" style="color:red" data-fragment-index="2">     'H' 'e' 'l' 'l'</span>
+<span style="color:#bf79db">10100011</span> 00000000 00010000 00000000 00000110
+<span style="color:#bf79db">10111000</span> <span class="fragment highlight-red" data-fragment-index="2">01101111 00101100 00100000 01010111</span><span class="fragment" style="color:red" data-fragment-index="2">     'o' ',' ' ' 'W'</span>
+<span style="color:#bf79db">10100011</span> 00000100 00010000 00000000 00000110
+<span style="color:#bf79db">10111000</span> <span class="fragment highlight-red" data-fragment-index="2">01101111 01110010 01101100 01100100</span><span class="fragment" style="color:red" data-fragment-index="2">     'o' 'r' 'l' 'd'</span>
+<span style="color:#bf79db">10100011</span> 00001000 00010000 00000000 00000110
+<span style="color:#bf79db">10111000</span> <span class="fragment highlight-red" data-fragment-index="2">00100001 00001010 00000000 00000000</span><span class="fragment" style="color:red" data-fragment-index="2">     '!' '\n' 0 0</span>
+<span style="color:#bf79db">10100011</span> 00001100 00010000 00000000 00000110
+<span style="color:#bf79db">10111001</span> 00000000 00010000 00000000 00000110
+<span style="color:#bf79db">10111010</span> 00010000 00000000 00000000 00000000
+<span style="color:#bf79db">10111011</span> 00000001 00000000 00000000 00000000
+<span style="color:#bf79db">10111000</span> 00000100 00000000 00000000 00000000
+<span style="color:#bf79db">11001101</span> 10000000
+<span style="color:#bf79db">10111000</span> 00000001 00000000 00000000 00000000
+<span style="color:#bf79db">11001101</span> 10000000
+</code></pre>
+
+* Questo programma scrive "Hello, World!" ed esce
+* Le istruzioni sono colorate in <span style="color:#bf79db">viola</span>, i dati in bianco
+* Riconoscete qualche codice ASCII?<!-- .element: class="fragment" data-fragment-index="1" -->
+
+---
+
+# Un esempio piuttosto famoso
+
+<div class="r-stack">
+    <img class="fragment" src="/images/labcalc_slides/apollo_code.jpg" width="600">
+    <img class="fragment" src="/images/labcalc_slides/punched_card.jpg" width="700">
+    <img class="fragment" src="/images/labcalc_slides/hamilton.webp" width="700">
+    <img class="fragment" src="/images/labcalc_slides/moon.webp" width="600">
+</div>

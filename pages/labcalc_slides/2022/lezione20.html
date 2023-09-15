@@ -1,0 +1,228 @@
+<!--
+.. title: Lezione 20
+.. slug: labcalc_lezione20_2022
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+-->
+
+# Il metodo Monte Carlo
+                    
+Dato l'integrale definito di $f(x)$ in un intervallo $[a, b]$, possiamo scrivere
+
+$$
+\int_a^b f(x) dx = \int_a^b f(x) \frac{b-a}{b-a} dx = (b-a) \int_a^b \frac{f(x)}{b - a} dx = \langle f \rangle (b-a)
+$$
+
+dove $\langle f \rangle$ è il *valor medio* di $f$ su $[a, b]$, che può essere stimato estraendo $N$ valori $R_i$ distribuiti uniformemente in $[a, b]$:
+
+$$
+\langle f \rangle \approx \frac{1}{N} \sum_{i=0}^{N-1} f(R_i)
+$$
+
+<div class="warning fragment">
+Questa derivazione non è rigorosa: nei prossimi anni sarà formalizzata meglio
+</div>
+
+---
+
+# Metodo Monte Carlo - implementazione
+
+* Calcoliamo l'integrale di $x^2 - \frac{3}{5} x^3$ nell'intervallo $[0, 2]$
+
+```C [|9,10|11-15|16|18-19|]
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int i;
+    srand48(time(NULL));
+    
+    double f_media = 0, a = 0, b = 2; // a e b potrebbero essere inseriti dall'utente
+    double intervallo = (b - a);
+    for(i = 0; i < N; i++) {
+        double x = drand48() * intervallo + a; // estraiamo un numero casuale tra a e b
+        double fx = x * x - 0.6 * x * x * x;   // calcoliamo la funzione in x
+        f_media += fx;
+    }
+    f_media /= N; // calcoliamo la media
+    
+    double integrale = f_media * (b - a); // stimiamo l'integrale
+    printf("%d %lf\n", N, integrale);
+    
+    return 0;
+}
+```
+
+---
+
+# Metodo Monte Carlo - risultati
+
+* Compiliamo il programma definendo `N` al momento della compilazione
+```text
+$ gcc -o integrazione_MC integrazione_MC.c -DN=1000
+```
+
+<img src="/images/labcalc_slides/integrazione_risultati_MC.png" width="500">
+
+<div class="focus fragment">
+Qual è il vantaggio? Il MC funziona <b>molto</b> meglio all'aumentare delle dimensioni su cui integrare e ha meno limiti sulla funzione integranda
+</div>
+
+---
+
+# Metodo MC hit&amp;miss per il calcolo di aree e volumi
+
+Qual è il volume dell'intersezione tra due sfere di raggi $R_1$ e $R_2$ poste a distanza $d$?
+
+<img src="/images/labcalc_slides/volume_MC.png" width="400">
+
+<div class="fragment">
+
+$$
+V_{\rm intersezione} = \int_V f(x, y, z) dx dy dz
+$$
+
+dove $V$ è un volume che racchiude l'intersezione e la funzione integranda è
+
+$$
+f(x, y, z) = 
+\begin{cases}
+1 &amp; \text{dentro l'intersezione}\\\\
+0 &amp; \text{altrimenti}
+\end{cases}
+$$
+
+</div>
+
+---
+
+# Calcolo del volume - la strategia
+
+* Scegliamo $V$ in modo da poter estrarre uniformemente un punto al suo interno
+* Esempio: un parallelepipedo che circondi completamente l'intersezione, prendendo il centro della prima sfera in $(0, 0, 0)$ e il centro della seconda in $(d, 0, 0)$
+
+<img src="/images/labcalc_slides/volume_MC_box.png" width="350">
+
+<div class="fragment">
+
+* Estraiamo $N$ punti e contiamo quante volte il punto si trova nell'intersezione, $N_{\rm in}$
+* Stimiamo il valore dell'integrale generalizzando la formula usata nel caso 1d
+
+$$
+V_{\rm intersezione} = \int_V f(x, y, z) dx dy dz \approx V \frac{N_{\rm in}}{N}
+$$
+
+</div>
+
+---
+
+# Calcolo del volume - `main`
+
+```C [|4-9|11-18|19-20|]
+// #define e prototipi
+
+int main() {
+    int i;
+    double R1 = 0.5, R2 = 0.4, d = 0.4;
+    double lati[3] = {R1 + R2, 2 * R2, 2 * R2}; // vedi figura
+    double centro_1[3] = {0, 0, 0}, centro_2[3] = {d, 0, 0};
+    double punto[3];
+    srand48(time(NULL));
+    
+    int dentro = 0;
+    for(i = 0; i < N; i++) {
+        estrai_punto(lati, punto);
+        if(nella_sfera(centro_1, R1, punto) && nella_sfera(centro_2, R2, punto)) {
+            dentro++;
+        }
+    }
+    
+    double volume = dentro / (double) N * lati[0] * lati[1] * lati[2];
+    printf("%d %lf\n", N, volume);
+    return 0;
+}
+
+// corpo delle funzioni
+```
+
+---
+
+# Calcolo del volume - funzioni accessorie
+
+```C [|1-4|6,11-14|7,16-20|]
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define SQR(x) ((x) * (x))
+
+int nella_sfera(double centro[], double R, double p[]);
+void estrai_punto(double lati[], double p[]);
+
+// qui il main
+
+int nella_sfera(double centro[], double R, double p[]) {
+    double dist_sqr = SQR(centro[0] - p[0]) + SQR(centro[1] - p[1]) + SQR(centro[2] - p[2]);
+    return dist_sqr < SQR(R);
+}
+
+void estrai_punto(double lati[], double p[]) {
+    p[0] = drand48() * lati[0]; // numero compreso tra 0 e R1 + R2
+    p[1] = (drand48() - 0.5) * lati[1]; // numero compreso tra -R2 e R2
+    p[2] = (drand48() - 0.5) * lati[2]; // numero compreso tra -R2 e R2
+}
+```
+<!-- .element style="font-size: 53%" -->
+
+---
+
+# Calcolo del volume - risultati
+
+In questo caso il volume ha un'espressione esatta
+
+$$
+V_{\rm inter} = \frac{\pi (R + r - d)^2 (d^2 + 2dr - 3r^2 + 2dR + 6rR - 3R^2)}{12 d} = 0.02573\ldots
+$$
+
+<img src="/images/labcalc_slides/integrazione_risultati_MC_intersezione.png" width="500">
+
+<div class="focus fragment">
+Il metodo è generale e può essere utilizzato per superfici o volumi per cui non si hanno espressioni teoriche
+</div>
+
+---
+
+# Un esempio più realistico: l'intersezione tra microgel
+
+* I microgel sono particelle mesoscopiche polimeriche
+* Sono utilizzati sia in ambito teorico (per studiare transizioni di fase) che in ambito applicativo (per costruire nuovi materiali)
+* Le loro proprietà microscopiche si possono studiare tramite simulazioni al computer
+* Esempio: le proprietà elastiche sono legate alla deformazione/interpenetrazione
+
+<div class="r-stack">
+    <img class="fragment fade-out" data-fragment-index="0" src="/images/labcalc_slides/microgels_1.png" width="500">
+    <img class="fragment" data-fragment-index="0" src="/images/labcalc_slides/microgels_2.png" width="500">
+</div>
+
+---
+
+# È tempo di vendicarvi: il questionario OPIS!
+
+1. Andate su www.uniroma1.it 
+2. Fate il login per entrare nella vostra area personale
+3. Cliccate su CORSI DI LAUREA 
+4. Cliccate su OPINIONI STUDENTI
+5. Inserite il codice
+
+# 86LN95GR
+
+<div class="focus fragment">
+Ricordatevi che il questionario è anonimo
+</div>
+                
