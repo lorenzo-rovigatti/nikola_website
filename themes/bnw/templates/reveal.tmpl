@@ -1,10 +1,42 @@
 ## -*- coding: utf-8 -*-
-<%namespace name="zzz" file="zzz_helper.tmpl" import="*" />
-${set_locale(lang)}
-${zzz.html_headstart()}
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reset.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.min.css">
+<%namespace name="zzz" file="zzz_helper.tmpl" import="*" />
+
+${set_locale(lang)}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        %if description:
+        <meta name="description" content="${description}">
+        %endif
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>${title|striphtml} | ${blog_title|striphtml}</title>
+
+        %if permalink:
+        <link rel="canonical" href="${abs_link(permalink)}">
+        %endif
+
+        %if favicons:
+            %for name, file, size in favicons:
+                <link rel="${name}" href="${file}" sizes="${size}"/>
+            %endfor
+        %endif
+
+        % if comment_system == 'facebook':
+            <meta property="fb:app_id" content="${comment_system_id}">
+        % endif
+
+        %if prevlink:
+            <link rel="prev" href="${prevlink}" type="text/html">
+        %endif
+        %if nextlink:
+            <link rel="next" href="${nextlink}" type="text/html">
+        %endif
+
+        ${extra_head_data}
+
+        <link rel="stylesheet" href="/assets/css/reset_reveal.css">
         <link rel="stylesheet" href="/assets/css/slides.css">
         
         <script src="/assets/js/matrixrain.js"></script>
@@ -43,20 +75,19 @@ ${zzz.html_headstart()}
                  ${post.text()}
                  % else:
                  <section data-markdown>
+                 
                     <textarea data-template>
-                        ${post.text()}
+
+${post.text()}
+
                     </textarea>
+                    
                 </section>
-                 % endif
+                % endif
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/notes/notes.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/markdown/markdown.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/highlight/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/math/math.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/zoom/zoom.min.js"></script>
+        <script src="/assets/js/reveal-full.js"></script>
         <script>
         Reveal.initialize({
             hash: true,
