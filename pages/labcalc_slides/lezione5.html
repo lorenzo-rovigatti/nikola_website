@@ -14,10 +14,10 @@
 # Introduzione al C
                         
 * Il programma si scrive come un insieme di file di testo
-* Una volta scritto il codice, il programma va compilato
+* Una volta scritto il codice, il programma va <b>compilato</b>
 
 ```c
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     // sommiamo degli interi e stampiamo il risultato
@@ -60,7 +60,7 @@ int main() {
 ```
 
 * Parentesi graffe `{` e `}`: delimitano un *blocco di codice* che sarà eseguito riga per riga
-* I caratteri `//`: tutto ciò che segue `//` è un *commento*, cioè non verrà considerato dal compilatore. Commenti molto lunghi (su più righe) si possono racchiudere tra `/*` e `*/`
+* I caratteri `//`: tutto ciò che segue `//` è un *commento*, cioè non verrà considerato dal compilatore. Commenti di più righe si possono racchiudere tra `/*` e `*/`
 
 <div class="fragment">
 
@@ -164,7 +164,7 @@ Il tipo stabilisce il n. di bit a disposizione e il tipo di rappresentazione di 
 <ul>
 <li>I modificatori adattano i tipi di dati fondamentali alle esigenze del programmatore. Possono essere anche usati assieme (es. <code>unsigned short int</code>)</li>
 <li class="fragment warning" data-fragment-index="1">
-Usate <code>double</code> al posto di <code>float</code>, quest'ultimo è troppo problematico dal punto di vista della precisione numerica</li>
+È facile avere problemi di precisione numerica con <code>float</code>, usate <code>double</code>!</li>
 <li class="fragment">Per inizializzare un <code>double</code> dobbiamo usare numeri razionali:
 
 ```C
@@ -558,4 +558,3 @@ int a = 3, b = 6;
 double c = 3.0 + a / b;   // quanto vale c?
 double d = (3.0 + a) / b; // quanto vale d?
 ```
-                        
