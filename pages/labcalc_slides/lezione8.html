@@ -20,16 +20,17 @@
 
 ```C [|2|6,7]
 #include <stdio.h>
-#define MOLT 10  // <-- è buona norma usare il maiuscolo per i nomi delle macro
+#define MOLT 10  // è buona norma usare il maiuscolo per i nomi delle macro
 
 int main() {
-    double a = 3.0;
-    double b = a * MOLT;                   // -> double b = a * 10;
-    printf("%lf * %d = %lf\n", a, MOLT, b);// -> printf("%lf * %d = %lf\n", a, 10, b);
+  double a = 3.0;
+  double b = a * MOLT;                   // -> double b = a * 10;
+  printf("%lf * %d = %lf\n", a, MOLT, b);// -> printf("%lf * %d = %lf\n", a, 10, b);
 
-    return 0;
+  return 0;
 }
 ```
+<!-- .element: style="width:100%;font-size:54%" -->
 
 ```bash
 $ gcc -o es_define es_define.c
@@ -57,6 +58,7 @@ int main() {
     return 0;
 }
 ```
+<!-- .element: style="width:100%;font-size:50%" -->
 
 ```bash [|2,3]
 $ gcc -o es_define_2 es_define_2.c

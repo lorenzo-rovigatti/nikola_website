@@ -22,7 +22,7 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
     <li><a href="link://slug/labcalc_lezione5">Quinta lezione:</a> introduzione al C: variabili, tipi e cast, operatori aritmetici, incremento e decremento.</li>
     <li><a href="link://slug/labcalc_lezione6">Sesta lezione:</a> il preprocessore (solo #include), input/output e printf.</li>
     <li><a href="link://slug/labcalc_lezione7">Settima lezione:</a> scanf, operatori logici e relazionali, priorità degli operatori, librerie matematiche, il linker.</li>
-    <li><a href="link://slug/labcalc_lezione8">Ottima lezione:</a> #define e compilazione condizionata.</li>
+    <li><a href="link://slug/labcalc_lezione8">Ottava lezione:</a> #define e compilazione condizionata.</li>
     <li><a href="link://slug/labcalc_lezione9">Nona lezione:</a> diagrammi di flusso, teorema di Bohm-Jacopini, if/else, for/while/do.</li>
     <li><a href="link://slug/labcalc_lezione10">Decima lezione:</a> array unidimensionali.</li>
     <li><a href="link://slug/labcalc_lezione11">Undicesima lezione:</a> bubblesort, ricerca binaria su array ordinati, numeri pseudocasuali, algoritmo lineare congruenziale.</li>

@@ -14,7 +14,7 @@
 # Rendiamo utile il nostro primo programma
                     
 ```C [|8,9|13|1]
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     double T_c, T_f;              
@@ -41,7 +41,7 @@ int main() {
 * Per utilizzare tali funzioni è necessario includere nel programma il file *header* associato alla libreria:
 
 ```C
-#include <nome_libreria.h> // Nota Bene: senza punto e virgola!
+#include &lt;nome_libreria.h&gt; // Nota Bene: senza punto e virgola!
 
 int main() {
     // qui possiamo usare le funzioni definite in nome_libreria.h
@@ -50,7 +50,7 @@ int main() {
 
 <div class="fragment">
 
-* Le parentesi angolari `<>` indicano che il file è contenuto in una cartella standard
+* Le parentesi angolari `&lt;&gt;` indicano che il file è contenuto in una cartella standard
 * L'estensione `.h` indica che il file è un *header* (file di intestazione)
 * I file *header* contengono le *dichiarazioni* delle funzioni, informazione necessaria per compilare correttamente il programma
 * Se i `.h` contengono solo le dichiarazioni, dove si trova il corpo di queste funzioni?
@@ -81,12 +81,12 @@ Semplificando, possiamo considerare la compilazione come un processo a tre stadi
 * Il preprocessore effettua sostituzioni sul codice sorgente prima della compilazione
 * I comandi (*direttive*) del preprocessore cominciano con `#` e **non** finiscono con `;`
 * Oggi vediamo il primo tipo di sostituzione che effettua: l'inclusione di file *header*
-* Ogni volte che appare una riga `#include <qualcosa.h>`, il preprocessore la sostituisce con il contenuto del file `qualcosa.h`
+* Ogni volte che appare una riga `#include &lt;qualcosa.h&gt;`, il preprocessore la sostituisce con il contenuto del file `qualcosa.h`
 * Se non trova il file dà errore e il processo di compilazione termina
 * Chiediamo a `gcc` di farci vedere l'effetto del preprocessore su questo semplice codice con l'opzione `-E`:
 
 ```C
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     return 0;
@@ -221,4 +221,4 @@ printf("%d\n", a + 1);            // possiamo stampare il risultato di un'espres
 printf("%lf\n", a + b / 2.);      // promozione del tipo!
 printf("%d\n", (int) (b / 2.));   // senza il cast verrebbe stampato un numero "assurdo"
 ```
-                
+<!-- .element: style="font-size:51%;width:100%" -->
