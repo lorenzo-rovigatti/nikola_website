@@ -95,20 +95,20 @@ Sotto al cofano il linker compila separatamente <code>main.c</code> e <code>my_r
 #include "my_random.h"
 
 int pari_dispari(int min, int max) {
-    return (random_int(min, max) % 2); // chiamiamo una funzione della nostra libreria
+  return (random_int(min, max) % 2); // chiamiamo una funzione della nostra libreria
 }
 
 int main() {
-    srand48(time(NULL));
+  srand48(time(NULL));
     
-    int result = pari_dispari(3, 15);
+  int result = pari_dispari(3, 15);
     
-    /* fa qualcosa con result */
+  /* fa qualcosa con result */
     
-    return 0;
+  return 0;
 }
 ```
-<!-- .element class="fragment" -->
+<!-- .element style="font-size:53%" -->
 
 <div class="fragment focus">
 Una funzione può persino chiamare se stessa!
@@ -235,7 +235,7 @@ void print_int_array(int *array, int n) {
     }
 }
 ```
-* In alternativa si può usare `int array[]` per rendere esplicita la natura del parametro
+* A scelta si può usare `int array[]` per rendere esplicita la natura del parametro
 ```C
 void print_int_array(int array[], int n) {
     int i;
@@ -246,7 +246,7 @@ void print_int_array(int array[], int n) {
 ```
 
 <div class="warning fragment">
-Modificare il contenuto di array passati a una funzione ha effetto anche al di fuori della funzione!
+Modificare il contenuto di array passati a una funzione ha effetto anche al di fuori della funzione: perché?
 </div>
 
 ---
@@ -374,7 +374,7 @@ In programmi lunghi è facile perdere traccia delle variabili globali: non usate
 <div class="flex-col">
 
 ```C
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     char c1 = 'a';
@@ -417,17 +417,17 @@ CODICE CARATTERE
 #define LEN 10
 
 int main() {
-    srand48(481923);
-    char stringa[LEN];
-    int i;
-    for(i = 0; i < LEN - 1; i++) {
-        stringa[i] = drand48() * (91 - 65) + 65;
-    }
-    stringa[LEN - 1] = '\0'; // l'ultimo carattere deve essere quello di fine stringa
+  srand48(481923);
+  char stringa[LEN];
+  int i;
+  for(i = 0; i < LEN - 1; i++) {
+    stringa[i] = drand48() * (91 - 65) + 65;
+  }
+  stringa[LEN - 1] = '\0'; // l'ultimo carattere deve il "fine stringa"
     
-    printf("%s\n", stringa); // stampa "VCZBCOCKF"
+  printf("%s\n", stringa); // stampa "VCZBCOCKF"
     
-    return 0;
+  return 0;
 }
 ```
 <!-- .element class="fragment" -->
@@ -492,7 +492,7 @@ int main() {
 
 # Inizializzare le stringhe
 
-* Una stringa può essere inizializzata come qualsiasi altro array (senza dimenticare `\0`)
+* Una stringa può essere inizializzata come un array normale (senza dimenticare `\0`)
 ```C
 char parola[5] = {'c', 'i', 'a', 'o', '\0'};
 ```

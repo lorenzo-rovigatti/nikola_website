@@ -17,7 +17,9 @@
 char parola[5] = "parolone";
 ```
 
+<figure>
 <img src="/images/labcalc_slides/string_ub.png" width=400>
+</figure>
 
 <div class="fragment">
 
@@ -40,15 +42,15 @@ Errori di questo tipo sono segnalati come <em>warning</em> ("avvertimenti") dal 
 * `scanf` prende indirizzi come argomenti, e le stringhe sono array, cioè indirizzi!
 
 ```C []
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 #define LEN 10
 
 int main() {
-    char parola[LEN];
-    printf("Inserisci una parola:\n");
-    scanf("%s", parola); // non serve utilizzare & perché parola è già un indirizzo
-    printf("Hai inserito %s\n", parola);
-    return 0;
+  char parola[LEN];
+  printf("Inserisci una parola:\n");
+  scanf("%s", parola); // non serve utilizzare & perché parola è già un indirizzo
+  printf("Hai inserito %s\n", parola);
+  return 0;
 }
 ```
 
@@ -78,7 +80,7 @@ Dovete assicurarvi che la parola non sia troppo lunga!
 </div>
 
 ```C [7]
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 #define LEN 10
 
 int main() {
@@ -118,6 +120,8 @@ scanf("%s %s", parola1, parola2);
 * E se non sappiamo quante parole inserirà l'utente?
 * Si può leggere un carattere alla volta con `%c`, ma il codice risultate è macchinoso
 
+</div>
+
 ---
 
 # Leggere un carattere per volta
@@ -127,19 +131,19 @@ scanf("%s %s", parola1, parola2);
 
 ```C [|5-8|10-14|]
 void leggi_frase(char frase[], int max) {
-    int read = 0;
-    char ch;
+  int read = 0;
+  char ch;
     
-    while((ch = getchar()) != '\n' && read < max) {
+  while((ch = getchar()) != '\n' && read < max) {
     frase[read] = ch;
     read++;
-    }
+  }
     
-    if(read == max) {
-    fprintf(stderr, "Frase troppo lunga: solo %d caratteri verranno salvati\n", max - 1);
+  if(read == max) {
     read = max - 1;
-    }
-    frase[read] = '\0';
+    fprintf(stderr, "Troppi caratteri: solo i primi %d verranno salvati\n", read);
+  }
+  frase[read] = '\0';
 }
 ```
 <!-- .element class="fragment" -->
@@ -149,7 +153,7 @@ void leggi_frase(char frase[], int max) {
 # Possiamo leggere frasi intere!
 
 ```C
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 #define MAX_LENGTH 20
 
 ... // definizione di leggi_frase
@@ -157,7 +161,7 @@ void leggi_frase(char frase[], int max) {
 int main() {
     char frase[MAX_LENGTH];
     
-    printf("Inserire una stringa di massimo %d caratteri (spazi permessi)\n", MAX_LENGTH - 1);
+    printf("Inserire al massimo %d caratteri (spazi permessi)\n", MAX_LENGTH - 1);
     leggi_frase(frase, MAX_LENGTH);
     printf("Hai inserito: %s\n", frase);
     return 0;
@@ -182,8 +186,8 @@ Hai inserito: Nel mezzo del cammi
 # Esempio completo: contare gli spazi
 
 ```C [|10,21|11-16|17-20|22-23|]
-#include <stdio.h>
-#include <stdlib.h> // serve per exit(1)
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt; // serve per exit(1)
 #define MAX_LENGTH 100
 
 int main() {
@@ -212,14 +216,12 @@ int main() {
 
 ---
 
-</div>
-
 # Scrivere un carattere per volta
 
 `int putchar(int c)` scrive sul *buffer* un singolo carattere
 
 ```C [|6-11|]
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     char stringa[100] = "Che bella stringa!";
@@ -250,7 +252,7 @@ Utile in casi molto specifici, in generale usate <code>printf("%s\n", stringa);<
 # Esempio completo: svuotare il buffer
 
 ```C [|4|6-8|10-14|]
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     char parola[100], ch;
@@ -286,7 +288,7 @@ Nel buffer sono rimasti i caratteri:
 Un array $n$-dimensionale di `char` può essere usato come un array $(n-1)$-dimensionale di stringhe
 
 ```C
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     char stringhe[2][10] = {"ciao", "mondo"};

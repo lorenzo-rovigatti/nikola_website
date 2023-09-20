@@ -27,7 +27,9 @@
 
 È un *grafo orientato* che rappresenta graficamente le operazioni da eseguire
 
+<figure>
 <img class="fragment" src="/images/labcalc_slides/flusso_conversione.png" height="350">
+</figure>
 
 <div class="flex-container fragment">
 <div class="flex-col">
@@ -60,7 +62,7 @@
 <div class="flex-col fragment">
 
 ```C
-// qui il codice che precede la selezione
+// codice che precede la selezione
 
 if(condizione) {
     ... // <-- istruzioni 1
@@ -84,7 +86,7 @@ else {
 # Un esempio completo
 
 ```C [|8-10|11-13]
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
     int n;
@@ -125,23 +127,28 @@ Il numero inserito è dispari
 <div class="flex-col fragment">
 
 ```C
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 int main() {
-    int n;
+  int n;
 
-    printf("Inserisci un numero intero:\n");
-    scanf("%d", &n);
+  printf("Inserisci un numero intero:\n");
+  scanf("%d", &n);
 
-    if(n == 666) {
+  if(n == 666) {
     printf("The number of the beast!\n");
-    }
+  }
 
-    ... // qui il resto del programma
+  ... // qui il resto del programma
 
-    return 0;
+  return 0;
 }
 ```
+<!-- .element: style="width:100%" -->
+
+</div>
+
+</div>
 
 ---
 
@@ -174,6 +181,7 @@ else { // n >= 18
     }
 }
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 <div class="flex-col">
@@ -212,6 +220,7 @@ else {
     printf("Il numero è zero\n");
 }
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 <div class="flex-col">
@@ -240,7 +249,7 @@ else {
 
 ```C [|2,3|4-11]
 int f_to_c;
-printf("Inserire 0 per convertire C->F, un valore != 0 per convertire F->C:\n");
+printf("Inserire 0 per C->F, un valore != 0 per F->C:\n");
 scanf("%d", &f_to_c);
 if(f_to_c) {
     T_output = (T_input - offset) * conv;  
@@ -275,6 +284,8 @@ while(condizione) {
 
 ...     // <-- altre istruzioni
 ```
+<!-- .element: style="width:100%" -->
+
 </div>
 </div>
 
@@ -364,6 +375,7 @@ do {
 
 ...     // <-- altre istruzioni
 ```
+<!-- .element: style="width:100%" -->
 </div>
 </div>
 
@@ -432,6 +444,7 @@ for(i = 1; i < 10; i++) { // l'inizializzazione avviene direttamente nel for
     // non c'è bisogno di aggiornare i all'interno del ciclo
 }
 ```
+<!-- .element: style="width:100%" -->
 
 ---
 
