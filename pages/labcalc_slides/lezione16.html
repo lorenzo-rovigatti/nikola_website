@@ -125,7 +125,7 @@ void stampa_su_file(double v1, int v2) { // prende un double e un int in input
 <div class="flex-col">
 
 ```C [|3-5|8-10|11|]
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 double square(double x) {
     return x * x;
@@ -146,7 +146,7 @@ int main() {
 <div class="flex-col fragment">
 
 ```C [|3|6-8|9|13-15|]
-#include <stdio.h>
+#include &lt;stdio.h&gt;
 
 double square(double x); // prototipo
 
@@ -292,16 +292,16 @@ double retta(double m, double q, double x) {
 }
 
 int main() {
-    double m = 1.1, q = 1.5, x = 2.0;
-    char c = 'A';
-    FILE *input;
+  double m = 1.1, q = 1.5, x = 2.0;
+  char c = 'A';
+  FILE *input;
     
-    printf("%lf\n", retta(m, q, x)); // OK
-    printf("%lf\n", retta(x, q, m)); // Compila ma probabilmente non è quello che volete
-    printf("%lf\n", retta(x));       // ERRORE DI COMPILAZIONE
-    printf("%lf\n", retta(m, c, x)); // Compila perché char -> double è permesso
-    printf("%lf\n", retta(m, input, x)); // ERRORE DI COMPILAZIONE
-    return 0;
+  printf("%lf\n", retta(m, q, x)); // OK
+  printf("%lf\n", retta(x, q, m)); // Compila ma probabilmente non è quello che volete
+  printf("%lf\n", retta(x));       // ERRORE DI COMPILAZIONE
+  printf("%lf\n", retta(m, c, x)); // Compila perché char -> double è permesso
+  printf("%lf\n", retta(m, input, x)); // ERRORE DI COMPILAZIONE
+  return 0;
 }
 ```
 <!-- .element class="fragment" style="font-size:52%" -->

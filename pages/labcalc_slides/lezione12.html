@@ -163,24 +163,24 @@ int main() {
 #define MAX 1.9 // può essere inserito dall'utente o calcolato automaticamente
 
 int main() {
-    int i, occorrenze[N_BINS] = {0};
-    double width = (MAX - MIN) / N_BINS;
-    double dati[N_DATI];
+  int i, occorrenze[N_BINS] = {0};
+  double width = (MAX - MIN) / N_BINS;
+  double dati[N_DATI];
     
-    /* generiamo o leggiamo da file i dati */
+  /* generiamo o leggiamo da file i dati */
     
-    for(i = 0; i < N_DATI; i++) {
-        if(dati[i] < MAX && dati[i] > MIN) { // assicuriamoci di non accedere a bin non esistenti
-            int bin = (int)((dati[i] - MIN) / width);
-            occorrenze[bin]++;
-        }
+  for(i = 0; i < N_DATI; i++) {
+    if(dati[i] < MAX && dati[i] > MIN) { // assicuriamoci di non accedere a bin non esistenti
+      int bin = (int)((dati[i] - MIN) / width);
+      occorrenze[bin]++;
     }
+  }
 
-    for(i = 0; i < N_BINS; i++) {
-        printf("%lf %d\n", i * width + MIN, occorrenze[i]);
-    }
+  for(i = 0; i < N_BINS; i++) {
+    printf("%lf %d\n", i * width + MIN, occorrenze[i]);
+  }
 
-    return 0;
+  return 0;
 }
 ```
 <!-- .element style="font-size:48%" -->

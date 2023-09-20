@@ -133,7 +133,9 @@ Questa proprietà è valida sia per i puntatori che per gli array!
 int a[4] = {-1, 3, 7, 0};
 ```
 
+<figure>
 <img src="/images/labcalc_slides/array_puntatori_aritmetica.png" class="fragment" width=500>
+</figure>
 
 <div class="fragment focus">
 Pensate a questi due metodi equivalenti come a dei <em>sinonimi</em>: di volta in volta conviene scegliere quello più appropriato al contesto
@@ -252,21 +254,21 @@ c = 7.800000
 #define N_V 5
 
 int main(){
-    char pvocali[N_V];
-    int i;
+  char pvocali[N_V];
+  int i;
 
-    pvocali[0] = 'A';
-    pvocali[1] = 'E';
-    *(pvocali + 2) = 'I';
-    pvocali[3] = 'O';
-    *(pvocali + 4) = 'U';
+  pvocali[0] = 'A';
+  pvocali[1] = 'E';
+  *(pvocali + 2) = 'I';
+  pvocali[3] = 'O';
+  *(pvocali + 4) = 'U';
 
-    for (i = 0; i < N_V; i++) {
-    printf("%c ", pvocali[i]); // equivalente a (ma più comprensibile di) *(pvocali + i)
-    }
-    printf("\n");
+  for (i = 0; i < N_V; i++) {
+    printf("%c ", pvocali[i]); // come "*(pvocali + i)" ma meno comprensibile
+  }
+  printf("\n");
 
-    return 0;
+  return 0;
 }
 ```
 
@@ -285,31 +287,31 @@ A E I O U
 #define NUM 10
 
 int main(){
-    int i, k, tmp, data[NUM];
-    int *pd;
+  int i, k, tmp, data[NUM];
+  int *pd;
 
-    printf("INSERIRE I %d VALORI DELL'ARRAY\n", NUM);
-    for(i = 0; i < NUM; i++) {
-        scanf("%d", &data[i]);
+  printf("INSERIRE I %d VALORI DELL'ARRAY\n", NUM);
+  for(i = 0; i < NUM; i++) {
+    scanf("%d", &data[i]);
+  }
+  /* bubblesort */
+  for(i = 0; i < NUM - 1; i++) {
+    for(pd = data; pd < (data + NUM - 1 - i); pd++) { // ciclo sugli indirizzi di memoria
+      if(*pd > *(pd + 1)) { // confronta il contenuto di celle vicine
+        tmp = *(pd + 1); // scambia i contenuti usando l'operatore di deferenza
+        *(pd + 1) = *pd;
+        *pd = tmp;
+      }
     }
-    /* bubblesort */
-    for(i = 0; i < NUM - 1; i++) {
-        for(pd = data; pd < (data + NUM - 1 - i); pd++) { // ciclo sugli indici degli indirizzi di memoria
-            if(*pd > *(pd + 1)){ // confronta il contenuto di celle vicine
-                tmp = *(pd + 1); // scambia i contenuti usando l'operatore di deferenza
-                *(pd + 1) = *pd;
-                *pd = tmp;
-            }
-        }
-    }
-    /* stampa finale dei dati ordinati */
-    printf("L'ARRAY ORDINATO È:\n");
-    for(k = 0; k < NUM; k++) {
-        printf("%d ", data[k]);
-    }
-    printf("\n");
+  }
+  /* stampa finale dei dati ordinati */
+  printf("L'ARRAY ORDINATO È:\n");
+  for(k = 0; k < NUM; k++) {
+    printf("%d ", data[k]);
+  }
+  printf("\n");
 
-    return 0;
+  return 0;
 }
 ```
 <!-- .element style="font-size: 45%" -->
@@ -356,7 +358,7 @@ a = 4; // errore di compilazione, a è const!
 const int c = 2;
 const int *p_a = &a; // puntatore a un intero costante
 *p_a = 4; // errore di compilazione, la variabile puntata, a, è const!
-p_a = &c; // OK: non è il puntatore che è costante, ma la cella di memoria a cui punta
+p_a = &c; // OK: non è il puntatore che è costante, ma la cella di memoria puntata
 
 int d = 4, e = 2;
 int * const p_d = &d; // puntatore costante a un intero

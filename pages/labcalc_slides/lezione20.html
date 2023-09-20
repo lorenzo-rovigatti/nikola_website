@@ -12,7 +12,7 @@
 -->
 
 # Il metodo Monte Carlo
-                    
+
 Dato l'integrale definito di $f(x)$ in un intervallo $[a, b]$, possiamo scrivere
 
 $$
@@ -41,24 +41,25 @@ Questa derivazione non è rigorosa: nei prossimi anni sarà formalizzata meglio
 #include <time.h>
 
 int main() {
-    int i;
-    srand48(time(NULL));
+  int i;
+  srand48(time(NULL));
     
-    double f_media = 0, a = 0, b = 2; // a e b potrebbero essere inseriti dall'utente
-    double intervallo = (b - a);
-    for(i = 0; i < N; i++) {
-        double x = drand48() * intervallo + a; // estraiamo un numero casuale tra a e b
-        double fx = x * x - 0.6 * x * x * x;   // calcoliamo la funzione in x
-        f_media += fx;
-    }
-    f_media /= N; // calcoliamo la media
+  double f_media = 0, a = 0, b = 2; // a e b potrebbero essere inseriti dall'utente
+  double intervallo = (b - a);
+  for(i = 0; i < N; i++) {
+    double x = drand48() * intervallo + a; // estraiamo un numero casuale tra a e b
+    double fx = x * x - 0.6 * x * x * x;   // calcoliamo la funzione in x
+    f_media += fx;
+  }
+  f_media /= N; // calcoliamo la media
     
-    double integrale = f_media * (b - a); // stimiamo l'integrale
-    printf("%d %lf\n", N, integrale);
+  double integrale = f_media * (b - a); // stimiamo l'integrale
+  printf("%d %lf\n", N, integrale);
     
-    return 0;
+  return 0;
 }
 ```
+<!-- .element: style="font-size:54%" -->
 
 ---
 
@@ -69,7 +70,9 @@ int main() {
 $ gcc -o integrazione_MC integrazione_MC.c -DN=1000
 ```
 
+<figure>
 <img src="/images/labcalc_slides/integrazione_risultati_MC.png" width="500">
+</figure>
 
 <div class="focus fragment">
 Qual è il vantaggio? Il MC funziona <b>molto</b> meglio all'aumentare delle dimensioni su cui integrare e ha meno limiti sulla funzione integranda
@@ -81,7 +84,9 @@ Qual è il vantaggio? Il MC funziona <b>molto</b> meglio all'aumentare delle dim
 
 Qual è il volume dell'intersezione tra due sfere di raggi $R_1$ e $R_2$ poste a distanza $d$?
 
+<figure>
 <img src="/images/labcalc_slides/volume_MC.png" width="400">
+</figure>
 
 <div class="fragment">
 
@@ -108,7 +113,9 @@ $$
 * Scegliamo $V$ in modo da poter estrarre uniformemente un punto al suo interno
 * Esempio: un parallelepipedo che circondi completamente l'intersezione, prendendo il centro della prima sfera in $(0, 0, 0)$ e il centro della seconda in $(d, 0, 0)$
 
+<figure>
 <img src="/images/labcalc_slides/volume_MC_box.png" width="350">
+</figure>
 
 <div class="fragment">
 
@@ -190,7 +197,9 @@ $$
 V_{\rm inter} = \frac{\pi (R + r - d)^2 (d^2 + 2dr - 3r^2 + 2dR + 6rR - 3R^2)}{12 d} = 0.02573\ldots
 $$
 
+<figure>
 <img src="/images/labcalc_slides/integrazione_risultati_MC_intersezione.png" width="500">
+</figure>
 
 <div class="focus fragment">
 Il metodo è generale e può essere utilizzato per superfici o volumi per cui non si hanno espressioni teoriche

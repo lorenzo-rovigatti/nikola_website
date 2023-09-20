@@ -185,10 +185,10 @@ double multi[N][M];
 ... // qui l'array viene inizializzato
 
 for(i = 0; i < N; i++) {
-    for(j = 0; j < M; j++) {
-        printf("%12.6lf ", multi[i][j]); // stampiamo tutta una riga, ordinatamente!
-    }
-    printf("\n"); // andiamo a capo dopo ogni riga!
+  for(j = 0; j < M; j++) {
+    printf("%12.6lf ", multi[i][j]); // stampiamo tutta una riga, ordinatamente!
+  }
+  printf("\n"); // andiamo a capo dopo ogni riga!
 }
 ```
 
@@ -280,28 +280,28 @@ for(i = 0; i < L; i++) {
 #define N 2
 
 int main(void){
-    int i, j, k;
-    int A[L][M] = {{0,-1,1}, {1,1,-1}}; // in un programma "vero" possiamo prendere A e B da input
-    int B[M][N] = {{1,1}, {1,-1}, {0,1}};
-    int C[L][N] = {0}; // IMPORTANTE: tutti gli elementi di C devono essere inizializzati a 0
+  int i, j, k;
+  int A[L][M] = {{0,-1,1}, {1,1,-1}}; // in un programma "vero" possiamo prendere A e B da input
+  int B[M][N] = {{1,1}, {1,-1}, {0,1}};
+  int C[L][N] = {0}; // IMPORTANTE: tutti gli elementi di C devono essere inizializzati a 0
     
-    for(i = 0; i < L; i++) {
-        for(j = 0; j < N; j++) {
-            for(k = 0; k < M; k++) {
-                C[i][j] += A[i][k] * B[k][j];
-            }
-        }
+  for(i = 0; i < L; i++) {
+    for(j = 0; j < N; j++) {
+      for(k = 0; k < M; k++) {
+        C[i][j] += A[i][k] * B[k][j];
+      }
     }
+  }
     
-    printf("Il risultato del prodotto tra matrici è:\n");
-    for(i = 0; i < L; i++) {
-        for(j = 0; j < N; j++) {
-            printf("%3d\t", C[i][j]);
-        }
-        printf("\n");
+  printf("Il risultato del prodotto tra matrici è:\n");
+  for(i = 0; i < L; i++) {
+    for(j = 0; j < N; j++) {
+      printf("%3d\t", C[i][j]);
     }
+    printf("\n");
+  }
     
-    return 0;
+  return 0;
 }
 ```
 <!-- .element style="font-size: 47%" -->
@@ -328,7 +328,9 @@ Il risultato del prodotto tra matrici è:
 
 # I puntatori
 
+<figure>
 <img src="/images/labcalc_slides/pericolo.png" width=450>
+</figure>
 
 <div class="fragment focus">
 Solo se non vi esercitate!
@@ -451,7 +453,7 @@ Oggi e nelle prossime lezioni vedremo tantissimi usi dei puntatori!
 * Il simbolo `*` ha significati diversi a seconda del contesto:
     * Nella dichiarazione di variabili identifica i puntatori, `int *p`
     * Dereferenziazione, se si trova accanto a una variabile che contiene un indirizzo, `*p = 5;` oppure `int a = *p;`
-    * Se usato come operatore binario, moltiplica i valori su cui agisce, `int c = a * b`;
+    * Usato come operatore binario moltiplica i valori su cui agisce, `int c = a * b`;
 
 <div class="fragment focus">
 Gli operatori unari <code>*</code> e <code>&</code> hanno la precedenza sugli operatori binari
@@ -491,7 +493,7 @@ int *q = p; // più puntatori possono puntare allo stesso indirizzo
 printf("3) val == %d, *p == %d, *q == %d\n", val, *p, *q);
 
 void *r = p; // il tipo "void *" può puntare a qualsiasi indirizzo di memoria
-printf("4) *r == %d\n", *r); // ERRORE DI COMPILAZIONE "invalid use of void expression"
+printf("4) *r == %d\n", *r); // ERRORE: "invalid use of void expression"
 printf("4) *r == %d\n", *((int *) r)); // brutto ma efficace
 ```
 
