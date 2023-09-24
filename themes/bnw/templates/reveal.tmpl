@@ -67,7 +67,11 @@ ${set_locale(lang)}
         </script>
     </head>
     <body>
+        % if post.meta('back_button'):
+        <a class="back_button" href="${post.meta('back_button')}"></a>
+        % else:
         <a class="back_button" href="../../talks/"></a>
+        % endif
     
         <div class="reveal">
             <div class="slides">

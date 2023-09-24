@@ -9,6 +9,7 @@
 .. type: text
 .. template: reveal.tmpl
 .. has_math: true
+.. back_button: ../../labcalc
 -->
 
 # Qualche esercizio
@@ -82,7 +83,7 @@ Risultato: questa rappresentazione non è adottata da nessuna architettura
 
 # Il complemento a due
 
-Dato un numero $m$ rappresentato con $n$ bit, $k$ è il suo complemento a due se
+Dato un numero $m$ rappresentato con $n$ bit, $k$ è il suo **complemento a due** se
 
 $$
 k + m = 2^n
@@ -98,16 +99,15 @@ $$
 
 Notiamo che $(2^n - 1)$ è quel numero composto da tutti **1**, quindi $a = (2^n - 1) - m$ è il numero che, aggiunto a $m$, dà tutti **1**. Due esempi con $n = 4$:
 
-* $1111_2 - 0100_2 = 1011_2$
-* $1111_2 - 1110_2 = 0001_2$
+* se $m = 0100_2$ $\to$ $a = 1111_2 - 0100_2 = 1011_2$
+* se $m = 1110_2$ $\to$ $a = 1111_2 - 1110_2 = 0001_2$
 
 </div>
 
 <div class="fragment">
 
-$\to$ le cifre di $a = (2^n - 1) - m$ si ottengono da quelle di $m$ scambiando **1** con **0** e viceversa
-
-$\to$ il complemento a due si ottiene sommando **1** al risultato così ottenuto, cioè $k = a + 1$.
+* le cifre di $a = (2^n - 1) - m$ si ottengono da quelle di $m$ scambiando **1** con **0**
+* il complemento a due si ottiene sommando **1** al numero che si ottiene: $k = a + 1$.
 
 </div>
 
