@@ -636,3 +636,13 @@ div.admonition.sidebar p.admonition-title ~ * {
     margin-left: 0;
     margin-right: 0;
 }
+
+@media print {
+    header {
+        display: none;
+    }
+
+    .header-padding {
+        display: none;
+    }
+}
