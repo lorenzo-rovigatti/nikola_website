@@ -62,8 +62,8 @@ Con $n$ bit, se ne usiamo $M$ per la parte intera e $K = n - M$ per la parte dec
 
 # Rappresentazione dei numeri decimali - virgola mobile
 
-* Dato un numbero di $n$ bit, i numeri rappresentabili sono al più $2^n$
-* Con la virgola "fissa" questi sono distribuiti in piccolo intervallo. Come ampliarlo?
+* Dato un numero di $n$ bit, i numeri ($=$ stati) rappresentabili sono al più $2^n$
+* Con la virgola "fissa" questi sono distribuiti in un piccolo intervallo. Come ampliarlo?
 * Consideriamo la *notazione scientifica*: $85.3 = 8.53 \cdot 10^1 = 0.853 \cdot 10^2$
 * Nel caso sopra $0.853$ è detta *mantissa* e $2$ è l'esponente
 * Somme e sottrazioni si eseguono <span class="fragment highlight-red">eguagliando gli esponenti</span> e operando sulle mantisse:
@@ -131,8 +131,12 @@ Consideriamo il numero $0.15625$
 </div>
 
 <div class="fragment spacing-1-top">
-    Valore non reale (come $\sqrt{-1}$), detto NaN (not a number)
+    Valore non reale (come $\sqrt{-1}$), detto <em>nan</em> (not a number)
     <img src="/images/labcalc_slides/float_nan.png" width=910>
+</div>
+
+<div class="fragment warning">
+I <em>nan</em> possono apparire per diversi motivi (<code>arccos(1.5)</code>, divisione per 0, <em>ecc</em>)
 </div>
 
 ---
@@ -233,7 +237,7 @@ Dal punto di vista <em>logico</em>, smartphone, tablet <em>ecc</em> sono identic
 # La CPU
 
 <ul style="width: 62%">
-    <li>L'unità di controllo coordina tutte le attività del computer, prelevando, decodificando ed eseguendo le istruzioni dei programmi
+    <li>L'unità di controllo (UC) coordina tutte le attività del computer, prelevando, decodificando ed eseguendo le istruzioni dei programmi
         <ul>
             <li>La CPU contiene un circuito (il clock) che scandisce nel tempo la trasmissione dati e la sequenza delle operazioni che la UC svolge</li>
         </ul>
