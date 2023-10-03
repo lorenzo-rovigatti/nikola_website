@@ -38,6 +38,16 @@
 
 ---
 
+# Intermezzo: Arduino
+
+<figure>
+<img src="/images/labcalc_slides/arduino.jpeg" width=600>
+</figure>
+
+Nel secondo semestre vedrete come programmare *direttamente* una "CPU" in C!
+
+---
+
 # Linguaggi di programmazione
 
 * Scrivere in linguaggio macchina non è pratico
@@ -198,10 +208,10 @@ Studiate sempre l'*output* del compilatore: potrebbe contenere eventuali errori 
 
 ```bash
 $ gcc -o prova prova.c
-roba.c: In function ‘main’:
-roba.c:8:5: error: expected ‘,’ or ‘;’ before ‘printf’
-    8 |     printf("Hello world, a + b = %d\n", sum);
-        |     ^~~~~~
+prova.c: In function ‘main’:
+prova.c:8:5: error: expected ‘,’ or ‘;’ before ‘printf’
+    8  |     printf("Hello world, a + b = %d\n", sum);
+       |     ^~~~~~
 ```
 
 * Usate `ls -l` per controllare se l'eseguibile esiste e a che ora è stato compilato
