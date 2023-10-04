@@ -2,20 +2,20 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="210mm"
    height="297mm"
    viewBox="0 0 210 297"
    version="1.1"
    id="svg844"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="esercizio_3.svg">
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="esercizio_3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs838">
     <marker
@@ -57,16 +57,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
-     inkscape:cx="320.45516"
-     inkscape:cy="858.9289"
+     inkscape:cx="320.53571"
+     inkscape:cy="173.21429"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="993"
-     inkscape:window-x="0"
+     inkscape:window-height="1051"
+     inkscape:window-x="1920"
      inkscape:window-y="0"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0" />
   <metadata
      id="metadata841">
     <rdf:RDF>
@@ -75,7 +76,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,67 +83,58 @@
      inkscape:label="Livello 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <circle
-       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="path838-3"
-       cx="67.753067"
-       cy="74.7146"
-       r="1.4174107"
-       inkscape:export-xdpi="127"
-       inkscape:export-ydpi="127" />
-    <circle
-       style="fill:#000000;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="path838-3-6"
-       cx="67.753067"
-       cy="43.444057"
-       r="1.4174107"
-       inkscape:export-xdpi="127"
-       inkscape:export-ydpi="127" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.46111107px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="72.391144"
-       y="77.807381"
-       id="text2076"
-       inkscape:export-xdpi="127"
-       inkscape:export-ydpi="127"><tspan
-         sodipodi:role="line"
-         id="tspan2074"
-         x="72.391144"
-         y="77.807381"
-         style="font-style:italic;font-size:7.05555534px;stroke-width:0.26458332px">q</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.46111107px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="71.198311"
-       y="43.073479"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4611px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="65.916054"
+       y="40.252304"
        id="text2076-3"
        inkscape:export-xdpi="127"
-       inkscape:export-ydpi="127"><tspan
+       inkscape:export-ydpi="127"
+       inkscape:export-filename="/home/lorenzo/git/nikola_website/files/images/fisica2/esercizo_lambda.png"><tspan
          sodipodi:role="line"
          id="tspan2074-6"
-         x="71.198311"
-         y="43.073479"
-         style="font-style:italic;font-size:7.05555534px;stroke-width:0.26458332px">q</tspan></text>
+         x="65.916054"
+         y="40.252304"
+         style="font-style:italic;font-size:7.05556px;stroke-width:0.264583px">q</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.26499999, 0.52999997;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
-       d="M 82.87128,44.040241 V 75.032676"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0.265, 0.53;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
+       d="M 63.473661,43.660506 V 74.652941"
        id="path2078"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="127"
-       inkscape:export-ydpi="127" />
+       inkscape:export-ydpi="127"
+       inkscape:export-filename="/home/lorenzo/git/nikola_website/files/images/fisica2/esercizo_lambda.png" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.46111107px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="89.013397"
-       y="61.542458"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.4611px;line-height:125%;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="53.400902"
+       y="58.354748"
        id="text2487"
        inkscape:export-xdpi="127"
-       inkscape:export-ydpi="127"><tspan
+       inkscape:export-ydpi="127"
+       inkscape:export-filename="/home/lorenzo/git/nikola_website/files/images/fisica2/esercizo_lambda.png"><tspan
          sodipodi:role="line"
          id="tspan2485"
-         x="89.013397"
-         y="61.542458"
-         style="font-style:italic;font-size:7.05555534px;stroke-width:0.26458332px">2L</tspan></text>
+         x="53.400902"
+         y="58.354748"
+         style="font-style:italic;font-size:7.05556px;stroke-width:0.264583px">2L</tspan></text>
+    <path
+       style="fill:#ff0000;stroke:#ff0000;stroke-width:0.26458299;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:0.52916597, 0.26458299;stroke-dashoffset:0"
+       d="M 42.592892,59.057645 H 111.40361"
+       id="path880"
+       inkscape:export-filename="/home/lorenzo/git/nikola_website/files/images/fisica2/esercizo_lambda.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.26499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1563"
+       width="2.6148608"
+       height="31.558329"
+       x="66.653625"
+       y="43.313549"
+       inkscape:export-filename="/home/lorenzo/git/nikola_website/files/images/fisica2/esercizo_lambda.png"
+       inkscape:export-xdpi="127"
+       inkscape:export-ydpi="127" />
   </g>
 </svg>

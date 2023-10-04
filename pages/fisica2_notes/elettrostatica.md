@@ -114,6 +114,10 @@ In uno spazio tridimensionale un campo vettoriale è una funzione di tre variabi
 
 In alcuni casi particolari, molto importanti nella fisica, diversi campi aventi la stessa natura si possono sommare direttamente. È il caso del campo elettromagnetico, per cui vale il cosiddetto *principio di sovrapposizione*: il campo totale generato da più di una sorgente è la somma dei campi generati dalle singole sorgenti.
 
+<small>Fine lezione 1</small>
+
+---
+
 ## Distribuzioni continue di cariche
 <small>MNV: paragrafo 1.5</small>
 
@@ -139,6 +143,89 @@ Nella maggior parte dei casi che incontreremo, la carica totale $q$ sarà distri
 * $dq = \sigma d\Sigma$ per oggetti "bidimensionali", dove $\sigma$ è detta densità superficiale e $d\Sigma$ è l'elemento superficiale infinitesimo (MNV: esempio 1.7).
 * $dq = \rho d\tau$ per oggetti "tridimensionali", dove $\rho$ è detta densità volumetrica e $d\tau$ è l'elemento di volume infinitesimo.
 
+### Esempio di campo generato da una distribuzione lineare di carica
+
+<figure>
+<img src="../../images/fisica2/esempio_lambda.png" style="margin:auto">
+</figure>
+
+Consideriamo il sistema in figura: una sbarretta lunga $2L$ è caricata *uniformemente* con carica $q$. Calcoliamo il campo generato in un punto generico $x_0$ equidistante dalle estremità della sbarretta, cioè in uno dei punti della linea tratteggiata disegnata in figura. Utilizziamo l'espressione di un campo generato da un sistema composto da due cariche (vedi box sotto).
+
+{{% accordion id="esempio" label="Preambolo: il campo generato da due cariche" %}}
+
+<figure>
+<img src="../../images/fisica2/esercizio_3.png">
+</figure>
+
+Consideriamo due cariche fisse $q$ disposte parallele all'asse $y$ e distanti $2L$. Calcoliamo il campo elettrostatico in un punto generico $x_0$ equidistante dalle due cariche, cioè in uno dei punti della linea tratteggiata disegnata in figura.
+
+Utilizziamo il sistema di riferimento nel quale le due cariche hanno coordinate $\vec{r}_1 = (0, L)$ e $\vec{r}_2 = (0, -L)$ e il punto che ci interessa ha coordinate $\vec{r}_0 = (x_0, 0)$. Studiamo il campo generato dalla prima carica, rispetto alla quale $\vec{r}_{10} = \vec{r}_0 - \vec{r}_1 = (x_0, -L)$, $r_{10} = \sqrt{x_0^2 + L^2}$ e quindi $\hat{r}_{10} = \frac{1}{r_{10}}(x_0, -L)$:
+
+$$
+E_x^{10} = \frac{1}{4\pi\epsilon_0} \frac{q}{r_{10}^2} \frac{x_0}{r_{10}}
+$$
+
+$$
+E_y^{10} = -\frac{1}{4\pi\epsilon_0} \frac{q}{r_{10}^2} \frac{L}{r_{10}}
+$$
+
+D'altra parte, rispetto alla seconda carica abbiamo $\vec{r}_{20} = \vec{r}_0 - \vec{r}_2 = (x_0, L)$, $r_{20} = \sqrt{x_0^2 + L^2} = r_{10}$, $\hat{r}_{20} = \frac{1}{r_{20}}(x_0, L)$ e quindi
+
+$$
+E_x^{20} = \frac{1}{4\pi\epsilon_0} \frac{q}{r_{10}^2} \frac{x_0}{r_{10}}
+$$
+$$
+E_y^{20} = \frac{1}{4\pi\epsilon_0} \frac{q}{r_{10}^2} \frac{L}{r_{10}}
+$$
+
+Il campo totale è la sovrapposizione (cioè, la somma) dei due, e quindi si ha $E_x = 2E_x^{10}$ e $E_y = 0$.
+
+Possiamo ritrovare lo stesso risultato considerando che, in generale, se definiamo $\theta$ come l'angolo compreso tra il campo e l'asse $x$, $E_x^{10} = |\vec{E}_{10}|\cos{\theta}$ e $E_y^{10} = |\vec{E}_{10}|\sin{\theta}$. Nel caso specifico dell'esercizio vale l'uguaglianza trigonometrica $\cos{\theta} = \frac{x_0}{r_{10}}$, mentre il modulo di $\vec{E}$ si ricava dalla legge di Coulomb, $|\vec{E}| = \frac{1}{4\pi\epsilon_0} \frac{q}{r_{10}^2}$. Si trova quindi:
+
+$$
+E_x^{10} = \frac{q}{4\pi\epsilon_0} \frac{\cos \theta}{r_{10}^2} = \frac{q}{4\pi\epsilon_0} \frac{x_0}{r_{10}^3}
+$$
+
+e quindi
+
+$$
+E_x = 2E_x^{10} = \frac{q}{2\pi\epsilon_0} \frac{\cos \theta}{r_{10}^2} = \frac{q}{2\pi\epsilon_0} \frac{x_0}{r_{10}^3}
+$$
+
+in accordo col risultato precedente.
+
+{{% /accordion %}}
+
+Ogni infinitesimo di sbarretta contiene una carica $dq$. Ogni coppia di infinitesimi posti alla stessa distanza dalla linea rossa genera un campo $d\vec{E}$ che ha l'espressione trovata al problema precedente sostituendo $q$ con $dq$. In particolare, il campo avrà solo la componente $x$ ($dE_x$) diversa da 0, che vale
+
+$$
+dE_x = \frac{dq}{2\pi\epsilon_0} \frac{\cos \theta}{r^2}
+$$
+
+dove $r$ è la distanza tra $dq$ e il punto $(x_0, 0)$. Poiché $r \cos \theta = x_0$, $r = x_0 / \cos \theta$; inoltre, la sbarretta ha una distribuzione di carica uniforme, quindi $dq = \lambda dy$, con $\lambda = q / 2L$, quindi
+
+$$
+dE_x = \frac{\lambda dy}{4\pi\epsilon_0} \frac{\cos^3 \theta}{x_0^2}.
+$$
+
+Per calcolare $E_x$ dobbiamo integrare su metà sbarretta (perché stiamo considerando coppie di punti), quindi da $0$ a $L$. Per risolvere l'integrale dobbiamo però cambiare variabile (e quindi estremi di integrazione), passando da $y$ a $\theta$, che sono legati dalla relazione $y = x_0 \tan \theta$. Si ha quindi
+
+$$
+dy = x_0 \frac{d\theta}{\cos^2\theta}
+$$
+
+e quindi
+
+$$
+dE_x = \frac{\lambda}{4\pi\epsilon_0 x_0} \cos \theta d \theta.
+$$
+
+Gli estremi di integrazione passano da $(0, L)$ a $(0, \theta_1)$, dove $\theta_1 = \arcsin \left( L / \sqrt{L^2 + x_0^2} \right)$, quindi si trova
+
+$$
+E_x = \frac{\lambda}{4\pi\epsilon_0 x_0} \int_0^{\theta_1} \cos \theta d \theta = \frac{\lambda \sin \theta_1}{4\pi\epsilon_0 x_0} = \frac{\lambda}{4\pi\epsilon_0 x_0} \frac{L}{\sqrt{L^2 + x_0^2}}
+$$
+
 ## Linee di forza di $\vec{E}$
 
 <small>MNV: paragrafo 1.6</small>
@@ -153,6 +240,10 @@ Possiamo *disegnare* questo campo partendo da un punto e muovendoci lungo la tan
 * Le linee partono dalle cariche positive e terminano su quelle negative. Se il sistema non è neutro, alcune linee di forza non terminano ma si *chiudono all'infinito*.
 
 A <a href="link://slug/field-lines">questo</a> link è possibile visualizzare le linee di forza di un campo elettrostatico generato sul piano da una qualsiasi distribuzione di carica discreta.
+
+<small>Fine lezione 2</small>
+
+---
 
 ## Moto di una carica in un campo elettrostatico
 

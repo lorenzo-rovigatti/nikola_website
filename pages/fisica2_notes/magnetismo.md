@@ -877,7 +877,7 @@ $$
 [BH] = {\rm J / m^3}
 $$
 
-I fenomeni di paramagnetismo e ferromagnetismo possono essere studiati con modelli teorici e numerici come quello di Ising, sviluppato negli anni '40. [Qui]({{< ref "../ising.js/index.html" >}}) potete trovare una pagina dove simulare il modello di Ising in due dimensioni.
+I fenomeni di paramagnetismo e ferromagnetismo possono essere studiati con modelli teorici e numerici come quello di Ising, sviluppato negli anni '40. <a href="link://slug/ising">Qui</a> potete trovare una pagina dove simulare il modello di Ising in due dimensioni.
 
 ## Meccanismi di magnetizzazione
 
@@ -995,7 +995,7 @@ La legge di Gauss per il campo magnetico è equivalente a quel che accade nel ca
 I campi che hanno divergenza identicamente nulla, cioè per i quali il flusso attraverso una qualunque superficie chiusa è nullo, sono detti *campi solenoidali*. Questi campi posseggono la seguente proprietà interessante: consideriamo una linea chiusa $\mathcal{C}$ ed un verso di percorrenza. Prendiamo ora due superfici aperte $\Sigma_1$ e $\Sigma_2$ che abbiano come contorno $\mathcal{C}$ e che abbiano normali $\hat{n}_1$ e $\hat{n}_2$ orientate verso l'esterno. Dalla legge di Gauss è chiaro che il flusso totale attraverso la superficie chiusa formata da $\Sigma_1$ e $\Sigma_2$ debba essere nullo:
 
 $$
-\oint_{\rm \Sigma_1 + \Sigma_2} \vec{B} \cdot \hat{n} d\Sigma = \int_{\Sigma_1} \vec{B} \cdot \hat{n}_1 d\Sigma_1 + \int_{\Sigma_2} \vec{B} \cdot \hat{n}_2 d\Sigma_2 = \Phi_1(\vec{B}) + \Phi_2(\vec{B}).
+\oint\_{\rm \Sigma_1 + \Sigma_2} \vec{B} \cdot \hat{n} d\Sigma = \int\_{\Sigma_1} \vec{B} \cdot \hat{n}_1 d\Sigma_1 + \int\_{\Sigma_2} \vec{B} \cdot \hat{n}_2 d\Sigma_2 = \Phi_1(\vec{B}) + \Phi_2(\vec{B}).
 $$
 
 Se consideriamo il verso di percorrenza di $\mathcal{C}$, le due normali sono orientate in maniera discorde, perché non possono soddisfare entrambe la regola della vite (o della mano destra). Se le prendiamo concordi, d'altro canto, troviamo che $\hat{n}'_1 = -\hat{n}_1$. Con questa definizione si trova
