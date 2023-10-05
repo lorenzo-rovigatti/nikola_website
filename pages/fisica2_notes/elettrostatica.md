@@ -312,10 +312,25 @@ $$
 
 Solitamente l'integrale di linea di un percorso chiuso si indica col simbolo $\oint$.
 
-Per quanto riguarda l'interazione elettromagnetica, mentre in generale le forze elettriche non sono conservative, si può dimostrare (vedi MNV 2.2) che la forza elettrostatica lo è. Si può quindi scrivere, per una forza elettrostatica agente sulla carica $q_0$,
+Per quanto riguarda l'interazione elettromagnetica, al contrario delle forze elettriche, la forza elettrostatica è conservativa. Lo dimostriamo calcolando il lavoro che la forza elettrostatica compie quando una carica di prova $q_0$ si muove da un punto $A$ a un punto $B$ in una regione in cui è presente un campo generato da una carica puntiforme $q$. Ricordando che la forza dovuta ad una carica puntiforme è radiale (cioè ha direzione $\hat{r}$), il prodotto scalare $\vec{F} \cdot d\vec{s} = Fdr$, dove $dr$ è proprio la proiezione di $d\vec{s}$ su $\hat{r}$. Si trova quindi
 
 $$
-W\_{\mathcal{C}_1} = W\_{AB} = \int_A^B \vec{F} \cdot d\vec{s} = q_0 \int_A^B \vec{E} \cdot d\vec{s}
+\vec{F} \cdot d\vec{s} = F dr = \frac{q_0 q}{4\pi \epsilon_0} \frac{dr}{r^2}
+$$
+
+Integriamo questa quantità lungo il percorso $\mathcal{C}$ che collega $A$ a $B$:
+
+$$
+W_{AB} = \int_\mathcal{C} \vec{F} \cdot d\vec{s} = \frac{q_0 q}{4\pi \epsilon_0} \int_{r_A}^{r_B} \frac{dr}{r^2} = - \left( \frac{q_0 q}{4\pi \epsilon_0}\frac{1}{r_B} - \frac{q_0 q}{4\pi \epsilon_0}\frac{1}{r_A} \right),
+$$
+
+che dimostra come il lavoro non dipenda dallo specifico $\mathcal{C}$ scelto ma solo da $A$ e $B$.
+
+
+Si può quindi scrivere, per una forza elettrostatica agente sulla carica $q_0$,
+
+$$
+W\_{\mathcal{C}_1} = W\_{AB} = \int_A^B \vec{F} \cdot d\vec{s} = q_0 \int_A^B \vec{E} \cdot d\vec{s}.
 $$
 
 Discende da questa relazione e da quanto detto in precedenza sulle forze conservative che la circuitazione del campo elettrostatico è *sempre nulla*, cioè:
@@ -364,23 +379,18 @@ L'unità di misura del potenziale è il Volt V. Se utilizziamo la relazione tra 
 
 ### Il potenziale generato da una carica puntiforme
 
-Calcoliamo il potenziale elettrostatico associato al campo generato da una carica puntiforme $q$. Per farlo dobbiamo usare la definizione che lo collega all'integrale del prodotto scalare tra il campo elettrostatico e lo spostamento elementare $d\vec{s}$:
+Abbiamo visto prima come il lavoro compiuto dalla forze elettrostatica per spostare una carica $q_0$ da $A$ a $B$ in una regione di spazio in cui è presente un campo generato da una carica puntiforme $q_0$ valga
 
 $$
-\vec{E} \cdot d\vec{s} = E \hat{E} \cdot d\vec{s} = E dr = \frac{q}{4\pi \epsilon_0} \frac{dr}{r^2}
+W_{AB} = - \left( \frac{q_0 q}{4\pi \epsilon_0}\frac{1}{r_B} - \frac{q_0 q}{4\pi \epsilon_0}\frac{1}{r_A} \right) = -q_0 \Delta V_{AB} = -q_0 \left(V(B) - V(A)\right),
 $$
 
-Integriamo questa quantità lungo un percorso $\mathcal{C}$ che va da $A$ a $B$ per trovare la differenza di potenziale:
-
-$$
-\int_\mathcal{C} \vec{E} \cdot d\vec{s} = \frac{q}{4\pi \epsilon_0} \int_{r_A}^{r_B} \frac{dr}{r^2} = - \left( \frac{q}{4\pi \epsilon_0}\frac{1}{r_B} - \frac{q}{4\pi \epsilon_0}\frac{1}{r_A} \right).
-$$
-
-In questo caso abbiamo dimostrato direttamente che il lavoro non dipende dallo specifico $\mathcal{C}$ scelto ma solo da $A$ e $B$. Inoltre, il risultato dell'integrale ci dà l'espressione del potenziale elettrostatico generato da una carica puntiforme $q$:
+che implica
 
 $$
 V(r ) = \frac{q}{4\pi\epsilon_0} \frac{1}{r} + C
 $$
+
 dove $C$ è una costante arbitraria. Nella maggior parte dei casi (ma non sempre!) si impone $V(r \to \infty) = 0$ e quindi $C = 0$, per cui l'espressione del potenziale diventa:
 
 $$
@@ -417,10 +427,10 @@ dove l'integrale è esteso al volume contenente la distribuzione di carica.
 
 <small>MNV: paragrafi 2.4 e 2.6</small>
 
-Consideriamo i due punti $\vec{A} = (x, y, z)$ e $\vec{B} = \vec{A} + d\vec{r}$, dove $d\vec{r} = \hat{x}dx + \hat{y}dy + \hat{z}dz$ è uno spostamento infinitesimo. La differenza di potenziale tra $\vec{A}$ e $\vec{B}$ dipende solamente dalle loro coordinate, quindi
+Consideriamo i due punti $\vec{A} = (x, y, z)$ e $\vec{B} = \vec{A} + d\vec{r}$, dove $d\vec{s} = \hat{x}dx + \hat{y}dy + \hat{z}dz$ è uno spostamento infinitesimo. La differenza di potenziale tra $\vec{A}$ e $\vec{B}$ dipende solamente dalle loro coordinate, quindi
 
 $$
-dV = V(x + dx, y + dy, z + dz) - V(x, y, z) = -\vec{E} \cdot d\vec{r} = -E_x dx - E_y dy - E_z dz
+dV = V(x + dx, y + dy, z + dz) - V(x, y, z) = -\vec{E} \cdot d\vec{s} = -E_x dx - E_y dy - E_z dz
 $$
 
 Consideriamo anche che, in maniera del tutto generale, il differenziale totale si scrive $dV = \frac{\partial V}{\partial x}dx + \frac{\partial V}{\partial y}dy + \frac{\partial V}{\partial z}dz$. Uguagliando membro a membro le due equazioni precedenti troviamo:
@@ -519,7 +529,7 @@ $$
 V(\vec{P}) = \frac{q}{4\pi\epsilon_0} \left( \frac{1}{r_+} - \frac{1}{r_-} \right) = \frac{q}{4\pi\epsilon_0} \frac{r_- - r_+}{r_+r_-},
 $$
 
-dove $r_+$ ed $r_-$ sono le distanze delle cariche positiva e negativa da $\vec{P}$. Se disegniamo le quantità vettoriali in gioco troviamo che $\vec{r}_- -\vec{r}_+ = \vec{a}$, e quindi $\vec{r}_+ = \vec{r}_- - \vec{a}$, dove $\vec{a}$ è il vettore che congiunge la carica negativa a quella positiva.
+dove $r_+$ ed $r_-$ sono le distanze delle cariche positiva e negativa da $\vec{P}$. Se disegniamo le quantità vettoriali in gioco troviamo che $\vec{r}\_- -\vec{r}\_+ = \vec{a}$, e quindi $\vec{r}\_+ = \vec{r}\_- - \vec{a}$, dove $\vec{a}$ è il vettore che congiunge la carica negativa a quella positiva.
 
 Poniamoci sufficientemente lontano da poter trascurare la dimensione del dipolo (matematicamente, $r \gg a$). In questo caso $r_+ r_- \approx r^2$, dove $r$ è la distanza di $\vec{P}$ dal centro del dipolo. Possiamo approssimare $r_- - r_+$ tenendo conto che, se $a$ è piccolo rispetto ad $r$ e $\theta$ è l'angolo tra $\vec{a}$ ed $\vec{r}$,
 
