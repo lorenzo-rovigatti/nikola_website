@@ -15,9 +15,9 @@
 <!-- .slide: data-background-image="/images/labcalc_slides/background.png" data-background-size="60%" data-background-opacity="0.2" -->
 # Linux, shell &amp; comandi utili
 
-<h2 class="spacing-1-top">Prof. Lorenzo Rovigatti</h2>
-<h2>Laboratorio di Calcolo, prima esercitazione</h2>
-<h4>AA 2023/2024</h4>
+<h2>Prima esercitazione</h2>
+
+<h4>Laboratorio di Calcolo, canale A-Ci, A.A. 2023/2024</h4>
 
 ---
 
@@ -97,7 +97,7 @@
 
 <ul>
     <li>La struttura ad albero parte da <b>/</b>, detta cartella di <em>root</em></li>
-    <li>Ogni utente ha una cartella <em>home</em> che solitamente si trova in <b>/home/nomeutente</b></li>
+    <li>Ogni utente ha una cartella <em>home</em> che <span class="fragment highlight-red">solitamente</span> si trova in <b>/home/nomeutente</b></li>
 </ul>
 
 <img src="/images/labcalc_slides/fs_hierarchy.png" height="350">
@@ -133,7 +133,7 @@
 
 <ul>
     <li>
-    Usa <code>pwd</code> per capire dove sei
+    Usa <code>pwd</code> per capire dove sei<br/>
     
     <img src="/images/labcalc_slides/pwd.png" width="600">
     </li>
@@ -205,6 +205,10 @@
     <li class="fragment fade-in">Usa le frecce &#8593; e &#8595; per scorrere i comandi dati in precedenza</li>
 </ul>
 
+<div class="fragment focus">
+Sforzatevi di usare queste scorciatoie, diventerete molto più veloci!
+</div>
+
 ---
 
 # Il comando <code>ls</code>, parte 2
@@ -230,30 +234,29 @@
 ---
 
 # Copiare, spostare e rimuovere file e cartelle
-    
+
 ---
 
 # Il comando <code>cp</code>
 
 <ul>
-    <li>
-        <code class="language-bash">cp file1 file2</code>
-
-        <img src="/images/labcalc_slides/cp.png">
-    </li>
+  <li>
+    <code class="language-bash">cp file1 file2</code>
+    <img src="/images/labcalc_slides/cp.png">
+  </li>
     
-    <li class="fragment">
-        <code class="language-bash">cp file1 file2 file3 cartella_di_destinazione</code>
+  <li class="fragment">
+    <code class="language-bash">cp file1 file2 file3 cartella_di_destinazione</code>
         
-        <img src="/images/labcalc_slides/cp_2.png">
-    </li>
+    <img src="/images/labcalc_slides/cp_2.png">
+  </li>
     
-    <li class="fragment">
-        Per copiare cartelle dovete aggiungere l'opzione <code class="language-bash">-r</code>
+  <li class="fragment">
+    Per copiare cartelle dovete aggiungere l'opzione <code class="language-bash">-r</code>:
         
-        <br/>
-        <code class="language-bash">cp -r CARTELLA DESTINAZIONE</code>
-    </li>
+    <br/>
+    <code class="language-bash">cp -r CARTELLA DESTINAZIONE</code>
+  </li>
 </ul>
 
 ---
