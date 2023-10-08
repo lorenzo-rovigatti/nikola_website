@@ -38,7 +38,7 @@ int main() {
 * In tutti i programmi esistono istruzioni che ne determinano l'inizio e la fine
 * Nel C l'inizio di un programma avviene attraverso la funzione obbligatoria `main()` 
 * Tutto le istruzioni del programma sono racchiuse nel/richiamate dal `main()`
-* **Ogni volta** che cominciate a lavorare su un programma dovrete scrivere
+* **Ogni volta** che cominciate a lavorare a un programma dovrete scrivere
 
 ```C
 int main() {
@@ -46,8 +46,8 @@ int main() {
 }
 ```
 
-<div class="warning fragment">                       
-Il C (come anche il terminale) è "case sensitive", quindi scrivere <code>MAIN()</code> è diverso da scrivere <code>main()</code>, che è diverso da scrivere <code>Main()</code>, <em>ecc</em>
+<div class="warning fragment">
+Il C (come anche il terminale) è “case sensitive”, quindi scrivere <code>MAIN()</code> è diverso da scrivere <code>main()</code>, che è diverso da scrivere <code>Main()</code>, <em>ecc</em>
 </div>
 
 ---
@@ -104,8 +104,8 @@ altra istruzione; // no, indentate o vi boccio!
 
 ```C
 int main() {
-    int a = 10, b; // <--- definiamo più variabili dello stesso tipo nella stessa istruzione
-    b = a + 1;
+  int a = 10, b; // definiamo più variabili dello stesso tipo nella stessa istruzione
+  b = a + 1;
 }
 ```
 <!-- .element: class="fragment" -->
@@ -113,7 +113,7 @@ int main() {
 ```C
 int main() {
     int a = 10;
-int b; // <--- potete anche non indentare, anche se vi costerà voti all'esame!
+int b; // potete anche non indentare, anche se vi costerà voti all'esame!
     b = a + 1;
 }
 ```
@@ -121,7 +121,7 @@ int b; // <--- potete anche non indentare, anche se vi costerà voti all'esame!
 
 ```C
 int main()
-{ // <--- la parentesi graffa non deve necessariamente stare sulla riga
+{ // la parentesi graffa non deve necessariamente stare sulla riga
     int a;
     int b;
     a = 10;
@@ -166,7 +166,7 @@ Il tipo stabilisce il n. di bit a disposizione e il tipo di rappresentazione di 
 <li>I modificatori adattano i tipi di dati fondamentali alle esigenze del programmatore. Possono essere anche usati assieme (es. <code>unsigned short int</code>)</li>
 <li class="fragment warning" data-fragment-index="1">
 È facile avere problemi di precisione numerica con <code>float</code>, usate <code>double</code>!</li>
-<li class="fragment">Per inizializzare un <code>double</code> dobbiamo usare numeri razionali:
+<li class="fragment">Per inizializzare un <code>double</code> è meglio usare numeri razionali:
 
 ```C
 double a = 4.5;
@@ -192,8 +192,8 @@ double b = 2.;  // <-- equivale a scrivere 2.0
 Esempio:
 
 ```C
-int a = 1234567890; // <--- 32 bit in complemento a 2, valore massimo 2^31 - 1 ~ 2 miliardi
-long long int b = 8294967295429; // <--- 64 bit in complemento a 2, massimo 2^63 - 1 ~ 10^18
+int a = 1234567890; // 32 bit in compl. a 2, valore massimo 2^31 - 1 ~ 2 miliardi
+long long int b = 8294967295429; // 64 bit in compl. a 2, massimo 2^63 - 1 ~ 10^18
 ```
 
 ---
@@ -204,27 +204,33 @@ long long int b = 8294967295429; // <--- 64 bit in complemento a 2, massimo 2^63
 <li>
 
 I tipi interi (`int` e `char`) supportano anche `signed` e `unsigned`
-    <ul><li>`signed` (che si usa poco) specifica che la variabile può essere negativa</li>
-    <li> `unsigned` (più comune) specifica che la variabile prende solo valori positivi</li></ul>
+  <ul>
+    <li><code>signed</code> (che si usa poco) specifica che la variabile può essere negativa</li>
+    <li><code>unsigned</code> (più comune) specifica che la variabile prende solo valori positivi</li>
+  </ul>
 </li>
 <li>
 
 Esempio:
-    <ul><li>`signed int` (cioè `int`) rappresenta valori tra $-2^{31} = -2147483648$ e $(2^{31} -1) = +2147483647$</li>
-    <li>`unsigned int` rappresenta valori tra $0$ e $(2^{32} - 1) = +4294967295$</li></ul>
+  <ul>
+    <li><code>signed int</code> (cioè <code>int</code>) rappresenta valori tra $-2^{31} = -2147483648$ e $(2^{31} -1) = +2147483647$</li>
+    <li><code>unsigned int</code> rappresenta valori tra $0$ e $(2^{32} - 1) = +4294967295$</li>
+  </ul>
 </li>
-<li class="fragment">
+<li class="fragment" data-fragment-index="1">
 
-Quanto valgono `sum1` e `sum2` secondo voi? <span class="fragment">Perché questi valori?</span>
+Quanto valgono `sum1` e `sum2` secondo voi? <span class="fragment" data-fragment-index="2">Perché questi valori?</span>
 
 ```C
 unsigned int a = -2;
 int b = 1;
-int sum1 = a + b; // <--- -1
-unsigned int sum2 = a + b; // <--- +4294967295
+int sum1 = a + b;
+unsigned int sum2 = a + b;
 ```
 </li>
 </ul>
+
+<div class="focus fragment" data-fragment-index="2"><code>sum1</code> vale -1, <code>sum2</code> vale +4294967295</div>
 
 ---
 
@@ -239,7 +245,7 @@ unsigned int sum2 = a + b; // <--- +4294967295
 - , ; : + - = / \ * $<$ $>$ ! ? @ # $ % ^ &amp; ' `
 </div>
 
-```C [1|2|3|4|5|6|7|8]
+```C [1|2|3|4|5|6|7|8|9]
 int var124;   // OK
 int var_124;  // OK
 int Var_124;  // OK, NB: questo nome è diverso dal precedente
@@ -248,6 +254,7 @@ int 124_var;  // NON VALIDO, comincia con un numero
 int @124var;  // NON VALIDO, comincia con un simbolo non permesso
 int 124 var;  // NON VALIDO, contiene uno spazio
 int 124!var;  // NON VALIDO, contiene un simbolo non permesso
+int quantità;  // NON VALIDO, contiene un simbolo non permesso
 ```
 <!-- .element: class="fragment" -->
 
@@ -300,13 +307,13 @@ double b = 5. / 2; // <-- 2 viene convertito in 2.0 e poi si esegue la divisione
 ```C
 int c = 5 / 2;    // <-- questo fa 2
 double d = 5 / 2; /* <-- questo fa 2.0, perché prima viene effettuata l'operazione 
-                        e poi il risultato viene convertito in double */
+                         e poi il risultato viene convertito in double */
 int e = 1 / 2;    // <-- quanto vale e?
 ```
 </div>
 
 <div class="focus spacing-1-top fragment">
-La divisione tra interi è costata l'esame a tanti studenti: non siate i prossimi!
+La divisione tra interi è costata l'esame a tanti studenti!
 </div>
 
 ---
@@ -333,7 +340,7 @@ La precedenza è la seguente:
 ```C
 int metri = 50;
 int secondi = 4;
-double velocita = metri / (double) secondi; // <-- 12.5, senza cast il risultato sarebbe 12
+double vel = metri / (double) secondi; // 12.5, senza cast il risultato sarebbe 12
 ```
 
 <div class="warning spacing-1-top fragment">
@@ -382,16 +389,16 @@ int a = a + 1;
 
 ```C
 int a = 2;
-int a++;     // ora a = 3
-int ++a;     // ora a = 4
-int b = a++; // b = a, poi incremento a, quindi b = 4, a = 5
-int c = ++a; // incremento a e poi c = a, quindi c = 6, a = 6
+int a++;     // ora a == 3
+int ++a;     // ora a == 4
+int b = a++; // b = a, poi incremento a, quindi b == 4, a == 5
+int c = ++a; // incremento a e poi c = a, quindi c == 6, a == 6
 ```
 </li>
 <li class="fragment">Operatore unario di negazione, <code>-</code>
 
 ```C
-int b = -a;  // se a = 2, allora b = -2
+int b = -a;  // se a == 2, allora b == -2
 ```
 </li>
 <li class="fragment">Operatori di assegnamento composti (aritmetici) <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>
@@ -512,7 +519,7 @@ Se volete eseguire operazioni in un altro ordine dove usare le parentesi
 
 # Priorità degli operatori - esempi
 
-```C [1,2|3|4|5]
+```C [1,2|1,3|1,4|1,5]
 int a = 2, b = 3, c = 5;
 int d, e, f;
 d = a + b * c;              // d = 17
@@ -523,14 +530,15 @@ f = a + (b * c);            // f = 17, parentesi superflue
 <div class="fragment">
 Attenzione anche alla promozione dei tipi!
 
-```C [1,2|3|4|5|6|7]
-int i = 10, j = 4, k, n;
+```C [1-3|1,4|1,4,5|1,4,6|1,4,7|1,4,8]
+int i = 10, j = 4;
+int k, n;
 double a, b, c;
-a = i + 3.5 * j;        // a = 24
-k = (a - i) / j;        // (a - i) / j = 3.5, ma k è intero quindi k = 3
-n = a - i / j;          // n = a - i / j = 24.0 - 2 = 22 perché n è intero
-b = (a - i) / j;        // b = (a - i) / j = 3.5 perché abbiamo cambiato la precedenza;
-c = a - i / j;          // c = a - i / j = 22.0 perché c è double;
+a = i + 3.5 * j;    // a = 24
+k = (a - i) / j;    // (a - i) / j = 3.5, ma k è intero quindi k = 3
+n = a - i / j;      // n = a - i / j = 24.0 - 2 = 22 perché n è intero
+b = (a - i) / j;    // b = (a - i) / j = 3.5 perché abbiamo cambiato la precedenza
+c = a - i / j;      // c = a - i / j = 22.0 perché c è double
 ```
 </div>
 

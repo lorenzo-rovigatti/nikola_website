@@ -14,7 +14,7 @@
 
 # Rendiamo utile il nostro primo programma
                     
-```C [|8,9|13|1]
+```C [|1,8,9|1,13]
 #include &lt;stdio.h&gt;
 
 int main() {
@@ -105,7 +105,7 @@ $ gcc -E include.c > include_full.c
 
 # Prime nozioni di input/output
 
-* Il sistema operativo fornisce tre "canali" di comunicazione ad ogni programma eseguito
+* Il sistema operativo fornisce tre "canali" di comunicazione ad ogni programma
     * **stdin** (standard input): input associato alla tastiera
     * **stdout** (standard output): dedicato alla stampa dei prodotti dell'elaborazione
     * **stderr** (standard error): dedicato alla stampa di errori o messaggi non legati ai dati in uscita
@@ -158,8 +158,8 @@ int a = 3;
 double b = 10.0;
 
 printf("ciao!\n");                   // stampa "ciao!" e va a capo
-printf("a == %d\n", a);              // "a == 3"
-printf("a == %d, b == %lf\n", a, b); // "a == 3, b == 10.000000"
+printf("a == %d\n", a);              // stampa "a == 3" e va a capo
+printf("a == %d, b == %lf\n", a, b); // stampa "a == 3, b == 10.000000" e va a capo
 
 ```
 
@@ -206,7 +206,7 @@ Tutte le sequenze tranne le ultime due fanno parte dei primi 32 caratteri del co
 
 Cerchiamo di capire assieme cosa viene stampato in questi casi!
 
-```C [1,2|4|5|6|8|9|10|12|13|14]
+```C [1,2|1,2,4|1,2,5|1,2,6|1,2,8|1,2,9|1,2,10|1,2,12|1,2,13|1,2,14]
 int a = -1;
 double b = 10.0;
 
