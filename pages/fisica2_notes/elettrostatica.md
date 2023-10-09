@@ -464,6 +464,10 @@ Cos'è il rotore di un campo vettoriale? È la cosiddetta "vorticità", che dà 
 
 <img src="../../images/fisica2/curl.png">
 
+<small>Fine lezione 3</small>
+
+---
+
 ## Superfici equipotenziali
 
 <small>MNV: paragrafo 2.5</small>
