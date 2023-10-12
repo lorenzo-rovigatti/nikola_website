@@ -342,6 +342,21 @@ Se il numero di liste a sinistra dell'uguale non è uguale al numero di colonne 
 
 ---
 
+# Uno sguardo al futuro
+
+Durante il corso di Laboratorio di Meccanica (prof. Organtini) userete Python per manipolare i dati tramite una libreria molto evoluta (`pandas`) che utilizza al suo interno `numpy`. Con questa libreria lo script della pagina precedente diventerebbe
+
+```python
+import matplotlib.pyplot as plt
+import pandas as pd
+
+dati = pd.read_csv("mio_file.dat", names=("x", "y"), usecols=(0, 1), sep=" ")
+dati.plot('x', 'y', marker='o')
+plt.show()
+```
+
+---
+
 # Esempio di lettura da file
 
 ```bash [1-6|7]
@@ -438,7 +453,7 @@ plt.show()
     * `.-` $\to$ linea puntata-tratteggiata
     * `:` $\to$ linea puntata
     
-<img src="/images/labcalc_slides/linestyle.png" width="400" class="fragment">
+<img src="/images/labcalc_slides/linestyle.png" width="400">
 
 ---
 
@@ -447,7 +462,7 @@ plt.show()
 * Lo spessore della linea si cambia con `linewidth=X`, dove `X` è un numero intero
 * In questo esempio ho usato `linewidth=1`, `2`, `3` e `4` per le quattro curve
 
-<img src="/images/labcalc_slides/linewidth.png" width="400" class="fragment">
+<img src="/images/labcalc_slides/linewidth.png" width="400">
 
 ---
 
@@ -455,7 +470,7 @@ plt.show()
 
 * Il tipo di simbolo si sceglie con `marker='tipo'`, dove `tipo` è uno dei simboli supportati
 
-<img src="/images/labcalc_slides/marker.png" width="400" class="fragment">
+<img src="/images/labcalc_slides/marker.png" width="400">
 
 ---
 
@@ -468,7 +483,7 @@ plt.show()
     * `r` è rosso
     * ...
 
-<img src="/images/labcalc_slides/color.png" width="400" class="fragment">
+<img src="/images/labcalc_slides/color.png" width="400">
 
 ---
 
@@ -487,7 +502,7 @@ plt.plot(x, y, 'g<-.') # '<-.g' avrebbe avuto lo stesso risultato
 plt.show()
 ```
 
-<img src="/images/labcalc_slides/compatta.png" width="350" class="fragment" style="margin:0">
+<img src="/images/labcalc_slides/compatta.png" width="350" style="margin:0">
 
 ---
 
@@ -504,7 +519,7 @@ plt.plot(x, y)
 plt.show()
 ```
 
-<img src="/images/labcalc_slides/axis_range.png" width="350" class="fragment" style="margin:0">
+<img src="/images/labcalc_slides/axis_range.png" width="350" style="margin:0">
 
 ---
 
@@ -523,7 +538,7 @@ plt.legend() # da chiamare sempre dopo plt.plot!
 plt.show()
 ```
 
-<img src="/images/labcalc_slides/etichette.png" width="350" class="fragment" style="margin:0">
+<img src="/images/labcalc_slides/etichette.png" width="350" style="margin:0">
 
 ---
 
