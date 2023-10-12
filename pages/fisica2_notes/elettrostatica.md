@@ -582,6 +582,10 @@ Il concetto di dipolo è estremamente importante in molti contesti, ad esempio:
 * Struttura della materia: atomi e molecole si polarizzano in presenza di un campo elettrico.
 * Chimica fisica: molte molecole posseggono un momento di dipolo *intrinseco*, come ad esempio l'acqua.
 
+<small>Fine lezione 4</small>
+
+---
+
 ## Momento della forza su un dipolo elettrico
 
 <small>MVN: paragrafo 2.8</small>
@@ -592,6 +596,7 @@ $$
 \vec{M} = \vec{a} \times \vec{F}\_+ = \vec{a} \times (q \vec{E}\_+) = \vec{a} \times (q \vec{E}) = q\vec{a} \times \vec{E} = \vec{p} \times \vec{E}
 $$
 
+{{% accordion id="variante_dipolo" label="Derivazione alternativa" %}}
 Troviamo lo stesso risultato se scriviamo il momento delle forze rispetto al centro del dipolo:
 
 $$
@@ -601,6 +606,8 @@ $$
 **Nota Bene:** i vettori $\vec{r}\_{c+}$ e $\vec{r}\_{c-}$ vanno dal centro del dipolo alle cariche, mentre prima andavano dalle cariche al punto $\vec{P}$. Se disegniamo questi vettori troviamo che, in questo caso, $\vec{a} = \vec{r}\_{c+} - \vec{r}\_{c-}$.
 
 Se disegniamo i vettori $\vec{p}$, $\vec{E}$ ed il loro prodotto vettoriale vediamo che un dipolo immerso in un campo elettrostatico tenderà a ruotare per allinearsi al campo.
+
+{{% /accordion %}}
 
 Per trovare l'energia potenziale associata ad un dipolo scriviamo il lavoro fatto dal momento meccanico. Disegniamo sul piano i vettori $\vec{p}$ ed $\vec{E}$ in maniera tale che il loro prodotto vettoriale sia diretto verso il piano, cioè lungo $-\hat{z}$. In questo caso abbiamo $\vec{M} = -pE \sin{\theta} \hat{z}$. Calcoliamo il lavoro fatto dal momento per portare l'angolo tra $\vec{p}$ ed $\vec{E}$ da $\theta_0$ a $\theta_1$:
 
@@ -686,22 +693,16 @@ In presenza di un campo elettrostatico, c'è un *transiente* durante il quale qu
 
 1. La distribuzione delle cariche è tale per cui $\vec{E} = 0$ all'interno del conduttore. Se così non fosse, ci sarebbero zone del campo in cui $\vec{E} \neq 0$, il che genererebbe moti di cariche che contravverrebbero all'ipotesi di equilibrio. 
 2. Il fatto che $\vec{E} = 0$ in ogni punto interno al conduttore implica come tutte le cariche libere siano distribuite sulla superficie. Questo risultato si dimostra applicando il teorema di Gauss. Prendiamo una superficie $\Sigma$ interna al conduttore. Il flusso del campo attraverso $\Sigma$ vale
-
 $$
 \oint_{\Sigma} \vec{E} \cdot \hat{n} d\Sigma = 0
 $$
-
 perché $\vec{E} = 0$. D'altro canto, per il teorema di Gauss questo implica che la carica totale interna alla superficia sia $0$. Questo risultato, data l'arbitrarietà nella scelta di $\Sigma$, implica come le cariche libere possano disporsi *unicamente* sulla superficie del conduttore.
-
 3. Il fatto che il campo sia nullo implica che, all'interno del conduttore, il potenziale è costante. Questo risultato si dimostra calcolando il potenziale tra due punti interni al conduttore e ricordando che $\vec{E} = 0$:
-
 $$
 V(P_2) - V(P_1) = -\int_{P_1}^{P_2} \vec{E} \cdot d\vec{s} = 0
 $$
-
 che significa $V(P_2) = V(P_1) = V_0$.
 **Nota Bene:** questo risultato implica che il potenziale in un conduttore è costante, non nullo!
-
 4. Il campo vicino alla superficie di un conduttore è normale alla superficie e ha modulo $E = \frac{\sigma}{\epsilon_0}$, con $\sigma$ densità superficiale di carica. Per ottenere questo risultato utilizziamo il teorema di Gauss. Se siamo sufficientemente vicini, qualunque superficie ci sembrerà planare. Applichiamo allora il teorema di Gauss ad un cilindretto di raggio $R$ e basi appena dentro e appena fuori dal conduttore. Il flusso del campo sarà nullo attraverso la superficie laterale (che abbiamo preso di spessore infinitesimo). Sarà però nullo anche attraverso la base interna del conduttore, perché all'interno si ha $\vec{E} = 0$. Resta quindi solamente il contributo dato dalla base esterna, che vale $E \pi R^2$. Secondo il teorema di Gauss, questo flusso è uguale alla carica contenuta all'interno del cilindro, che vale $q = \sigma \pi R^2$, per cui il campo vale
 
 $$
@@ -717,6 +718,10 @@ Come si distribuisce la carica sulla superficie di un conduttore? Facciamo degli
   * Se il conduttore è anch'esso un piano, sulla faccia di fronte al piano carico negativamente si accumulerà una carica positiva di densità $\sigma$, mentre sulla faccia di fronte al piano carico positivamente si accumulerà una carica negativa di densità $-\sigma$. Possiamo verificare che questa combinazione fa sì che all'interno del conduttore si abbia $\vec{E} = 0$.
   * Se il conduttore ha una forma più complicata (ad esempio una sfera), la distribuzione di cariche sarà anch'essa più complicata, ma sempre tale che si abbia $\vec{E} = 0$.
 * Se si mettono in contatto (tramite, ad esempio, un filo conduttore) due o più oggetti conduttori si ottiene un *unico corpo conduttore*: il campo è nullo ovunque (lo sarebbe stato anche se i conduttori non fossero stati collegati) e, in aggiunta, tutti i conduttori hanno anche lo stesso potenziale. 
+
+<small>Fine lezione 5</small>
+
+---
 
 ## Conduttori cavi, induzione completa e gabbia di Faraday
 

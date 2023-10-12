@@ -19,7 +19,7 @@
 * Una macro è un simbolo $X$ a cui associamo un valore o un'espressione $Y$
 * Il preprocessore sostituisce $Y$ ad $X$ in tutto il codice sorgente
 
-```C [|2|6,7]
+```C [|2|2,6,7]
 #include <stdio.h>
 #define MOLT 10  // è buona norma usare il maiuscolo per i nomi delle macro
 
@@ -47,7 +47,7 @@ $ ./es_define
 * Sono comode per definire quantità che utilizziamo più volte all'interno di un codice
 * Il preprocessore sostituisce *bovinamente* $Y$ a $X$
 
-```C [|2|6,7]
+```C [|2|2,6,7]
 #include <stdio.h>
 #define MOLT 10 + 5
 
@@ -114,7 +114,7 @@ $ ./es_define_3
 * Un esempio classico (e molto usato): `#define SQR(x) ((x) * (x))`
 * Ecco un esempio completo:
 
-```C [|2,3|9,10]
+```C [|2,3|2,3,9,10]
 #include <stdio.h>
 #define SQR(x) ((x) * (x))
 #define SUM_SQR(x, y) ((x) * (x)) + ((y) * (y))
@@ -144,12 +144,16 @@ La somma dei quadrati dei due numeri è 37.570
 # Che differenza c'è tra una macro e una funzione?
 
 * Una macro viene *espansa* dal preprocessore $\to$ `SQR(x)` è vista dal compilatore come `(x) * (x)`
-* Una funzione è compilata a parte e viene chiamata al momento dell'esecuzione del programma
+* Una funzione è compilata a parte, il suo codice oggetto viene incluso nel programma dal linker e chiamato al momento dell'esecuzione del programma
 * Differenza di prestazioni (chiamare una funzione "costa" tempo)
 * "Rule of thumb": usate le macro per operazioni **molto** semplici
 
 <div class="fragment warning">
 Per ora non dovete preoccuparvi delle prestazioni: capire cosa rallenta il vostro codice è complicato e spesso anche controintuitivo
+</div>
+
+<div class="fragment focus">
+Utilizzate <code>gcc -E</code> (vedi la <a href="../labcalc_lezione6/#/4">lezione</a>) della settimana scorsa) per osservare direttamente come le macro vengano sostituite dal preprocessore
 </div>
 
 ---
@@ -226,8 +230,9 @@ int main() {
 
 * Definiamo al momento della compilazione la macro `F_TO_C`:
 
-```bash [1|2-4]
-$ gcc -o es_condizionata es_condizionata.c -DF_TO_C
+```bash [1|2-5]
+$ gcc -o es_F_to_C es_condizionata.c -DF_TO_C
+$ ./es_F_to_C
 Inserire la temperatura in input:
 96.8
 La temperatura in Celsius è 36.000000
@@ -237,8 +242,9 @@ La temperatura in Celsius è 36.000000
 
 * Senza la definizione la parte di codice compilata è l'altra:
 
-```bash [1|2-4]
-$ gcc -o es_condizionata es_condizionata.c
+```bash [1|2-5]
+$ gcc -o es_C_to_F es_condizionata.c
+$ ./es_C_to_F
 Inserire la temperatura in input:
 36
 La temperatura in Fahrenheit è 96.800000
