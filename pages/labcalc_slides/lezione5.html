@@ -268,7 +268,7 @@ int quantità;  // NON VALIDO, contiene un simbolo non permesso
 * Il blocco di codice cui appartiene una variabile ne definisce lo *scope*
 * La variabile **non esiste** al di fuori del suo scope
 
-```C [2,3|5-8|9]
+```C [2,3|5-8|6,9]
 int main() {
     int a = 3; // ok
     a = 4; // ok
@@ -417,7 +417,7 @@ a /= 2;   // sinonimo di a = a / 2;
 
 # Un primo programma *utile*
 
-```C [1,8|2-4|6-7|]
+```C [1,10|2-4|6-7|]
 int main() {
     double T_c, T_f;              // T_c = T in Celsius, T_f = T in Fahreneit
     double conv = 5. / 9.;        // fattore di conversione
