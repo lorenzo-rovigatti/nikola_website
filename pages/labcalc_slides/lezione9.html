@@ -166,20 +166,20 @@ printf("Inserisci il voto preso:\n");
 scanf("%d", &n);
 
 if(n < 18) {
-    printf("Oh no :-(\n");
+  printf("Oh no :-(\n");
 }
 else { // n >= 18
-    if(n < 24) {
+  if(n < 24) {
     printf("Un esame in meno!\n");
-    }
-    else { // n >= 24
+  }
+  else { // n >= 24
     if(n < 28) {
-        printf("Ottimo voto\n");
+      printf("Ottimo voto\n");
     }
     else { // n >= 28
-        printf("Bravissimo/a!\n");
+      printf("Bravissimo/a!\n");
     }
-    }
+  }
 }
 ```
 <!-- .element: style="width:100%" -->
@@ -400,7 +400,7 @@ do {
 printf("Il numero inserito è %lf\n", N);
 ```
 
-```bash [1-3|4-5|6-7]
+```bash [1-3|4-5|6-8]
 $ ./es_do_while
 Inserire un numero positivo:
 -5928.2
