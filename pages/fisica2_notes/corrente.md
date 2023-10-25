@@ -33,35 +33,7 @@ I generatori di tensione (che siano pile o altri dispositivi) vengono comunement
 ## Modello classico della conduzione elettrica
 <small>MNV: paragrafi 5.4 e 5.2 (in questo ordine)</small>
 
-Senza prendere in considerazione effetti quantistici, consideriamo un conduttore solido come un "mare" di elettroni immersi in un reticolo di ioni. Il moto di ogni elettrone, che può essere modellizzato come rettilineo uniforme con velocità *molto* alta, $v \approx 10^6 $ m/s,  viene interrotto di frequente dagli urti con gli ioni, che (con ottima approssimazione) ne randomizzano la direzione. La distanza percorsa tra un urto ed un altro è chiamato *cammino libero medio* $l$. Poiché la velocità è essenzialmente costante, il tempo che intercorre tra due urti vale:
-
-$$
-\tau = \frac{l}{v}
-$$
-
-Senza campo elettrico, la media delle velocità degli elettroni vale $\frac{1}{N}\sum_i \vec{v}_i = 0$, perché non c'è passaggio netto di corrente. Se però il conduttore viene immerso in una regione di spazio in cui è presente un campo $\vec{E}$, ciascun elettrone avverte una forza $-e\vec{E}$, e quindi viene accelerato di $-e\vec{E}/m$. Se appena dopo un urto la velocità di un elettrone vale $\vec{v}_i^{(i)}$, poco prima dell'urto seguente (prima cioè che la velocità venga nuovamente randomizzata) si avrà:
-
-$$
-\vec{v}_i^{(f)} = \vec{v}_i^{(i)} - \frac{e\vec{E}}{m} \tau
-$$
-
-Dove il fatto che $\tau$ non cambi per effetto del campo verrà giustificato a posteriori notando che le velocità in gioco (quella "naturale" degli elettroni e quella dovuta al campo) differiscono di molti ordini di grandezza. Se facciamo una media tra tutti gli elettroni, troviamo che la velocità non è più nulla ma ha valore finito che dipende dal campo e dalle proprietà degli elettroni:
-
-$$
-\vec{v}_d = \frac{1}{N}\sum_i \vec{v}_i^{(f)} = \frac{1}{N}\sum_i \vec{v}_i^{(i)} - \frac{e\vec{E}}{m} \tau = - \frac{e\vec{E}}{m} \tau
-$$
-
-Dove $\vec{v}_d$ è detta *velocità di deriva*. **Nota Bene:** La media delle velocità iniziali viene nulla perché si ha, come vedremo fra poco, $v_d \ll v$, e quindi la distribuzione delle velocità per effetto degli urti resta casuale, indipendentemente da $\vec{E}$. In altre parole, l'effetto del campo viene "resettato" dopo ogni urto.
-
-$\vec{v}_d$ è detta velocità di deriva perché è, in media, l'unica componente della velocità non nulla. Il suo effetto netto è quello di muovere gli elettroni lungo la direzione del campo. Stimiamo l'ordine di grandezza di $v_d$ sapendo che $l \sim 4 \times 10^{-8}$ m, $v = 10^6$ m/s, $e = -1.603 \times 10^{-19}$ C, $m = 9.1 \times 10^{-31}$ Kg e un campo elettrico tipico all'interno di un conduttore è dell'ordine di $10^{-2}$ V/m, quindi:
-
-$$
-v_d \approx 10^{-4}\\, \mathrm{m / s} = 10^{-10} v
-$$
-
-Il che dimostra (giustificando a posteriori le relazioni derivate sopra) come $v_d \ll v$.
-
-Il moto dei portatori di carica (in questo caso elettroni) ha velocità media diversa da zero e quindi dà luogo ad una corrente elettrica. Data una superficie all'interno del conduttore, l'intensità media di questa corrente elettrica è definita come la quantità di carica $\Delta q$ che passa attraverso la superficie in un intervallo di tempo $\Delta t$:
+I portatori di carica (in questo caso elettroni) risentono dell'effetto del campo e si mettono in modo, generando una corrente elettrica. Data una superficie all'interno del conduttore, l'intensità media di questa corrente elettrica è definita come la quantità di carica $\Delta q$ che passa attraverso la superficie in un intervallo di tempo $\Delta t$:
 
 $$
 i_m = \frac{\Delta q}{\Delta t}
@@ -74,6 +46,36 @@ i = \lim_{\Delta t \to 0} \frac{\Delta q}{\Delta t} = \frac{dq}{dt}
 $$
 
 La corrente si misura in Ampere (A, che indica quanti Coulomb per secondo passano attraverso una data superficie).
+
+Applichiamo ora il {{% wikipedia article="Modello_di_Drude" text="modello di Drude" override_lang=it %}} per trovare la relazione che lega la differenza di potenziale applicata ai capi del conduttore con la corrente che viene generata.
+
+Senza prendere in considerazione effetti quantistici, consideriamo un conduttore solido come un "mare" di elettroni immersi in un reticolo di ioni. Il moto di ogni elettrone, che può essere modellizzato come rettilineo uniforme con velocità *molto* alta, $v \approx 10^6 $ m/s,  viene interrotto di frequente dagli urti con gli ioni, che (con ottima approssimazione) ne randomizzano la direzione. La distanza percorsa tra un urto ed un altro è chiamato *cammino libero medio* $l$. Poiché la velocità è essenzialmente costante, il tempo che intercorre tra due urti vale:
+
+$$
+\tau_l = \frac{l}{v}
+$$
+
+Senza campo elettrico, la media delle velocità degli elettroni vale $\frac{1}{N}\sum_i \vec{v}_i = 0$, perché non c'è passaggio netto di corrente. Se però il conduttore viene immerso in una regione di spazio in cui è presente un campo $\vec{E}$, ciascun elettrone avverte una forza $-e\vec{E}$, e quindi viene accelerato di $-e\vec{E}/m$. Se appena dopo un urto la velocità di un elettrone vale $\vec{v}_i^{(i)}$, poco prima dell'urto seguente (prima cioè che la velocità venga nuovamente randomizzata) si avrà:
+
+$$
+\vec{v}_i^{(f)} = \vec{v}_i^{(i)} - \frac{e\vec{E}}{m} \tau_l
+$$
+
+Dove il fatto che $\tau_l$ non cambi per effetto del campo verrà giustificato a posteriori notando che le velocità in gioco (quella "naturale" degli elettroni e quella dovuta al campo) differiscono di molti ordini di grandezza. Se facciamo una media tra tutti gli elettroni, troviamo che la velocità non è più nulla ma ha valore finito che dipende dal campo e dalle proprietà degli elettroni:
+
+$$
+\vec{v}_d = \frac{1}{N}\sum_i \vec{v}_i^{(f)} = \frac{1}{N}\sum_i \vec{v}_i^{(i)} - \frac{e\vec{E}}{m} \tau_l = - \frac{e\vec{E}}{m} \tau_l
+$$
+
+Dove $\vec{v}_d$ è detta *velocità di deriva*. **Nota Bene:** La media delle velocità iniziali viene nulla perché si ha, come vedremo fra poco, $v_d \ll v$, e quindi la distribuzione delle velocità per effetto degli urti resta casuale, indipendentemente da $\vec{E}$. In altre parole, l'effetto del campo viene "resettato" dopo ogni urto.
+
+$\vec{v}_d$ è detta velocità di deriva perché è, in media, l'unica componente della velocità non nulla. Il suo effetto netto è quello di muovere gli elettroni lungo la direzione del campo. Stimiamo l'ordine di grandezza di $v_d$ sapendo che $l \sim 4 \times 10^{-8}$ m, $v = 10^6$ m/s, $e = -1.603 \times 10^{-19}$ C, $m = 9.1 \times 10^{-31}$ Kg e un campo elettrico tipico all'interno di un conduttore è dell'ordine di $10^{-2}$ V/m, quindi:
+
+$$
+v_d \approx 10^{-4}\\, \mathrm{m / s} = 10^{-10} v
+$$
+
+Il che dimostra (giustificando a posteriori le relazioni derivate sopra) come $v_d \ll v$.
 
 Per mettere in relazione $i$ e $v_d$ prendiamo una superficie infinitesima all'interno del conduttore, $d\Sigma$, e calcoliamo la quantità di carica per unità di tempo che ci passa attraverso quando nel conduttore è presente un campo $\vec{E}$ che genera una velocità di deriva $\vec{v}_d \parallel \vec{E}$. Poiché, in generale, la normale $\hat{n}$ di $d\Sigma$ non è parallela ad $\vec{E}$ ma forma con esso un angolo $\theta$, mentre  la velocità di deriva è costante, gli elettroni che attraversano $d\Sigma$ in un tempo $dt$ sono quelli contenuti nel cilindro obliquo di basi pari a $d\Sigma$ ed altezza pari a $v_d dt$. Disegnandolo si vede subito come il volume di questo solido sia
 
@@ -122,28 +124,10 @@ da cui discende il nome di $\vec{j}$, che infatti può essere definita come l'in
 Nel ricavare $\vec{j}$ abbiamo considerato portatori di carica negativi. In questo caso, se sostituiamo la relazione che lega $\vec{j}$ ad $\vec{E}$ ricavata precedentemente troviamo
 
 $$
-\vec{j} = -n e \vec{v}_d = \frac{ne^2\vec{E}}{m} \tau
+\vec{j} = -n e \vec{v}_d = \frac{ne^2\vec{E}}{m} \tau_l
 $$
 
-La densità di corrente ed il campo sono quindi proporzionali. Questa relazione è nota come *legge di Ohm della conduttività elettrica*. Poiché $e^2 \tau / m$ è definito positivo, $\vec{j}$ ha sempre lo stesso verso del campo. Inoltre, la dipendenza dalla carica dei portatori è data dal termine $e^2$, e quindi lo stesso identico risultato è valido anche qualora i portatori fossero positivi. Il fatto che $\vec{j}$ ed $\vec{E}$ siano sempre concordi implica che non sia possibile misurare il segno dei portatori di carica eseguendo misure macroscopiche di corrente: gli effetti macroscopici di una data differenza di potenziale non dipendono dal segno della carica dei portatori. **Nota Bene:** data questa premessa, il verso della corrente (che si considera scorrere dal polo positivo, a potenziale maggiore, a quello negativo, a potenziale minore) è solamente una *convenzione*.
-
-## Corrente elettrica stazionaria
-
-Data una porzione di conduttore, la condizione di *stazionarietà* si ha quando la carica media di ogni sua parte è costante nel tempo. Se prendiamo un volume all'interno del conduttore (che comprenda anche le pareti laterali attraverso le quali non passa corrente), questo sarà delimitato da due superfici $\Sigma_1$ e $\Sigma_2$ qualunque, una attraverso la quale la corrente *entra*, l'altra attraverso la quale la corrente *esce*. La condizione di stazionarietà implica che la quantità di carica che entra deve essere uguale a quelle che ne esce, e quindi si deve avere
-
-$$
-i_1 = i_2
-$$
-
-**Nota Bene:** questa condizione non implica per forza che la corrente debba essere costante nel tempo.
-
-Se $\Sigma_1$ e $\Sigma_2$ sono entrambe ortogonali a $\vec{j}$, troviamo la relazione $j_1 \Sigma_1 = j_2 \Sigma_2$, cioè
-
-$$
-\frac{j_1}{j_2} = \frac{\Sigma_2}{\Sigma_1}
-$$
-
-In un sistema stazionario, più il conduttore è stretto più la densità di corrente sarà grande! Pensate a quel che succede quando restringiamo il tubo della pompa per innaffiare...
+La densità di corrente ed il campo sono quindi proporzionali. Questa relazione è nota come *legge di Ohm della conduttività elettrica*. Poiché $e^2 \tau_l / m$ è definito positivo, $\vec{j}$ ha sempre lo stesso verso del campo. Inoltre, la dipendenza dalla carica dei portatori è data dal termine $e^2$, e quindi lo stesso identico risultato è valido anche qualora i portatori fossero positivi. Il fatto che $\vec{j}$ ed $\vec{E}$ siano sempre concordi implica che non sia possibile misurare il segno dei portatori di carica eseguendo misure macroscopiche di corrente: gli effetti macroscopici di una data differenza di potenziale non dipendono dal segno della carica dei portatori. **Nota Bene:** data questa premessa, il verso della corrente (che si considera scorrere dal polo positivo, a potenziale maggiore, a quello negativo, a potenziale minore) è solamente una *convenzione*.
 
 # Legge di Ohm
 <small>MNV: paragrafo 5.3</small>
@@ -151,10 +135,10 @@ In un sistema stazionario, più il conduttore è stretto più la densità di cor
 Abbiamo visto come la densità di corrente sia proporzionale al campo elettrico. La costante di proporzionalità si indica solitamente con $\sigma$ e si chiama *conduttività elettrica*. Nel modello microscopico che abbiamo utilizzato si trova
 
 $$
-\sigma = \frac{ne^2\tau}{m}.
+\sigma = \frac{ne^2\tau_l}{m}.
 $$
 
-Vediamo che in questa relazione entrano solo quantità relative ai portatori di carica ($e$ ed $m$), ed allo specifico materiale ($n$ e $\tau$). Poiché, come abbiamo visto, $\vec{j} \parallel \vec{E}$, $\sigma$ è una quantità positiva (come si trova anche dalla relazione precedente). La legge di Ohm si può anche invertire, e spesso si scrive nella forma
+Vediamo che in questa relazione entrano solo quantità relative ai portatori di carica ($e$ ed $m$), ed allo specifico materiale ($n$ e $\tau_l$). Poiché, come abbiamo visto, $\vec{j} \parallel \vec{E}$, $\sigma$ è una quantità positiva (come si trova anche dalla relazione precedente). La legge di Ohm si può anche invertire, e spesso si scrive nella forma
 
 $$
 \vec{E} = \rho \vec{j}
@@ -219,6 +203,24 @@ $$
 Se la corrente è costante nel tempo si ha $W = R i^2 t$. Il lavoro viene assorbito dal conduttore sotto forma di calore, provocando un aumento di temperatura. In generale, quindi, la temperatura di un conduttore percorso da corrente aumenta tanto più quanto l'intensità della corrente è grande. Questo aumento di temperatura, che prende il nome di *effetto Joule*, può persino portare alla fusione del materiale.
 
 Esiste una classe di materiali che hanno resistività così piccola da essere essenzialmente zero: i cosiddetti *superconduttori*. Purtroppo l'effetto di superconduttività si osserva solo a temperature molto basse, e quindi le applicazioni di questi materiali sono limitate (ma comunque importanti: risonanze magnetiche, acceleratori di particelle).
+
+# Corrente elettrica stazionaria
+
+Data una porzione di conduttore, la condizione di *stazionarietà* si ha quando la carica media di ogni sua parte è costante nel tempo. Se prendiamo un volume all'interno del conduttore (che comprenda anche le pareti laterali attraverso le quali non passa corrente), questo sarà delimitato da due superfici $\Sigma_1$ e $\Sigma_2$ qualunque, una attraverso la quale la corrente *entra*, l'altra attraverso la quale la corrente *esce*. La condizione di stazionarietà implica che la quantità di carica che entra deve essere uguale a quelle che ne esce, e quindi si deve avere
+
+$$
+i_1 = i_2
+$$
+
+**Nota Bene:** questa condizione non implica per forza che la corrente debba essere costante nel tempo.
+
+Se $\Sigma_1$ e $\Sigma_2$ sono entrambe ortogonali a $\vec{j}$, troviamo la relazione $j_1 \Sigma_1 = j_2 \Sigma_2$, cioè
+
+$$
+\frac{j_1}{j_2} = \frac{\Sigma_2}{\Sigma_1}
+$$
+
+In un sistema stazionario, più il conduttore è stretto più la densità di corrente sarà grande! Pensate a quel che succede quando restringiamo il tubo della pompa per innaffiare...
 
 # Resistori
 <small>MNV: paragrafo 5.5</small>
