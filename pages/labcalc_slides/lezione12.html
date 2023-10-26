@@ -43,7 +43,7 @@ Quale di queste versioni è la più chiara? E quale la meno ambigua?
 * Cosa stampa questo codice?
 
 ```C
-#include <stdio.h>
+#include &lt;stdio.h>
 
 int main() {
     int i, j, N = 10;
@@ -104,8 +104,8 @@ Come possiamo capire se il dado è truccato o meno? Generandone l'istogramma!
 # Istogramma di interi - esempio in C
 
 ```C [|4-6|10,11|13,14|15|18-20]
-#include <stdio.h>
-#include <stdlib.h>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
 
 #define LANCI 100
 #define MIN 1
@@ -155,8 +155,8 @@ int main() {
 # Istogramma generico - esempio in C
 
 ```C [|4-7|11,12|14|16,21|17,20|18-19|23-25]
-#include <stdio.h>
-#include <stdlib.h>
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
 
 #define N_DATI 1000
 #define N_BINS 10
@@ -185,4 +185,25 @@ int main() {
 }
 ```
 <!-- .element style="font-size:48%" -->
-                
+
+---
+
+# Occorrenze $\to$ probabilità
+
+* Per passare dal numero di occorrenze alla probabilità si divide l'istogramma per il numero **totale** di occorrenze
+
+```C[|3-7|9-12]
+// prima calcoliamo le occorrenze (non mostrato)
+
+// sommiamo su tutti i bin
+double sum = 0.;
+for(i = 0; i < N_bins; i++) {
+  sum += occorrenze[i];
+}
+
+// stampiamo la probabilità
+for(i = 0; i < N_BINS; i++) {
+  printf("%lf %lf\n", i * width + MIN, occorrenze[i] / sum);
+}
+
+```
