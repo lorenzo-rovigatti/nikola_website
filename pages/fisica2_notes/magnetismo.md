@@ -31,8 +31,8 @@ Le osservazioni sperimentali compiute nel XXVII, XXVIII e XIX secolo possono ess
 2. I magneti hanno la capacità di *magnetizzare* altri oggetti. Non tutti i materiali possono essere magnetizzati (ferro sì, vetro e plastica no). Un esempio noto è il caso di un sottile ago di ferro che, se magnetizzato, prende il nome di *ago magnetico*.
 3. Un ago magnetico, se libero di ruotare (perché sospeso ad un filo o posto su di un sostegno galleggiante), si orienta sempre nella stessa direzione (approssimativamente coincidente con la direzione dei meridiani terrestri). Questo effetto è dovuto alla presenza del *campo magnetico terrestre* ed è analogo a quel che succede ad un dipolo elettrico in presenza di un campo elettrico. I due poli dell'ago vengono denominati nord e sud, a seconda della direzione lunga la quale tendono ad orientarsi. L'asse "magnetico" della Terra è spostato di circa $15^\circ$ rispetto al'asse nord-sud: i poli cosiddetti magnetici non coincidono infatti con quelli geografici, ma ne sono distanziati di $\approx 1600$ km.
 4. Grazie ad esperimenti simili a quelli che hanno permesso di ricavare la dipendenza funzionale della forza elettrostatica, Coulomb mostrò come anche la forza tra poli magnetici puntiformi (quali quelli che si trovano, con buona approssimazione, agli estremi di sbarre lunghe e sottili) sia inversamente proporzionale al quadrato della distanza.
-5. Esiste una differenza fondamentale fra la forza elettrostatica e quella magnetica: la carica elettrica elementare, in natura, può essere sia positiva che negativa. Nel caso dei poli magnetici, questi si trovano sempre a due a due: se si prende una sbarra magnetizzata e la si divide in due, ognuna delle due metà diventerà un magnete con due poli. Dal punto di vista microscopico, le nostre conoscenze attuali non spiegano perché non esistano i cosiddetti *monopoli magnetici*, ma esperimenti molto scrupolosi non ne hanno ancora dimostrato l'esistenza. In effetti, le particelle "elementari" (anche quelle neutre) posseggono tutte un momento di dipolo magnetico che, allo stato attuale delle nostre conoscenze, consideriamo *intrinseco*.
-6. Limatura di ferro posta nelle vicinanze di un magnete tenderà a disporsi lungo le linee del campo magnetico. Questo è dovuto al fatto che i grani che compongono la limatura si magnetizzano e si comportano quindi come dipoli magnetici, orientandosi lungo il campo. Le proprietà di queste linee di campo sono molto simili a quelle che valgono per il campo elettrico:
+5. Esiste una differenza fondamentale fra la forza elettrostatica e quella magnetica: la carica elettrica elementare, in natura, può essere sia positiva che negativa. Nel caso dei poli magnetici, questi si trovano sempre a due a due: se si prende una sbarra magnetizzata e la si divide in due, ognuna delle due metà diventerà un magnete con due poli. Dal punto di vista microscopico, le nostre conoscenze attuali non spiegano perché non esistano i cosiddetti *monopoli magnetici*, ma esperimenti molto scrupolosi non ne hanno ancora trovato traccia. In effetti, le particelle "elementari" (anche quelle neutre) posseggono tutte un momento di dipolo magnetico che, allo stato attuale delle nostre conoscenze, consideriamo *intrinseco*.
+6. Della limatura di ferro posta nelle vicinanze di un magnete tenderà a disporsi lungo le linee del campo magnetico. Questo è dovuto al fatto che i grani che compongono la limatura si magnetizzano e si comportano quindi come dipoli magnetici, orientandosi lungo il campo. Le proprietà di queste linee di campo sono molto simili a quelle che valgono per il campo elettrico:
   * Le linee sono tangenti e concordi al campo, punto per punto. Il verso si può trovare ponendo un ago magnetico di cui conosciamo i poli.
   * Le linee di campo sono più dense dove il campo è più forte. Ne deriva che un campo uniforme genera linee parallele ed equidistanti.
   * Le linee di campo non si incrociano mai, perché anche il campo magnetico è definitivo univocamente.
@@ -45,7 +45,7 @@ L'insieme dei risultati sperimentali appena riassunti porta a pensare che i magn
 
 In linea con quanto detto precedentemente, risulta quindi evidente come delle cariche in movimento (cioè una corrente elettrica) generino un campo magnetico (indicato col simbolo $\vec{B}$).
 
-Il fatto sperimentale che due fili percorsi da corrente interagiscono portò Ampère a ipotetizzare che tutti i fenomeni magnetici siano generati dall'interazione tra cariche elettriche in movimento (cioè da correnti). Per spiegare come fosse possibile che oggetti in cui non sembra scorrere corrente (come quelli composti da magnetite) generino comunque campi magnetici, Ampère ipotizzò anche che esistono correnti microscopiche, dette *correnti molecolari di Ampère* o *correnti amperiane*, che sono responsabili dei fenomeni magnetici in assenza di corrente.
+Il fatto sperimentale che due fili percorsi da corrente interagiscono portò Ampère a ipotizzare che tutti i fenomeni magnetici siano generati dall'interazione tra cariche elettriche in movimento (cioè da correnti). Per spiegare come fosse possibile che oggetti in cui non sembra scorrere corrente (come quelli composti da magnetite) generino comunque campi magnetici, Ampère ipotizzò anche che esistono correnti microscopiche, dette *correnti molecolari di Ampère* o *correnti amperiane*, che sono responsabili dei fenomeni magnetici in assenza di corrente.
 
 Ulteriori sviluppi sperimentali e teorici misero in evidenza altri legami tra elettricità e magnetismo:
 
@@ -71,13 +71,13 @@ $$
 F = |q| v B \sin \theta.
 $$
 
-La forza è quindi nulla quando $\vec{v}$ e $\vec{B}$ sono paralleli e massima quando sono ortogonali. Direzione e verso sono invece dati dal versore generato dal prodotto vettoriale tra la velocità e il campo magnetico, che si può calcolare con la {{% wikipedia article="regola della mano destra" override_lang="it" %}}. Il prodotto vettoriale è stato discusso <a href="link://slug/fisica2-esercizi-magnetostatica#il-prodotto-vettoriale">qui</a>. Qui ricordiamo le seguenti proprietà del prodotto vettoriale $\vec{c} = \vec{a} \times \vec{b}$:
+La forza è quindi nulla quando $\vec{v}$ e $\vec{B}$ sono paralleli e massima quando sono ortogonali. Direzione e verso sono invece dati dal versore generato dal prodotto vettoriale tra la velocità e il campo magnetico, che si può calcolare con la {{% wikipedia article="regola della mano destra" override_lang="it" %}}. Le principale proprietà del prodotto vettoriale $\vec{c} = \vec{a} \times \vec{b}$ (discusso in maniera più dettagliata <a href="link://slug/fisica2-esercizi-magnetostatica#il-prodotto-vettoriale">qui</a>) sono:
 
 1. $| \vec{a} \times \vec{b} | = ab\sin{ \theta}$
 2. $\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}$
 3. $\vec{c}$ è ortogonale sia ad $\vec{a}$ che a $\vec{b}$
 
-Analizziamo quest'ultima proprietà: il vettore risultante dall'operazione è ortogonale ad entrambi gli operandi. Ne deriva che la velocità della carica e la forza dovuta all'interazione magnetica sono sempre ortogonali. Poiché quest'ultima è anche parallela alla traiettoria della particella (e quindi allo spostamento), il lavoro compiuto dalle forze magnetiche, e quindi la differenza di energia cinetica, tra due punti generici della traiettoria si annulla:
+Analizziamo quest'ultima proprietà: il vettore risultante dall'operazione è ortogonale ad entrambi gli operandi. Ne deriva che la forza dovuta all'interazione magnetica e la velocità della carica sono sempre ortogonali. Poiché quest'ultima è tangente alla traiettoria della particella, e quindi parallela allo spostamento, si ha $\vec{F} \perp \vec{v} \parallel d\vec{s}$. Di conseguenza, il lavoro compiuto dalle forze magnetiche, e quindi la differenza di energia cinetica, tra due punti generici della traiettoria si annulla:
 
 $$
 W = \int_P^Q \vec{F} \cdot d\vec{s} = \frac{1}{2}mv_Q^2 - \frac{1}{2}mv_P^2 = 0.
@@ -116,24 +116,24 @@ $$
 \vec{F}_L = -e \vec{v}_d \times \vec{B}
 $$
 
-questa forza si trasmette direttamente al reticolo (e quindi alla massa del conduttore, che consideriamo indeformabile) tramite gli urti degli elettroni. In un tratto $ds$ di sezione $\Sigma$ la forza agente sul conduttore vale
+questa forza si trasmette direttamente al reticolo (e quindi alla massa del conduttore, che consideriamo indeformabile) tramite gli urti degli elettroni. In un tratto $dl$ di sezione $\Sigma$ la forza agente sul conduttore vale
 
 $$
-d\vec{F} = n \Sigma ds \vec{F}_L = -n \Sigma ds e \vec{v}_d \times \vec{B} = \Sigma ds \vec{j} \times \vec{B}.
+d\vec{F} = n \Sigma dl \vec{F}_L = -n \Sigma dl e \vec{v}_d \times \vec{B} = \Sigma dl \vec{j} \times \vec{B}.
 $$
 
-Se orientiamo $d\vec{s}$ nella direzione di $\vec{j}$, prendiamo un conduttore di sezione $\Sigma$ costante e introduciamo l'intensità di corrente al posto di $j$ possiamo scrivere la relazione precedente come
+Se orientiamo $d\vec{l}$ nella direzione di $\vec{j}$, prendiamo un conduttore di sezione $\Sigma$ costante e introduciamo l'intensità di corrente al posto di $j$ possiamo scrivere la relazione precedente come
 
 $$
-d\vec{F} = i d\vec{s} \times \vec{B}
+d\vec{F} = i d\vec{l} \times \vec{B}
 $$
 
-che è detta *seconda legge elementare di Laplace*. Essendo molto simile all'espressione della legge di Lorentz, valgono le considerazioni fatte prima su verso e modulo della forza rispetto al verso e al modulo dell'orientamento del conduttore (dato da $d\vec{s}$) e di $\vec{B}$. 
+che è detta *seconda legge elementare di Laplace*. Essendo molto simile all'espressione della legge di Lorentz, valgono le considerazioni fatte prima su verso e modulo della forza rispetto al verso e al modulo dell'orientamento del conduttore (dato da $d\vec{l}$) e di $\vec{B}$. 
 
 La forza che agisce su di un tratto $PQ$ di conduttore si trova integrando la legge di Laplace:
 
 $$
-\vec{F} = i \int_P^Q d\vec{s} \times \vec{B}.
+\vec{F} = i \int_P^Q d\vec{l} \times \vec{B}.
 $$
 
 La corrente si porta fuori dall'integrale perché costante su ogni sezione del conduttore. In generale, invece, la direzione e il modulo di $\vec{B}$ cambiano punto per punto.
