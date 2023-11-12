@@ -222,19 +222,19 @@ Perché <code>*(b * 2 + i)</code> non compila mentre <code>*(b + 2 * i)</code> s
 #include <stdio.h>
 
 int main() {
-    double data[5] = {3.14, 2.10, 1.70, 7.80, 3.14};
-    double a, b, c;
-    int k = 2;
+  double data[5] = {3.14, 2.10, 1.70, 7.80, 3.14};
+  double a, b, c;
+  int k = 2;
     
-    double *pd = data;// pd punta all'elemento 0 di data
-    a = *(pd + 1);    // prendo il valore dell'elemento 1 di data -> a == 2.10
-    pd++;             // pd = pd + 1 -> adesso pd punta al secondo elemento di data
-    b = *(pd - 1);    // il valore della cella che precede pd -> b == data[0] == 3.14
-    c = *(pd + k);    // il valore della cella puntata da pd + k -> c == data[3] == 7.80
+  double *pd = data;// pd punta all'elemento 0 di data
+  a = *(pd + 1);    // prendo il valore dell'elemento 1 di data -> a == 2.10
+  pd++;             // pd = pd + 1 -> adesso pd punta al secondo elemento di data
+  b = *(pd - 1);    // il valore della cella che precede pd -> b == data[0]
+  c = *(pd + k);    // il valore della cella puntata da pd + k -> c == data[3]
     
-    fprintf(stdout,"a = %lf\nb = %lf\nc = %lf\n", a, b, c);
+  fprintf(stdout,"a = %lf\nb = %lf\nc = %lf\n", a, b, c);
 
-    return 0;
+  return 0;
 }
 ```
 
@@ -409,18 +409,14 @@ int ***p_p_pa = &p_p_a;
 
 # Un esempio con i puntatori
 
-```C [|6|7-11|13-15|17-22]
+```C [|6|7|9-11|13-18]
 #include <stdio.h>
 #define ROWS 3
 #define COLS 4
 
 int main() {
     int i, j, *point[ROWS]; // definiamo un array di puntatori
-    int num[ROWS][COLS] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12},
-    };
+    int num[ROWS][COLS] = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
     
     for(i = 0;i < ROWS; i++) { // scorriamo su tutte le righe
         point[i] = num[i]; // copiamo l'indirizzo di ogni riga nell'array di puntatori
@@ -436,7 +432,7 @@ int main() {
     return 0;
 }
 ```
-<!-- .element style="font-size:43%" -->
+<!-- .element style="font-size:50%" -->
 
 ```text
 $ ./es_multi_array_puntatori
@@ -444,24 +440,20 @@ $ ./es_multi_array_puntatori
     5   6   7   8 
     9  10  11  12
 ```
-<!-- .element style="font-size:43%" class="fragment" -->
+<!-- .element style="font-size:50%" class="fragment" -->
 
 ---
 
 # Se è un puntatore, possiamo usare l'aritmetica!
 
-```C [|13-15|17-22]
+```C [|9-11|13-18]
 #include <stdio.h>
 #define ROWS 3
 #define COLS 4
 
 int main() {
     int i, j, *point[ROWS]; // definiamo un array di puntatori
-    int num[ROWS][COLS] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12},
-    };
+    int num[ROWS][COLS] = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
     
     for(i = 0;i < ROWS; i++) { // scorriamo su tutte le righe
         point[i] = *(num + i); // equivalente a "point[i] = num[i];"
@@ -477,7 +469,7 @@ int main() {
     return 0;
 }
 ```
-<!-- .element style="font-size:43%" -->
+<!-- .element style="font-size:48%" -->
 
 ```text
 $ ./es_multi_array_puntatori
@@ -485,7 +477,7 @@ $ ./es_multi_array_puntatori
     5   6   7   8 
     9  10  11  12
 ```
-<!-- .element style="font-size:43%" class="fragment" -->
+<!-- .element style="font-size:50%" class="fragment" -->
 
 ---
 

@@ -36,14 +36,14 @@ Il nome quasi uguale dovrebbe rinfrancarvi: anche il loro utilizzo è quasi ugua
 #include <stdio.h>
 
 int main() {
-    FILE *my_file; // un "FILE *" viene anche chiamato "stream" o "canale"
-    my_file = fopen("il_mio_primo_file.txt", "w"); // w per scrivere, r per leggere
+  FILE *my_file; // un "FILE *" viene anche chiamato "stream" o "canale"
+  my_file = fopen("il_mio_primo_file.txt", "w"); // w per scrivere, r per leggere
     
-    fprintf(my_file, "Guarda mamma, scrivo su file!\n");
+  fprintf(my_file, "Guarda mamma, scrivo su file!\n");
     
-    fclose(my_file); // chiudete sempre i file quando smettete di usarli!
+  fclose(my_file); // chiudete sempre i file quando smettete di usarli!
     
-    return 0;
+  return 0;
 }
 ```
 
