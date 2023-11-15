@@ -403,7 +403,7 @@ Il campo magnetico generato dalla Terra ha più o meno questa forma, e infatti e
 
 ### Lo spettrometro di Dempster
 
-Il moto uniforme circolare generato da un campo magnetico uniforme può essere utilizzato per separare ioni aventi diversi rapporti di carica su massa da dispositivi detti *spettrometri di massa*. 
+Il MCU generato da un campo magnetico uniforme può essere utilizzato per separare ioni aventi diversi rapporti di carica su massa da dispositivi detti *spettrometri di massa*. 
 
 Vediamo una semplice schematizzazione di come funziona uno di questi strumenti. Gli ioni vengono inizialmente accelerati. Se, come spesso succede, viene utilizzato un campo elettrostatico, ogni ione avrà una energia cinetica iniziale
 
@@ -449,6 +449,8 @@ Se confrontiamo questa relazione con quella ottenuta per lo spettromero di Demps
 
 ### Il ciclotrone
 
+{{% accordion id="ciclotrone" label="Argomento opzionale" %}}
+
 Consideriamo due cavità semicilindriche conduttrici poste ad una d.d.p. variabile $\Delta V = V_0 \sin (\omega_{RF} t)$ ed immerse in un campo magnetico uniforme $\vec{B}$ ortogonale alle loro basi. All'interno delle cavità il campo elettrico è essenzialmente nullo. Gli ioni vengono iniettati nel centro del sistema e inizialmente accelerati dalla d.d.p., così che la loro energia cinetica sia $U_k = q \Delta V$. Entrati in una delle due cavità, gli ioni vengono deflessi dal campo magnetico e ne escono dopo un tempo che è semplicemente la metà del periodo del moto circolare di una carica in un campo magnetico uniforme, cioè
 
 $$
@@ -461,7 +463,8 @@ $$
 v_{\rm max} = \frac{qBR}{m}.
 $$
 
-Il principio del ciclotrone è alla base di tutti i moderni acceleratori di particelle circolare (come LHC), e quindi di tutte le loro applicazioni (*imaging*, terapia adronica, *ecc*).
+Il principio del ciclotrone è alla base di tutti i moderni acceleratori di particelle circolare (come LHC), e quindi di tutte le loro applicazioni (<i>imaging</i>, terapia adronica, <i>ecc</i>).
+{{% /accordion %}}
 
 # Campi magnetici prodotti da correnti
 
