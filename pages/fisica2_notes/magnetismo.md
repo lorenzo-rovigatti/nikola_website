@@ -518,13 +518,35 @@ $$
 d\vec{B}(\vec{r} ) = \frac{\mu_0}{4 \pi} \frac{q  \vec{v} \times \hat{r}}{r^2} n \Sigma dl = \frac{\mu_0}{4 \pi} \frac{q \vec{v} \times \hat{r}}{r^2} n d\tau.
 $$
 
-Questa è l'espressione del campo generata dagli $N = n d\tau$ portatori di carica presenti nel volumetto $d\tau = \Sigma dl$. Il campo generato da ognuno di questi portatori sarà quindi pari a $d\vec{B}(\vec{r} ) / n d\tau$, da cui si ricava il campo dovuto ad una semplice carica $q$ in movimento con velocità $\vec{v}$
+Questa è l'espressione del campo generata dagli $dN = n d\tau$ portatori di carica presenti nel volumetto $d\tau = \Sigma dl$. Il campo generato da ognuno di questi portatori sarà quindi pari a $d\vec{B}(\vec{r} ) / n d\tau$, da cui si ricava il campo dovuto ad una semplice carica $q$ in movimento con velocità $\vec{v}$
 
 $$
 \vec{B} = \frac{\mu_0}{4 \pi} \frac{q \vec{v} \times \hat{r}}{r^2}.
 $$
 
 Poiché dipende unicamente dal valore della carica e dalla velocità della particella, questa espressione ha carattere del tutto generale. È chiaro quindi come una carica in moto generi *sempre* un campo magnetico, indipendentemente dalle cause che generano (o hanno generato) il moto. Questo risultato si può confermare misurando i campi magnetici generati da sistemi elettrostatici messi in moto, come fatto per la prima volta da Rowland nel 1878 con un disco carico rotante.
+
+## Spira circolare
+
+Consideriamo un punto generico posto sull'asse di una spira circolare di raggio $R$ in cui scorre una corrente $i$. Se prendiamo l'asse $x$ parallelo alla normale della spira, il punto generico ha coordinate $P = (x, 0, 0)$. Ogni porzione orientata della spira  $d\vec{l}$ è posta a distanza $\vec{r}$ da $P$, con $d\vec{l} \perp \vec{r}$, e il campo che genera vale
+
+$$
+d\vec{B} = \frac{\mu_0 i}{4 \pi r^2} d\vec{l} \times \hat{r}.
+$$
+
+Poiché le componenti $y$ e $z$ del campo generato da due porzioni di spira opposte si annullano, resta solo la componente $x$, che varrà
+
+$$
+dB_x = \frac{\mu_0 i \cos \theta}{4 \pi r^2} = \frac{\mu_0 i R}{4 \pi r^3},
+$$
+
+dove abbiamo considerato che $\cos\theta = R / r$. Integrando su tutta la spira (e considerando che $\hat{x}$ è parallela alla normale della spira, $\hat{n}$) otteniamo
+
+$$
+\vec{B} = \int\_{\rm spira} dB_x \hat{n}  = \frac{\mu_0 i 2 \pi R^2 \hat{n}}{4 \pi r^3} = \frac{\mu_0 2 \Sigma \hat{n}}{4 \pi r^3} = \frac{\mu_0}{4 \pi} \frac{2 \vec{m}}{r^3}
+$$
+
+dove abbiamo utilizzato la definizione di momento di dipolo magnetico, $\vec{m} = i \Sigma \hat{n}$, definita [precedentemente](#momenti-meccanici-su-circuiti-piani). L'espressione trovata è formalmente equivalente a quella del dipolo elettrico, $\vec{E} = \frac{1}{4 \pi \epsilon_0} \frac{\vec{p}}{r^3}$. Una spira si comporta quindi come un *dipolo magnetico* non solo dal punto di vista di forze e momenti (come visto in precedenza), ma anche per quanto riguarda il campo generato.
 
 # Legge di Ampère
 
@@ -1059,4 +1081,4 @@ e nella versione in presenza di dielettrici e mezzi magnetizzati:
 \begin{align}
 \vec{\nabla} \times \vec{D} = 0 \qquad & \vec{\nabla} \times \vec{H} = \vec{j}\\\\
 \vec{\nabla} \cdot \vec{D} = \rho \qquad & \vec{\nabla} \cdot \vec{H} = 0
-\end{align}dfo
+\end{align}

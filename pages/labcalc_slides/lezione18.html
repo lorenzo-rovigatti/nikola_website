@@ -258,11 +258,11 @@ Utile in casi molto specifici, in generale usate <code>printf("%s\n", stringa);<
 int main() {
     char parola[100], ch;
     
-    printf("Inserisci una parola di massimo 5 caratteri\n");
+    printf("> Inserisci una parola di massimo 5 caratteri\n");
     scanf("%5s", parola);
-    printf("La parola inserita e' '%s'\n", parola);
+    printf("> La parola inserita e' '%s'\n", parola);
     
-    printf("Nel buffer sono rimasti i seguenti caratteri:\n");
+    printf("> Nel buffer sono rimasti i seguenti caratteri:\n");
     while((ch = getchar()) != '\n') {
         putchar(ch);
     }
@@ -274,11 +274,11 @@ int main() {
 
 ```text [1-2|1-4|5-6|]
 $ ./es_getchar_buffer
-Inserisci una parola di 5 caratteri, senza spazi
+> Inserisci una parola di 5 caratteri, senza spazi
 cosa restera' nel buffer?
-La parola inserita e' 'cosa'
-Nel buffer sono rimasti i caratteri:
-    restera' nel buffer?
+> La parola inserita e' 'cosa'
+> Nel buffer sono rimasti i caratteri:
+restera' nel buffer?
 ```
 <!-- .element class="fragment" -->
 

@@ -131,8 +131,8 @@ double square(double x) {
 }
 
 int main() {
-    double num = 3.0, num_sqr = square(num);
-    printf("%lf^2 == %lf\n", num, num_sqr);
+    double num = 3.0;
+    printf("%lf^2 == %lf\n", num, square(num));
     return 0;
 }
 ```
@@ -150,7 +150,7 @@ $ ./es_passaggio
 # Passaggio *by value* e *scope*
 
 * Una variabile esiste **solamente** tra le parentesi graffe più interne che la circondano
-* Variabili con nomi uguali ma scope diversi non hanno **nessun** legame fra di loro
+* Variabili con nomi uguali ma *scope* diversi non hanno **nessun** legame fra di loro
 
 ```C [|5,6|5,6,11|14|]
 #include <stdio.h>
@@ -275,10 +275,10 @@ int main() {
 
 ```text
 parametro_multi.c:6:31: error: array type has incomplete element type ‘double[]’
-    6 | void inizializza_wrong(double my_array[][]);
+              6 | void inizializza_wrong(double my_array[][]);
 parametro_multi.c: In function ‘main’:
 parametro_multi.c:14:20: error: type of formal parameter 1 is incomplete
-    14 |  inizializza_wrong(a);
+             14 |  inizializza_wrong(a);
 ```
 <!-- .element class="fragment" -->
 
@@ -424,7 +424,7 @@ int main() {
   for(i = 0; i < LEN - 1; i++) {
     stringa[i] = drand48() * (91 - 65) + 65;
   }
-  stringa[LEN - 1] = '\0'; // l'ultimo carattere deve il "fine stringa"
+  stringa[LEN - 1] = '\0'; // l'ultimo carattere deve essere il "fine stringa"
     
   printf("%s\n", stringa); // stampa "VCZBCOCKF"
     
@@ -539,10 +539,10 @@ $ gcc -o es_init_sbagliato es_init_sbagliato.c
 prova.c: In function ‘main’:
 prova.c:5:9: error: assignment to expression with array type
     3 |  parola = "ciao";
-        |         ^
+      |         ^
 prova.c:6:11: error: expected expression before ‘{’ token
     4 |  parola = {'c', 'i', 'a', 'o'};
-        |
+      |         ^
 ```
 
 <div class="fragment focus">
