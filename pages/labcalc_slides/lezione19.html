@@ -57,7 +57,7 @@ La lunghezza della parola inserita è 33
 # Copiare stringhe: `strcpy` e `strncpy`
 
 * `char *strcpy(char *dest, const char *origine);` copia `origine` in `dest`
-    * semplice da usare ma è facile generare *undefined behaviour*
+    * semplice da usare ma pericoloso per possibili *undefined behaviour*
 * `char *strncpy(char *dest, const char *origine, size_t num);` copia *al più* `num` caratteri di `origine` in `dest`
     * potete assicurarvi di non copiare più caratteri di quanti compongano `dest`
     * se `strlen(origine) >= num` il carattere di fine riga non viene copiato
@@ -75,20 +75,20 @@ Entrambe le funzioni restituiscono <code>dest</code>, il puntatore alla stringa 
 #include <stdio.h>
 
 int main() {
-    char frase[100] = "ciao mondo";
-    char dest1[100], dest2[10], dest3[10];
+  char frase[100] = "ciao mondo";
+  char dest1[100], dest2[10], dest3[10];
     
-    strcpy(dest1, frase);
-    strcpy(dest2, frase); // l'ultimo carattere finisce in dest2[10], che non esiste...
-    strncpy(dest3, frase, 10);
-    dest3[9] = '\0'; // assicuriamoci che l'ultimo carattere sia '\0'
+  strcpy(dest1, frase);
+  strcpy(dest2, frase); // oh no, l'ultimo carattere finisce in dest2[10]!
+  strncpy(dest3, frase, 10);
+  dest3[9] = '\0'; // assicuriamoci che l'ultimo carattere sia '\0'
     
-    printf("frase: %s\n", frase);
-    printf("dest1: %s\n", dest1);
-    printf("dest2: %s\n", dest2);
-    printf("dest3: %s\n", dest3);
+  printf("frase: %s\n", frase);
+  printf("dest1: %s\n", dest1);
+  printf("dest2: %s\n", dest2);
+  printf("dest3: %s\n", dest3);
     
-    return 0;
+  return 0;
 }
 ```
 
@@ -126,18 +126,18 @@ dest3: ciao mond
 #define LEN 20
 
 int main() {
-    char frase[LEN] = "";
-    char parola[LEN];
+  char frase[LEN] = "";
+  char parola[LEN];
     
-    while(strlen(frase) < LEN - 1) {
-        printf("Inserire una parola (mancano %d caratteri):\n", LEN - strlen(frase) - 1);
-        scanf("%s", parola);
-        strncat(frase, parola, LEN - strlen(frase));
-    }
-    frase[LEN - 1] = '\0';
-    printf("La frase inserita è: %s\n", frase);
+  while(strlen(frase) < LEN - 1) {
+    printf("Inserire una parola lunga massimo %d:\n", LEN - strlen(frase) - 1);
+    scanf("%s", parola);
+    strncat(frase, parola, LEN - strlen(frase));
+  }
+  frase[LEN - 1] = '\0';
+  printf("La frase inserita è: %s\n", frase);
     
-    return 0;
+  return 0;
 }
 ```
 
@@ -248,13 +248,13 @@ sedia
 ```C [|2-5|7-10|]
 // definizione di main e variabili, apertura del file (che va chiuso alla fine)
 while(fgets(parole[n_parole], MAX_LENGTH - 1, input) != NULL) {
-    n_parole++;
+  n_parole++;
 }
 fclose(input);
 
 printf("Ho trovato le seguenti %d parole:\n", n_parole);
 for(i = 0; i < n_parole; i++) {
-    printf("%s", parole[i]); // non serve il '\n' perché fgets lo lascia nella stringa
+  printf("%s", parole[i]); // fgets lascia il '\n' nella stringa
 }
 ```
 <!-- .element class="fragment" -->
@@ -274,11 +274,13 @@ sedia
 
 # Altre funzioni che possono essere utili
 
-* `int fputs(const char *str, FILE *stream)` scrive `str` su `stream`
-* `char *strtok(char *str, const char *delimiters)` divide `str` in *token* separati dai caratteri contenuti in `delimiters`
-* `const char *strstr(const char *str1, const char *str2)` cerca `str2` in `str1` e restituisce un puntatore alla prima porzione di `str1` uguale `str2`.
-* `const char *strpbrk(const char *str1, const char *str2)` restituisce un puntatore al primo carattere di `str1` uguale a uno dei caratteri presenti in `str2`
-* `sprintf(char *str, ...)` permette di scrivere su una stringa
+<ul>
+    <li class="fragment"><code>int fputs(const char *str, FILE *stream)</code> scrive <code>str</code> su <code>stream</code></li>
+    <li class="fragment"><code>char *strtok(char *str, const char *delimiters)</code> divide <code>str</code> in <em>token</em> separati dai caratteri contenuti in <code>delimiters</code></li>
+    <li class="fragment"><code>const char *strstr(const char *str1, const char *str2)</code> cerca <code>str2</code> in <code>str1</code> e restituisce un puntatore alla prima porzione di <code>str1</code> uguale <code>str2</code></li>
+    <li class="fragment"><code>const char *strpbrk(const char *str1, const char *str2)</code> restituisce un puntatore al primo carattere di <code>str1</code> uguale a uno dei caratteri presenti in <code>str2</code></li>
+    <li class="fragment"><code>sprintf(char *str, ...)</code> permette di scrivere su una stringa</li>
+</ul>
 
 ```C
 char filename[100];
@@ -307,7 +309,7 @@ $$
 dove $F(x)$ è detta funzione primitiva
 
 <div class="warning fragment">
-Che facciamo se $f(x)$ non ha un'espressione analitica o $F(x)$ non è nota?
+Che facciamo se $f(x)$ non ha un'espressione analitica o $F(x)$ non è nota (esempio: una gaussiana?)
 </div>
 
 ---
@@ -375,22 +377,22 @@ int main() {
 
 ```C [|1|5-6|8-12|14-17]
 void leggi_dati(double x[], double fx[]) {
-    int i;
-    char filename[100];
+  int i;
+  char filename[100];
     
-    // il nome del file da aprire dipende dal valore di N
-    sprintf(filename, "poly_N%d.dat", N);
+  // il nome del file da aprire dipende dal valore di N
+  sprintf(filename, "poly_N%d.dat", N);
     
-    FILE *input = fopen(filename, "r");
-    if(input == NULL) {
-        fprintf(stderr, "Errore, il file %s non è leggibile\n", filename);
-        exit(1);
-    }
+  FILE *input = fopen(filename, "r");
+  if(input == NULL) {
+    fprintf(stderr, "Errore, il file %s non è leggibile\n", filename);
+    exit(1);
+  }
     
-    for(i = 0; i < N; i++) {
-        fscanf(input, "%lf %lf", x + i, fx + i); // usiamo l'aritmetica dei puntatori
-    }
-    fclose(input);
+  for(i = 0; i < N; i++) {
+    fscanf(input, "%lf %lf", x + i, fx + i); // usiamo l'aritmetica dei puntatori
+  }
+  fclose(input);
 }
 ```
 

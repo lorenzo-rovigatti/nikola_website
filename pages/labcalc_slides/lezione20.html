@@ -137,24 +137,24 @@ $$
 // #define e prototipi
 
 int main() {
-    int i;
-    double R1 = 0.5, R2 = 0.4, d = 0.4;
-    double lati[3] = {R1 + R2, 2 * R2, 2 * R2}; // vedi figura
-    double centro_1[3] = {0, 0, 0}, centro_2[3] = {d, 0, 0};
-    double punto[3];
-    srand48(time(NULL));
+  int i;
+  double R1 = 0.5, R2 = 0.4, d = 0.4;
+  double lati[3] = {R1 + R2, 2 * R2, 2 * R2}; // vedi figura
+  double centro_1[3] = {0, 0, 0}, centro_2[3] = {d, 0, 0};
+  double punto[3];
+  srand48(time(NULL));
     
-    int dentro = 0;
-    for(i = 0; i < N; i++) {
-        estrai_punto(lati, punto);
-        if(nella_sfera(centro_1, R1, punto) && nella_sfera(centro_2, R2, punto)) {
-            dentro++;
-        }
+  int dentro = 0;
+  for(i = 0; i < N; i++) {
+    estrai_punto(lati, punto);
+    if(nella_sfera(centro_1, R1, punto) && nella_sfera(centro_2, R2, punto)) {
+      dentro++;
     }
+  }
     
-    double volume = dentro / (double) N * lati[0] * lati[1] * lati[2];
-    printf("%d %lf\n", N, volume);
-    return 0;
+  double volume = dentro / (double) N * lati[0] * lati[1] * lati[2];
+  printf("%d %lf\n", N, volume);
+  return 0;
 }
 
 // corpo delle funzioni
@@ -164,7 +164,7 @@ int main() {
 
 # Calcolo del volume - funzioni accessorie
 
-```C [|1-4|6,11-14|7,16-20|]
+```C [|1-4|6,11-16|7,18-22|]
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -176,14 +176,16 @@ void estrai_punto(double lati[], double p[]);
 // qui il main
 
 int nella_sfera(double centro[], double R, double p[]) {
-    double dist_sqr = SQR(centro[0] - p[0]) + SQR(centro[1] - p[1]) + SQR(centro[2] - p[2]);
-    return dist_sqr < SQR(R);
+  double dist_sqr = SQR(centro[0] - p[0]) + 
+                    SQR(centro[1] - p[1]) + 
+                    SQR(centro[2] - p[2]);
+  return dist_sqr < SQR(R);
 }
 
 void estrai_punto(double lati[], double p[]) {
-    p[0] = drand48() * lati[0]; // numero compreso tra 0 e R1 + R2
-    p[1] = (drand48() - 0.5) * lati[1]; // numero compreso tra -R2 e R2
-    p[2] = (drand48() - 0.5) * lati[2]; // numero compreso tra -R2 e R2
+  p[0] = drand48() * lati[0]; // numero compreso tra 0 e R1 + R2
+  p[1] = (drand48() - 0.5) * lati[1]; // numero compreso tra -R2 e R2
+  p[2] = (drand48() - 0.5) * lati[2]; // numero compreso tra -R2 e R2
 }
 ```
 <!-- .element style="font-size: 53%" -->
@@ -222,17 +224,17 @@ Il metodo è generale e può essere utilizzato per superfici o volumi per cui no
 
 ---
 
-# È tempo di vendicarvi: il questionario OPIS!
+# Il questionario OPIS: utile se compilato con attenzione
 
-1. Andate su www.uniroma1.it 
+1. Andate su www.uniroma1.it $\to$ STUDENTI 
 2. Fate il login per entrare nella vostra area personale
 3. Cliccate su CORSI DI LAUREA 
 4. Cliccate su OPINIONI STUDENTI
 5. Inserite il codice
 
-# 86LN95GR
+# 9XP4NT0L
 
-<div class="focus fragment">
+<div class="focus">
 Ricordatevi che il questionario è anonimo
 </div>
                 
