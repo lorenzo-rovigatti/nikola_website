@@ -779,7 +779,7 @@ $$
 $$
 La capacità di separare diverse componenti, detta anche *potere risolutore* dello strumento, è definita come $R \equiv \lambda / \Delta \lambda = Nn$ ed è quindi proporzionale sia all'ordine del massimo $n$ che al numero di fenditure $N$.
 
-Ecco un esempio:
+Ecco un esempio che mostra sia l'intensità per lunghezza d'onda (blue  e verde) che totale (linea nera tratteggiata):
 
 <img src="../../images/fisica2/interference_lattice_diff.png" width="800"/>
 
