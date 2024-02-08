@@ -97,6 +97,12 @@ In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecch
 </ul>
 {{% /accordion %}}
 
+{{% accordion id="2023" label="A.A. 2023/2024" %}}
+<ul>
+    <li><a href="../pdfs/fisica2_exams/2023_Gennaio.pdf">Gennaio</a></li>
+</ul>
+{{% /accordion %}}
+
 ## Note del corso
 
 Qui sotto trovate delle note che ho compilato negli anni. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi queste note non vanno utilizzate per studiare ma, al limite, per avere un'idea dettagliata del programma e del livello di approfondimento richiesto.
