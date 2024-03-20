@@ -36,24 +36,24 @@ video {
 }
 
 #publication-year-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
   list-style: none;
-  margin: auto;
-  text-align: center;
-  padding-top: 10px;
-}
-
-#publication-year-list li:first-child {
-  border-left: 1px solid black;
+  margin-left: -3ch;
+  clip-path: inset(0 0 0 3ch);
 }
 
 #publication-year-list li {
-  border-right: 1px solid black;
+  padding-left: 1ch;
 }
 
-#publication-year-list li {
+#publication-year-list li::before {
+  content: '•';
   display: inline-block;
-  padding: 0 0.5rem;
-  min-width: 3rem;
+  margin-right: 1ch;
+  width: 1ch;
+  text-align: center;
 }
 
 /* Table of contents */
