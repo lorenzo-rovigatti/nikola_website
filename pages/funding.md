@@ -11,6 +11,8 @@
 
 I am very grateful for the research support I have received throughout my career. I have been PI or co-PI of the following projects, which greatly helped me to carry out my research:
 
+* 2023-2024: PI of the ISCRA B project *Rheology of associative polymer networks* (RhAsPoNe)*, from CINECA (96,000 GPU hours).
+* 2023-2025: Co-PI of the PRIN 2022 PNRR project *Amorphous Rheology (AmoRhe)*, from MUR (231,417 €).
 * 2023-2025: PI of the PRIN 2022 project *Efficient Light Harvesting with Self-assembled Peptide Nanostructures (LANTERN)*, from MUR (244,437 €). 
 * 2022-2023: Co-PI of the [CECAM/CCP5 sandpit](https://www.ccp5.ac.uk/cecam-ccp5-sandpits/) project *Calculation of Surface Free Energy of Molecular and Coarse- Grained Systems* (24,000 £).
 * 2022-2023: PI of the ISCRA B project *Understanding associative polymer networks: from minimal models to realistic systems (AssoPoN)*, from CINECA (71,800 GPU hours).
