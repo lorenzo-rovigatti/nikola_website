@@ -95,7 +95,8 @@ class CompileMyst(PageCompiler):
                     "embed_stylesheet": True,
                     'output_encoding': 'unicode',
                     'myst_suppress_warnings': ["myst.header"],
-                    'myst_heading_anchors' : 4
+                    'myst_heading_anchors' : 4,
+                    'myst_dmath_allow_labels' : True
                 },
                 parser=Parser(),
             )
