@@ -11,6 +11,10 @@
 
 Here you can find the slides of selected seminars I delivered during the years (after I switched to [reveal.js](https://revealjs.com/) to prepare my presentations).
 
+## 2024
+
+* <a href="link://slug/dresda_2024">Designing enhanced entropy binding in associative polymers</a> (invited talk at the [IntCha24 workshop](https://www.pks.mpg.de/intcha24))
+
 ## 2023
 
 * <a href="link://slug/fs_2023">Harnessing entropy to drive phase separation</a> (invited seminar for the Soft and Biological Matter class)

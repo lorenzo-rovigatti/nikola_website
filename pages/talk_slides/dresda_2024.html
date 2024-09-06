@@ -1,0 +1,512 @@
+<!--
+.. title: Designing enhanced entropy binding in associative polymers
+.. slug: dresda_2024
+.. date: 2024-04-22 13:12:44 UTC+02:00
+.. tags:
+.. category: talks
+.. link:
+.. description:
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. is_html: true
+-->
+
+<section data-background-image="/images/talks/dresda_2024/background.png" data-background-size="50%" data-background-opacity="0.1">
+    <h1>
+        Designing enhanced entropy binding in associative polymers
+    </h1>
+
+    <h3>Lorenzo Rovigatti</h3>
+    <h4 style="margin:1em">Physics Department, Sapienza University of Rome</h4>
+    <h4>IntCha24, April 23rd, 2024</h4>
+</section>
+
+<section>
+    <h1>A foreword</h1>
+
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="/images/talks/dresda_2024/workshop_age.png" width=350>
+        <img class="fragment" data-fragment-index="0" src="/images/talks/dresda_2024/grinds_my_gear.jpg" width=350>
+    </div>
+
+    <small class="fragment" data-fragment-index="0">I apologise to those of you who can't stand low-quality memes in scientific talks: I'm not a fan either</small>
+
+    <ol>
+        <li class="fragment"><span class="fragment strike">"The $N!$ factor accounts for the indistinguishability of the particles"</span></li>
+        <li class="fragment">"Entropy is a measure of disorder"</li>
+    </ol>
+
+    <h2 class="fragment block-title" style="margin-top: 1em">Alternative title for today: "Harnessing entropy to drive phase separation"</h2>
+
+
+</section>
+
+<section>
+    <h2>The classic, molecular "gas-liquid" picture</h2>
+
+    <div>
+        <div class="block-title">The Van der Waals recipe for the gas-liquid phase separation:</div>
+
+        <ul>
+            <li>A "long-range" attraction</li>
+            <li>A "short-range" repulsion</li>
+        </ul>
+    </div>
+
+    <img src="/images/talks/dresda_2024/lj.png" width=300>
+
+    <div class="fragment spacing-1-top">
+        <div class="block-title">The transition takes place between two phases</div>
+
+        <ul>
+            <li>A low-density phase with high entropy $S_g$ and high energy $U_g$ (the <em>gas</em>)</li>
+            <li>A high-density phase with $S_l < S_g$ and $U_l < U_g$ (the <em>liquid</em>)</li>
+        </ul>
+    </div>
+</section>
+
+<!--<section>
+    <h2>Tuning the phase diagram</h2>
+
+    <div>
+        <h4 class="block-title">Example: the effect of the range of a spherical attraction</h4>
+
+        <img src="/images/talks/dresda_2024/hs.png" width="8%" style="margin-bottom:0em"><br/>
+
+        <div style="display:flex">
+            <div style="flex:33%">
+                $\approx$ particle size
+                <img src="/images/talks/dresda_2024/pd_long_range.png">
+            </div>
+
+            <div style="flex:34%" class="fragment fade-in">
+                Fraction of particle size
+                <img src="/images/talks/dresda_2024/pd_short_range.png">
+            </div>
+
+            <div style="flex:30%" class="fragment fade-in">
+                <img src="/images/talks/dresda_2024/pd_lysozyme.png">
+            </div>
+        </div>
+
+        <small>P. Camp, <em>Phys. Rev. E</em> (1997), Muschol and Rosenberger, <em>J. Chem. Phys.</em> (1997)</small><br/>
+    </div>
+</section>-->
+
+<section>
+    <h2>The soft-matter picture</h2>
+
+    <ul>
+        <li>Particle-particle interactions can be tuned to a large extent</li>
+        <li>The phase behaviour can (at least in principle) finely tuned</li>
+        <li class="fragment" data-fragment-index="0">A classic example: the depletion interaction
+            <ul>
+                <li>Mixture of small (depletants) and big (colloids) particles</li>
+                <li>There is only excluded volume: energy is 0 or $\infty$ $\to$ only entropy counts</li>
+                <li class="fragment" data-fragment-index="1">Two colloids get close $\to$ depletants have more space $\to$ higher entropy</li>
+            </ul>
+        </li>
+    </ul>
+
+    <img class ="fragment" data-fragment-index="0" src="/images/talks/dresda_2024/depletion_1.png" width=400>
+    <img class ="fragment" data-fragment-index="1" src="/images/talks/dresda_2024/depletion_2.png" width=400>
+
+    <div class="block-title fragment" data-fragment-index="1">Colloids feel an <em>effective</em> attraction due to entropy alone</div>
+</section>
+
+<section>
+    <h2>Different mechanisms, similar phase diagrams</h2>
+
+    <ul>
+        <li>The "molecular" phase diagram[1]</li>
+        <li class="fragment" data-fragment-index="1">A depletion phase diagram[2]</li>
+    </ul>
+
+    <br/>
+    <img src="/images/talks/dresda_2024/pd_lysozyme.png" width=300>
+    <img src="/images/talks/dresda_2024/pd_depletion.png" width=400 class="fragment" data-fragment-index="1" style="margin-top:-30px">
+
+    <div class="block-title fragment" data-fragment-index="2" style="font-size: 110%">Complex behaviour can be obtained with more complicated building blocks</div>
+
+    <small style="margin-top:10px">[1] Muschol and Rosenberger, <em>J. Chem. Phys.</em> (1997), [2] P. J. Lu <em>et al., Nature</em> (2008)</small>
+</section>
+
+<!--<section>
+    <h2>Tuning the phase behaviour of soft-matter systems</h2>
+
+    <h2 class="block-title">Self-assembly <em>vs.</em> phase separation</h2>
+
+    <img src="/images/talks/dresda_2024/pd_janus.png" width="32%">
+    <img src="/images/talks/dresda_2024/pd_john.png" width="32%">
+    <img src="/images/talks/dresda_2024/pd_2A9B.png" width="32%">
+
+    <small>[1] F. Sciortino, A. Giacometti and G. Pastore, <em>Phys. Rev. Lett.</em> (2009)</small></br>
+    <small>[2] J. Russo, J. M. Tavares, P. I. C. Teixeira, M. M. Telo da Gama and F. Sciortino, <em>Phys. Rev. Lett.</em> (2011)</small></br>
+    <small>[3] L. Rovigatti, J. M. Tavares and F. Sciortino, <em>Phys. Rev. Lett.</em> (2013)</small>
+</section>-->
+
+<section>
+    <h2>Increasing complexity: flexibility &amp; deformability</h2>
+
+    Many soft-matter building blocks are polymer-based $\to$ internal degrees of freedom
+
+    <ul>
+        <li>Polymers (chains, rings, star polymers, <em>etc.</em>)</li>
+        <li class="fragment" data-fragment-index="0">Micron-sized polymer networks (microgels)</li>
+        <li class="fragment" data-fragment-index="1">DNA-based particles (DNA nanostars, DNA origami, <em>etc.</em>)</li>
+    </ul>
+
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="/images/talks/dresda_2024/polymers.png" width=800>
+        <img class="fragment current-visible" data-fragment-index="0" src="/images/talks/dresda_2024/microgels.png" width="500">
+        <img class="fragment" data-fragment-index="1" src="/images/talks/dresda_2024/DNA_tetrahedron.png" width="800">
+    </div>
+
+</section>
+
+<section>
+    <h2>Associative polymers</h2>
+
+    <ul>
+        <li>Polymers decorated with attractive monomers</li>
+        <li class="fragment" data-fragment-index="0">Diluted $\to$ single-chain nanoparticles (SCNPs)[1]</li>
+        <li class="fragment" data-fragment-index="1">Concentrated $\to$ transient polymer networks (useful as <em>e.g.</em> model biosystems[2])</li>
+        <li class="fragment" data-fragment-index="2">Strong but exchangeable bonds $\to$ covalent adaptable networks (<em>e.g.</em> vitrimers[3])</li>
+    </ul>
+
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="/images/talks/dresda_2024/AAAA.png" width=800>
+        <img class="fragment current-visible" data-fragment-index="0" src="/images/talks/dresda_2024/SCNPs.png" width="800">
+        <img class="fragment current-visible" data-fragment-index="1" src="/images/talks/dresda_2024/sticker_spacer.png" width="600">
+        <img class="fragment" data-fragment-index="2" src="/images/talks/dresda_2024/vitrimers.png" width="650">
+    </div>
+
+    <small class="fragment" data-fragment-index="0">[1] A. P. P. Kröger and J. M. J. Paulusse, <em>J. Control. Release</em> (2018)</small><br/>
+    <small class="fragment" data-fragment-index="1">[2] J.-M. Choi, A. S. Hoblehouse, and R. V. Pappu <em>Annu. Rev. Biophys.</em> (2020)</small><br/>
+    <small class="fragment" data-fragment-index="2">[3] W. Denissen, J. M. Winne, and Filip E. Du Prez, <em>Chem. Sci.</em> (2016)</small>
+
+</section>
+
+<section>
+    <h2>What contributes to the thermodynamics of associative polymers?</h2>
+
+    <ul>
+        <li>Monomers can form both intra- and inter-molecular bonds</li>
+        <li>I will focus on the <b>fully-bonded state</b>: all bonds are formed, only entropy plays a role</li>
+        <li class="fragment" data-fragment-index="0">At low concentrations polymers don't meet: intra-molecular bonds are more likely</li>
+        <li class="fragment" data-fragment-index="1">Forming an intra-molecular bond costs entropy</li>
+        <li class="fragment" data-fragment-index="2">All things being equal, inter-molecular bonds are combinatorially favoured</li>
+    </ul>
+
+    <div class="r-stack fragment" data-fragment-index="0">
+        <img class="fragment fade-out" data-fragment-index="1" src="/images/talks/dresda_2024/rho_entropy.png" width=400>
+        <img class="fragment current-visible" data-fragment-index="1" src="/images/talks/dresda_2024/intra_entropy.png" width="600">
+        <img class="fragment" data-fragment-index="2" src="/images/talks/dresda_2024/inter_entropy.png" width="700">
+    </div>
+
+    <div class="block-title fragment" data-fragment-index="3">Overall, the number of inter-molecular bonds increases with density</div>
+</section>
+
+<section>
+    <h2>The thermodynamics of associative polymers - results from literature</h2>
+
+    <div>
+    Theory[1], experiments[2] and simulations[3] have shown that "simple" associative polymers do not phase separate
+    </div>
+
+    <div class="fragment">
+        <ul>
+            <li>The conversion of intra- to inter-molecular bonds is continuous</li>
+            <li>SCNPs start to bind to each other and form transient polymer networks</li>
+        </ul>
+        <img src="/images/talks/dresda_2024/continuous_association.png" width="650">
+    </div>
+
+    <small>[1] A. N. Semenov and M. Rubinstein, <em>Macromolecules</em> (1998), [2] D. E. Whitaker, C. S. Mahon, and D. A. Fulton <em>Angew. Chem.</em> (2013), [3] M. Formanek <em>et al.</em>, <em>Macromolecules</em> (2021)</small>
+
+</section>
+
+<section>
+    <h2>Associative polymer models</h2>
+
+    <div class="block-title">The goal: control the thermodynamics by manipulating the sequence</div>
+
+    <ul>
+        <li>Equispaced reactive monomers along the chain</li>
+        <li>Three models: one, two or three types of (alternating) reactive monomers</li>
+        <li>Only like-type reactive monomers can bind to each other</li>
+    </ul>
+
+    <img src="/images/talks/dresda_2024/models.png" width=800>
+
+</section>
+
+<section>
+    <h2>The low-density fully-bonded limit</h2>
+
+    <img src="/images/talks/dresda_2024/folded.png" width=500>
+
+    <ul>
+        <li>In all three cases the energy is the same</li>
+        <li>To satisfy all bonds, polymers have to "fold"</li>
+        <li>Closing a loop costs entropy: longer loop $\to$ higher cost</li>
+        <li>Larger distance between "compatible" monomers $\to$ longer loops</li>
+        <!--<li class="fragment" data-fragment-index="0">The cost per reactive site is $\approx -4\, k_B$ for $(AAAA)_6$ and $\approx -5\, k_B$ for $(ABCD)_6$</li>-->
+    </ul>
+</section>
+
+<section>
+    <h2>Effective (two-body) chain-chain interaction</h2>
+
+    <img src="/images/talks/dresda_2024/Veff_conf.png" height=150 style="margin:0">
+    <div>
+        <ul>
+            <li>All bonds are formed $\to$ the only contribution is entropic</li>
+            <li class="fragment" data-fragment-index="1">Only intra-molecular bonds $\to$ strong repulsion</li>
+            <li class="fragment" data-fragment-index="2">Intra- and inter-molecular bonds $\to$ from weakly repulsive to strongly attractive</li>
+            <li class="fragment" data-fragment-index="2">In the $(AAAA)_6$ system, $\beta V \approx 0$ $\to$ attraction $\approx$ repulsion </li>
+        </ul>
+
+        <img src="/images/talks/dresda_2024/Veff_repulsive.png" width=440 class="fragment" data-fragment-index="1">
+        <img src="/images/talks/dresda_2024/Veff.png" width=450 class="fragment" data-fragment-index="2">
+
+    </div>
+</section>
+
+<section>
+    <h2>Equations of state in the fully-bonded limit</h2>
+
+    <img src="/images/talks/dresda_2024/eos.png" height=330>
+
+    <ul>
+        <li>The $(AAAA)_6$ behaves like an ideal gas in a large density range</li>
+        <li>Both "designed" systems display a non-monotonic equation of state</li>
+    </ul>
+
+    <div class="block-title">Signature of phase separation?</div>
+</section>
+
+<section>
+    <h2>Signature of phase separation!</h2>
+
+    <img src="/images/talks/dresda_2024/dc_results_snapshots.png" height=450>
+
+    <ul>
+        <li>In the $(AAAA)_6$ system, the interfaces melt</li>
+        <li>In the designed systems, the density remains heterogeneous</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Robustness checks</h2>
+
+    <div class="block-title" style="font-size:100%">Phase separation is retained if disordered chains or ring polymers are considered</div>
+
+    <img src="/images/talks/dresda_2024/robustness.png" width=900>
+</section>
+
+<section>
+    <h2>Theoretical confirmation</h2>
+
+    <ul>
+        <li>We extend the Semenov and Rubinstein theory[1]</li>
+        <li>We confirm the numerical qualitative trends with number of attractive species</li>
+        <li>We find a quantitative match, perhaps serendipitously</li>
+    </ul>
+
+    <img src="/images/talks/dresda_2024/B2_stefano_AAAA.png" width=400>
+    <img src="/images/talks/dresda_2024/B2_stefano_ABAB.png" width=400>
+
+    <div class="block-title">
+    Theory confirms that the chain-chain repulsion for $(AAAA)_6$ is large enough to suppress phase separation
+    </div>
+
+    <small>[1] A. N. Semenov and M. Rubinstein, <em>Macromolecules</em> (1998)</small>
+</section>
+
+<section data-background-image="/images/talks/dresda_2024/background_second_part.png" data-background-size="70%" data-background-opacity="0.10">
+    <h1>An interesting biological context where this can be relevant</h1>
+</section>
+
+<section>
+    <h1>Membraneless organelles</h1>
+
+    <div>
+        <img src="/images/talks/dresda_2024/gomes_phase_separation.png" width="40%"><br/>
+        <small>E. Gomes and J. Shorter, <em>J. Mol. Bio.</em> 2018</small>
+
+        <ul>
+            <li>Often called (sometimes improperly) biomolecular condensates</li>
+            <li>Liquid-like (they can and do flow, cfr. Brangwynne <em>et al</em>)</li>
+            <li>Made of multivalent (intrinsically-disordered) proteins and/or RNA</li>
+            <li>Act as reservoirs of biomolecules or as microreactors</li>
+            <li>The mechanisms behind their formation are linked to the pathogenesis of several diseases (<em>e.g.</em> Alzheimer's, ALS)</li>
+        </ul>
+    </div>
+</section>
+
+<!--<section>
+    <h1>What are these things made of?</h1>
+
+    <ul>
+        <li>There seems to be many different membraneless organelles in cells</li>
+        <li>Composition and behaviour vary greatly from type to type</li>
+        <li>Made of proteins interacting through intrinsically disordered regions or lock-and-key mechanisms, and/or RNA</li>
+        <li>The main structure is called <em>scaffold</em> and is (usually) formed by phase-separating biomacromolecules</li>
+        <li>Other macromolecules interacting with it are called <em>clients</em></li>
+    </ul>
+</section>-->
+
+<section>
+    <h1>Some evidence for the role of entropy?</h1>
+
+    <ul>
+        <li>These organelles are made of (bio)polymers that can bind to themselves or to others</li>
+        <li>There is flexibility, torsional stiffness, different interaction strengths, thermal energy, ...</li>
+        <li class="fragment" data-fragment-index="1">Simulations on condensate-forming RNA suggests that "our" entropy plays a role</li>
+    </ul>
+
+    <img class="fragment" data-fragment-index="1" src="/images/talks/dresda_2024/RNA_evidence.png" width="80%">
+
+    <small class="fragment fade-in" data-fragment-index="1" style="margin-top:-10px"> H. T. Nguyen et al, <em>Nat. Chem.</em> 2022</small>
+</section>
+
+<section>
+    <h2>Conclusions &amp; perspectives</h2>
+
+    <ul>
+        <li>We find a way to controllably tune the behaviour of associative polymers</li>
+        <li>The resulting phase behaviour is <b>fully</b> determined by entropy</li>
+        <li>The effect may be in play in biological contexts</li>
+        <li class="fragment" data-fragment-index="1">Future work: experimental realisation (with DNA?) and dynamics</li>
+    </ul>
+
+    <div class="fragment" data-fragment-index="1">
+    <img src="/images/talks/dresda_2024/DNA_associative_polymers.png" width=400>
+    </div>
+</section>
+
+<section>
+    <h1>Thank you!</h1>
+
+    Work done in collaboration with F. Sciortino (simulations) &amp; S. Chiani (theory)
+
+    <img src="/images/talks/dresda_2024/thanks_AAAA_polymer.png" width=600><br/>
+
+    <div class="block-title">Some references</div>
+
+    <ul>
+        <li>L. Rovigatti and F. Sciortino, <em>Phys. Rev. Lett.</em> (2022)</li>
+        <li>L. Rovigatti and F. Sciortino, <em>SciPost Phys.</em> (2023)</li>
+        <li>S. Chiani, F. Sciortino, and L. Rovigatti, <em>in preparation</em></li>
+    </ul>
+    <img src="/images/talks/dresda_2024/thanks_ABAB_polymer.png" width=600>
+</section>
+
+<section>
+    <h2>Model &amp; methods - details</h2>
+
+    <ul>
+        <li>Implicit-solvent, coarse-grained description: polymer connectivity (Kremer-Grest) + attraction between the reactive monomers</li>
+        <li>Molecular dynamics simulations to compute two-body (<em>effective interactions</em>) and many-body (<em>e.g.</em> pressure) quantities</li>
+        <li>A three-body potential to enforce a single-bond-per-site constraint and enable a bond-swapping mechanism to speed-up the dynamics</li>
+    </ul>
+</section>
+
+<section>
+    <h1>The three-body potential</h1>
+
+    <table id="three_body">
+        <tr>
+            <td class="rotate">Configuration</td>
+            <td width="33%"><img src="/images/talks/dresda_2024/three_body_first.png"></td>
+            <td width="33%"><img class="fragment fade-in" data-fragment-index="1" src="/images/talks/dresda_2024/three_body_second.png" width="80%"></td>
+            <td width="33%"><img class="fragment fade-in" data-fragment-index="2" src="/images/talks/dresda_2024/three_body_third.png" width="80%"></td>
+        </tr>
+
+        <tr>
+            <td class="rotate"><em>V<sub style="font-size:60%">2</sub></em></td>
+            <td>$-\epsilon$</td>
+            <td><span class="fragment fade-in" data-fragment-index="1">$-2\epsilon$</span></td>
+            <td><span class="fragment fade-in" data-fragment-index="2">$-\epsilon$</span></td>
+        </tr>
+
+        <tr>
+            <td class="rotate"><em>V<sub style="font-size:60%">3</sub></em></td>
+            <td>$0$</td>
+            <td><span class="fragment fade-in" data-fragment-index="1">$\lambda\epsilon$</span></td>
+            <td><span class="fragment fade-in" data-fragment-index="2">$0$</span></td>
+        </tr>
+
+        <tr>
+            <td class="rotate"><em>V<sub style="font-size:60%">2</sub> + V<sub style="font-size:60%">3</sub></em></td>
+            <td>$-\epsilon$</td>
+            <td><span class="fragment fade-in" data-fragment-index="1">$-2 \epsilon + \lambda\epsilon$</span></td>
+            <td><span class="fragment fade-in" data-fragment-index="2">$\epsilon$</span></td>
+        </tr>
+    </table>
+
+    <div class="fragment fade-in">
+        <p>The value of $\lambda$ controls the behaviour</p>
+
+        <ul>
+            <li>$\lambda \geq 1$ $\to$ single-bond-per-patch</li>
+            <li>$\lambda = 1$ $\to$ free swapping!</li>
+        </ul>
+    </div>
+    <div class="spacer"></div>
+
+    <small>F. Sciortino, Eur. Phys. J. E (2017), L. Rovigatti <em>et al., Macromolecules</em> (2018)</small>
+</section>
+
+<section>
+    <h2>Effective potentials from two-chain simulations</h2>
+
+    <img src="/images/talks/dresda_2024/Veff_conf.png" height=120 style="margin:0">
+
+    <ul>
+        <li class="fragment" data-fragment-index="0">Add a contribution depending on the chain-chain distance $R$ to $H$, $H_{\rm bias}(R)$</li>
+        <li class="fragment" data-fragment-index="1">Run simulations to obtain <em>biased</em> averages, $\langle \cdot \rangle_{\rm bias}$</li>
+        <li class="fragment" data-fragment-index="2">Any observable that depends on $R$ can be obtained from biased simulations as
+        $$
+        \langle O(R) \rangle_{\rm unbias} = \langle O(R) \rangle_{\rm bias} e^{\beta H_{bias}(R)}
+        $$
+        </li>
+        <li class="fragment" data-fragment-index="3">If necessary, run simulations with different biases and "glue" the results together, recalling that $U_{\rm eff}(R) = -k_B T \log(g(r)_{\rm unbias})$</li>
+    </ul>
+
+    <div class="r-stack fragment" data-fragment-index="1">
+        <img class="fragment fade-out" data-fragment-index="2" src="/images/talks/dresda_2024/gr_biased.png" width=550>
+        <img class="fragment current-visible" data-fragment-index="2" src="/images/talks/dresda_2024/gr_unbiased.png" width="550">
+        <img class="fragment" data-fragment-index="3" src="/images/talks/dresda_2024/U_eff.png" width="550">
+    </div>
+</section>
+
+<section>
+    <h2>Weak dependence of the # of bonds and $\beta V$ on the spacing</h2>
+
+    <img src="/images/talks/dresda_2024/inter_bonds_M.png" width=450>
+    <img src="/images/talks/dresda_2024/Veff_M.png" width=450>
+
+    Here $M$ is the number of inert monomer separating two nearby attractive monomers
+
+</section>
+
+<section>
+    <h2>The bond-bond autocorrelation function decays to $\approx 0$</h2>
+
+    <img src="/images/talks/dresda_2024/bond_bond_acf.png" width=700><br/>
+
+    Probability that a bond existing at $t = 0$ is still there at $t = 0$ (two-chain simulations)
+</section>
+
+<section>
+    <h2>Phase diagram of the (ABAB)$_6$ model</h2>
+
+    <div class="block-title">Direct-coexistence simulations</div>
+
+    <img src="/images/talks/dresda_2024/pd_BC24.png" height=330> <img src="/images/talks/dresda_2024/BC24_snapshots.png" height=350>
+
+    $T$ is fixed, $\epsilon$ is the depth of the attraction between reactive monomers
+</section>
