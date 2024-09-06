@@ -10,5 +10,5 @@
 -->
 
 * <a href="link://slug/labcalc">Laboratorio di Calcolo</a>
+* <a href="link://slug/comp-bio">Computational Biophysics</a>
 * <a href="link://slug/fisica2">Fisica 2 (Chimica Industriale e Scienze Chimiche)</a>
-

@@ -94,18 +94,20 @@ In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecch
     <li><a href="../pdfs/fisica2_exams/2022_Giugno.pdf">Giugno</a></li>
     <li><a href="../pdfs/fisica2_exams/2022_Luglio.pdf">Luglio</a></li>
     <li><a href="../pdfs/fisica2_exams/2022_Settembre.pdf">Settembre</a></li>
+    <li><a href="../pdfs/fisica2_exams/2022_Novembre.pdf">Novembre</a></li>
 </ul>
 {{% /accordion %}}
 
 {{% accordion id="2023" label="A.A. 2023/2024" %}}
 <ul>
     <li><a href="../pdfs/fisica2_exams/2023_Gennaio.pdf">Gennaio</a></li>
+    <li><a href="../pdfs/fisica2_exams/2023_Febbraio.pdf">Febbraio</a></li>
 </ul>
 {{% /accordion %}}
 
 ## Note del corso
 
-Qui sotto trovate delle note che ho compilato negli anni. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi queste note non vanno utilizzate per studiare ma, al limite, per avere un'idea dettagliata del programma e del livello di approfondimento richiesto.
+Qui sotto trovate delle note che ho compilato negli anni. **Nota Bene:** il corso attuale è basato sul libro di testo, quindi queste note servono per avere un'idea dettagliata del programma e del livello di approfondimento richiesto e non per studiare.
 
 1. <a href="link://slug/ripasso-di-matematica">Ripasso di matematica</a>
 2. <a href="link://slug/elettrostatica">Elettrostatica</a>
