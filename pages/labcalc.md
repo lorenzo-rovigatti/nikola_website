@@ -69,5 +69,8 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
     <li>Gennaio, mattina: <a href="/pdfs/labcalc_exams/2023_Gennaio_1.pdf">testo</a> e <a href="link://listing/labcalc/2023_Gennaio_1.c">soluzione</a></li>
     <li>Gennaio, pomeriggio: <a href="/pdfs/labcalc_exams/2023_Gennaio_2.pdf">testo</a> e <a href="link://listing/labcalc/2023_Gennaio_2.c">soluzione</a></li>
     <li>Febbraio: <a href="/pdfs/labcalc_exams/2023_Febbraio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Febbraio.c">soluzione</a></li>
+    <li>Maggio: <a href="/pdfs/labcalc_exams/2023_Maggio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Maggio.c">soluzione</a></li>
+    <li>Giugno: <a href="/pdfs/labcalc_exams/2023_Giugno.pdf">testo</a>, <a href="link://listing/labcalc/2023_Giugno_1.c">soluzione 1</a> e <a href="link://listing/labcalc/2023_Giugno_2.c">soluzione 2</a></li>
+    <li>Luglio: <a href="/pdfs/labcalc_exams/2023_Luglio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Luglio.c">soluzione</a></li>
 </ul>
 {{% /accordion %}}
