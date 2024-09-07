@@ -1,0 +1,371 @@
+<!--
+.. title: Diffusion, viscosity and linear rheology of network fluids
+.. slug: waterx_2024
+.. date: 2024-05-26 13:12:44 UTC+02:00
+.. tags:
+.. category: talks
+.. link:
+.. description:
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. is_html: true
+-->
+
+<section data-background-image="../../images/talks/waterx_2024/background.png" data-background-size="60%" data-background-opacity="0.2">
+    <h1>
+        Diffusion, viscosity and linear rheology of network fluids
+    </h1>
+
+    <h2>Lorenzo Rovigatti</h2>
+    <h3 style="margin:1em">Physics Department, Sapienza University of Rome</h3>
+    <h3>Water X, May 27th, 2024</h3>
+</section>
+
+<section>
+    <h1>Most of the water you'll see in this talk</h1>
+
+    <img src="/images/talks/waterx_2024/la_maddalena.webp" width=700>
+</section>
+
+<section>
+    <h1>Valence-limited models</h1>
+
+    <ul>
+        <li>Each atom/molecule/particle can form up to a maximum number of bonds</li>
+        <li>Interactions are (in most models) non-spherical</li>
+        <li>Useful to investigate the role of bonding in atomic and molecular systems[1,2]</li>
+        <li class="fragment" data-fragment-index="0">Great model systems to design &amp; realise new supramolecular materials[3]</li>
+    </ul>
+
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="/images/talks/waterx_2024/frank.png" width=700>
+        <img class="fragment" data-fragment-index="0" src="/images/talks/waterx_2024/science.png" width=850>
+    </div>
+
+    <div><small>[1] J. Russo <em>et al.</em>, Rep. Prog. Phys. (2022), [2] F. Smallenburg, L. Filion and F. Sciortino, Nat. Phys. (2014)</small></div>
+    <div class="fragment" data-fragment-index="0"><small>[3] H. Liu <em>et al.</em>, Science (2024)</small></div>
+</section>
+
+<section>
+    <h1>The patchy model</h1>
+
+    <ul>
+        <li>Particles are spheres of diameter $\sigma$ decorated with $M = 4, 3$ or $2$ point patches</li>
+        <li>Fixed "optimal network" density $\rho \sigma^3 = 0.60$</li>
+        <li>A three-body potential enforces the single-bond-per-site constraint and enable a bond-swapping mechanism to speed-up the dynamics[1]</li>
+        <li class="fragment" data-fragment-index="0">At low $T$ the patch-patch potential can be mapped on a square well of depth $\epsilon_{\rm eff}$</li>
+    </ul>
+
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="/images/talks/waterx_2024/swap.png" width=800>
+        <img class="fragment" data-fragment-index="0" src="/images/talks/waterx_2024/potential.png" width=500>
+    </div>
+
+    <small>[1] F. Sciortino, Eur. Phys. J. E (2017), L. Rovigatti <em>et al., Macromolecules</em> (2018)</small>
+</section>
+
+<section>
+    <h1>Why the swap?</h1>
+
+    <ul>
+        <li>There are systems where this is the only decorrelation channel (<em>e.g.</em> vitrimers[1])</li>
+        <li class="fragment" data-fragment-index="0">Its relative importance w.r.t. thermal unbonding can be tuned in <em>e.g.</em> DNA systems [2]</li>
+        <li class="fragment" data-fragment-index="1">Can be used to understand surprising dynamical effects (<em>e.g.</em> $q^0$ relaxation mode[3])</li>
+    </ul>
+
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="/images/talks/waterx_2024/vitrimers.png" width=600>
+        <img class="fragment" data-fragment-index="0" src="/images/talks/waterx_2024/strand_displacement.png" width=800>
+    </div>
+
+    <small>[1] W. Denissen, J. M. Winne, and Filip E. Du Prez, Chem. Sci. (2016)</small><br/>
+    <small class="fragment" data-fragment-index="0">[2] P. Šulc <em>et al.</em> Biophys. J. (2015)</small><br/>
+    <small class="fragment" data-fragment-index="1">[3] L. Rovigatti <em>et al., Macromolecules</em> (2018), P. H. Handle <em>et al.</em>, Phys. Rev. Lett. (2019)</small>
+</section>
+
+<section data-background-image="../../images/talks/waterx_2024/patchy.png" data-background-size="70%" data-background-opacity="0.3">
+    <h1>Tetravalent ($M = 4$) particles</h1>
+</section>
+
+<section>
+    <h1>Structure</h1>
+
+    <img src="/images/talks/waterx_2024/sq.png">
+
+    <div>Large patches $\to$ high flexibility $\to$ no tetrahedral peak</div>
+</section>
+
+<section>
+    <h1>Bonding is an activated process</h1>
+
+    <img src="/images/talks/waterx_2024/M4_X.png" width=600>
+
+    <ul>
+        <li>A bond can be unambiguously defined</li>
+        <li>Arrhenius behaviour at low $T$</li>
+        <li>Exponents compatible with theoretical estimates of $\approx 0.5\, \epsilon_{\rm eff}$ [1]</li>
+    </ul>
+
+    <small>[1] F. Smallenburg and F. Sciortino, Nat. Phys. (2013)</small>
+</section>
+
+<section>
+    <h1>Diffusion constant &amp; viscosity</h1>
+
+    <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="/images/talks/waterx_2024/msd.png" width=600>
+        <img class="fragment" data-fragment-index="0" src="/images/talks/waterx_2024/M4_D_eta_X.png" width=600>
+    </div>
+
+    <ul>
+        <li>From almost freely diffusive to supercooled</li>
+        <li class="fragment" data-fragment-index="0">$D$ and $\eta$ are both Arrhenius at low $T$ $\to$ power laws if plotted against $X$</li>
+        <li class="fragment" data-fragment-index="0">Swap <em>vs.</em> no-swap: same behaviour, different exponent</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Rheology</h1>
+
+    <img src="/images/talks/waterx_2024/G_omega_L10.png" width=450>
+    <img class="fragment" data-fragment-index="1" src="/images/talks/waterx_2024/G_omega_L1.png" width=450>
+
+    <ul>
+        <li>Upon cooling $G'$ acquires a plateau $\to$ viscoelasticity</li>
+        <li>The frequency at which $G'$ and $G''$ cross correlates with $1 / \eta$ (not shown)</li>
+        <li class="fragment" data-fragment-index="0">Without swap the elastic plateau does not depend on $T$</li>
+        <li class="fragment" data-fragment-index="1">Bond-swapping $\to$ additional stress-relaxing channel: the plateau height decreases</li>
+    </ul>
+</section>
+
+<section data-background-image="../../images/talks/waterx_2024/patchy_mixture.png" data-background-size="70%" data-background-opacity="0.3">
+    <h1>Mixtures ($4 + 2$ and $3 + 2$)</h1>
+</section>
+
+<section>
+    <h1>The Stokes-Einstein relation</h1>
+
+    $$
+    \alpha_{\rm SE} = \frac{D\eta}{k_BT \rho^{1/3}} \approx 0.132 \left( 1 + \frac{\eta}{2\eta_l}\right)
+    $$
+
+    where the second relation comes from R. Zwanzig, <em>J. Chem. Phys.</em> (1983)
+
+    <div class="fragment">
+    <img src="/images/talks/waterx_2024/shifted_SE.png" width=500>
+
+    <ul>
+        <li>$f_2$ is the fraction of patches belonging to divalent particles</li>
+        <li>Results are almost always compatible with Zwanzig's prediction</li>
+        <li>$\alpha_{\rm SE}$ increases at very low $T$ (as observed in supercooled molecular models [1,2])</li>
+    </ul>
+
+    <small>[1] Y. J. Jung <em>et al.</em>, Phys. Rev. E (2004), [2] S. R. Becker <em>et al.</em>, Phys. Rev. Lett. (2006)</small>
+    </div>
+</section>
+
+<section>
+    <h1>Power-law rheology</h1>
+
+    <img src="/images/talks/waterx_2024/G_omega_mixtures_L10.png" width=500>
+
+    <ul>
+        <li>At low $T$, $G'$ and $G''$ of mixtures take on a power-law behaviour at intermediate $\omega$</li>
+        <li>Power-law rheology is a feature of many complex materials (see <em>e.g.</em> [1-3])</li>
+        <li>The exponent change continuously with the valence (see inset)</li>
+    </ul>
+
+    <small>[1] B. Fabry <em>et al.</em>, Phys. Rev. Lett. (2001), [2] K.-C. Hung <em>et al,</em> ,ACS Macro Lett. (2015), [3] N. Conrad <em>et al.</em>, arXiv (2023)</small>
+</section>
+
+<section data-background-image="../../images/talks/waterx_2024/patchy.png" data-background-size="70%" data-background-opacity="0.2">
+    <h1>Conclusions</h1>
+
+    <ul>
+        <li>Valence-limited systems: simple models for complex behaviour that keep on giving</li>
+        <li>Qualitative (and sometimes quantitative or semi-quantitative) agreement with experiments on "real" patchy particles</li>
+        <li class="fragment">There is more: the $\rho$-dependence (unpublished since I don't understand it) is very rich</li>
+        <li class="fragment">More details in "S. S. Gomez and L. Rovigatti, <em>J. Chem. Phys.</em> <b>160</b>, 184901 (2024)"</li>
+    </ul>
+
+    <h1 class="fragment" style="margin-top: 1.5em; font-size:2.5em">Thank you!</h1>
+</section>
+
+<section>
+    <h1>Mapping to the a square well</h1>
+
+    The dimer partition function is defined as
+
+    $$
+    Z_{ij} = 4 \pi \int_V e^{-V_{\rm pp}(R_{ij}, \Omega_i, \Omega_j) / k_B T} R_{ij}^2 dR_{ij} d\Omega_i d\Omega_j
+    $$
+
+    where $V_{\rm pp}$ is the patch-patch interaction and $R_{ij}$, $\Omega_i$, $\Omega_j$ are the degrees of freedom.
+
+    <img src="/images/talks/waterx_2024/dimer_Z.png" width=700>
+</section>
+
+<section>
+    <h1>The three-body potential</h1>
+
+    <table id="three_body">
+        <tr>
+            <td class="rotate">Configuration</td>
+            <td width="33%"><img src="/images/talks/waterx_2024/three_body_first.png"></td>
+            <td width="33%"><img class="fragment fade-in" data-fragment-index="1" src="/images/talks/waterx_2024/three_body_second.png" width="80%"></td>
+            <td width="33%"><img class="fragment fade-in" data-fragment-index="2" src="/images/talks/waterx_2024/three_body_third.png" width="80%"></td>
+        </tr>
+
+        <tr>
+            <td class="rotate"><em>V<sub style="font-size:60%">2</sub></em></td>
+            <td>$-\epsilon$</td>
+            <td><span class="fragment fade-in" data-fragment-index="1">$-2\epsilon$</span></td>
+            <td><span class="fragment fade-in" data-fragment-index="2">$-\epsilon$</span></td>
+        </tr>
+
+        <tr>
+            <td class="rotate"><em>V<sub style="font-size:60%">3</sub></em></td>
+            <td>$0$</td>
+            <td><span class="fragment fade-in" data-fragment-index="1">$\lambda\epsilon$</span></td>
+            <td><span class="fragment fade-in" data-fragment-index="2">$0$</span></td>
+        </tr>
+
+        <tr>
+            <td class="rotate"><em>V<sub style="font-size:60%">2</sub> + V<sub style="font-size:60%">3</sub></em></td>
+            <td>$-\epsilon$</td>
+            <td><span class="fragment fade-in" data-fragment-index="1">$-2 \epsilon + \lambda\epsilon$</span></td>
+            <td><span class="fragment fade-in" data-fragment-index="2">$\epsilon$</span></td>
+        </tr>
+    </table>
+
+    <div class="fragment fade-in">
+        <p>The value of $\lambda$ controls the behaviour</p>
+
+        <ul>
+            <li>$\lambda \geq 1$ $\to$ single-bond-per-patch</li>
+            <li>$\lambda = 1$ $\to$ free swapping!</li>
+        </ul>
+    </div>
+    <div class="spacer"></div>
+
+    <small>F. Sciortino, Eur. Phys. J. E (2017), L. Rovigatti <em>et al., Macromolecules</em> (2018)</small>
+</section>
+
+<section>
+    <h1>The effect of the swap on structure</h1>
+
+    <img src="/images/talks/waterx_2024/sq_with_shift.png">
+
+    <div>Tiny shift without swap $\to$ slightly higher effective density</div>
+</section>
+
+
+<section>
+    <h1>State points investigated</h1>
+
+    <table>
+        <tr>
+            <td>Type</td>
+            <td>$\langle M \rangle$</td>
+            <td>$x_2$</td>
+            <td>$f_2$</td>
+            <td>$X_{\rm min}$ for $\lambda = 10$</td>
+            <td>$X_{\rm min}$ for $\lambda = 1$</td>
+        </tr>
+        <tr>
+            <td>Pure $M = 2$</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.026</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Pure $M = 3$</td>
+            <td>3</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.017</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Pure $M = 4$</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0.011</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Mixture of $M = 2, 3$</td>
+            <td>2.2</td>
+            <td>0.8</td>
+            <td>0.73</td>
+            <td>0.022</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Mixture of $M = 2, 3$</td>
+            <td>2.4</td>
+            <td>0.6</td>
+            <td>0.5</td>
+            <td>0.021</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Mixture of $M = 2, 3$</td>
+            <td>2.6</td>
+            <td>0.4</td>
+            <td>0.31</td>
+            <td>0.020</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Mixture of $M = 2, 4$</td>
+            <td>2.2</td>
+            <td>0.9</td>
+            <td>0.82</td>
+            <td>0.023</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Mixture of $M = 2, 4$</td>
+            <td>2.4</td>
+            <td>0.8</td>
+            <td>0.67</td>
+            <td>0.021</td>
+            <td>0.001</td>
+        </tr>
+        <tr>
+            <td>Mixture of $M = 2, 4$</td>
+            <td>2.6</td>
+            <td>0.7</td>
+            <td>0.54</td>
+            <td>0.019</td>
+            <td>0.001</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h1>How bonding controls $D$ and $\eta$</h1>
+
+    <img src="/images/talks/waterx_2024/fit_mixtures_exponent_L10.png" width=450>
+    <img class="fragment" data-fragment-index="0" src="/images/talks/waterx_2024/fit_mixtures_exponent_L1.png" width=450>
+
+    <ul>
+        <li>$f_2$ is the fraction of patches belonging to divalent particles</li>
+        <li>Mixtures can be mapped onto one-component effective systems</li>
+        <li class="fragment" data-fragment-index="0">Bond-swapping $\to$ more complex $f_2$-dependence, all exponents are smaller (in absolute value)</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Example of loss and storage moduli of mixtures</h2>
+
+    <img src="/images/talks/waterx_2024/G_omega_M24_M32.png" width=600>
+
+    <div>Mixture of $M = 3$ and $M = 2$ with $f_2 = 0.5$</div>
+
+</section>

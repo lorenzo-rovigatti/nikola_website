@@ -143,7 +143,11 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/", "Home"),
-        ("/didattica/", "Didattica"),
+        ((
+            ("/labcalc/", "Laboratorio di Calcolo"),
+            ("/comp-bio/", "Computational Biophysics"),
+            ("/old-courses/", "Corsi precedenti"),
+        ), "Didattica"),
         ((
             ("/my-main-research-topics/", "Main topics"),
             ("/publications/", "Publications"),
