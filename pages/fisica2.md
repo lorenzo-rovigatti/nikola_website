@@ -102,6 +102,9 @@ In questa pagina troverete materiale aggiuntivo, vecchi compiti di esame e vecch
 <ul>
     <li><a href="../pdfs/fisica2_exams/2023_Gennaio.pdf">Gennaio</a></li>
     <li><a href="../pdfs/fisica2_exams/2023_Febbraio.pdf">Febbraio</a></li>
+    <li><a href="../pdfs/fisica2_exams/2023_Aprile.pdf">Aprile</a></li>
+    <li><a href="../pdfs/fisica2_exams/2023_Giugno.pdf">Giugno</a></li>
+    <li><a href="../pdfs/fisica2_exams/2023_Luglio.pdf">Luglio</a></li>
 </ul>
 {{% /accordion %}}
 
