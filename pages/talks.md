@@ -13,6 +13,7 @@ Here you can find the slides of selected seminars I delivered during the years (
 
 ## 2024
 
+* <a href="link://slug/waterx_2024">Diffusion, viscosity and linear rheology of network fluids</a> (contributed talk at the [Water X 2024 workshop](https://www.water-x.eu))
 * <a href="link://slug/dresda_2024">Designing enhanced entropy binding in associative polymers</a> (invited talk at the [IntCha24 workshop](https://www.pks.mpg.de/intcha24))
 
 ## 2023
