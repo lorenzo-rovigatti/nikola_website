@@ -73,6 +73,8 @@ Since this is the first year I teach this course, the following outline (as well
 3. By definition, life is an out-of-equilibrium process, since it continuously uses up energy. However, many biophysical processes are in (or close to) equilibrium. Therefore, they can be analysed and understood using the language of thermodynamics and statistical mechanics. You should be familiar with concepts such as free energy, entropy, ensembles, partition function, Boltzmann distribution, as well as with the mathematical tools used to work with these quantities.
 4. *Any* knowledge of biology and biochemistry is welcome (and will be useful to its holder). However, I will introduce most of what we need at the beginning, and then some more as the need arises.
 
+[^windows_terminal]: Or at least it does not come with a Unix-like (POSIX) terminal, which is what we will be using.
+
 # Notes
 
 I'm compiling the course's notes, which can be found [here](https://lorenzo-rovigatti.github.io/comp_bio_notes/). Note that this is a super-early, uncomplete version. You are welcome to use them to guide your study, but please
