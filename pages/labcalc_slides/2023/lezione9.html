@@ -1,0 +1,559 @@
+<!--
+.. title: Lezione 9
+.. slug: labcalc_lezione9
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Il teorema di Böhm-Jacopini
+                    
+* Qualunque algoritmo si può scrivere in termini di tre sole *strutture di controllo*:
+    * istruzioni sequenziali<!-- .element: class="fragment highlight-blue" data-fragment-index="1" -->
+    * strutture di selezione<!-- .element: class="fragment highlight-red" data-fragment-index="2" -->
+    * strutture di iterazione<!-- .element: class="fragment highlight-red" data-fragment-index="2" -->
+* Un programma che usa solamente questi tre tipi di strutture si dice **strutturato**
+* Istruzioni **non strutturate** sono quelle che permettono di *saltare* tra istruzioni non consecutive
+* Il C (come quasi tutti i linguaggi di programmazione) consente di scrivere sia programmi strutturati che non strutturati
+
+---
+
+# Il diagramma di flusso
+
+È un *grafo orientato* che rappresenta graficamente le operazioni da eseguire
+
+<figure>
+<img class="fragment" src="/images/labcalc_slides/flusso_conversione.png" height="350">
+</figure>
+
+<div class="flex-container fragment">
+<div class="flex-col">
+<strong>Inizio/fine</strong><br/>
+<img src="/images/labcalc_slides/ellisse.png" height="50"> 
+</div>
+
+<div class="flex-col">
+<strong>Operazioni sui dati</strong><br/>
+<img src="/images/labcalc_slides/rettangolo.png" height="50">
+</div>
+
+<div class="flex-col">
+<strong>Istruzione condizionale</strong><br/>
+<img src="/images/labcalc_slides/rombo.png" height="50">
+</div>
+</div>
+
+---
+
+# Struttura di selezione o condizionale: `if` e `else`
+
+* In C la struttura di selezione si realizza con il costrutto `if`
+
+<div class="flex-container">
+<div class="flex-col">
+<img src="/images/labcalc_slides/flusso_condizione.png" height="250">
+</div>
+
+<div class="flex-col fragment">
+
+```C
+// codice che precede la selezione
+
+if(condizione) {
+    ... // <-- istruzioni 1
+}
+else {
+    ... // <-- istruzioni 2
+}
+
+...     // <-- altre istruzioni
+```
+
+</div>
+</div>
+
+<div class="focus fragment">
+<code>condizione</code> può essere qualsiasi espressione logica
+</div>
+
+---
+
+# Un esempio completo
+
+```C [|8-10|11-13]
+#include &lt;stdio.h&gt;
+
+int main() {
+    int n;
+    printf("Inserisci un numero intero: ");
+    scanf("%d", &n);
+
+    if(n % 2) {
+        printf("Il numero inserito è dispari\n");
+    }
+    else {
+        printf("Il numero inserito è pari\n");
+    }
+    
+    return 0;
+}
+```
+
+```bash [1-4|5-7]
+$ gcc -o es_if es_if.c
+$ ./es_if
+Inserisci un numero intero: 12
+Il numero inserito è pari
+$ ./es_if
+Inserisci un numero intero: 133
+Il numero inserito è dispari
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# L'`else` è opzionale
+
+<div class="flex-container">
+<div class="flex-col">
+<img src="/images/labcalc_slides/flusso_solo_if.png" height="350">
+</div>
+
+<div class="flex-col fragment">
+
+```C
+#include &lt;stdio.h&gt;
+
+int main() {
+  int n;
+
+  printf("Inserisci un numero intero:\n");
+  scanf("%d", &n);
+
+  if(n == 666) {
+    printf("The number of the beast!\n");
+  }
+
+  ... // qui il resto del programma
+
+  return 0;
+}
+```
+<!-- .element: style="width:100%" -->
+
+</div>
+
+</div>
+
+---
+
+# Composizione di strutture di selezione - 1
+
+* Scriviamo un programma che "analizza" il voto di un esame
+
+<div class="flex-container">
+<div class="flex-col">
+
+```C [|5-7|8,20|9-11|12,19|13-15|16-18]
+int n;
+printf("Inserisci il voto preso:\n");
+scanf("%d", &n);
+
+if(n < 18) {
+  printf("Oh no :-(\n");
+}
+else { // n >= 18
+  if(n < 24) {
+    printf("Un esame in meno!\n");
+  }
+  else { // n >= 24
+    if(n < 28) {
+      printf("Ottimo voto\n");
+    }
+    else { // n >= 28
+      printf("Bravissimo/a!\n");
+    }
+  }
+}
+```
+<!-- .element: style="width:100%" -->
+
+</div>
+<div class="flex-col">
+<img src="/images/labcalc_slides/flusso_if_esclusivo.png" height="500">
+</div>
+</div>
+
+---
+
+# Composizione di strutture di selezione - 2
+
+* Scriviamo un programma che stampa alcune proprietà del numero inserito
+
+<div class="flex-container">
+<div class="flex-col">
+
+```C [|5-10|12-14|15-17|18-20]
+int n;
+printf("Inserisci un numero:\n");
+scanf("%d", &n);
+
+if(n % 2 == 0) {
+    printf("Il numero è pari\n");
+}
+else {
+    printf("Il numero è dispari\n");
+}
+
+if(n > 0) {
+    printf("Il numero è positivo\n");
+}
+else if(n < 0) {
+    printf("Il numero è negativo\n");
+}
+else {
+    printf("Il numero è zero\n");
+}
+```
+<!-- .element: style="width:100%" -->
+
+</div>
+<div class="flex-col">
+<img src="/images/labcalc_slides/flusso_if_inclusivo.png" height="480">
+</div>
+
+---
+
+# Differenze tra `if` e compilazione condizionale
+
+* Nella compilazione condizionale le direttive vengono valutate a *compile time*
+
+```C [|2,3|5,6]
+#ifdef F_TO_C
+    T_output = (T_input - offset) * conv;  
+    printf("La temperatura in Celsius è %lf\n", T_output);
+#else
+    T_output = T_input / conv + offset;  
+    printf("La temperatura in Fahrenheit è %lf\n", T_output);
+#endif
+```
+
+<div class="fragment">
+
+* Gli `if` vengono eseguiti a *runtime*: valutano espressioni non note a *compile time*
+
+```C [|2,3|4-11]
+int f_to_c;
+printf("Inserire 0 per C->F, un valore != 0 per F->C:\n");
+scanf("%d", &f_to_c);
+if(f_to_c) {
+    T_output = (T_input - offset) * conv;  
+    printf("La temperatura in Celsius è %lf\n", T_output);
+}
+else {
+    T_output = T_input / conv + offset;  
+    printf("La temperatura in Fahrenheit è %lf\n", T_output);
+}
+```
+</div>
+
+---
+
+# Struttura iterativa - `while`
+
+* "Finché [condizione] è vera esegui [istruzioni]"
+
+<div class="flex-container">
+<div class="flex-col">
+<img src="/images/labcalc_slides/flusso_while.png" height="200">
+</div>
+
+<div class="flex-col fragment">
+
+```C
+// qui il codice che precede l'iterazione
+
+while(condizione) {
+    ... // <-- istruzioni
+}
+
+...     // <-- altre istruzioni
+```
+<!-- .element: style="width:100%" -->
+
+</div>
+</div>
+
+<div class="focus fragment">
+Se <code>condizione</code> è falsa le istruzioni tra <code>{}</code> non sono mai eseguite
+</div>
+
+---
+
+# Un esempio di ciclo `while`
+
+```C [1-3|5-8]
+int i = 1, N;
+printf("Inserire il numero di cui si vuole stampare la tabellina:\n");
+scanf("%d", &N);
+
+while(i < 10) { // se i non fosse inizializzata sarebbe un disastro...
+    printf("%d * %d == %d\n", N, i, N * i);
+    i++;
+}
+```
+
+```bash
+$ gcc -o es_while es_while.c
+$ ./es_while
+Inserire il numero di cui si vuole stampare la tabellina:
+9
+9 * 1 == 9
+9 * 2 == 18
+9 * 3 == 27
+9 * 4 == 36
+9 * 5 == 45
+9 * 6 == 54
+9 * 7 == 63
+9 * 8 == 72
+9 * 9 == 81
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Esercizio sul `while`
+
+```C [4,5|7-10|12]
+#include <stdio.h>
+
+int main() {
+    int j = 7;
+    int k = 7;
+    
+    while(j > 2) {
+        j--;
+        k++;
+    }
+    
+    printf("La variabile k vale %d\n", k);
+    
+    return 0;
+}
+```
+
+```bash
+$ ./esercizio_while
+La variabile k vale 12
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Struttura iterativa - `do`-`while`
+
+* "Esegui [istruzioni] finché [condizione] è vera"
+
+<div class="flex-container">
+<div class="flex-col">
+<img src="/images/labcalc_slides/flusso_do.png" height="200">
+</div>
+
+<div class="flex-col fragment">
+
+```C
+// qui il codice che precede l'iterazione
+
+do {
+    ... // <-- istruzioni
+} while(condizione);
+
+...     // <-- altre istruzioni
+```
+<!-- .element: style="width:100%" -->
+</div>
+</div>
+
+<div class="warning fragment">
+A differenza del <code>while</code>, le istruzioni tra <code>{}</code> vengono eseguite almeno una volta, indipendentemente da <code>condizione</code>
+</div>
+
+---
+
+# Un esempio di ciclo `do`-`while`
+
+* Questo tipo di ciclo iterativo è *perfetto* per controllare la correttezza dei dati in input
+
+```C
+double N;
+do {
+    printf("Inserire un numero positivo:\n");
+    scanf("%lf", &N);
+} while(N <= 0);
+
+printf("Il numero inserito è %lf\n", N);
+```
+
+```bash [1-3|4-5|6-8]
+$ ./es_do_while
+Inserire un numero positivo:
+-5928.2
+Inserire un numero positivo:
+0.0
+Inserire un numero positivo:
+23.6
+Il numero inserito è 23.600000
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Il ciclo `for`
+
+* Il costrutto `for` si usa al posto del `while` quando il numero di iterazioni da fare è noto
+* La sintassi è un po' più complicata rispetto agli altri casi:
+
+```C
+for(inizializzazione; condizione; incremento) {
+    ... // <-- istruzioni
+}
+```
+
+* `inizializzazione` è una o più operazioni da eseguire *all'inizio del ciclo*
+* `condizione` è ciò che determina la continuazione del ciclo
+* `incremento` è una o più operazioni da compiere ogniqualvolta il ciclo viene ripetuto
+
+---
+
+# Esempio di ciclo `for` - tabelline
+
+* Possiamo riscrivere meglio il programma delle tabelline grazie al `for`
+
+```C [1-3|5-7]
+int i, N; // non c'è più bisogno di inizializzare la variabile della condizione
+printf("Inserire il numero di cui si vuole stampare la tabellina:\n");
+scanf("%d", &N);
+
+for(i = 1; i < 10; i++) { // l'inizializzazione avviene direttamente nel for
+    printf("%d * %d == %d\n", N, i, N * i);
+    // non c'è bisogno di aggiornare i all'interno del ciclo
+}
+```
+<!-- .element: style="width:100%" -->
+
+---
+
+# Esempio di ciclo `for` - potenze
+
+<div class="focus">
+<ul style="font-size: 88%;margin-left:20px">
+<li><code>inizializzazione</code> e <code>incremento</code> possono contenere più operazioni separate da virgole</li>
+<li><code>incremento</code> non deve necessariamente essere un'addizione</li>
+</ul>
+</div>
+
+<div class="fragment">
+
+* Un codice che stampa le potenze di un intero fino ad un esponente massimo
+
+```C [1-3|5-7]
+int base, esponente, valore, i;
+printf("Inserire base ed esponente massimo:\n");
+scanf("%d %d", &base, &esponente);
+
+for(valore = base, i = 0; i < esponente; i++, valore *= base) {
+    printf("%d**%d == %d\n", base, i + 1, valore);
+}
+```
+
+```bash
+$ ./es_potenze
+Inserire base ed esponente massimo:
+5 4
+5**1 == 5
+5**2 == 25
+5**3 == 125
+5**4 == 625
+```
+<!-- .element: class="fragment" -->
+
+</div>
+
+---
+
+# Altri due esempi sul ciclo `for`
+
+```C []
+int i;
+for(i = 0; i < 10; /* nessun incremento? */) {
+    printf("i == %d\n", i);
+    i++;
+}
+```
+
+<div class="fragment focus">
+<code>inizializzazione</code>, <code>condizione</code> e <code>incremento</code> sono opzionali!
+</div>
+
+```C [|3,5]
+int i;
+int N = 10;
+for(i = 0; i < N; i++) {
+    printf("i == %d\n", i);
+    N++;
+}
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment warning">
+Ciclo infinito: <code>condizione</code> viene valutata <strong>ad ogni iterazione</strong>
+</div>
+
+---
+
+# Esercizio sul `for`
+
+```C
+#include <stdio.h>
+
+int main() {
+    int j;
+    int k = 7;
+    
+    for(j = 2; j < 7; j++) {
+        k++;
+    }
+    
+    printf("La variabile k vale %d\n", k);
+    
+    return 0;
+}
+```
+
+```bash
+$ ./es_for
+La variabile k vale 12
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Esercizio per casa
+
+* Cosa fa il programma descritto dal seguente diagramma di flusso in figura?
+
+<img src="/images/labcalc_slides/flusso_esercizio.png" height="500" style="float: left">
+
+<div>
+
+* [ ] stampa i numeri da 0 a 50 a ritroso e di 5 in 5
+* [ ] stampa 10 volte il numero 50
+* [ ] stampa i numeri da 0 a 50
+</div>
+                

@@ -1,0 +1,300 @@
+<!--
+.. title: Linux
+.. slug: labcalc_linux
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Linux, shell &amp; comandi utili
+
+<h2>Prima esercitazione</h2>
+
+<h4>Laboratorio di Calcolo, canale A-Ci, A.A. 2023/2024</h4>
+
+---
+
+# Unix? Linux?
+
+<ul>
+    <li>Sono nomi di <em>sistemi operativi</em> (come Windows)</li>
+    <li>Linux, come Mac Os X, è Unix-like </li>
+    <li>Hanno sia un'interfaccia grafica (GUI) che una riga di comando (terminale)</li>
+</ul>
+
+<img src="/images/labcalc_slides/GUI.png" height="250">
+<img src="/images/labcalc_slides/terminal.png" height="250">
+
+---
+    
+# E quindi?
+
+<img class="fragment fade-in" src="/images/labcalc_slides/meme.png" height="500">
+    
+---
+
+# Perché?
+
+<p>Con il terminale</p>
+
+<ul>
+    <li>
+        si lavora più velocemente (!)
+        
+        <pre><code class="language-bash" data-trim data-noescape>
+        $ cp lab*2021.png /home/lorenzo/immagini_da_salvare/
+        </code></pre>
+    </li>
+    <li>
+        si possono effettuare operazioni complesse quasi a piacere
+        
+        <pre><code class="language-bash" data-trim data-noescape>
+        $ paste primo.dat secondo.dat | awk '{print $1 + $2}' | sort -n | uniq -c
+        </code></pre>
+    </li>
+    <li>
+        automatizzare le operazioni da fare è "semplice"
+        
+        <pre><code class="language-bash" data-trim data-noescape>
+        $ for directory in $(ls -1d all_dirs)
+        $ do
+        $   paste primo.dat secondo.dat | awk '{print $1 + $2}' | sort -n | uniq -c
+        $ done
+        </code></pre>
+    </li>
+</ul>
+    
+---
+
+# Qualche definizione
+
+<ul>
+    <li>Una <em>shell</em> è un programma che interpreta dei comandi</li>
+    <li>Il <em>terminale</em> è il programma che usiamo per dialogare con la shell</li>
+    <li>Il <em>prompt</em> è la linea in cui possiamo scrivere</li>
+</ul>
+
+<img src="/images/labcalc_slides/prompt.png" height="350">
+
+---
+
+# Il filesystem
+
+<p>File e cartelle sono organizzati in una struttura <em>ad albero</em></p>
+
+<img src="/images/labcalc_slides/filesystem.png">
+
+---
+
+# Il filesystem in linux
+
+<ul>
+    <li>La struttura ad albero parte da <b>/</b>, detta cartella di <em>root</em></li>
+    <li>Ogni utente ha una cartella <em>home</em> che <span class="fragment highlight-red">solitamente</span> si trova in <b>/home/nomeutente</b></li>
+</ul>
+
+<img src="/images/labcalc_slides/fs_hierarchy.png" height="350">
+
+---
+
+# I comandi del terminale
+
+<ul>
+    <li>Ogni comando svolge un compito</li>
+    <li>Alcuni richiedono opzioni (argomenti), altri no
+    
+    <pre class="fragment"><code class="language-bash" data-trim data-noescape>
+    $ ls
+    IronMaiden.txt JudasPriest.txt
+    </code></pre>
+    
+    <pre class="fragment"><code class="language-bash" data-trim data-noescape>
+    $ rm
+    rm: missing operand
+    Try 'rm --help' for more information.
+    </code></pre>
+    
+    </li>
+    <li class="fragment">Usate <code>man</code> per leggere il manuale</li>
+</ul>
+    
+---
+
+# Dove sono? Chi c'è con me? Come mi sposto?
+
+<p>(usate la figura presente sull'esercitazione per seguire meglio)
+
+<ul>
+    <li>
+    Usa <code>pwd</code> per capire dove sei<br/>
+    
+    <img src="/images/labcalc_slides/pwd.png" width="600">
+    </li>
+    
+    <li class="fragment">
+    Usa <code>ls</code> per sapere cos'altro c'è nella cartella
+    
+    <img src="/images/labcalc_slides/ls.png" width="600">
+    </li>
+    
+    <li class="fragment">
+    Usa <code>cd</code> per spostarti di cartella
+    
+    <img src="/images/labcalc_slides/cd.png" width="600">
+    </li>
+</ul>
+
+---
+
+# Navigare il filesystem
+
+<p>Il comando <code>cd</code>
+
+<ul>
+    <li class="fragment">
+        accetta percorsi assoluti e relativi
+    
+    <img src="/images/labcalc_slides/cd_relative.png" width="600">
+    </li>
+    
+    <li class="fragment">
+        accetta <code>..</code> per indicare la cartella precedente
+    
+    <img src="/images/labcalc_slides/cd_previous.png" width="600">
+    </li>
+    
+    <li class="fragment">
+    se chiamato senza argomenti ci riporta nella nostra home
+    
+    <pre><code class="language-bash" data-trim data-noescape>
+        studente@labcalc:~/BluesRock/HardRock/HeavyMetal$ cd
+        studente@labcalc:~$ pwd
+        /home/studente
+    </code></pre>
+    </li>
+</ul>
+    
+---
+
+# Creare file e cartelle
+
+<ul>
+    <li>Usa <code>mkdir</code> per creare cartelle<br/>
+    <img src="/images/labcalc_slides/mkdir.png" width="600">
+    </li>
+    
+    <li class="fragment">Usa <code>touch</code> per creare file vuoti<br/>
+    <img src="/images/labcalc_slides/touch.png" width="600">
+    </li>
+</ul>
+
+---
+
+# Comandi di supporto
+
+<ul>
+    <li>Usa <code>clear</code> per "pulire" il terminale</li>
+    <li class="fragment fade-in">Usa il tasto <code>tab</code> per autocompletare comandi e percorsi: provate con nomi di cartelle e/o file!</li>
+    <li class="fragment fade-in">Usa le frecce &#8593; e &#8595; per scorrere i comandi dati in precedenza</li>
+</ul>
+
+<div class="fragment focus">
+Sforzatevi di usare queste scorciatoie, diventerete molto più veloci!
+</div>
+
+---
+
+# Il comando <code>ls</code>, parte 2
+
+<p>Ecco alcune utili opzioni di questo comando<p>
+
+<ul>
+    <li><code>-a</code> (all) mostra anche i file e le cartelle nascoste</li>
+    <li><code>-l</code> (long) mostra file e cartelle in formato lungo</li>
+    <li><code>-t</code> (time) ordine l'output in base al tempo di modifica</li>
+</ul>
+
+<img src="/images/labcalc_slides/ls_2.png" width="600">
+
+---
+
+# Il comando <code>cat</code>
+
+<p>Mostra il contenuto di un file, o concatena il contenuto di più file</p>
+
+<img src="/images/labcalc_slides/cat.png">
+
+---
+
+# Copiare, spostare e rimuovere file e cartelle
+
+---
+
+# Il comando <code>cp</code>
+
+<ul>
+  <li>
+    <code class="language-bash">cp file1 file2</code>
+    <img src="/images/labcalc_slides/cp.png">
+  </li>
+    
+  <li class="fragment">
+    <code class="language-bash">cp file1 file2 file3 cartella_di_destinazione</code>
+        
+    <img src="/images/labcalc_slides/cp_2.png">
+  </li>
+    
+  <li class="fragment">
+    Per copiare cartelle dovete aggiungere l'opzione <code class="language-bash">-r</code>:
+        
+    <br/>
+    <code class="language-bash">cp -r CARTELLA DESTINAZIONE</code>
+  </li>
+</ul>
+
+---
+
+# Caratteri speciali: wildcards!
+
+<ul>
+    <li>
+        Il simbolo di asterisco * viene <em>espanso</em> automaticamente dalla shell per selezionare gruppi di file e cartelle
+        
+        <img src="/images/labcalc_slides/wildcard_1.png">
+        <img src="/images/labcalc_slides/wildcard_2.png">
+    </li>
+    <li class="fragment">Esistono anche altre wildcard, ma sono meno utili!</li>
+</ul>
+
+---
+
+# Il comando <code>mv</code>
+
+<ul>
+    <li>Sposta file e cartelle</li>
+    <li>Si usa come <code>cp</code> (ma non fa copie!)
+    
+    <img src="/images/labcalc_slides/mv.png">
+    </li>
+    <li class="fragment">È un modo per rinominare i file</li>
+</ul>
+
+---
+
+# Il comando <code>rm</code>
+
+<ul>
+    <li>Se usato senza argomenti cancella uno o più file</li>
+    <li class="fragment">Con l'argomento <code>-r</code> può cancellare anche le cartelle
+    
+    <img src="/images/labcalc_slides/rm.png">
+    </li>
+    <li class="fragment"><span class="fragment highlight-red"><b>Attenzione:</b> non esiste il cestino!</span></li>
+</ul>
+       
