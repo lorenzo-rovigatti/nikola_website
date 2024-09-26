@@ -1,0 +1,515 @@
+<!--
+.. title: Lezione 7
+.. slug: labcalc_lezione7
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Modificatori opzionali
+                    
+* I descrittori possono essere "complicati" tramite dei modificatori
+* Per ora vedremo (e useremo) descrittori del tipo `%[X][.Y]Z` dove
+    * `[]` indica che sia `X` che `.Y` sono opzionali
+    * `Z` è la combinazione di caratteri che indica il tipo di descrittore (es: `d`, `lf` o `c`)
+    * `X` è il numero **minimo** di caratteri che verranno stampati al posto del descrittore
+    * `Y` dipende dal tipo di dato che vogliamo stampare:
+        * se intero (`%d`, `%u`, *ecc*), `Y` è il numero **minimo** di caratteri totali (eventualmente aggiungendo 0 a sinistra)
+        * se numero razionale (`%f`, `%lf`), `Y` è il numero **massimo** di cifre dopo la virgola
+        * se stringa (`%s`), `Y` è il numero **massimo** di caratteri (stringhe più lunghe verranno troncate)
+        
+```C [1|2|3|4]
+printf("%6.2lf\n", 2.0);  // stampa "  2.00"   (2 spazi)
+printf("%6d\n", 12);      // stampa "    12"   (4 spazi)
+printf("%8d\n", 12);      // stampa "      12" (6 spazi)
+printf("%8.6d\n", 12);    // stampa "  000012" (6 spazi)
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Utilizzare il valore restituito da `printf`
+
+* Ricordate che `printf` restituisce un `int` (cfr. la sua firma)?
+* Questo valore è il numero di caratteri che `printf` ha effettivamente stampato
+* In caso di errore (molto raro) la funzione restituisce un valore negativo
+
+```C
+int car_stampati;
+int a = 123456;
+car_stampati = printf("a == %d\n", a);              // "a == 123456"
+printf("Ho stampato %d caratteri\n", car_stampati); // "Ho stampato 12 caratteri"
+```
+
+<div class="fragment focus">
+È difficile che il valore restituito da <code>printf</code> sia utile, ma non si sa mai...
+</div>
+
+---
+
+# Usare `scanf` per leggere input da tastiera
+
+```C
+scanf("%lf", &T_f);
+```
+
+* Anche `scanf` è una funzione della libreria standard del *C*
+* La firma è `int scanf(stringa, indirizzo_1, indirizzo_2, ...)`
+    * `stringa` è un insieme di descrittori come per `printf`
+    * Gli argomenti seguenti sono gli *indirizzi di memoria* delle variabili in cui vogliamo mettere i dati letti
+    * L'indirizzo di memoria di una variabile `x` si ottiene con l'operatore di indirizzamento `&` e vale quindi `&x` (cfr. `&T_f` sopra)
+* Nel caso di `scanf` il primo argomento contiene informazioni su come *interpretare* l'input ricevuto da tastiera
+
+<div class="fragment focus">
+Di default l'input è bufferizzato, quindi <code>scanf</code> legge l'input dopo che l'utente ha premuto INVIO
+</div>
+
+---
+
+# Come scrivere la stringa di formato
+
+* La stringa di formato può contenere uno o più descrittori
+* Di default `scanf` ignora spazi o tab quando legge l'input
+* Come per `printf`, numero di descrittori == numero degli altri parametri (indirizzi)
+* Facciamo qualche esempio
+
+```C [1,2|1,2,4,5|1,2,7,8]
+int a, b;
+double c;
+
+scanf("%d %lf %d", &a, &c, &b); // chiediamo di inserire un int, un double, un int
+printf("%d %d %lf\n", a, b, c); // stampiamoli in un altro ordine
+
+scanf("%d %lf %d", &a, &b, &c); // il compilatore darà un warning
+printf("%d %d %lf\n", a, b, c); // b e c avranno valori insensati (probabilmente 0)
+```
+
+---
+
+# Complessità di `scanf` - non usare `\n`!
+
+* Per abitudine può capitare di aggiungere un "\n" alla fine della stringa di formato
+* Come vi aspettate che si comporti questo programma?
+
+```C
+int a;
+
+printf("Inserire un numero:\n");
+scanf("%d\n", &a); // <--- c'è un '\n' dopo il descrittore
+printf("Il numero inserito è %d\n", a);
+```
+
+<div class="fragment" data-fragment-index="1">
+
+* Disastro: il programma sembra non prendere mai l'input!
+
+<div class="flex-container">
+<div class="flex-col">
+
+```bash
+$ ./prova_scanf
+Inserire un numero:
+1
+
+
+
+```
+</div>
+
+<div class="flex-col fragment" data-fragment-index="2">
+
+```bash
+$ ./prova_scanf
+Inserire un numero:
+1 2
+Il numero inserito è 1
+```
+</div>
+
+</div>
+</div>
+
+<div class="fragment warning" data-fragment-index="2">
+Se la stringa di formato finisce con del <em>white space</em>, <code>scanf</code> attenderà finché l'utente non inserirà qualcosa che <strong>non sia</strong> uno spazio/tab/fine riga!
+</div>
+
+---
+
+# Complessità di `scanf` - leggere caratteri
+
+```C [1|1,3-5|1,7-9|1,11-13]
+char a, b, c;
+
+printf("Introdurre il primo carattere\n");
+scanf("%c", &a);
+printf("Il carattere inserito è %c\n", a);
+
+printf("Introdurre il secondo carattere\n");
+scanf("%c", &b);
+printf("Il carattere inserito è %c\n", b);
+
+printf("Introdurre il terzo carattere\n");
+scanf("%c", &c);
+printf("Il carattere inserito è %c\n", c);
+```
+
+* Supponiamo di voler leggere tre caratteri: il secondo non verrà letto!
+* Il problema è che il fine riga `\n` viene interpretato come secondo carattere
+* Si può ovviare al problema<!-- .element: class="fragment" -->
+    * usando `" %c"` per leggere un carattere alla volta
+    * usando un'unica chiamata: `scanf("%c %c %c", &a, &b, &c);`
+
+---
+
+# Complessità di `scanf` - stringa di formato
+
+Se la stringa di formato contiene altro oltre a descrittori e spazi il comportamento può essere inaspettato
+
+```C
+int a, b, c;
+
+printf("Inserire tre numeri interi separati da una virgola\n");
+scanf("%i,%i,%i", &a, &b, &c);
+printf("I valori inseriti sono %i %i %i\n", a, b, c);
+```
+<!-- .element: class="fragment" -->
+
+```bash
+$ ./prova_scanf3
+Introdurre tre numeri interi separati da una virgola
+1,2,3
+I valori inseriti sono 1 2 3
+```
+<!-- .element: class="fragment" -->
+
+```bash
+$ ./prova_scanf_3
+Introdurre tre numeri interi separati da una virgola
+1,2 3
+I valori inseriti sono 1 2 32765
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Utilizzare il valore restituito da `scanf`
+
+* Ricordate che `scanf` restituisce un `int` (cfr. la sua firma)?
+* Il valore di ritorno $N$ è il numero di valori che `scanf` ha *effettivamente* letto
+* Se va tutto bene $N$ è il numero di descrittori contenuto nella stringa di formato
+* $N$ può essere usato per verificare che la lettura sia andata a buon fine!
+
+```C [|8,9]
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    int N;
+    
+    printf("Inserire tre numeri interi separati da una virgola\n");
+    N = scanf("%i,%i,%i", &a, &b, &c);      // <-- salviamo il valore di ritorno
+    printf("Hai inserito %d numeri\n", N);  // <-- stampiamolo
+    printf("I valori inseriti sono %i %i %i\n", a, b, c);
+    
+    return 0;
+}
+```
+
+---
+
+# Eseguiamo il codice
+
+```bash
+$ ./prova_scanf4
+Inserire tre numeri interi separati da una virgola
+1,2,3
+Hai inserito 3 numeri
+I valori inseriti sono 1 2 3
+```
+
+```bash
+$ ./prova_scanf4
+Introdurre tre numeri interi separati da una virgola
+1,2 3
+Hai inserito 2 numeri
+I valori inseriti sono 1 2 -439293264
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment focus">
+Tra qualche lezione capiremo come gestire situazioni come questa (in cui dobbiamo richiedere all'utente di inserire input in un formato corretto)
+</div>
+
+---
+
+# Operatori logici &amp; algebra booleana
+
+* L'algebra booleana è il ramo dell'algebra in cui le variabili possono assumere solamente due valori: **vero** o **falso**
+* In questo contesto una proposizione è una affermazione che può essere vera o falsa
+    * "Laboratorio di calcolo è il mio corso preferito" è una proposizione
+    * "State attenti oppure non passate l'esame" non lo è!
+* Diverse proposizioni possono essere combinate per costruire *espressioni logiche*
+* Gli operatori (o connettivi) logici combinano le proposizioni<!-- .element class="fragment" -->
+* In un programma le operazioni da svolgere possono dipendere dal verificarsi di determinate condizioni<!-- .element class="fragment" -->
+    
+---
+
+# Operatori logici - AND, OR e NOT
+
+Date due preposizioni **A** e **B** (es. "Il professore è noioso" e "in aula fa caldo"):
+
+<ul>
+<li class="fragment" data-fragment-index="1">
+L'espressione <strong>C</strong> = <strong>A</strong> AND <strong>B</strong> è vera <em>solo</em> se sono vere sia <strong>A</strong> che <strong>B</strong></li>
+<li class="fragment" data-fragment-index="2">L'espressione <strong>C</strong> = <strong>A</strong> OR <strong>B</strong> è vera se almeno una tra <strong>A</strong> e <strong>B</strong> è vera</li>
+<li class="fragment" data-fragment-index="3">L'espressione <strong>C</strong> = NOT <strong>A</strong> è vera se <strong>A</strong> è falsa</li>
+<li class="fragment" data-fragment-index="4">Come si scrive un'espressione che è vera solo se una tra <strong>A</strong> o <strong>B</strong> è vera?
+    <ul>
+    <li>Questo operatore logico si chiama XOR (o OR esclusivo): scrivete la sua espressione e costruite la sua tavola di verità</li>
+    </ul>
+</li>
+</ul>
+
+<h3 class="spacing-1-top fragment" data-fragment-index="1">Tavola di verità associata</h3>
+
+<div class="flex-container">
+
+<div class="flex-col fragment fade-in-then-semi-out" data-fragment-index="1">
+
+| **A** | **B** | **C** = **A** AND **B** |
+|-|-|-|
+|1|1|1|
+|0|1|0|
+|1|0|0|
+|0|0|0|
+
+</div>
+
+<div class="flex-col fragment fade-in-then-semi-out" data-fragment-index="2">
+
+| **A** | **B** | **C** = **A** OR **B** |
+|-|-|-|
+|1|1|1|
+|0|1|1|
+|1|0|1|
+|0|0|0|
+
+</div>
+
+<div class="flex-col fragment fade-in-then-semi-out" data-fragment-index="3">
+
+| **A** | **C** = NOT **A** |
+|-|-|
+|1|0|
+|0|1|
+
+</div>
+</div>
+
+---
+
+# Operatori logici in C
+
+* Nel C i valori logici *vero* e *falso* sono rappresentati tramite interi
+    * Una preposizione è *falsa* se vale 0
+    * Una preposizione è *vera* se il suo valore è diverso da 0
+* Gli operatori logici agiscono solo sugli interi<!-- .element class="fragment" -->
+    * L'operatore AND è `&amp;&amp;`
+    * L'operatore OR è `||`
+    * L'operatore NOT è `!`
+* Questi tre operatori sono sufficienti per calcolare qualsiasi espressione logica<!-- .element class="fragment" -->
+
+---
+
+# Operatori logici in C - esempi
+
+```C [1,2|1,3|1,4]
+int a = 0, b = 3;
+int c = a && b;             // c == 0 perché a e b non sono entrambe vere
+int d = a || b;             // d == 1 perché almeno una tra a e b è vera
+int e = !a;                 // e == 1 perché a è falsa
+```
+
+```C [1,2|1,3|1,4|1,5]
+int a = 0, b = 1;
+int c = (a || b) && b;      // c == 1 perché sia (a || b) che b sono vere
+int d = (a || b) && !a;     // d == 1 perché sia (a || b) che !a sono vere
+int e = (a && b) || b;      // quanto fa?
+int f = (a || !b) && a;     // quanto fa?
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Operatori relazionali
+
+* Servono a confrontare i valori di variabili o espressioni
+* Danno come risultato un valore logico (cioè vero o falso)
+
+|Operatore|Relazione|
+|-|-|
+|`>`| maggiore di|
+|`>=`| maggiore o uguale a|
+|`<`| minore di|
+|`<=`|minore o uguale a|
+|`==`|uguale a|
+|`!=`|diverso da|
+
+<div class="warning fragment">Non confondete <code>==</code> con <code>=</code>!</div>
+
+```C [1,2|1,3|1,4]
+int a = 2, b = 3, c = 5;
+int d = (a == 2);           // a è effettivamente uguale a 2, quindi d == 1
+d = (a >= c);               // a è maggiore di c, quindi d == 0
+d = (a != c);               // a e c sono diversi, quindi d == 1
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Gerarchia globale delle priorità
+
+<div>
+    <div class="arrow" style="position:relative;left:250px;top:125px; width:300px;">
+        <div class="line" style="width:270px"></div>
+        <div class="point"></div>
+        Priorità
+    </div>
+    
+    <ol>
+    <li><code>a++ a--</code> (post)</li>
+    <li><code>++a --a</code> (pre), <code>! -</code> (unario)</li>
+    <li><code>* / %</code></li>
+    <li><code>+ -</code></li>
+    <li><code>< <= > >=</code></li>
+    <li><code>== !=</code></li>
+    <li><code>&&</code></li>
+    <li><code>||</code></li>
+    <li><code>= += -= *= /= %=</code></li>
+    </ol>
+</div>
+
+---
+
+# Altri esempi
+
+<div class="focus">
+Ricordate che <code>==</code> indica uguaglianza!
+</div>
+
+```C [1,3|1,4|1,6,7,9]
+int a = 7, b = 4;
+
+int c = b > a;              // a è maggiore di b quindi c == 0
+int d = b == 3 + 1;         // la somma ha priorità, quindi d == 1
+
+int e = (b > a) && b;       // quanto vale e?
+int f = b > a && b;         // quanto vale f?
+
+int g = !(b - 4) || !b;     // quanto vale g?
+```
+
+<div class="warning fragment">
+Alcuni di questi esempi sono poco leggibili: considerateli come esercizi ma non imitatene lo stile!
+</div>
+
+---
+
+# Le librerie matematiche
+
+|Simbolo|Definizione|Funzione C|
+|-|-|-|
+|$\sqrt{x}$ | Radice quadrata di $x$, per $x \geq 0$ | `double sqrt(double x)`|
+|$\sin{x}$ | Seno di $x$ | `double sin(double x)`|
+|$\cos{x}$ | Coseno di $x$ | `double cos(double x)`|
+|$\tan{x}$ | Tangente di $x$ | `double tan(double x)`|
+|$\arcsin{x}$ | Arcoseno di $x$ | `double asin(double x)`|
+|$\arccos{x}$ | Arcocoseno di $x$ | `double acos(double x)`|
+|$\arctan{x}$ | Arcotangente di $x$ | `double atan(double x)`|
+|$e^x$ | $e$ elevato alla $x$ | `double exp(double x)`|
+|$x^y$ | $x$ elevato alla $y$ | `double pow(double x, double y)`<!-- .element: style="font-size:85%" -->|
+|$\ln(x)$| log. naturale di $x$, per $x \geq 0$ | `double log(double x)` |
+|$\|x\|$ | valore assoluto di $x$ | `double fabs(double x)`|
+|...|...|...|
+
+---
+
+# Un esempio
+
+```C [|2,8]
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int numero;
+    printf("Inserire un numero intero\n");
+    scanf("%i", &numero);
+    printf("La radice del numero inserito è %.3lf\n", sqrt(numero));
+
+    return 0;
+}
+```
+
+```bash
+$ gcc -o es_math es_math.c
+/usr/bin/ld: /tmp/ccSi46s7.o: in function `main':
+es_math.c:(.text+0x47): undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment focus">
+
+Compilare un codice con le librerie matematiche richiede il parametro `-lm`
+
+```bash
+$ gcc -o es_math es_math.c -lm
+```
+</div>
+
+---
+
+<!-- .slide: data-transition="slide-in none-out" -->
+# Un ripasso veloce: come funziona la compilazione?
+
+Semplificando, possiamo considerare la compilazione come un processo a tre stadi
+
+<img src="/images/labcalc_slides/compilazione.png" width="650">
+
+---
+
+<!-- .slide: data-transition="none-in slide-out" -->
+# Un ripasso veloce: come funziona la compilazione?
+
+Semplificando, possiamo considerare la compilazione come un processo a tre stadi
+
+<img src="/images/labcalc_slides/linker.png" width="650">
+
+---
+
+# Il linker
+
+* Il linker mette assieme il codice oggetto compilato da noi e quello delle funzioni invocate dal nostro programma
+* In alcuni casi (es: funzioni di input/output) il linker agisce "automaticamente"
+* In altri casi dobbiamo esplicitamente dirgli quali librerie "linkare" con l'opzione `-l`
+* Errori di `undefined reference` **non** sono errori di compilazione ma del linker
+    * Significa che il linker non trova il codice oggetto di quella specifica funzione
+    
+```bash
+$ gcc -o es_math es_math.c
+/usr/bin/ld: /tmp/ccSi46s7.o: in function `main':
+es_math.c:(.text+0x47): undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
+$ gcc -o es_math es_math.c -lm
+```
+
+<div class="fragment focus">
+Leggete attentamente gli errori di compilazione, contengono sempre indizi per risolvere il problema. Cominciate <strong>sempre</strong> a risolverli partendo dall'inizio!
+</div>
+                
