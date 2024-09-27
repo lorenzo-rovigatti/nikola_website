@@ -9,6 +9,10 @@
 .. type: text
 -->
 
+# Introduction
+
+The presentation of the first lesson can be found <a href="link://slug/compbio_lezione1">here</a>.
+
 ```{important}
 Please enroll [here](https://elearning.uniroma1.it/course/view.php?id=18658) so that I can keep an updated list of students who attend the lectures.
 ```
