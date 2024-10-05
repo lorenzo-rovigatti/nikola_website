@@ -39,7 +39,7 @@ In ognuno di questi casi è necessario scegliere un insi<!--
 
 ---
 
-# Rappresentazione dei numeri decimali - virgola "fissa"
+# Numeri decimali - virgola "fissa"<!-- .element: style="font-size: 170%"-->
 
 In un sistema posizionale, numeri razionali con $L$ cifre decimali e $M$ cifre a sinistra della virgola si esprimono generalizzando quanto visto per gli interi:
 
@@ -60,7 +60,7 @@ Con $n$ bit, se ne usiamo $M$ per la parte intera e $K = n - M$ per la parte dec
 
 ---
 
-# Rappresentazione dei numeri decimali - virgola mobile
+# Numeri decimali - virgola mobile<!-- .element: style="font-size: 170%"-->
 
 * Dato un numero di $n$ bit, i numeri ($=$ stati) rappresentabili sono al più $2^n$
 * Con la virgola "fissa" questi sono distribuiti in un piccolo intervallo. Come ampliarlo?
@@ -73,7 +73,7 @@ Con $n$ bit, se ne usiamo $M$ per la parte intera e $K = n - M$ per la parte dec
 
 ---
 
-# Rappresentazione dei numeri decimali - standard IEEE 754
+# Numeri decimali - standard IEEE 754
 
 ### $\color{red}{32}/\color{blue}{64}$ bit
 
@@ -86,7 +86,7 @@ Con $n$ bit, se ne usiamo $M$ per la parte intera e $K = n - M$ per la parte dec
     
 ---
 
-# Rappresentazione dei numeri decimali - standard IEEE 754
+# Numeri decimali - standard IEEE 754
     
 ## Numeri razionali a 32 bit (singola precisione):
 
@@ -161,27 +161,33 @@ Sommare due numeri IEEE754 significa prima eguagliare gli esponenti e poi sommar
 
 Se i numeri differiscono molto, la mantissa del minore perde di precisione e può arrivare persino a valere $0$:
 
-```python [1-2|3]
->>> import numpy as np
->>> np.float32(4000000000) + np.float32(1)
-4000000000.0
+```python [1|2]
+>>> 1000000000000. + 0.00001
+1000000000000.0
 ```
 <!-- .element: class="fragment" -->
 
 <div class="fragment warning">
-Dobbiamo "obbligare" Python a usare numeri a 32 bit nella maniera convoluta mostrata sopra, perché di default usa numeri a 64 bit
+Python di default usa decimali a 64 bit: il problema diventa ancora più evidente usando numeri a 32 bit!
 </div>
 
 ---
 
 # Problemi di arrotondamento - esempio 3
 
-Se due numeri sono molto simili uno all'altro, calcolare la loro differenza può portare ad errori anche molto grandi:
+Se due numeri sono molto simili uno all'altro, calcolare la loro differenza può portare a errori anche molto grandi:
 
-```python [1-2|3]
->>> import numpy as np
->>> np.float32(100.00002) - np.float32(100.00001)
-1.5258789e-05
+```python [1|]
+>>> 1000000. + 0.0001 - 1000000.
+9.999994654208422e-05
+```
+<!-- .element: class="fragment" -->
+
+Alcune regole dell'aritmetica sono vere solo approssimativamente!<!-- .element: class="fragment" -->
+
+```python [1|]
+>>> 1000000. - 1000000. + 0.0001
+0.0001
 ```
 <!-- .element: class="fragment" -->
 
