@@ -98,7 +98,7 @@ int main() {
 $ gcc -E include.c > include_full.c
 ```
 
-* Aprite il file `include_full.c`: è enorme e pieno di codice che non avete scritto voi!
+* Aprite il file `include_full.c`: è pieno di codice che non avete scritto voi!
     
 
 ---
@@ -133,7 +133,7 @@ printf("La temperatura in Celsius è %lf\n", T_c);
 <div class="fragment">
 
 * La funzione `printf` è messa a disposizione dalla *libreria standard* del C
-* La *firma* è `int printf(stringa, espressione_1, espressione_2, ...)`
+* La *firma* è `int printf(stringa, espr_1, espr_2, ...)`
     * `stringa` è un argomento racchiuso fra doppi apici (vedi prossima slide)
     * Gli argomenti seguenti sono le espressioni e/o variabili che vogliamo stampare
 * Qualunque dato in C è solo una sequenza di bit: dobbiamo dire a `printf`
@@ -149,7 +149,7 @@ printf("La temperatura in Celsius è %lf\n", T_c);
 * Il primo argomento di `printf` è il *template* di ciò che vogliamo stampare
 * Può contenere delle combinazioni di caratteri speciali:
     * Combinazioni che cominciano per `%`: sono sostituite dal valore delle espressioni passate come argomenti
-    * Combinazioni che cominciano per `\`: *sequenze di escape* che servono a formattare il testo
+    * Combinazioni che cominciano per `\`: *sequenze di escape* per formattare il testo
 
 Qualche esempio:
 
