@@ -147,7 +147,7 @@ La somma dei quadrati dei due numeri è 37.570
 
 ---
 
-# Che differenza c'è tra una macro e una funzione?
+# C'è tra una macro e una funzione?
 
 * Una macro viene *espansa* dal preprocessore $\to$ `SQR(x)` è vista dal compilatore come `(x) * (x)`
 * Una funzione è compilata a parte, il suo codice oggetto viene incluso nel programma dal linker e chiamato al momento dell'esecuzione del programma
@@ -159,7 +159,7 @@ Per ora non dovete preoccuparvi delle prestazioni: capire cosa rallenta il vostr
 </div>
 
 <div class="fragment focus">
-Utilizzate <code>gcc -E</code> (vedi la <a href="../labcalc_lezione6/#/4">lezione</a>) della settimana scorsa) per osservare direttamente come le macro vengano sostituite dal preprocessore
+Utilizzate <code>gcc -E</code> (vedi <a href="../labcalc_lezione6/#/4">lezione</a> della settimana scorsa) per osservare direttamente come le macro vengano sostituite dal preprocessore
 </div>
 
 ---
@@ -185,6 +185,8 @@ int main() {
 ```bash
 $ ./es_macro_pred
 Questo file è stato compilato il Aug 20 2022 alle 10:25:11
+$ ./es_macro_pred
+Questo file è stato compilato il Aug 20 2022 alle 10:25:11
 ```
 <!-- .element: class="fragment" -->
 
@@ -196,11 +198,11 @@ Questo file è stato compilato il Aug 20 2022 alle 10:25:11
 * Solo la parte inclusa verrà compilata!
 * In parole povere: se la data macro `MIA_MACRO` è definita, allora includi questo blocco di codice, altrimenti includi quest'altro
 * Per effettuare questa *compilazione condizionata* si usano le direttive
-    * `#ifdef NOMEMACRO` il codice che segue verrà incluso se `NOMEMACRO` esiste
-    * `#ifndef NOMEMACRO` il codice che segue verrà incluso se `NOMEMACRO` **non** esiste
-    * `#else` il codice che segue verrà incluso se la condizione precedente è falsa
-    * `#endif` chiude il blocco aperto con `#ifdef` o `#ifndef`
-    * `#undef NOMEMACRO` *cancella* `NOMEMACRO`: da qui in poi è come se `NOMEMACRO` non fosse mai stata definita
+    * `#ifdef NOMEMACRO`: il codice che segue viene incluso se `NOMEMACRO` esiste
+    * `#ifndef NOMEMACRO`: il codice che segue viene incluso se `NOMEMACRO` **non** esiste
+    * `#else`: il codice che segue vieneincluso se la condizione precedente è falsa
+    * `#endif`: chiude il blocco aperto con `#ifdef` o `#ifndef`
+    * `#undef NOMEMACRO`: *cancella* `NOMEMACRO`: da qui in poi è come se `NOMEMACRO` non fosse mai stata definita
 
 ---
 
