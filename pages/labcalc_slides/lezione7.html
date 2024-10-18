@@ -12,6 +12,16 @@
 .. back_button: ../../labcalc
 -->
 
+# Recap: `printf` e i descrittori
+
+* Il primo argomento di `printf` è il *template* di ciò che vogliamo stampare
+* Può contenere delle combinazioni di caratteri speciali:
+    * Combinazioni che cominciano per `%`: sono sostituite dal valore delle espressioni passate come argomenti
+* `%d` / `%u` per interi con e senza segno
+* `%lf` per i double
+    
+---
+
 # Modificatori opzionali
                     
 * I descrittori possono essere "complicati" tramite dei modificatori
@@ -510,6 +520,6 @@ $ gcc -o es_math es_math.c -lm
 ```
 
 <div class="fragment focus">
-Leggete attentamente gli errori di compilazione, contengono sempre indizi per risolvere il problema. Cominciate <strong>sempre</strong> a risolverli partendo dall'inizio!
+Leggete attentamente gli errori, contengono sempre indizi per risolvere il problema. Cominciate <strong>sempre</strong> a risolverli partendo dall'inizio!
 </div>
                 
