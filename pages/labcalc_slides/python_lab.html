@@ -18,7 +18,7 @@
 
 ### Corso di Laboratorio di Calcolo
 
-#### Seconda esercitazione, AA 2023/2024
+#### Seconda esercitazione, AA 2024/2025
 
 ---
 
@@ -196,7 +196,7 @@ Guarda mamma, programmo
 * L'indentazione è obbligatoria
 
 ``` python
-# questo programma stampa le lettere contenute nella parola "ciao"
+# questo programma stampa i caratteri contenuti in "ciao"
 for c in "ciao":
     # i ":" definiscono un nuovo blocco di codice finché le righe 
     # hanno il "rientro" (indentazione) il blocco non termina
@@ -266,9 +266,9 @@ Provate a usare questi pulsanti durante l'esercitazione!
 
 ---
 
-# Graficare $y = f(x)$
+# Graficare $y_i = f(x_i)$
 
-Possiamo definire *liste* di numeri per graficare una quantità in funzione di un'altra
+Definiamo *liste* di numeri per graficare una quantità (discreta) in funzione di un'altra
 
 ```python
 import matplotlib.pyplot as plt
@@ -284,7 +284,7 @@ plt.show()
 
 ---
 
-# Graficare funzioni più complicate
+# Graficare relazioni più complicate
 
 * Le liste `x` e `y` si possono inizializzare più facilmente usando funzioni esterne
 * Il modulo più comune per queste operazioni è `numpy`, spesso importato come `np`
@@ -337,7 +337,7 @@ plt.show()
 * `usecols=(0, 1)` fa sì che solo le prime due colonne vengano lette
 
 <div class="fragment warning">
-Se il numero di liste a sinistra dell'uguale non è uguale al numero di colonne lette tramite <code>usecols</code> il programma darà errore
+Il numero di liste a sinistra dell'uguale deve essere uguale al numero di colonne lette tramite <code>usecols</code> o il programma dà errore
 </div>
 
 ---
@@ -382,7 +382,7 @@ Cosa succede se cambiate <code>usecols=(0, 1)</code> con <code>usecols=(0, 2)</c
 # Salvare il grafico su file
 
 * Il grafico si può salvare "manualmente" usando il pulsante nella toolbar
-* Si può usare la funzione `plt.savefig("nomefile.png")`
+* Lo stesso effetto si ottiene con la funzione `plt.savefig("nomefile.png")`
 
 ```python
 import matplotlib.pyplot as plt
@@ -506,7 +506,7 @@ plt.show()
 
 ---
 
-# Personalizzare i grafici - l'intervallo degli assi
+# Personalizzare l'intervallo degli assi
 
 * `xlim` e `ylim` impostano l'intervallo degli assi x e y
 
@@ -523,7 +523,7 @@ plt.show()
 
 ---
 
-# Personalizzare i grafici - titolo, etichette e legenda
+# Personalizzare titolo, etichette e legenda
 
 * Usate `plt.title`, `plt.xlabel`, `plt.ylabel` e `plt.legend` per aggiungere etichette al grafico, agli assi e alle curve
 
