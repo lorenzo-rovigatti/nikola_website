@@ -187,7 +187,7 @@ Se il programma contiene molte funzioni, elencare tutte le definizioni all'inizi
 * Numero e tipo degli argomenti devono corrispondere al prototipo della funzione
 * Gli argomenti possono essere sia costanti che variabili
 
-```C [|2|4|6|8|10|2-8]
+```C [1|1,2|4|6|1,8|1,10|1,2-8]
 double x = 2.5;
 printf("%lf\n", square(x)); // passiamo una variabile
 
@@ -216,7 +216,7 @@ $ ./es_chiamata_funzioni
 * Non esiste **nessun** legami tra i nomi delle variabili passate come parametri e i nomi dei parametri in questione
 * Ciò che conta è il **valore** delle variabili, che viene acquisito dai parametri
 
-```C [3-5|8-11|13|14|15|16|17|]
+```C [3-5|8-11|3-5,8-11,13|3-5,8-11,14|3-5,8-11,15|3-5,8-11,16|3-5,8-11,17]
 #include <stdio.h>
 
 double diff(double x, double y) {
@@ -242,7 +242,7 @@ int main() {
 
 ---
 
-# *Return value* e parametri sono "opzionali"
+# Il valore di ritorno e i parametri sono "opzionali"<!-- .element style="font-size:140%" -->
 
 * Una funzione può non restituire nulla $\to$ il tipo che precede il nome è `void`
 * Una funzione può non prendere nessun parametro in input $\to$ nulla tra `()`
@@ -285,7 +285,7 @@ int main() {
 * Il tipo dei parametri deve essere coerente con quello che la funzione si aspetta
     * oppure devono poter essere "convertibili" (tramite *cast*)
     
-```C [3-5|8-10|3-5,12|3-5,13|3-5,14|3-5,15|3-5,16|]
+```C [3-5|8-10|3-5,12|3-5,8-10,13|3-5,8-10,14|3-5,8-10,15|3-5,8-10,16]
 #include <stdio.h>
 
 double retta(double m, double q, double x) {
