@@ -31,7 +31,7 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
     <li><a href="link://slug/labcalc_lezione14">Quattordicesima lezione:</a> input/output su file.</li>
     <li><a href="link://slug/labcalc_lezione15">Quindicesima lezione:</a> puntatori e array unidimensionali, qualificatore const, puntatori e array multidimensionali.</li>
     <li><a href="link://slug/labcalc_lezione16">Sedicesima lezione:</a> introduzione alle funzioni.</li>
-    <li><a href="link://slug/labcalc_lezione17">Diciassettesima lezione:</a> librerie, personali, argomenti passati by reference e by value, introduzione alle stringhe.</li>
+    <li><a href="link://slug/labcalc_lezione17">Diciassettesima lezione:</a> librerie personali, argomenti passati by reference e by value, introduzione alle stringhe.</li>
     <li><a href="link://slug/labcalc_lezione18">Diciottesima lezione:</a> getchar, putchar, array multidimensionali di stringhe.</li>
     <li><a href="link://slug/labcalc_lezione19">Diciannovesima lezione:</a> manipolazione di stringhe, lettura di stringhe da file, integrazione numerica: rettangoli e trapezi.</li>
     <li><a href="link://slug/labcalc_lezione20">Ventesima lezione:</a> integrazione Monte Carlo.</li>

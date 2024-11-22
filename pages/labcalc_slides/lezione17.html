@@ -23,11 +23,11 @@
     * Si compila tutto assieme: `gcc -o eseguibile main.c libreria.c`
     
 <div class="fragment warning">
-Nell'<code>#include</code> dovete usare le virgolette e non i simboli minore e maggiore!
+Nell'<code>#include</code> dovete usare le virgolette e non i simboli minore e maggiore
 </div>
     
 <div class="focus fragment">
-Questa procedura si generalizza a un numero qualsiasi di librerie!
+Questa procedura si generalizza a un numero qualsiasi di librerie
 </div>
 
 ---
@@ -80,7 +80,7 @@ $ ./mio_exe
 </div>
 
 <div class="fragment focus">
-Sotto al cofano il linker compila separatamente <code>main.c</code> e <code>my_random.c</code> e poi unisce insieme i codici oggetto risultanti
+Sotto al cofano il linker compila separatamente <code>main.c</code> e <code>my_random.c</code>, poi unisce insieme i codici oggetto risultanti
 </div>
 
 ---
@@ -122,7 +122,7 @@ Una funzione può persino chiamare se stessa!
 * Le funzioni possono restituire un solo valore (tramite il `return`)
 * Cambiare il valore di un parametro all'interno di una funzione **non** ha effetto fuori dalla funzione $\to$ questo concetto si chiama passaggio *by value* (per valore)
 
-```C [3-6|9-10|]
+```C [3-6|9-10]
 #include <stdio.h>
 
 double square(double x) {
@@ -152,7 +152,7 @@ $ ./es_passaggio
 * Una variabile esiste **solamente** tra le parentesi graffe più interne che la circondano
 * Variabili con nomi uguali ma *scope* diversi non hanno **nessun** legame fra di loro
 
-```C [|5,6|5,6,11|14|]
+```C [|5,6|5,6,11|14]
 #include <stdio.h>
 #include <math.h>
 
@@ -252,11 +252,11 @@ Modificare il contenuto di array passati a una funzione ha effetto anche al di f
 
 ---
 
-# Array multidimensionali come argomenti di funzioni
+# Array multidimensionali come argomenti di funzioni<!-- .element style="font-size:140%" -->
 
 * Nella lista dei parametri, un array multidimensionale deve avere tutte le dimensioni specificate tranne la prima
 
-```C [|3,9|4,10|]
+```C [|3,9|4,10]
 #define LEN 10
 
 void inizializza(double my_array[][LEN]);
@@ -286,7 +286,7 @@ parametro_multi.c:14:20: error: type of formal parameter 1 is incomplete
 
 # Esempio: una funzione per il bubblesort
 
-```C [|1,14|5,6,12,13|7-11|]
+```C [|1,14|5,6,12,13|7-11]
 void bubblesort(int data[], int n){
     int i, tmp;
     int *pd;
@@ -318,7 +318,7 @@ void bubblesort(int data[], int n){
 * Una variabile definita all'esterno di qualunque funzione è detta *globale*
 * Una variabile globale è visibile in qualunque funzione definita nello stesso file
 
-```C [|3|6|10-11|]
+```C [|3|6|10-11]
 #include <stdio.h>
 
 int x = 3;
@@ -337,7 +337,7 @@ int main() {
 
 ---
 
-# Perché non è bene usare variabili globali
+# Perché è difficile usare bene le variabili globali<!-- .element style="font-size:140%" -->
 
 * Le variabili locali *nascondono* quelle globali
 ```C
@@ -358,7 +358,7 @@ void stampa_x() {
     ```
 
 <div class="warning fragment">
-In programmi lunghi è facile perdere traccia delle variabili globali: non usatele mai per evitare bug insidiosissimi
+In programmi lunghi è facile perdere traccia delle variabili globali: usatele con criterio per evitare bug insidiosissimi
 </div>
 
 ---
@@ -412,7 +412,7 @@ CODICE CARATTERE
 * Una stringa è una sequenza di `char` che termina con il **carattere di fine stringa** `\0`
 * Le stringhe sono rappresentate da array unidimensionali di `char`
 
-```C [|3,7|9-11|12|14|]
+```C [|3,7|9-11|12|14]
 #include <stdio.h>
 #include <stdlib.h>
 #define LEN 10
@@ -461,7 +461,7 @@ Per contenere una stringa di <code>N</code> caratteri serve un array di lunghezz
 
 ---
 
-# Una stringa può contenere qualunque carattere ASCII
+# Una stringa può contenere qualunque carattere ASCII<!-- .element style="font-size:130%" -->
 
 ```C [|6|7|9|17|18|]
 #include <stdio.h>
@@ -565,9 +565,9 @@ Le funzioni che lavorano con le stringhe si aspettano di trovare un <code>'\0'</
 
 ---
 
-# Una funzione che restituisce la lunghezza di una stringa
+# Una funzione che restituisce la lunghezza di una stringa<!-- .element style="font-size:120%" -->
 
-```C [|4-9|]
+```C [|4-9]
 #include <stdio.h>
 
 int lunghezza_stringa(char stringa[]) { // avremmo potuto usare "char *stringa"
@@ -591,7 +591,7 @@ int lunghezza_stringa(char stringa[]) { // avremmo potuto usare "char *stringa"
 
 # Usiamo la nostra funzione
 
-```C [|4-10|12-13|]
+```C [|4-10|12-13]
 // qui gli include e la definizione di lunghezza_stringa
 
 int main() {
