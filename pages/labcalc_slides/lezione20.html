@@ -36,7 +36,7 @@ Questa derivazione non è rigorosa: nei prossimi anni sarà formalizzata meglio
 
 * Calcoliamo l'integrale di $x^2 - \frac{3}{5} x^3$ nell'intervallo $[0, 2]$
 
-```C [|9,10|11-15|16|18-19|]
+```C [|9,10|11-15|16|18-19]
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -81,7 +81,7 @@ Qual è il vantaggio? Il MC funziona <b>molto</b> meglio all'aumentare delle dim
 
 ---
 
-# Metodo MC hit&amp;miss per il calcolo di aree e volumi
+# Metodo hit&amp;miss per stimare aree e volumi
 
 Qual è il volume dell'intersezione tra due sfere di raggi $R_1$ e $R_2$ poste a distanza $d$?
 
@@ -133,7 +133,7 @@ $$
 
 # Calcolo del volume - `main`
 
-```C [|4-9|11-18|19-20|]
+```C [|4-9|11-18|19-20]
 // #define e prototipi
 
 int main() {
@@ -164,7 +164,7 @@ int main() {
 
 # Calcolo del volume - funzioni accessorie
 
-```C [|1-4|6,11-16|7,18-22|]
+```C [|1-4|6,11-16|7,18-22]
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -210,7 +210,7 @@ Il metodo è generale e può essere utilizzato per superfici o volumi per cui no
 
 ---
 
-# Un esempio più realistico: l'intersezione tra microgel
+# Un esempio realistico: l'intersezione tra microgel<!-- .element: style="font-size:140%" -->
 
 * I microgel sono particelle mesoscopiche polimeriche
 * Sono utilizzati sia in ambito teorico (per studiare transizioni di fase) che in ambito applicativo (per costruire nuovi materiali)
@@ -246,7 +246,5 @@ if((value & ox1) > 0) printf("Numero dispari!\n");
 ---
 
 <figure>
-<img src="/images/labcalc_slides/Thats_all_folks.svg" width="700">
+<img src="/images/labcalc_slides/Thats_all_folks.svg" width="800">
 </figure>
-
-<div class="focus fragment">Per chi vuole ci vediamo lunedì per una lezione opzionale su Python</div>
