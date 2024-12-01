@@ -32,7 +32,7 @@ char parola[5] = "mondo";
 </div>
 
 <div class="fragment focus">
-Errori di questo tipo sono segnalati come <em>warning</em> ("avvertimenti") dal compilatore: assicuratevi che il comando <code>gcc ...</code> non stampi mai nulla!
+Errori come questi sono segnalati come <em>warning</em> dal compilatore: assicuratevi che il comando <code>gcc ... -Wall</code> non stampi mai nulla!
 </div>
 
 ---
@@ -50,7 +50,7 @@ int main() {
   char parola[LEN];
   printf("Inserisci una parola:\n");
   scanf("%s", parola); // non serve utilizzare & perché parola è già un indirizzo
-  printf("Hai inserito %s\n", parola);
+  printf("Hai inserito '%s'\n", parola);
   return 0;
 }
 ```
@@ -59,7 +59,7 @@ int main() {
 $ ./es_stringa_scanf
 Inserisci una parola:
 prova
-Hai inserito prova
+Hai inserito 'prova'
 ```
 <!-- .element class="fragment" -->
 
@@ -71,7 +71,7 @@ Hai inserito prova
 $ ./es_stringa_scanf
 Inserisci una parola:
 supercalifragilistichespiralidoso
-Hai inserito supercalifragilistichespiralidoso
+Hai inserito 'supercalifragilistichespiralidoso'
 *** stack smashing detected ***: terminated
 [1]    47111 IOT instruction (core dumped)  ./stringa_scanf
 ```
@@ -88,7 +88,7 @@ int main() {
     char parola[LEN];
     printf("Inserisci una parola:\n");
     scanf("%9s", parola); // diciamo a scanf di leggere al massimo 9 caratteri
-    printf("Hai inserito %s\n", parola);
+    printf("Hai inserito '%s'\n", parola);
     return 0;
 }
 ```
@@ -106,7 +106,7 @@ Ricordatevi che un carattere dell'array serve per <code>'\0'</code>
 $ ./es_stringa_scanf
 Inserisci una parola:
 due parole
-Hai inserito due
+Hai inserito 'due'
 ```
 <!-- .element class="fragment" -->
 
@@ -119,7 +119,7 @@ char parola1[LEN], parola2[LEN]
 scanf("%s %s", parola1, parola2);
 ```
 * E se non sappiamo quante parole inserirà l'utente?
-* Si può leggere un carattere alla volta con `%c`, ma il codice risultate è macchinoso
+* Si può leggere un carattere alla volta con `%c`, ma il codice risultante è macchinoso
 
 </div>
 
@@ -130,7 +130,7 @@ scanf("%s %s", parola1, parola2);
 * È possibile ottenere un maggior controllo sull'input tramite la funzione `getchar()`
 * `int getchar()` legge dal *buffer* un singolo carattere e lo restituisce
 
-```C [|5-8|10-14|]
+```C [|5-8|10-14]
 void leggi_frase(char frase[], int max) {
   int read = 0;
   char ch;
@@ -186,7 +186,7 @@ Hai inserito: Nel mezzo del cammi
 
 # Esempio completo: contare gli spazi
 
-```C [|10,21|11-16|17-20|22-23|]
+```C [|10,21|11-16|17-20|22-23]
 #include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt; // serve per exit(1)
 #define MAX_LENGTH 100
@@ -221,7 +221,7 @@ int main() {
 
 `int putchar(int c)` scrive sul *buffer* un singolo carattere
 
-```C [|6-11|]
+```C [|6-11]
 #include &lt;stdio.h&gt;
 
 int main() {
@@ -252,7 +252,7 @@ Utile in casi molto specifici, in generale usate <code>printf("%s\n", stringa);<
 
 # Esempio completo: svuotare il buffer
 
-```C [|4|6-8|10-14|]
+```C [|4|6-8|10-14]
 #include &lt;stdio.h&gt;
 
 int main() {
