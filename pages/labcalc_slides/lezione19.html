@@ -70,7 +70,7 @@ Entrambe le funzioni restituiscono <code>dest</code>, il puntatore alla stringa 
 
 # Copiare stringhe: un esempio
 
-```C [|5-6|8-9|10-11|13-16|]
+```C [|5-6|8-9|10-11|13-16]
 #include <string.h>
 #include <stdio.h>
 
@@ -120,7 +120,7 @@ dest3: ciao mond
 
 # Concatenare stringhe: un esempio
 
-```C [|6-7|9-14|]
+```C [|6-7|9-14]
 #include <string.h>
 #include <stdio.h>
 #define LEN 20
@@ -173,7 +173,7 @@ Ricordate che in C tutto è <em>case sensitive</em>: <code>'Z'</code> viene prim
 
 # Confrontare stringhe: un esempio
 
-```C [|6-8|10|12-17|]
+```C [|6-8|10|12-17]
 #include <string.h>
 #include <stdio.h>
 #define MAX_LENGTH 20
@@ -245,7 +245,7 @@ sedia
 * `char *fgets(char *str, int num, FILE *stream)` legge al più `num` caratteri di una riga e li mette in `str`
 * `fgets` restituisce `str` se è stato letto almeno un carattere, `NULL` altrimenti
 
-```C [|2-5|7-10|]
+```C [|2-5|7-10]
 // definizione di main e variabili, apertura del file (che va chiuso alla fine)
 while(fgets(parole[n_parole], MAX_LENGTH - 1, input) != NULL) {
   n_parole++;
@@ -350,7 +350,7 @@ $$
 
 Il programma si aspetta una macro `N` definita al momento della compilazione
 
-```C [|8,9|4,10|5,11|13|]
+```C [|8,9|4,10|5,11|13]
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -400,7 +400,7 @@ void leggi_dati(double x[], double fx[]) {
 
 # Metodo dei rettangoli - calcolo dell'area
 
-```C [|1|2-4|6-8|10|]
+```C [|1|2-4|6-8|10]
 double calcola_area_rettangoli(double x[], double fx[], int N_points) {
     int i;
     double area = 0.0;
@@ -447,7 +447,7 @@ $ ./integrazione_rettangoli
 
 # Metodo dei trapezi - calcolo dell'area
 
-```C [|7|]
+```C [|7]
 double calcola_area_trapezi(double x[], double fx[], int N_points) {
     int i;
     double area = 0.0;
