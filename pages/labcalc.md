@@ -49,6 +49,29 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
 
 **Nota Bene:** riporto qui solo le soluzioni relative alla parte in C.
 
+{{% accordion id="2024" label="A.A. 2024/2025" %}}
+<ul>
+    <li>Prima esercitazione valutata: <a href="/pdfs/labcalc_exams/2024_valutata_1.pdf">testo</a> e <a href="link://listing/labcalc/2024_valutata_1.c">soluzione</a></li>
+    <li>Seconda esercitazione valutata: <a href="/pdfs/labcalc_exams/2024_valutata_2.pdf">testo</a> e <a href="link://listing/labcalc/2024_valutata_2.c">soluzione</a></li>
+    <li>Terza esercitazione valutata: <a href="/pdfs/labcalc_exams/2024_valutata_3.pdf">testo</a> e <a href="link://listing/labcalc/2024_valutata_3.c">soluzione</a></li>
+</ul>
+{{% /accordion %}}
+
+{{% accordion id="2023" label="A.A. 2023/2024" %}}
+<ul>
+    <li>Prima esercitazione valutata: <a href="/pdfs/labcalc_exams/2023_valutata_1.pdf">testo</a> e <a href="link://listing/labcalc/2023_valutata_1.c">soluzione</a></li>
+    <li>Seconda esercitazione valutata: <a href="/pdfs/labcalc_exams/2023_valutata_2.pdf">testo</a> e <a href="link://listing/labcalc/2023_valutata_2.c">soluzione</a></li>
+    <li>Terza esercitazione valutata: <a href="/pdfs/labcalc_exams/2023_valutata_3.pdf">testo</a> e <a href="link://listing/labcalc/2023_valutata_3.c">soluzione</a></li>
+    <li>Gennaio, mattina: <a href="/pdfs/labcalc_exams/2023_Gennaio_1.pdf">testo</a> e <a href="link://listing/labcalc/2023_Gennaio_1.c">soluzione</a></li>
+    <li>Gennaio, pomeriggio: <a href="/pdfs/labcalc_exams/2023_Gennaio_2.pdf">testo</a> e <a href="link://listing/labcalc/2023_Gennaio_2.c">soluzione</a></li>
+    <li>Febbraio: <a href="/pdfs/labcalc_exams/2023_Febbraio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Febbraio.c">soluzione</a></li>
+    <li>Maggio: <a href="/pdfs/labcalc_exams/2023_Maggio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Maggio.c">soluzione</a></li>
+    <li>Giugno: <a href="/pdfs/labcalc_exams/2023_Giugno.pdf">testo</a>, <a href="link://listing/labcalc/2023_Giugno_1.c">soluzione 1</a> e <a href="link://listing/labcalc/2023_Giugno_2.c">soluzione 2</a></li>
+    <li>Luglio: <a href="/pdfs/labcalc_exams/2023_Luglio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Luglio.c">soluzione</a></li>
+    <li>Settembre: <a href="/pdfs/labcalc_exams/2023_Settembre.pdf">testo</a> e <a href="link://listing/labcalc/2023_Settembre.c">soluzione</a></li>
+</ul>
+{{% /accordion %}}
+
 {{% accordion id="2022" label="A.A. 2022/2023" %}}
 <ul>
     <li>Prima esercitazione valutata: <a href="/pdfs/labcalc_exams/2022_valutata_1.pdf">testo</a> e <a href="link://listing/labcalc/2022_valutata_1.c">soluzione</a></li>
@@ -58,19 +81,5 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
     <li>Maggio: <a href="/pdfs/labcalc_exams/2022_Maggio.pdf">testo</a> e soluzioni <a href="link://listing/labcalc/2022_Maggio_1.c">parte 1</a> e <a href="link://listing/labcalc/2022_Maggio_2.c">parte 3</a></li>
     <li>Giugno: <a href="/pdfs/labcalc_exams/2022_Giugno.pdf">testo</a> e soluzioni <a href="link://listing/labcalc/2022_Giugno_1.c">parte 1</a> e <a href="link://listing/labcalc/2022_Giugno_2.c">parte 3</a></li>
     <li>Luglio: <a href="/pdfs/labcalc_exams/2022_Luglio.pdf">testo</a> e <a href="link://listing/labcalc/2022_Luglio.c">soluzione</a></li>
-</ul>
-{{% /accordion %}}
-
-{{% accordion id="2023" label="A.A. 2023/2024" %}}
-<ul>
-    <li>Prima esercitazione valutata: <a href="/pdfs/labcalc_exams/2023_valutata_1.pdf">testo</a> e <a href="link://listing/labcalc/2023_valutata_1.c">soluzione</a></li>
-    <li>Seconda esercitazione valutata: <a href="/pdfs/labcalc_exams/2023_valutata_2.pdf">testo</a> e <a href="link://listing/labcalc/2023_valutata_2.c">soluzione</a></li>
-    <li>Terza esercitazione valutata: <a href="/pdfs/labcalc_exams/2023_valutata_3.pdf">testo</a> e <a href="link://listing/labcalc/2023_valutata_2.c">soluzione</a></li>
-    <li>Gennaio, mattina: <a href="/pdfs/labcalc_exams/2023_Gennaio_1.pdf">testo</a> e <a href="link://listing/labcalc/2023_Gennaio_1.c">soluzione</a></li>
-    <li>Gennaio, pomeriggio: <a href="/pdfs/labcalc_exams/2023_Gennaio_2.pdf">testo</a> e <a href="link://listing/labcalc/2023_Gennaio_2.c">soluzione</a></li>
-    <li>Febbraio: <a href="/pdfs/labcalc_exams/2023_Febbraio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Febbraio.c">soluzione</a></li>
-    <li>Maggio: <a href="/pdfs/labcalc_exams/2023_Maggio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Maggio.c">soluzione</a></li>
-    <li>Giugno: <a href="/pdfs/labcalc_exams/2023_Giugno.pdf">testo</a>, <a href="link://listing/labcalc/2023_Giugno_1.c">soluzione 1</a> e <a href="link://listing/labcalc/2023_Giugno_2.c">soluzione 2</a></li>
-    <li>Luglio: <a href="/pdfs/labcalc_exams/2023_Luglio.pdf">testo</a> e <a href="link://listing/labcalc/2023_Luglio.c">soluzione</a></li>
 </ul>
 {{% /accordion %}}
