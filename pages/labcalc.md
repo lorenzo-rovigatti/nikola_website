@@ -54,6 +54,7 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
     <li>Prima esercitazione valutata: <a href="/pdfs/labcalc_exams/2024_valutata_1.pdf">testo</a> e <a href="link://listing/labcalc/2024_valutata_1.c">soluzione</a></li>
     <li>Seconda esercitazione valutata: <a href="/pdfs/labcalc_exams/2024_valutata_2.pdf">testo</a> e <a href="link://listing/labcalc/2024_valutata_2.c">soluzione</a></li>
     <li>Terza esercitazione valutata: <a href="/pdfs/labcalc_exams/2024_valutata_3.pdf">testo</a> e <a href="link://listing/labcalc/2024_valutata_3.c">soluzione</a></li>
+    <li>Gennaio: <a href="/pdfs/labcalc_exams/2024_Gennaio.pdf">testo</a> e <a href="link://listing/labcalc/2024_Gennaio.c">soluzione</a></li>
 </ul>
 {{% /accordion %}}
 
