@@ -16,6 +16,21 @@
   height: auto; 
 }
 
+figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure figcaption {
+  margin-top: 1em;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 90%;
+  text-align: center;
+  font-size: 90%;
+}
+
 code {
   border: 0;
   background-color: transparent;
