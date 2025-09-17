@@ -58,6 +58,7 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
     <li>Febbraio: <a href="/pdfs/labcalc_exams/2024_Febbraio.pdf">testo</a> e <a href="link://listing/labcalc/2024_Febbraio.c">soluzione</a></li>
     <li>Giugno: <a href="/pdfs/labcalc_exams/2024_Giugno.pdf">testo</a> e <a href="link://listing/labcalc/2024_Giugno.c">soluzione</a></li>
     <li>Luglio: <a href="/pdfs/labcalc_exams/2024_Luglio.pdf">testo</a> e <a href="link://listing/labcalc/2024_Luglio.c">soluzione</a></li>
+    <li>Settembre: <a href="/pdfs/labcalc_exams/2024_Settembre.pdf">testo</a> e <a href="link://listing/labcalc/2024_Settembre.c">soluzione</a></li>
 </ul>
 {{% /accordion %}}
 
