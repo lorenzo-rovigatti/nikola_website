@@ -1,0 +1,304 @@
+<!--
+.. title: Lezione 18
+.. slug: labcalc_lezione18
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Stringhe: un errore comune
+                    
+```C
+char parola[5] = "parolone";
+```
+
+<figure>
+<img src="/images/labcalc_slides/string_ub.png" width=400>
+</figure>
+
+<div class="fragment">
+
+```C
+char parola[5] = "mondo";
+```
+
+<img src="/images/labcalc_slides/string_ub2.png" width=250>
+</div>
+
+<div class="fragment focus">
+Errori come questi sono segnalati come <em>warning</em> dal compilatore: assicuratevi che il comando <code>gcc ... -Wall</code> non stampi mai nulla!
+</div>
+
+---
+
+# Stringhe &amp; `scanf`
+
+* Come per `printf`, il descrittore da utilizzare è `%s`
+* `scanf` prende indirizzi come argomenti, e le stringhe sono array, cioè indirizzi!
+
+```C []
+#include &lt;stdio.h&gt;
+#define LEN 10
+
+int main() {
+  char parola[LEN];
+  printf("Inserisci una parola:\n");
+  scanf("%s", parola); // non serve utilizzare & perché parola è già un indirizzo
+  printf("Hai inserito '%s'\n", parola);
+  return 0;
+}
+```
+
+```bash
+$ ./es_stringa_scanf
+Inserisci una parola:
+prova
+Hai inserito 'prova'
+```
+<!-- .element class="fragment" -->
+
+---
+
+# E se esageriamo con la lunghezza?
+
+```bash
+$ ./es_stringa_scanf
+Inserisci una parola:
+supercalifragilistichespiralidoso
+Hai inserito 'supercalifragilistichespiralidoso'
+*** stack smashing detected ***: terminated
+[1]    47111 IOT instruction (core dumped)  ./stringa_scanf
+```
+
+<div class="warning fragment">
+Dovete assicurarvi che la parola non sia troppo lunga!
+</div>
+
+```C [7]
+#include &lt;stdio.h&gt;
+#define LEN 10
+
+int main() {
+    char parola[LEN];
+    printf("Inserisci una parola:\n");
+    scanf("%9s", parola); // diciamo a scanf di leggere al massimo 9 caratteri
+    printf("Hai inserito '%s'\n", parola);
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+<div class="focus fragment">
+Ricordatevi che un carattere dell'array serve per <code>'\0'</code>
+</div>
+
+---
+
+# Leggere più parole
+
+```bash
+$ ./es_stringa_scanf
+Inserisci una parola:
+due parole
+Hai inserito 'due'
+```
+<!-- .element class="fragment" -->
+
+<div class="fragment">
+
+* Quando `scanf` incontra uno spazio, considera la stringa finita e la immagazzina nell'array passato, scartando il resto della frase
+* Una soluzione (poco generale) è usare un `%s` per ogni parola che volete leggere
+```C
+char parola1[LEN], parola2[LEN]
+scanf("%s %s", parola1, parola2);
+```
+* E se non sappiamo quante parole inserirà l'utente?
+* Si può leggere un carattere alla volta con `%c`, ma il codice risultante è macchinoso
+
+</div>
+
+---
+
+# Leggere un carattere per volta
+
+* È possibile ottenere un maggior controllo sull'input tramite la funzione `getchar()`
+* `int getchar()` legge dal *buffer* un singolo carattere e lo restituisce
+
+```C [|5-8|10-14]
+void leggi_frase(char frase[], int max) {
+  int read = 0;
+  char ch;
+    
+  while((ch = getchar()) != '\n' && read < max) {
+    frase[read] = ch;
+    read++;
+  }
+    
+  if(read == max) {
+    read = max - 1;
+    fprintf(stderr, "Troppi caratteri: solo i primi %d verranno salvati\n", read);
+  }
+  frase[read] = '\0';
+}
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Possiamo leggere frasi intere!
+
+```C
+#include &lt;stdio.h&gt;
+#define MAX_LENGTH 20
+
+... // definizione di leggi_frase
+
+int main() {
+    char frase[MAX_LENGTH];
+    
+    printf("Inserire al massimo %d caratteri (spazi permessi)\n", MAX_LENGTH - 1);
+    leggi_frase(frase, MAX_LENGTH);
+    printf("Hai inserito: %s\n", frase);
+    return 0;
+}
+```
+
+```bash [1-4|5-9]
+$ ./es_getchar
+Inserire una stringa (spazi permessi) di massimo 19 caratteri
+NON ACCETTO LIMITI
+Hai inserito: NON ACCETTO LIMITI
+$ ./es_getchar
+Inserire una stringa (spazi permessi) di massimo 19 caratteri
+Nel mezzo del cammin di nostra vita
+La frase è troppo lunga e verrà troncata a 19 caratteri
+Hai inserito: Nel mezzo del cammi
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Esempio completo: contare gli spazi
+
+```C [|10,21|11-16|17-20|22-23]
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt; // serve per exit(1)
+#define MAX_LENGTH 100
+
+int main() {
+    char frase[MAX_LENGTH], ch;
+    int read = 0, spaces = 0;
+    
+    printf("Inserire una frase di non più di %d caratteri\n", MAX_LENGTH - 1);
+    while((ch = getchar()) != '\n') {
+        if(read < MAX_LENGTH) {
+            frase[read++] = ch;
+            if(ch == ' ') {
+                spaces++;
+            }
+        }
+        else {
+            printf("La frase è troppo lunga, esco!\n");
+            exit(1); // equivalente a "return 1" se ci si trova nel main
+        }
+    }
+    frase[read] = '\0';
+    printf("la frase '%s' contiene %d spazi\n", frase, spaces);
+    return 0;
+}
+```
+<!-- .element style="font-size:53%" -->
+
+---
+
+# Scrivere un carattere per volta
+
+`int putchar(int c)` scrive sul *buffer* un singolo carattere
+
+```C [|6-11]
+#include &lt;stdio.h&gt;
+
+int main() {
+    char stringa[100] = "Che bella stringa!";
+
+    char *ch = stringa;
+    while(*ch != '\0') {
+        putchar(*ch);
+        ch++;
+    }
+    putchar('\n');
+    
+    return 0;
+}
+```
+
+```bash
+$ ./es_putchar
+Che bella stringa!
+```
+<!-- .element class="fragment" -->
+
+<div class="focus fragment">
+Utile in casi molto specifici, in generale usate <code>printf("%s\n", stringa);</code>
+</div>
+
+---
+
+# Esempio completo: svuotare il buffer
+
+```C [|4|6-8|10-14]
+#include &lt;stdio.h&gt;
+
+int main() {
+    char parola[100], ch;
+    
+    printf("> Inserisci una parola di massimo 5 caratteri\n");
+    scanf("%5s", parola);
+    printf("> La parola inserita e' '%s'\n", parola);
+    
+    printf("> Nel buffer sono rimasti i seguenti caratteri:\n");
+    while((ch = getchar()) != '\n') {
+        putchar(ch);
+    }
+    putchar('\n');
+    
+    return 0;
+}
+```
+
+```text [1-2|1-4|5-6|]
+$ ./es_getchar_buffer
+> Inserisci una parola di 5 caratteri, senza spazi
+cosa restera' nel buffer?
+> La parola inserita e' 'cosa'
+> Nel buffer sono rimasti i caratteri:
+restera' nel buffer?
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Array multidimensionali di stringhe
+
+Un array $n$-dimensionale di `char` può essere usato come un array $(n-1)$-dimensionale di stringhe
+
+```C
+#include &lt;stdio.h&gt;
+
+int main() {
+    char stringhe[2][10] = {"ciao", "mondo"};
+    
+    printf("%s, %s!\n", stringhe[0], stringhe[1]); // stampa "ciao, mondo!"
+    
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+<img src="/images/labcalc_slides/string_multi.png" width=900 class="fragment">

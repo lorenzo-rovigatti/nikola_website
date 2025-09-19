@@ -1,0 +1,225 @@
+<!--
+.. title: Lezione 6
+.. slug: labcalc_lezione6
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Rendiamo utile il nostro primo programma
+                    
+```C [|1,8,9|1,13]
+#include &lt;stdio.h&gt;
+
+int main() {
+    double T_c, T_f;              
+    double conv = 5. / 9.; 
+    double offset = 32;           
+    
+    printf("Inserire la temperatura in Fahrenheit:\n");
+    scanf("%lf", &T_f);
+                
+    T_c = (T_f - offset) * conv;  
+    
+    printf("La temperatura in Celsius è %lf\n", T_c);
+    
+    return 0;
+}
+```
+
+---
+
+# Le librerie e i file *header*
+
+* Il C mette a dispozione funzioni che possono essere chiamate dai nostri programmi
+* Un insieme di tali funzioni è detto *libreria* (da *library*, cioè "biblioteca")
+* Per utilizzare tali funzioni è necessario includere nel programma il file *header* associato alla libreria:
+
+```C
+#include &lt;nome_libreria.h&gt; // Nota Bene: senza punto e virgola!
+
+int main() {
+    // qui possiamo usare le funzioni definite in nome_libreria.h
+}
+```
+
+<div class="fragment">
+
+* Le parentesi angolari `&lt;&gt;` indicano che il file è contenuto in una cartella standard
+* L'estensione `.h` indica che il file è un *header* (file di intestazione)
+* I file *header* contengono le *dichiarazioni* delle funzioni, informazione necessaria per compilare correttamente il programma
+* Se i `.h` contengono solo le dichiarazioni, dove si trova il corpo di queste funzioni?
+</div>
+
+---
+
+<!-- .slide: data-transition="slide-in none-out" -->
+# Un passo indietro: come funziona la compilazione?
+
+Semplificando, possiamo considerare la compilazione come un processo a tre stadi
+
+<img src="/images/labcalc_slides/compilazione.png" width="650">
+
+---
+
+<!-- .slide: data-transition="none-in slide-out" -->
+# Un passo indietro: come funziona la compilazione?
+
+Semplificando, possiamo considerare la compilazione come un processo a tre stadi
+
+<img src="/images/labcalc_slides/preprocessore.png" width="650">
+
+---
+
+# Il preprocessore - direttiva `#include`
+
+* Il preprocessore effettua sostituzioni sul codice sorgente prima della compilazione
+* I comandi (*direttive*) del preprocessore cominciano con `#` e **non** finiscono con `;`
+* Oggi vediamo il primo tipo di sostituzione che effettua: l'inclusione di file *header*
+* Ogni volte che appare una riga `#include &lt;qualcosa.h&gt;`, il preprocessore la sostituisce con il contenuto del file `qualcosa.h`
+* Se non trova il file dà errore e il processo di compilazione termina
+* Chiediamo a `gcc` di farci vedere l'effetto del preprocessore su questo semplice codice con l'opzione `-E`:
+
+```C
+#include &lt;stdio.h&gt;
+
+int main() {
+    return 0;
+}
+```
+
+```bash
+$ gcc -E include.c > include_full.c
+```
+
+* Aprite il file `include_full.c`: è pieno di codice che non avete scritto voi!
+    
+
+---
+
+# Prime nozioni di input/output
+
+* Il sistema operativo fornisce tre "canali" di comunicazione ad ogni programma
+    * **stdin** (standard input): input associato alla tastiera
+    * **stdout** (standard output): dedicato alla stampa dei prodotti dell'elaborazione
+    * **stderr** (standard error): dedicato alla stampa di errori o messaggi non legati ai dati in uscita
+    
+<div class="fragment">
+
+* I dati associati a stdin e stdout non vengono elaborati immediatamente ma vengono immagazzinati in un *buffer*
+* Di default i buffer vengono svuotati
+    * Ogni volta che si va a capo
+    * **Vale solo per stdout**: chiamando esplicitamente `fflush(stdout)`
+</div>
+    
+<div class="fragment focus">
+Al contrario degli altri due, stderr non ha buffer
+</div>
+
+---
+
+# Usare `printf` per stampare a schermo
+
+```C
+printf("La temperatura in Celsius è %lf\n", T_c);
+```
+
+<div class="fragment">
+
+* La funzione `printf` è messa a disposizione dalla *libreria standard* del C
+* La *firma* è `int printf(stringa, espr_1, espr_2, ...)`
+    * `stringa` è un argomento racchiuso fra doppi apici (vedi prossima slide)
+    * Gli argomenti seguenti sono le espressioni e/o variabili che vogliamo stampare
+* Qualunque dato in C è solo una sequenza di bit: dobbiamo dire a `printf`
+    * come interpretarla (es: come un `int` o come un `double`?)
+    * come *formattarla* (es: vogliamo stampare un `double` come `12.0` o `12.000`?)
+* Queste informazioni sono contenute nei cosiddetti "descrittori"<!-- .element: class="fragment" -->
+</div>
+
+---
+
+# I descrittori &amp; le sequenze di escape
+
+* Il primo argomento di `printf` è il *template* di ciò che vogliamo stampare
+* Può contenere delle combinazioni di caratteri speciali:
+    * Combinazioni che cominciano per `%`: sono sostituite dal valore delle espressioni passate come argomenti
+    * Combinazioni che cominciano per `\`: *sequenze di escape* per formattare il testo
+
+Qualche esempio:
+
+```C [1-2|4|5|6]
+int a = 3;
+double b = 10.0;
+
+printf("ciao!\n");                   // stampa "ciao!" e va a capo
+printf("a == %d\n", a);              // stampa "a == 3" e va a capo
+printf("a == %d, b == %lf\n", a, b); // stampa "a == 3, b == 10.000000" e va a capo
+
+```
+
+---
+
+# Elenco (parziale) dei descrittori
+
+|Descrittore|Tipo|
+|-|-|
+|`%f` / `%lf` / `%LF`| `float` / `double` / `long double`|
+|`%e` | `float` o `double` in notazione esponenziale|
+|`%d` / `%lld` |`int` / `long long int`|
+|`%u` / `%llu`| `unsigned int` / `unsigned long long int`|
+|`%c` | `char` |
+|`%s` | stringa (utile in seguito) |
+|`%p` | indirizzo di memoria (utile in seguito) |
+|`%x` | intero senza segno in base 16 |
+
+<div class="fragment warning">
+Utilizzare il descrittore sbagliato può generare errori anche complicati da debuggare
+</div>
+
+---
+
+# Elenco (parziale) delle sequenze di *escape*
+
+|Sequenza| Descrizione |
+|-|-|
+|`\n`| a capo (*new line*)|
+|`\t`| tab |
+|`\r`| torna all'inizio della riga|
+|`\b`| torna indietro di una lettera|
+|`\0`| carattere "null" o di fine stringa |
+|`\\`| stampa il backslash, `\`|
+|`\"`| stampa i doppi apici, `"`|
+
+<div class="fragment focus">
+Tutte le sequenze tranne le ultime due fanno parte dei primi 32 caratteri del codice ASCII ("non stampabili")
+</div>
+
+---
+
+# Esempi complessi
+
+Cerchiamo di capire assieme cosa viene stampato in questi casi!
+
+```C [1,2|1,2,4|1,2,5|1,2,6|1,2,8|1,2,9|1,2,10|1,2,12|1,2,13|1,2,14]
+int a = -1;
+double b = 10.0;
+
+printf("b == %d\n", a);           // scriviamo b ma passiamo a come parametro, quindi?
+printf("a == %d, b == %lf\n", a); // abbiamo dimenticato un parametro, che succede?
+printf("b == %d\n", b);           // b è double, cosa succede se lo trattiamo da int?
+
+printf("99 esadec. == %x\n", 99); // quanto fa 99 in base esadecimale?
+printf("a == %u\n", a);           // a è un intero con il segno...
+printf("ciao\rmondo\n");          // perché stampa "mondo"?
+
+printf("%d\n", a + 1);            // possiamo stampare il risultato di un'espressione
+printf("%lf\n", a + b / 2.);      // promozione del tipo!
+printf("%d\n", (int) (b / 2.));   // senza il cast verrebbe stampato un numero "assurdo"
+```
+<!-- .element: style="font-size:51%;width:100%" -->

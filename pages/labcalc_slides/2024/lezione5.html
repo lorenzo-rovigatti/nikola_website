@@ -1,0 +1,571 @@
+<!--
+.. title: Lezione 5
+.. slug: labcalc_lezione5
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Introduzione al C
+                        
+* Il programma si scrive come un insieme di file di testo
+* Una volta scritto il codice, il programma va <b>compilato</b>
+
+```c
+#include &lt;stdio.h&gt;
+
+int main() {
+    // sommiamo degli interi e stampiamo il risultato
+    int a = 2;
+    int b = 3;
+    int sum = a + b;
+    printf("Hello world, a + b = %d\n", sum);
+    
+    return 0;
+}
+```
+
+---
+
+# La funzione `main()`
+
+* In tutti i programmi esistono istruzioni che ne determinano l'inizio e la fine
+* Nel C l'inizio di un programma avviene attraverso la funzione obbligatoria `main()` 
+* Tutto le istruzioni del programma sono racchiuse nel/richiamate dal `main()`
+* **Ogni volta** che cominciate a lavorare a un programma dovrete scrivere
+
+```C
+int main() {
+    // qui va il blocco di istruzioni contenente il programma
+}
+```
+
+<div class="warning fragment">
+Il C (come anche il terminale) è “case sensitive”, quindi scrivere <code>MAIN()</code> è diverso da scrivere <code>main()</code>, che è diverso da scrivere <code>Main()</code>, <em>ecc</em>
+</div>
+
+---
+
+# Il nostro primo `main()`: considerazioni
+
+```C
+int main() {
+    // qui va il blocco di istruzioni contenente il programma
+}
+```
+
+* Parentesi graffe `{` e `}`: delimitano un *blocco di codice* che sarà eseguito riga per riga
+* I caratteri `//`: tutto ciò che segue `//` è un *commento*, cioè non verrà considerato dal compilatore. Commenti di più righe si possono racchiudere tra `/*` e `*/`
+
+<div class="fragment">
+
+* Le funzioni vanno definite in questa maniera (e il `main()` non fa eccezione):
+```C
+tipo nome_funzione(argomenti) {
+    istruzioni
+}
+```
+    * `tipo` (`int` nel caso del `main()`) è il tipo di output che la funzione restituisce
+    * `(argomenti)` è la lista di parametri che la funzione accetta: per ora i nostri `main()` non ne hanno
+    * Il *corpo* della funzione va all'interno di un *blocco*, cioè tra `{` e `}`
+</div>
+
+---
+
+# Cenni di sintassi
+
+* Ogni *istruzione* deve finire con `;`
+* Teoricamente potete avere più istruzioni per riga (purché siano separate da `;`): di solito non conviene farlo perché rende il codice meno leggibile
+* Esistono delle parole (*keyword*) riservate: **non** possono essere usate come nomi di funzioni o variabili 
+* Mantenete ordinati i vostri programmi: *indentate* per bene i codici che scrivete
+
+```C [1|2|3-5|7]
+int main() {
+    istruzione;
+    {
+        altra_istruzione;
+    }
+    
+altra istruzione; // no, indentate o vi boccio!
+}
+```
+
+<div class="fragment focus">Se usate editor di testo che supportano il C, l'indentazione è semi-automatica</div>
+
+---
+
+# Cenni di sintassi
+
+* Il C lascia molta libertà per quanto riguarda la formattazione (non così Python!)
+
+```C
+int main() {
+  int a = 10, b; // definiamo più variabili dello stesso tipo nella stessa istruzione
+  b = a + 1;
+}
+```
+<!-- .element: class="fragment" -->
+
+```C
+int main() {
+    int a = 10;
+int b; // potete anche non indentare, anche se vi costerà voti all'esame!
+    b = a + 1;
+}
+```
+<!-- .element: class="fragment" -->
+
+```C
+int main()
+{ // la parentesi graffa non deve necessariamente stare sulla riga
+    int a;
+    int b;
+    a = 10;
+    b = a + 1;
+}
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Tipi di dato
+
+* Sappiamo che un programma è fatto da istruzioni e dati
+* I dati vengono gestiti tramite le cosiddette **variabili**
+* Il C è un linguaggio *tipizzato*: alle variabili va associato un *tipo* al momento della loro dichiarazione
+
+```C
+int main() {
+    int a = 10;
+    float b = a + 1;
+}
+```
+
+* Ricordate il discorso sul contenuto della memoria? Il *tipo* di una variabile dice al compilatore come **interpretare** la memoria associata a quella variabile
+    * se `int` $\to 01000011 \\; 01101001 \\; 01100001 \\; 01001111 = 1900671836$
+    * se `float` $\to 01000011 \\; 01101001 \\; 01100001 \\; 01001111 = 1.0000110465 \cdot 10^{30}$
+    
+---
+
+# Tipi di variabile
+
+Il tipo stabilisce il n. di bit a disposizione e il tipo di rappresentazione di una variabile
+
+|Tipo|Variabile|Bit| Rappresentazione | Modificatore|
+|-|-|-|-|-|
+|`char`|carattere|8|Complemento a 2| `signed`, `unsigned`|
+|`int`|intero|32|Complemento a 2|`signed`, `unsigned`, `short`, `long`|
+|<span class="fragment strike" data-fragment-index="1">`float`</span>|<span class="fragment strike" data-fragment-index="1">razionale</span>|<span class="fragment strike" data-fragment-index="1">32</span>|<span class="fragment strike" data-fragment-index="1">IEEE754</span>|<span class="fragment" style="color: red" data-fragment-index="1">Non usatelo mai!</span>|
+|`double`|razionale|64|IEEE754|`long`|
+
+<ul>
+<li>I modificatori adattano i tipi di dati fondamentali alle esigenze del programmatore. Possono essere anche usati assieme (es. <code>unsigned short int</code>)</li>
+<li class="fragment warning" data-fragment-index="1">
+È facile avere problemi di precisione numerica con <code>float</code>, usate <code>double</code>!</li>
+<li class="fragment">Per inizializzare un <code>double</code> è meglio usare numeri razionali:
+
+```C
+double a = 4.5;
+double b = 2.;  // <-- equivale a scrivere 2.0
+```
+</li>
+</ul>
+
+---
+
+# Modificatori `short` e `long`
+
+* L'effetto dei modificatori dipende, in linea di principio, dall'architettura del computer
+* Nel caso più comune (i computer che useremo/userete):
+
+|Modificatore|Alias|n. bit|n. byte|
+|-|-|-|-|
+|`short` | `short int` | 16 bit | 2 byte |
+| `long` | `long int` | 64 bit | 8 byte |
+| `long long` | `long long int` | 64 bit | 8 byte |
+| `long double` | | 80/96/128 bit | 10/12/16 |
+
+Esempio:
+
+```C
+int a = 1234567890; // 32 bit in compl. a 2, valore massimo 2^31 - 1 ~ 2 miliardi
+long long int b = 8294967295429; // 64 bit in compl. a 2, massimo 2^63 - 1 ~ 10^18
+```
+
+---
+
+# Modificatori `signed` e `unsigned`
+
+<ul>
+<li>
+
+I tipi interi (`int` e `char`) supportano anche `signed` e `unsigned`
+  <ul>
+    <li><code>signed</code> (che si usa poco) specifica che la variabile può essere negativa</li>
+    <li><code>unsigned</code> (più comune) specifica che la variabile prende solo valori positivi</li>
+  </ul>
+</li>
+<li>
+
+Esempio:
+  <ul>
+    <li><code>signed int</code> (cioè <code>int</code>) rappresenta valori tra $-2^{31} = -2147483648$ e $(2^{31} -1) = +2147483647$</li>
+    <li><code>unsigned int</code> rappresenta valori tra $0$ e $(2^{32} - 1) = +4294967295$</li>
+  </ul>
+</li>
+<li class="fragment" data-fragment-index="1">
+
+Quanto valgono `sum1` e `sum2` secondo voi? <span class="fragment" data-fragment-index="2">Perché questi valori?</span>
+
+```C
+unsigned int a = -2;
+int b = 1;
+int sum1 = a + b;
+unsigned int sum2 = a + b;
+```
+</li>
+</ul>
+
+<div class="focus fragment" data-fragment-index="2"><code>sum1</code> vale -1, <code>sum2</code> vale +4294967295</div>
+
+---
+
+# Scegliere i nomi delle variabili
+
+* I nomi possono cominciare per lettera minuscola, maiuscola o "_" (*underscore*)
+* **Non** possono cominciare con un numero
+* **Non** possono contenere spazi
+* **Non** possono contenere i seguenti caratteri
+
+<div style="margin: 20px; word-spacing: 0.3em; font-size: 140%">
+- , ; : + - = / \ * $<$ $>$ ! ? @ # $ % ^ &amp; ' `
+</div>
+
+```C [1|2|3|4|5|6|7|8|9]
+int var124;   // OK
+int var_124;  // OK
+int Var_124;  // OK, NB: questo nome è diverso dal precedente
+int _var124;  // OK
+int 124_var;  // NON VALIDO, comincia con un numero
+int @124var;  // NON VALIDO, comincia con un simbolo non permesso
+int 124 var;  // NON VALIDO, contiene uno spazio
+int 124!var;  // NON VALIDO, contiene un simbolo non permesso
+int quantità;  // NON VALIDO, contiene un simbolo non permesso
+```
+<!-- .element: class="fragment" -->
+
+---
+
+# Lo *scope*
+
+* Un *blocco di codice* è una porzione di codice circondato da parentesi graffe `{}`
+* Il blocco di codice cui appartiene una variabile ne definisce lo *scope*
+* La variabile **non esiste** al di fuori del suo scope
+
+```C [2,3|5-8|6,9]
+int main() {
+    int a = 3; // ok
+    a = 4; // ok
+    
+    { // inizio blocco di codice
+        int b = 2; // ok
+        b = 3; // ok
+    } // fine blocco di codice
+    b = 5; // ERRORE: b esiste solo nel blocco di codice in cui è stata definita!
+
+    return 0;
+}
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment warning">
+Lo scope può sembrare un concetto molto astratto ma comprenderlo il prima possibile è fondamentale per evitare gravi errori in futuro
+</div>
+
+---
+
+# Promozione del tipo
+
+* Il C **non** è fortemente tipizzato $\to$ permette tipi diversi nella stessa espressione
+* In espressioni con tipi diversi il C adotta un criterio teso a *non perdere informazioni*
+* Esempio: il risultato di una divisione tra un `double` e un `int` è un `double`
+
+```C
+double a = 5;      // <-- conversione "implicita" di 5 in 5.0
+double b = 5. / 2; // <-- 2 viene convertito in 2.0 e poi si esegue la divisione
+```
+<!-- .element: class="fragment" -->
+
+<div class="fragment">
+
+<div class="warning">La divisione tra due interi restituisce la parte intera della divisione</div>
+
+```C
+int c = 5 / 2;    // <-- questo fa 2
+double d = 5 / 2; /* <-- questo fa 2.0, perché prima viene effettuata l'operazione 
+                         e poi il risultato viene convertito in double */
+int e = 1 / 2;    // <-- quanto vale e?
+```
+</div>
+
+<div class="focus spacing-1-top fragment">
+La divisione tra interi è costata l'esame a tanti studenti!
+</div>
+
+---
+
+# Promozione del tipo - regole
+
+La precedenza è la seguente:
+
+1. Se uno degli operandi è `long double`, l'altro viene promosso a `long double`
+2. altrimenti, se uno degli operandi è `double`, l'altro viene promosso a `double`
+3. altrimenti, se uno degli operandi è `float`, l'altro viene promosso a `float`
+4. altrimenti, se uno degli operandi è `unsigned long int`, l'altro viene promosso a `unsigned long int`
+5. altrimenti, se uno degli operandi è `long int`, l'altro viene promosso a `long int`
+6. altrimenti, se uno degli operandi è `unsigned int`, l'altro viene promosso a `unsigned int`
+
+---
+
+# Conversione (cast) esplicita
+
+* In C è possibile forzare il tipo di una variabile attraverso l'operazione di *casting*
+* L'operatore di *cast* associa un nuovo tipo alla variabile alla sua destra
+* L'operatore di cast è `(qualcosa)`, dove `qualcosa` è il nuovo tipo
+
+```C
+int metri = 50;
+int secondi = 4;
+double vel = metri / (double) secondi; // 12.5, senza cast il risultato sarebbe 12
+```
+
+<div class="warning spacing-1-top fragment">
+<code>(int) 2.6</code> dà come risultato 2, e non 3!
+</div>
+
+<div class="focus spacing-1-top fragment">
+Regola aurea: meglio abbondare con i cast, soprattutto quando si comincia!
+</div>
+
+---
+
+# Operatori e operazioni aritmetiche
+
+Un operatore è un simbolo associato a un'operazione matematica o logica
+* Operatori **unari**: agiscono su un solo operando
+    * Esempio: l'operatore di *cast* `(double) a` agisce sulla variabile `a`
+* Operatori **binari**: agiscono su due operandi
+    * Esempi: gli operatori aritmetici `+ - / *`
+    * Un esempio nuovo: l'operatore modulo <code>%</code> restituisce il <strong>resto</strong> della divisione tra due interi
+    
+    ```C
+    int a = 5;
+    int b = 2;
+    int c = a % b;  // a / b = 2 con il resto di 1, quindi c = 1
+    int d = 9 % 2;  // = 1
+    int e = 12 % 5; // = 2
+    int f = 15 % 4; // = 3
+    int g = 23 % 9; // = 5
+    ```
+    <!-- .element: class="fragment"  -->
+    
+---
+
+# Operatori
+
+<ul>
+<li>Operatore di assegnamento <code>=</code>
+
+```C
+int a = 2;
+int a = a + 1;
+```
+</li>
+<li class="fragment">Operatori unari di incremento e decremento, <code>++</code> e <code>--</code>
+
+```C
+int a = 2;
+a++;         // ora a == 3
+++a;         // ora a == 4
+int b = a++; // b = a, poi incremento a, quindi b == 4, a == 5
+int c = ++a; // incremento a e poi c = a, quindi c == 6, a == 6
+```
+</li>
+<li class="fragment">Operatore unario di negazione, <code>-</code>
+
+```C
+int b = -a;  // se a == 2, allora b == -2
+```
+</li>
+<li class="fragment">Operatori di assegnamento composti (aritmetici) <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code>, <code>%=</code>
+
+```C
+a += 10;  // sinonimo di a = a + 10;
+a /= 2;   // sinonimo di a = a / 2;
+```
+</li>
+
+</ul>
+
+---
+
+# Un primo programma *utile*
+
+```C [1,10|2-4|6-7|]
+int main() {
+    double T_c, T_f;              // T_c = T in Celsius, T_f = T in Fahreneit
+    double conv = 5. / 9.;        // fattore di conversione
+    double offset = 32;           // offset per la conversione
+    
+    T_f = 86.0;                   // dato in "input": temperatura in Fahreneit
+    T_c = (T_f - offset) * conv;  // dato in "output": temperatura in Celsius
+    
+    return 0;
+}
+```
+
+<ul class="fragment">
+    <li>I nomi delle variabili sono legati al loro significato</li>
+    <li>Le variabili <code>conv</code> e <code>offset</code> non sono strettamente necessarie, ma aumentano la <em>leggibilità</em></li>
+</ul>
+
+---
+
+# Excursus: scrivere codici ordinati
+
+<blockquote>Programs must be written for people to read, and only incidentally for machines to execute</blockquote>
+
+<div class="focus">
+Scrivete il codice con l'idea che debba essere <em>letto e compreso</em> da qualcuno
+</div>
+
+<div class="flex-container fragment">
+<div class="flex-col">
+
+```C
+int main() {
+    double T_c, T_f;             
+    double conv = 5. / 9.;
+    double offset = 32;          
+    
+    T_f = 86.0;                 
+    T_c = (T_f - offset) * conv;
+    
+    return 0;
+}
+```
+</div>
+
+<div class="flex-col">
+
+```C
+int main() {
+double x, y;             
+double c=5./9.;
+double o=32;          
+
+x=86.0;                 
+y=(x-o)*c;
+return 0;
+}
+```
+</div>
+</div>
+
+<ul>
+<li class="fragment">I codici scientifici hanno migliaia (se non centinaia di migliaia) di righe di codice...</li>
+<li class="fragment">Come vi convinco ad essere ordinati? Tolgo voti se non lo siete...</li>
+</ul>
+
+---
+
+# Priorità degli operatori
+
+* Abbiamo scritto `T_c = (T_f - offset) * conv;`
+* Cosa sarebbe successo senza le parentesi, `T_c = T_f - offset * conv;`?
+* Esistono delle regole di priorità degli operatori. Per quelli aritmetici
+
+<div class="fragment">
+    <div class="arrow" style="position: relative;left: 50px;top: 85px; width: 180px">
+        <div class="line" style="width: 150px;"></div>
+        <div class="point"></div>
+        Priorità
+    </div>
+    
+    <ol>
+    <li>Operatori di post-incremento, <code>a++ a--</code></li>
+    <li>Operatori di pre-incremento, <code>++a --a</code></li>
+    <li>Operatore di negazione, <code>-</code></li>
+    <li>Moltiplicazione, divisione, modulo, <code>* / %</code></li>
+    <li>Somma e sottrazione, <code>+ -</code></li>
+    <li>Assegnamento (composto e non), <code>= += -= *= /= %=</code></li>
+    </ol>
+</div>
+
+<div class="fragment">
+
+* Se due operatori hanno la stessa priorità, l'operazione viene svolta da sinistra a destra: `10. * 3 / 5 = 30. / 5 = 6.0`
+</div>
+
+<div class="fragment focus">
+Se volete eseguire operazioni in un altro ordine dove usare le parentesi
+</div>
+
+---
+
+# Priorità degli operatori - esempi
+
+```C [1,2|1,3|1,4|1,5]
+int a = 2, b = 3, c = 5;
+int d, e, f;
+d = a + b * c;              // d = 17
+e = (a + b) * c;            // e = 25
+f = a + (b * c);            // f = 17, parentesi superflue
+```
+
+<div class="fragment">
+Attenzione anche alla promozione dei tipi!
+
+```C [1-3|1-4|1-4,5|1-4,6|1-4,7|1-4,8]
+int i = 10, j = 4;
+int k, n;
+double a, b, c;
+a = i + 3.5 * j;    // a = 24
+k = (a - i) / j;    // (a - i) / j = 3.5, ma k è intero quindi k = 3
+n = a - i / j;      // n = a - i / j = 24.0 - 2 = 22 perché n è intero
+b = (a - i) / j;    // b = (a - i) / j = 3.5 perché abbiamo cambiato la precedenza
+c = a - i / j;      // c = a - i / j = 22.0 perché c è double
+```
+</div>
+
+---
+
+# Priorità degli operatori - tre esercizi
+
+```C
+int a = 4, i = 8;
+int b;
+
+b = ++a;
+b += a - i / 2;           // quanto vale b?
+```
+
+```C
+int a = 4;
+int b = a % 2 + 1;
+
+b = b + a;                // quanto vale b?
+```
+
+```C
+int a = 3, b = 6;
+
+double c = 3.0 + a / b;   // quanto vale c?
+double d = (3.0 + a) / b; // quanto vale d?
+```

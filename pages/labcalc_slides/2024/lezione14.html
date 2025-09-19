@@ -1,0 +1,236 @@
+<!--
+.. title: Lezione 14
+.. slug: labcalc_lezione14
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Input/output su file
+                    
+* Fino ad ora abbiamo visto come fare input/output *a schermo*
+    * `scanf` legge da riga di comando
+    * `printf` stampa a schermo
+* In programmi complessi la maggior parte della comunicazione avviene tramite file
+    * `fscanf` legge da file
+    * `fprintf` scrive su file
+    
+<div class="focus fragment">
+Il nome quasi uguale dovrebbe rinfrancarvi: anche il loro utilizzo è quasi uguale!
+</div>
+
+---
+
+# Input/output su file in C
+
+* In C la scrittura e lettura di file richiede l'uso dei puntatori
+* Anche l'input/output su file richiede `<stdio.h>`
+
+```C [|1|4|5|7|9|]
+#include <stdio.h>
+
+int main() {
+  FILE *my_file; // un "FILE *" viene anche chiamato "stream" o "canale"
+  my_file = fopen("il_mio_primo_file.txt", "w"); // w per scrivere, r per leggere
+    
+  fprintf(my_file, "Guarda mamma, scrivo su file!\n");
+    
+  fclose(my_file); // chiudete sempre i file quando smettete di usarli!
+    
+  return 0;
+}
+```
+
+```text
+$ ./es_io_file
+$ cat il_mio_primo_file.txt
+Guarda mamma, scrivo su file!
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Aprire un file con `fopen`
+
+* Un puntatore di tipo `FILE *` punta a strutture dati che permettono l'input/output
+* Un `FILE *` deve essere inizializzato con `fopen()`, che vuole due parametri:
+    * Il nome del file da aprire (es: `"mio_file.txt"`)
+    * La modalità di apertura: ce ne sono tante, a noi interessano
+        * `"r"` per leggere un file
+        * `"w"` per scrivere su un file: se esiste il file viene **sovrascritto**
+        * `"a"` per aggiungere contenuti a un file (se esiste, altrimenti viene creato)
+* `fopen()` restituisce `NULL` se l'operazione di apertura è fallita
+
+```C [|1|2-5]
+FILE *file = fopen("mio_file.txt", "r");
+if(file == NULL) {
+    fprintf(stderr, "Oh no, non sono riuscito ad aprire il file :-(\n");
+    return 1; // usciamo dal main restituendo un valore diverso da 0
+}
+... // usiamo il file
+```
+
+<div class="fragment focus">
+Controllate sempre che il file sia stato aperto correttamente!
+</div>
+
+---
+
+# Leggere e scrivere su file
+
+* Leggere e scrivere su file è **molto** simile a leggere e scrivere su schermo
+* Si usano `fprintf` e `fscanf` invece di `printf` e `scanf`, con la differenza che queste funzioni vogliono il puntatore a file come primo argomento
+    * `fscanf` restituisce `EOF` se leggiamo da un file di cui si è raggiunta la fine
+
+```C [|1,2|4|5|6|8|9|10|12]
+int i_write = 5, i_read;
+double d_write = -2.4, d_read;
+
+FILE *my_file = fopen("mio_file.txt", "w"); // apriamo in modalità scrittura
+fprintf(my_file, "%3d %8.2lf\n", i_write, d_write); // stessa sintassi del printf
+fclose(my_file);
+
+my_file = fopen("mio_file.txt", "r"); // apriamo in modalità lettura
+fscanf(my_file, "%d %lf", &i_read, &d_read); // che valore restituisce fscanf qui?
+fclose(my_file);
+
+printf("Ho letto i numeri %d e %lf\n", i_read, d_read);
+```
+
+```text
+$ ./es_io_rw
+Ho letto i numeri 5 e -2.400000
+$ cat mio_file.txt         
+    5    -2.40
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Leggere array
+
+```bash
+$ head -n2 dati.txt # mostriamo le prime due righe del file
+0.389559 0.740530
+0.427218 0.224750
+
+```
+
+```C [2,3|6,7|9,16|10|11|12-14|18-20]
+#include <stdio.h>
+#define DIM 10
+#define N_COLS 2
+
+int main() {
+    double dati[DIM][N_COLS];
+    int row = 0, rows_read = 0;
+    
+    FILE *my_file = fopen("dati.txt", "r");
+    ... // controlla che my_file != NULL
+    for(row = 0; row < DIM; row++) {
+        if(fscanf(my_file, "%lf %lf", &dati[row][0], &dati[row][1]) != EOF) {
+            rows_read++;
+        }
+    }
+    fclose(my_file);
+    
+    for(row = 0; row < rows_read; row++) {
+        ... // operazioni sugli elementi
+    }
+    
+    return 0;
+}
+```
+<!-- .element class="fragment" style="font-size: 48%" -->
+
+---
+
+# Leggere array multidimensionali
+
+```C [|11-15|18-22]
+#include <stdio.h>
+#define ROWS 3
+#define COLS 9
+
+int main(){
+    int i, j;
+    double val[ROWS][COLS];
+    
+    FILE *fp = fopen("dati_multi.txt", "r");
+    ... // controlla che fp != NULL
+    for(i = 0;i < ROWS; i++){
+        for(j = 0;j < COLS; j++){
+            fscanf(fp,"%lf", &val[i][j]);
+        }
+    }
+    fclose(fp);
+    
+    for(i = 0;i < ROWS; i++){
+        for(j = 0;j < COLS; j++){
+            ... // operazioni sugli elementi
+        }
+    }
+    
+    return 0;
+}
+```
+<!-- .element style="font-size: 52%" -->
+
+---
+
+# Scrivere array su file
+
+```C [|8,14|9-13]
+#include<stdio.h>
+#define DIM 5
+
+int main(){
+    int array[DIM] = {0, 7, 93, 24, 32};
+    int i;
+    
+    FILE *fp = fopen("output.txt","w");
+    for(i = 0; i < DIM; i++){
+        fprintf(fp, "%d\n", array[i]);
+        fprintf(stdout, "%d ", array[i]);
+    }
+    fprintf(stdout, "\n");
+    fclose(fp);
+
+    return 0;
+}
+```
+<!-- .element style="font-size: 51%" -->
+
+```text [1-2|3-8]
+$ ./es_scrittura_file
+0 7 93 24 32
+$ cat output.txt
+0
+7
+93
+24
+32
+```
+<!-- .element class="fragment" style="font-size: 51%" -->
+
+---
+
+# Modalità di lettura e scrittura
+
+Esistono altre modalità che si possono passare a `fopen` per controllare il modo con cui il file viene aperto
+
+|Modalità| Significato|
+|-|-|
+|"r"| solo lettura, se il file non esiste `fopen` restituisce `NULL`|
+|"w"| solo scrittura, se il file esiste viene sovrascritto|
+|"a"| solo scrittura, se il file esiste ciò che si stampa viene aggiunto |
+|"r+"| lettura e scrittura, se il file non esiste `fopen` restituisce `NULL`|
+|"w+"| lettura e scrittura, se il file non esiste viene creato, se esiste viene sovrascritto|
+|"a+"| lettura e scrittura, se il file non esiste viene creato, se esiste ciò che si stampa viene aggiunto alla fine|
+                

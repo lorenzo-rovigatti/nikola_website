@@ -1,0 +1,515 @@
+<!--
+.. title: Lezione 15
+.. slug: labcalc_lezione15
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# I puntatori e gli array sono simili
+                    
+* Se `int a[10];`, allora `a` si riferisce all'indirizzo di memoria del primo elemento
+* Per molti versi, `a` si può trattare come un puntatore:
+
+```C [|4,5,7,8]
+#include <stdio.h>
+
+int main() {
+    int a[3] = {1, 2, 3};
+    int *p_a = &a[0];
+
+    printf("a: %p, a[0]: %d, *a: %d\n", a, a[0], *a);
+    printf("p_a: %p, p_a[0]: %d, *p_a: %d\n", p_a, p_a[0], *p_a);
+    
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+```text
+$ ./es_array_p
+a: 0x7ffd5af2c240, a[0]: 1, *a: 1
+p_a: 0x7ffd5af2c240, p_a[0]: 1, *p_a: 1
+```
+<!-- .element class="fragment" -->
+
+---
+
+# I puntatori e gli array sono diversi
+
+* Una volta definito, un array può puntare **unicamente** al primo elemento della memoria allocata
+* Un puntatore può puntare a qualsiasi cosa
+    * a una variabile
+    * al primo elemento di un array
+    * a qualunque altro elemento di un array
+    
+```C [1,2|1,2,4|1,2,5|1,2,6|1,2,7]
+int a[3], b[3];
+int *p_a;
+
+p_a = a;     // OK
+p_a = &b[1]; // OK
+a = b;       // NO! Errore di compilazione
+a = &b[2];   // NO! Errore di compilazione
+```
+<!-- .element class="fragment" -->
+
+<div class="focus fragment">
+Un array si può considerare come un puntatore immutabile
+</div>
+
+---
+
+# Puntatori, array &amp; memoria
+
+* Le caselle di memoria di un array sono sempre contigue in memoria
+* Ma che significa contigue?
+
+```C [1,2|]
+int a[3] = {1, 2, 3};
+double b[3] = {1.3, 6.2, 0.5};
+
+printf("%p %p %p\n", &a[0], &a[1], &a[2]);
+printf("%p %p %p\n", &b[0], &b[1], &b[2]);
+```
+<!-- .element class="fragment" -->
+
+<div class="flex-container">
+<div class="flex-col fragment">
+    <img src="/images/labcalc_slides/array_puntatori_int.png" width=350>
+</div>
+
+<div class="flex-col fragment">
+    <img src="/images/labcalc_slides/array_puntatori_double.png" width=350>
+</div>
+</div>
+
+<div class="focus fragment">
+Il compilatore sa quanti byte distano le caselle perché conosce il tipo dell'array
+</div>
+
+---
+
+# Muoversi "lungo" la memoria
+
+Esiste un'equivalenza tra l'operatore `[]` e quello di dereferenziazione `*`:
+
+* `a[0]` è equivalente a `*a`: è il contenuto della cella puntata da `a`
+* `a[1]` è equivalente a `*(a + 1)`: è il contenuto della cella accanto a quella di `a`
+* Generalizzando, dato un intero `i`, `a[i] == *(a + i)`
+
+```C []
+int a[3] = {10, 20, 30};
+int i;
+
+for(i = 0; i < 3; i++) {
+    printf("*(a + %d) == %d, a[%d] == %d\n", i, *(a + i), i, a[i]);
+}
+```
+<!-- .element class="fragment" -->
+
+```text
+$ ./es_muoversi
+*(a + 0) == 10, a[0] == 10
+*(a + 1) == 20, a[1] == 20
+*(a + 2) == 30, a[2] == 30
+```
+<!-- .element class="fragment" -->
+
+<div class="focus fragment">
+Questa proprietà è valida sia per i puntatori che per gli array!
+</div>
+
+---
+
+# Array come puntatori
+
+```C
+int a[4] = {-1, 3, 7, 0};
+```
+
+<figure>
+<img src="/images/labcalc_slides/array_puntatori_aritmetica.png" class="fragment" width=500>
+</figure>
+
+<div class="fragment focus">
+Pensate a questi due metodi equivalenti come a dei <em>sinonimi</em>: di volta in volta conviene scegliere quello più appropriato al contesto
+</div>
+
+---
+
+# Puntatori come array
+
+```C [|2,3]
+int a[4] = {-1, 3, 7, 0};
+int *b = a;
+int *c = a + 2;
+```
+
+<img src="/images/labcalc_slides/array_puntatori_aritmetica_2.png" class="fragment" width=850>
+
+<div class="fragment warning">
+Attenzione a non accedere a zone di memoria non di pertinenza degli array che puntate! Ad esempio, cosa succede nell'esempio sopra se usiamo <code>c[3]</code>?
+</div>
+
+---
+
+# Aritmetica dei puntatori
+
+* Gli indirizzi di memoria si possono manipolare con sottrazioni/addizioni di **interi**
+* Questa tecnica si chiama *aritmetica dei puntatori*
+* Dato un intero $i$ con segno che si somma/sottrae al puntatore
+    * il suo modulo $|i|$ indica di quante *caselle di memoria* ci si muove
+    * il suo segno ${\rm sgn}(i)$ indica se ci si sposta verso sinistra o verso destra
+    
+<div class="fragment">
+
+```C [1,2|4]
+int a[9] = {8, 0, 2, -3, 12, 0, 1, 3, -1};
+int *p = &(a[4]); // equivalente a int *p = a + 4;
+
+printf("%d %d\n", p[-4], p[3]); // stampa "8 3"
+```
+
+<img src="/images/labcalc_slides/array_puntatori_aritmetica_3.png" width=550>
+</div>
+
+---
+
+# Manipolare puntatori è potente ma pericoloso
+
+<blockquote>
+Da grandi poteri derivano grandi responsabilità
+</blockquote>
+
+* Usare *offset* sbagliati è *undefined behaviour* $\to$ *segmentation fault* o errori subdoli
+* L'aritmetica dei puntatori non si può usare con tipi `void *`
+    * **Nota Bene**: se la usate i compilatori di norma non si lamentano, ma è un errore!
+
+```C [1-3|1-3,5|1-3,6|1-3,8]
+int a[3] = {1, 2, 3};
+int *b = a + 1;
+void *c = a;
+
+b[10] = 5;  // undefined behaviour: segmentation fault o comportamento inaspettato!
+c++;        // aritmetica dei puntatori con (void *): comportamento inaspettato!
+
+printf("%d %d\n", b[10], *(int *)c);
+```
+<!-- .element class="fragment" -->
+
+```text
+$ ./es_aritmetica_problemi
+5 33554432
+```
+<!-- .element class="fragment" -->
+
+<div class="fragment warning">
+Perché <code>*(b * 2 + i)</code> non compila mentre <code>*(b + 2 * i)</code> sì?
+</div>
+
+---
+
+# Aritmetica dei puntatori - un esempio
+
+```C [4-6|4-6,8|4-6,9|4-6,10|4-6,11|4-6,12|4-6,14]
+#include <stdio.h>
+
+int main() {
+  double data[5] = {3.14, 2.10, 1.70, 7.80, 3.14};
+  double a, b, c;
+  int k = 2;
+    
+  double *pd = data;// pd punta all'elemento 0 di data
+  a = *(pd + 1);    // prendo il valore dell'elemento 1 di data -> a == 2.10
+  pd++;             // pd = pd + 1 -> adesso pd punta al secondo elemento di data
+  b = *(pd - 1);    // il valore della cella che precede pd -> b == data[0]
+  c = *(pd + k);    // il valore della cella puntata da pd + k -> c == data[3]
+    
+  fprintf(stdout,"a = %lf\nb = %lf\nc = %lf\n", a, b, c);
+
+  return 0;
+}
+```
+
+```text
+$ ./es_aritmetica_p
+a = 2.100000
+b = 3.140000
+c = 7.800000
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Un esempio "in scrittura"
+
+```C [2,5|5,8-12|5,14-17]
+#include <stdio.h>
+#define N_V 5
+
+int main(){
+  char pvocali[N_V];
+  int i;
+
+  pvocali[0] = 'A';
+  pvocali[1] = 'E';
+  *(pvocali + 2) = 'I';
+  pvocali[3] = 'O';
+  *(pvocali + 4) = 'U';
+
+  for (i = 0; i < N_V; i++) {
+    printf("%c ", pvocali[i]); // come "*(pvocali + i)" ma meno comprensibile
+  }
+  printf("\n");
+
+  return 0;
+}
+```
+
+```text
+$ ./es_vocali
+A E I O U
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Un esempio "realistico": il bubblesort rivisitato<!-- .element style="font-size:140%" -->
+
+```C [|8-11|12-21|22-27]
+#include <stdio.h>
+#define NUM 10
+
+int main(){
+  int i, k, tmp, data[NUM];
+  int *pd;
+
+  printf("INSERIRE I %d VALORI DELL'ARRAY\n", NUM);
+  for(i = 0; i < NUM; i++) {
+    scanf("%d", &data[i]);
+  }
+  /* bubblesort */
+  for(i = 0; i < NUM - 1; i++) {
+    for(pd = data; pd < (data + NUM - 1 - i); pd++) { // ciclo sugli indirizzi di memoria
+      if(*pd > *(pd + 1)) { // confronta il contenuto di celle vicine
+        tmp = *(pd + 1); // scambia i contenuti usando l'operatore di deferenza
+        *(pd + 1) = *pd;
+        *pd = tmp;
+      }
+    }
+  }
+  /* stampa finale dei dati ordinati */
+  printf("L'ARRAY ORDINATO È:\n");
+  for(k = 0; k < NUM; k++) {
+    printf("%d ", data[k]);
+  }
+  printf("\n");
+
+  return 0;
+}
+```
+<!-- .element style="font-size: 45%" -->
+
+---
+
+# Zoom sul bubblesort rivisitato
+
+Ecco la parte relativa al bubblesort:
+
+```C [1,9|2,8|3-7]
+for(i = 0; i < NUM - 1; i++) {
+    for(pd = data; pd < (data + NUM - 1 - i); pd++) {
+        if(*pd > *(pd + 1)){
+            tmp = *(pd + 1);
+            *(pd + 1) = *pd;
+            *pd = tmp;
+        }
+    }
+}
+```
+
+```text
+$ ./es_bubblesort_puntatori
+INSERIRE I 10 VALORI DELL'ARRAY
+12 -4 5 23 9 5 -2 5 96 -1
+L'ARRAY ORDINATO È:
+-4 -2 -1 5 5 5 9 12 23 96
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Il qualificatore `const`
+
+* Alcune volte è utile che variabili inizializzate non siano più modificabili
+* In questi casi si aggiunge il qualificatore `const` alla definizione
+* Potete pensare a un array come a un puntatore `const`: il suo contenuto (l'indirizzo del primo elemento dell'array) non è modificabile!
+
+```C [1,2|4,5|6|7|9,10|11|12]
+const int a = 3;
+a = 4; // errore di compilazione, a è const!
+
+const int c = 2;
+const int *p_a = &a; // puntatore a un intero costante
+*p_a = 4; // errore di compilazione, la variabile puntata, a, è const!
+p_a = &c; // OK: non è il puntatore che è costante, ma la cella di memoria puntata
+
+int d = 4, e = 2;
+int * const p_d = &d; // puntatore costante a un intero
+*p_d = 3; // OK: il puntatore è const, la cella puntata no
+p_d = &e; // errore di compilazione, il puntatore è costante
+```
+<!-- .element class="fragment" -->
+
+<div class="fragment warning">
+<code>const int *</code> oppure <code>int const *</code> significa puntatore a un intero costante, ma <code>int * const</code> significa puntatore costante a un intero!
+</div>
+
+---
+
+# Puntatori a puntatori
+
+```C []
+int a = 3;
+int *p_a = &a;
+int **p_p_a = &p_a;
+int ***p_p_pa = &p_p_a;
+```
+
+<img src="/images/labcalc_slides/puntatore.png" width=450 style="margin:0" class="fragment">
+<br/>
+
+<img src="/images/labcalc_slides/puntatore_puntatore.png" width=450 style="margin:0" class="fragment">
+<br/>
+
+<img src="/images/labcalc_slides/puntatore_puntatore_puntatore.png" width=450 style="margin:0" class="fragment">
+
+---
+
+# Array multidimensionali come array di puntatori
+
+* La memoria è lineare, ma può essere organizzata in maniera "multidimensionale"
+
+<img src="/images/labcalc_slides/array_multidimensionali_memoria_3.png" width=650>
+
+<div class="fragment">
+
+* Ogni `multi[i]` è un array
+* `multi` può essere visto come un array di puntatori!
+</div>
+
+---
+
+# Un esempio con i puntatori
+
+```C [|6|7|6,7,9-11|6,7,13-18]
+#include <stdio.h>
+#define ROWS 3
+#define COLS 4
+
+int main() {
+    int i, j, *point[ROWS]; // definiamo un array di puntatori
+    int num[ROWS][COLS] = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
+    
+    for(i = 0;i < ROWS; i++) { // scorriamo su tutte le righe
+        point[i] = num[i]; // copiamo l'indirizzo di ogni riga nell'array di puntatori
+    }
+    
+    for(i = 0; i < ROWS; i++) {
+        for(j = 0; j < COLS; j++) {
+            printf("%3i ", point[i][j]); // stampiamo l'elemento i,j
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+<!-- .element style="font-size:50%" -->
+
+```text
+$ ./es_multi_array_puntatori
+    1   2   3   4 
+    5   6   7   8 
+    9  10  11  12
+```
+<!-- .element style="font-size:50%" class="fragment" -->
+
+---
+
+# Se è un puntatore, possiamo usare l'aritmetica!<!-- .element style="font-size:140%" -->
+
+```C [|9-11|13-18]
+#include <stdio.h>
+#define ROWS 3
+#define COLS 4
+
+int main() {
+    int i, j, *point[ROWS]; // definiamo un array di puntatori
+    int num[ROWS][COLS] = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12} };
+    
+    for(i = 0;i < ROWS; i++) { // scorriamo su tutte le righe
+        point[i] = *(num + i); // equivalente a "point[i] = num[i];"
+    }
+    
+    for(i = 0; i < ROWS; i++) {
+        for(j = 0; j < COLS; j++) {
+            printf("%3i ", *(point[i] + j)); // equivalente a "printf("%3i ", point[i][j]);"
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+<!-- .element style="font-size:48%" -->
+
+```text
+$ ./es_multi_array_puntatori
+    1   2   3   4 
+    5   6   7   8 
+    9  10  11  12
+```
+<!-- .element style="font-size:50%" class="fragment" -->
+
+---
+
+# Qualche considerazione aggiuntiva
+
+* `int ****p` richiede quattro dereferenziazioni per ottenere il valore `int` puntato
+* Sapendo che la memoria è lineare, gli array multidimensionali si possono trattare come unidimensionali
+<!-- .element class="fragment" -->
+
+```C [|4-8|9|11-14]
+#include <stdio.h>
+
+int main() {
+    double a[3][2] = {
+        {0., -2.3},
+        {1.5, -0.01},
+        {0.2, 0.7}
+    };
+    double *p = &a[0][0]; // l'indirizzo del primo elemento
+
+    for(int i = 0; i < 6; i++) {
+        printf("%.2lf ", *(p + i)); // *(p + i) è equivalente a p[i]
+    }
+    printf("\n");
+    return 0;
+}
+```
+<!-- .element class="fragment" -->
+
+```text
+$ ./es_multi_uni_puntatori
+0.00 -2.30 1.50 -0.01 0.20 0.70
+```
+<!-- .element class="fragment" -->
+                

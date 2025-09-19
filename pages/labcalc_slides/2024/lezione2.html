@@ -1,0 +1,222 @@
+<!--
+.. title: Lezione 2
+.. slug: labcalc_lezione2
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Qualche esercizio
+                        
+* $F + 1 = ?$
+* $E + F = ?$
+* $100_{10} - 10_{10} = ?$
+* $100_{2} - 10_{2} = ?$
+* $100_{16} - 10_{16} = ?$
+
+---
+
+# Recap
+
+* In un computer ogni cosa è rappresentata come uno o più numeri binari
+* Sappiamo convertire numeri binari in (esa)decimali e viceversa
+* Sappiamo manipolare ($=$ sommare e sottrarre) numeri binari ed esadecimali
+
+<div class="focus fragment">
+Non è stato detto esplicitamente, ma finora "numero" $=$ "intero positivo"
+</div>
+
+---
+
+# Sistemi di rappresentazione
+
+* L'hardware del computer permette di manipolare unicamente sequenze di 0 e 1
+* Come vengono *rappresentate* le altre "entità" che un computer manipola?
+    * Interi negativi
+    * Numeri razionali
+    * Testo
+    * Immagini
+    * Video
+    * ...
+    
+<p class="fragment">
+In ognuno di questi casi è necessario scegliere un insieme di regole ($=$ sistema di rappresentazione) che metta in relazione un certo numero di bit con l'oggetto che si vuole rappresentare</p>
+
+---
+
+# Un preambolo sulla memoria
+
+* La memoria è una risorsa *finita* $\to$ non tutto è rappresentabile esattamente
+* Per motivi storici l'unità di misura di base è il *byte* (B), pari a 8 bit
+* Un gruppo di $m$ byte adiacenti si chiama *parola* (*word*) di $n$ bit, dove $n = 8m$
+* I *tipi* di dati più comuni sono rappresentati con 1 -- 8 byte (parole da 8 -- 64 bit)
+* La memoria si misura spesso in multipli del byte. Notando che $2^{10n} \approx 10^{3n}$:
+    * 1 kB $= 2^{10}$ B $= 1024$ B $\approx 1000$ B
+    * 1 MB $= 2^{20}$ B $= 1024$ kB $= 1048576$ B $\approx 10^6$ B
+    * 1 GB $= 2^{30}$ B $= 1024$ MB $\approx 10^9$ B
+    * 1 TB $= 2^{40}$ B $= 1024$ GB $\approx 10^{12}$ B
+    * 1 PB $= 2^{50}$ B $= 1024$ TB $\approx 10^{15}$ B
+    
+---
+
+# Rappresentazione di interi con segno
+
+* Sappiamo come rappresentare interi $\geq 0$, come fare per gli interi minori di zero?
+* Potremmo "dedicare" un bit (per esempio il pù significativo) per rappresentare il segno:
+    * ${\color{red}0}100 1100_2 = +76_{10}$
+    * ${\color{red}1}100 1100_2 = -76_{10}$
+* I numeri più grande e più piccolo rappresentabili in questo modo sono $0111 1111_2 = +127_{10}$ e $1111 1111_2 = -127_{10}$ cioè, in generale, $2^{n-1}-1$ e $-(2^{n-1}-1)$.
+* **Problema n.1:** lo zero ha due rappresentazioni: ${\color{red}0}000 0000 = +0$, ${\color{red}1}000 0000 = -0$
+* **Problema n.2:** sommare e sottrarre numeri richiede di manipolare i loro bit $\to$ circuiti elettrici più complicati
+
+<div class="focus fragment">
+Risultato: questa rappresentazione non è adottata da nessuna architettura
+</div>
+
+---
+
+# Il complemento a due
+
+Dato un numero $m$ rappresentato con $n$ bit, $k$ è il suo **complemento a due** se
+
+$$
+k + m = 2^n
+$$
+
+che possiamo riscrivere come
+
+$$
+k = (2^n - 1) - m + 1 \equiv a + 1.
+$$
+
+<div class="fragment">
+
+Notiamo che $(2^n - 1)$ è quel numero composto da tutti **1**, quindi $a = (2^n - 1) - m$ è il numero che, aggiunto a $m$, dà tutti **1**. Due esempi con $n = 4$:
+
+* se $m = 0100_2$ $\to$ $a = 1111_2 - 0100_2 = 1011_2$
+* se $m = 1110_2$ $\to$ $a = 1111_2 - 1110_2 = 0001_2$
+
+</div>
+
+<div class="fragment">
+
+* le cifre di $a = (2^n - 1) - m$ si ottengono da quelle di $m$ scambiando **1** con **0**
+* il complemento a due si ottiene sommando **1** al numero che si ottiene: $k = a + 1$.
+
+</div>
+
+---
+
+# Rappresentazione in complemento a due
+
+Dato un intero $m$
+
+* se $m \geq 0$, il numero viene rappresentato normalmente
+* se $m < 0$, il numero viene rappresentato con il suo complemento a due, $k$ 
+
+## Esempi a 8 bit
+
+* $m = 93_{10} \to 0101 \\; 1101_2$
+* $m = -93_{10} \to 1010 \\; 0011_2$. Per trovarlo:
+    1. invertite i bit di $|m|$, $1010 \\; 0010_2$
+    2. aggiungete **1**, ottenendo proprio $1010 \\; 0011_2$
+* $m = -12_{10} \to 1111 \\; 0100_2$
+* $m = -113_{10} \to 1000 \\; 1111_2$
+* $m = 140_{10} \to 1000 \\; 1100_2$<!-- .element: class="fragment highlight-red" -->
+
+<div class="fragment warning">
+Col complemento a due si rappresentano numeri $\in [- 2^{n - 1}, 2^{n - 1} - 1]$, cioè $[-128, 127]$ se $n = 8$
+</div>
+
+---
+
+# Rappresentazione in complemento a due
+
+|Valore binario | Cosa rappresenta | Cosa rappresenterebbe|
+|-|-|-|
+|00000000|0|0|
+|00000001|1|1|
+|...|...|...|
+|01111110|126|126|
+|01111111|127|127|
+|10000000|-128|128|
+|10000001|-127|129|
+|10000010|-126|130|
+|...|...|...|
+|11111110|-2|254|
+|11111111|-1|255|
+
+---
+
+# Proprietà del complemento a due
+
+* La cifra più significativa determina il segno: se è **1** allora il numero è negativo
+* I numeri rappresentabili sono compresi nell'intervallo $[-2^{n-1}, 2^{n-1} - 1]$
+* Lo zero è unico: è quel numero che ha tutte le cifre pari a **0**
+* Somma e sottrazione non richiedono manipolazioni speciali dei bit:
+    * Prendiamo $5_{10} = 0101_2$ e $-2_{10} = 1110_2$
+    * $0101_2 + 1110_2 = 0011_2 = 3_{10}$
+    * $0101_2 - 1110_2 = 0111_2 = 7_{10}$
+
+<div class="focus fragment">
+Risultato: questa rappresentazione è lo standard per gli interi con segno
+</div>
+
+---
+
+# Rappresentazione tramite notazione in eccesso $N$<!-- .element: style="font-size:140%"-->
+
+In questa rappresentazione lo zero viene traslato di $N$ posizioni
+
+* I primi $N$ *pattern* di bit rappresentano numeri negativi
+* I restanti $2^n - (N + 1)$ rappresentano numeri positivi
+* Per "tradurre" il numero calcolate il numero binario associato e sottraete $N$
+* Esempi a 8 bit e $N = 128$:
+    * $1001 \\; 1100_2 = 156_{10} \to m = 156_{10} - 128_{10} = 28_{10}$
+    * $m = 2_{10} \to 1000 \\; 0010_2 = 128_{10} + 2_{10} = 130_{10}$
+    * $m = -57_{10} \to 0100 \\; 0111_2 = 128_{10} - 57_{1} = 71_{10}$
+* Vantaggio rispetto al complemento a due: dati due numeri, trovare il maggiore è più semplice (dal punto di vista dei circuiti della CPU)<!-- .element: class="fragment" -->
+
+<div class="focus fragment">
+Spoiler: la notazione in eccesso viene utilizzata per rappresentare l'esponente dei numeri a virgola mobile
+</div>
+
+---
+
+# Rappresentazione tramite notazione in eccesso $N$<!-- .element: style="font-size:140%"-->
+
+## Esempio di rappresentazione in eccesso con 3 bit
+
+|Valore binario|Eccesso 5|Eccesso 4|Eccesso 3|
+|-|-|-|-|
+|000|-5|-4|-3|
+|001|-4|-3|-2|
+|010|-3|-2|-1|
+|011|-2|-1|0|
+|100|-1|0|1|
+|101|0|1|2|
+|110|1|2|3|
+|111|2|3|4|
+
+**Nota Bene:** se $N = 2^{n-1}$ (4 in questo caso) il bit più significativo denota il segno
+
+---
+
+# Rappresentazioni a confronto
+
+|Valore binario|"Naturale"|Modulo e segno|Compl. a due|Eccesso 4|
+|-|-|-|-|-|
+|000|0|+0|0|-4
+|001|1|+1|+1|-3
+|010|2|+2|+2|-2
+|011|3|+3|+3|-1
+|100|4|-0|-4|0
+|101|5|-1|-3|+1
+|110|6|-2|-2|+2
+|111|7|-3|-1|+3

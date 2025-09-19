@@ -1,0 +1,488 @@
+<!--
+.. title: Lezione 19
+.. slug: labcalc_lezione19
+.. date: 2023-08-08 13:12:44 UTC+02:00
+.. tags: 
+.. category: didattica
+.. link: 
+.. description: 
+.. type: text
+.. template: reveal.tmpl
+.. has_math: true
+.. back_button: ../../labcalc
+-->
+
+# Libreria standard &amp; stringhe
+                    
+* La libreria standard del C mette a disposizione funzioni per
+    * ottenere la lunghezza di una stringa
+    * copiare una stringa in un'altra
+    * concatenare stringhe
+    * confrontare stringhe
+    * ...
+* Queste funzioni si trovano in `<string.h>`: ricordatevi di includerlo!
+* Tutte le funzioni che prendono stringhe si aspettano che queste terminino con `'\0'`
+* *Repetita iuvant*: senza `'\0'` il risultato è sempre *undefined behaviour*
+
+---
+
+# La lunghezza di una stringa: `strlen`
+
+* La definizione è `size_t strlen(const char *str)`, dove solitamente `size_t == long unsigned int`
+* Restituisce la lunghezza della stringa `str`
+* **Nota Bene**: `'\0'` è escluso dal computo!
+
+```C
+#include <string.h>
+#include <stdio.h>
+
+int main() {
+    char parola[100];
+    scanf("%s", parola);
+    printf("La lunghezza della parola inserita è %lu\n", strlen(parola));
+    
+    return 0;
+}
+```
+
+```text
+$ ./es_strlen
+supercalifragilistichespiralidoso
+La lunghezza della parola inserita è 33
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Copiare stringhe: `strcpy` e `strncpy`
+
+* `char *strcpy(char *dest, const char *origine);` copia `origine` in `dest`
+    * semplice da usare ma pericoloso per possibili *undefined behaviour*
+* `char *strncpy(char *dest, const char *origine, size_t num);` copia *al più* `num` caratteri di `origine` in `dest`
+    * potete assicurarvi di non copiare più caratteri di quanti compongano `dest`
+    * se `strlen(origine) >= num` il carattere di fine riga non viene copiato
+
+<div class="focus fragment">
+Entrambe le funzioni restituiscono <code>dest</code>, il puntatore alla stringa di destinazione
+</div>
+
+---
+
+# Copiare stringhe: un esempio
+
+```C [|5-6|8-9|10-11|13-16]
+#include <string.h>
+#include <stdio.h>
+
+int main() {
+  char frase[100] = "ciao mondo";
+  char dest1[100], dest2[10], dest3[10];
+    
+  strcpy(dest1, frase);
+  strcpy(dest2, frase); // oh no, l'ultimo carattere finisce in dest2[10]!
+  strncpy(dest3, frase, 10);
+  dest3[9] = '\0'; // assicuriamoci che l'ultimo carattere sia '\0'
+    
+  printf("frase: %s\n", frase);
+  printf("dest1: %s\n", dest1);
+  printf("dest2: %s\n", dest2);
+  printf("dest3: %s\n", dest3);
+    
+  return 0;
+}
+```
+
+```text
+$ ./es_strcpy
+frase: ciao mondo
+dest1: ciao mondo
+dest2: ciao mondociao mond
+dest3: ciao mond
+```
+<!-- .element class="fragment" style="font-size: 45%" -->
+
+---
+
+# Concatenare stringhe: `strcat` e `strncat`
+
+* `char *strcat(char *dest, const char *origine);` concatena `origine` con `dest`
+* `char *strncat(char *dest, const char *origine, size_t num);` concatena *al più* `num` caratteri di `origine` in `dest`
+* Valgono le stesse considerazioni fatte su `strcpy` e `strncpy`
+
+<img src="/images/labcalc_slides/strcat_before.png" width=500 class="fragment">
+<img src="/images/labcalc_slides/strcat_after.png" width=750 class="fragment">
+
+<div class="fragment warning">
+<code>strcat</code> e <code>strncat</code> aggiungono sempre il carattere di fine stringa!
+</div>
+
+---
+
+# Concatenare stringhe: un esempio
+
+```C [|6-7|9-14]
+#include <string.h>
+#include <stdio.h>
+#define LEN 20
+
+int main() {
+  char frase[LEN] = "";
+  char parola[LEN];
+    
+  while(strlen(frase) < LEN - 1) {
+    printf("Inserire una parola lunga massimo %d:\n", LEN - strlen(frase) - 1);
+    scanf("%s", parola);
+    strncat(frase, parola, LEN - strlen(frase));
+  }
+  frase[LEN - 1] = '\0';
+  printf("La frase inserita è: %s\n", frase);
+    
+  return 0;
+}
+```
+
+```text
+Inserire una parola (mancano 19 caratteri):
+Supercalifragi
+Inserire una parola (mancano 5 caratteri):
+Listichespiralidoso
+La frase inserita è: SupercalifragiListi
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Confrontare stringhe: `strcmp` e `strncmp`
+
+* `int strcmp(const char *str1, const char *str2);` confronta due stringhe
+* `int strncmp(const char *str1, const char *str2, size_t num);` confronta i primi `num` caratteri di due stringhe
+* Restituiscono
+    * `0` se le stringhe (o i primi `num` caratteri) sono uguali
+    * un valore `< 0` se il codice ASCII del primo carattere diverso di `str1` è minore di quello di `str2`
+    * un valore `> 0` se il codice ASCII del primo carattere diverso di `str1` è maggiore di quello di `str2`
+    
+<div class="focus fragment">
+Utili per capire se due stringhe sono uguali, ma anche per ordinare alfabeticamente!
+</div>
+
+<div class="fragment warning">
+Ricordate che in C tutto è <em>case sensitive</em>: <code>'Z'</code> viene prima di <code>'a'</code>
+</div>
+
+---
+
+# Confrontare stringhe: un esempio
+
+```C [|6-8|10|12-17]
+#include <string.h>
+#include <stdio.h>
+#define MAX_LENGTH 20
+
+int main() {
+    char parola1[MAX_LENGTH], parola2[MAX_LENGTH];
+    printf("Inserire due parole:\n");
+    scanf("%s %s", parola1, parola2);
+    
+    int res = strncmp(parola1, parola2, MAX_LENGTH - 1);
+    
+    if(res == 0) printf("Le due parola sono identiche!\n");
+    else {
+        printf("L'ordine alfabetico delle due parole è: ");
+        if(res < 0) printf("%s %s\n", parola1, parola2);
+        else printf("%s %s\n", parola2, parola1);
+    }
+    
+    return 0;
+}
+```
+
+```text
+$ ./es_strcmp
+Inserire due parole:
+alfiere alfabeto
+L'ordine alfabetico delle due parole è: alfabeto alfiere
+```
+<!-- .element class="fragment" style="font-size: 45%" -->
+
+---
+
+# Lettura di stringhe da file: `fgetc`
+
+* `int fgetc(FILE *stream)` legge un carattere alla volta da `stream`
+
+```C [|2-9|11-14]
+// definizione di main e variabili, apertura del file (che va chiuso alla fine)
+while((c = fgetc(input)) != EOF) {
+    if(c != '\n') parole[n_parole][i++] = c;
+    else {
+        parole[n_parole][i] = '\0';
+        n_parole++;
+        i = 0;
+    }
+}
+
+printf("Ho trovato le seguenti %d parole:\n", n_parole);
+for(i = 0; i < n_parole; i++) {
+    printf("%s\n", parole[i]);
+}
+```
+
+```text
+Ho trovato le seguenti 6 parole:
+prova
+ciao
+mondo
+parole
+aula
+sedia
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Lettura di stringhe da file: `fgets`
+
+* `char *fgets(char *str, int num, FILE *stream)` legge al più `num` caratteri di una riga e li mette in `str`
+* `fgets` restituisce `str` se è stato letto almeno un carattere, `NULL` altrimenti
+
+```C [|2-5|7-10]
+// definizione di main e variabili, apertura del file (che va chiuso alla fine)
+while(fgets(parole[n_parole], MAX_LENGTH - 1, input) != NULL) {
+  n_parole++;
+}
+fclose(input);
+
+printf("Ho trovato le seguenti %d parole:\n", n_parole);
+for(i = 0; i < n_parole; i++) {
+  printf("%s", parole[i]); // fgets lascia il '\n' nella stringa
+}
+```
+<!-- .element class="fragment" -->
+
+```text
+Ho trovato le seguenti 6 parole:
+prova
+ciao
+mondo
+parole
+aula
+sedia
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Altre funzioni che possono essere utili
+
+<ul>
+    <li class="fragment"><code>int fputs(const char *str, FILE *stream)</code> scrive <code>str</code> su <code>stream</code></li>
+    <li class="fragment"><code>char *strtok(char *str, const char *delimiters)</code> divide <code>str</code> in <em>token</em> separati dai caratteri contenuti in <code>delimiters</code></li>
+    <li class="fragment"><code>const char *strstr(const char *str1, const char *str2)</code> cerca <code>str2</code> in <code>str1</code> e restituisce un puntatore alla prima porzione di <code>str1</code> uguale <code>str2</code></li>
+    <li class="fragment"><code>const char *strpbrk(const char *str1, const char *str2)</code> restituisce un puntatore al primo carattere di <code>str1</code> uguale a uno dei caratteri presenti in <code>str2</code></li>
+    <li class="fragment"><code>sprintf(char *str, ...)</code> permette di scrivere su una stringa</li>
+</ul>
+
+```C
+char filename[100];
+int N = 100;
+sprintf(filename, "dati_%d.dat", N);
+printf("%s\n", filename); // stampa "dati_100.dat"
+```
+<!-- .element class="fragment" -->
+
+<div class="focus fragment">
+Lavorare con le stringhe non è mai facile, ma in C è particolarmente difficile!
+</div>
+
+---
+
+# Integrazione numerica
+
+<img src="/images/labcalc_slides/integrazione_funzione.png" width=500>
+
+Teorema fondamentale del calcolo integrale
+
+$$
+\int_a^b f(x) dx = F(b) - F(a)
+$$
+
+dove $F(x)$ è detta funzione primitiva
+
+<div class="warning fragment">
+Che facciamo se $f(x)$ non ha un'espressione analitica o $F(x)$ non è nota (esempio: una gaussiana?)
+</div>
+
+---
+
+# Integrazione numerica - metodo dei rettangoli
+
+<ul>
+    <li>L'integrale può essere visto come l'area sotto la curva (stando attenti ai segni!)</li>
+    <li class="fragment" data-fragment-index="0">Dividiamo l'intervallo $[a, b]$ in $n$ intervalli di larghezza $\Delta x = (b - a) / n$</li>
+    <li class="fragment" data-fragment-index="1">L'area della curva si può approssimare con la somma dei rettangoli di altezza $f(x_i)$ e larghezza $\Delta x$:
+    $$
+    A \approx \Delta x (f(x_0) + f(x_1) + \ldots + f(x_{n-1})) = \sum_{i=0}^{n-1} f(x_i) \Delta x
+    $$
+    </li>
+</ul>
+
+<div class="r-stack">
+    <img class="fragment fade-out" data-fragment-index="0" src="/images/labcalc_slides/integrazione_colori.png" width="500">
+    <img class="fragment current-visible" data-fragment-index="0" src="/images/labcalc_slides/integrazione_intervalli.png" width="500">
+    <img class="fragment" data-fragment-index="1" src="/images/labcalc_slides/integrazione_rettangoli.png" width="500">
+</div>
+
+---
+
+# Un integrale di prova
+
+Consideriamo l'integrale definito di $f(x) = x^2 - \frac{3}{5} x^3$ nell'intervallo $[0, 2]$:
+
+$$
+\int_0^2 \left(x^2 - \frac{3}{5} x^3\right) dx = 0.2\bar{6}
+$$
+
+<img src="/images/labcalc_slides/integrazione_fx.png" width="500">
+
+---
+
+# Metodo dei rettangoli - implementazione
+
+Il programma si aspetta una macro `N` definita al momento della compilazione
+
+```C [|8,9|4,10|5,11|13]
+#include <stdio.h>
+#include <stdlib.h>
+
+void leggi_dati(double x[], double fx[]);
+double calcola_area_rettangoli(double x[], double fx[], int N_points);
+
+int main() {
+    double x[N], fx[N];
+    
+    leggi_dati(x, fx);
+    double integrale = calcola_area_rettangoli(x, fx, N);
+    
+    printf("%d %lf\n", N, integrale);
+    
+    return 0;
+}
+
+// qui il corpo delle due funzioni, vedi prossima slide
+```
+
+---
+
+# Metodo dei rettangoli - lettura dei dati
+
+```C [|1|5-6|8-12|14-17]
+void leggi_dati(double x[], double fx[]) {
+  int i;
+  char filename[100];
+    
+  // il nome del file da aprire dipende dal valore di N
+  sprintf(filename, "poly_N%d.dat", N);
+    
+  FILE *input = fopen(filename, "r");
+  if(input == NULL) {
+    fprintf(stderr, "Errore, il file %s non è leggibile\n", filename);
+    exit(1);
+  }
+    
+  for(i = 0; i < N; i++) {
+    fscanf(input, "%lf %lf", x + i, fx + i); // usiamo l'aritmetica dei puntatori
+  }
+  fclose(input);
+}
+```
+
+---
+
+# Metodo dei rettangoli - calcolo dell'area
+
+```C [|1|2-4|6-8|10]
+double calcola_area_rettangoli(double x[], double fx[], int N_points) {
+    int i;
+    double area = 0.0;
+    double dx = x[1] - x[0];
+    
+    for(i = 0; i < N_points - 1; i++) {
+        area += dx * fx[i];
+    }
+    
+    return area;
+}
+```
+
+```text [1-3|4-6]
+$ gcc -o integrazione_rettangoli integrazione_rettangoli.c -DN=10
+$ ./integrazione_rettangoli
+10 0.342387
+$ gcc -o integrazione_rettangoli integrazione_rettangoli.c -DN=10000
+$ ./integrazione_rettangoli
+10000 0.266747
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Integrazione numerica - metodo dei trapezi
+
+<ul>
+    <li>L'approssimazione con i rettangoli porta a un errore piuttosto grande, e quindi richiede un gran numero di punti per convergere al "valore vero"
+    </li>
+    <li class="fragment" data-fragment-index="0">Facciamo meglio: approssimiamo l'area della curva con la somma delle aree dei trapezi
+    $$
+    A \approx \sum_{i=0}^{n-1} \frac{1}{2}(f(x_i) + f(x_{i+1})) \Delta x
+    $$
+    </li>
+</ul>
+
+<div class="r-stack">
+    <img class="fragment fade-out" data-fragment-index="0" src="/images/labcalc_slides/integrazione_rettangoli.png" width="500">
+    <img class="fragment current-visible" data-fragment-index="0" src="/images/labcalc_slides/integrazione_trapezi.png" width="500">
+</div>
+
+---
+
+# Metodo dei trapezi - calcolo dell'area
+
+```C [|7]
+double calcola_area_trapezi(double x[], double fx[], int N_points) {
+    int i;
+    double area = 0.0;
+    double dx = x[1] - x[0];
+    
+    for(i = 0; i < N_points - 1; i++) {
+        area += dx * (fx[i] + fx[i + 1]) / 2.0; // unica differenza!
+    }
+    
+    return area;
+}
+```
+
+```text [1-3|4-6]
+$ gcc -o integrazione_rettangoli integrazione_rettangoli.c -DN=100
+$ ./integrazione_rettangoli
+100 0.274639
+$ gcc -o integrazione_trapezi integrazione_trapezi.c -DN=100
+$ ./integrazione_trapezi
+100 0.266558
+```
+<!-- .element class="fragment" -->
+
+---
+
+# Risultato dell'integrale in funzione di $N$
+
+<img src="/images/labcalc_slides/integrazione_risultati.png" width="500">
+
+## Il metodo dei trapezi converge prima!
+
+<div class="focus fragment">
+<ul>
+    <li>Questi metodi si generalizzano ai casi in più dimensioni</li>
+    <li>L'errore può essere ulteriormente ridotto (usando più di due punti, $\Delta x_i$, <em>ecc</em>)</li>
+</ul>
+</div>
+                
