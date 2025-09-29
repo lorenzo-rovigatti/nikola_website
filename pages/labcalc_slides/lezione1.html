@@ -15,7 +15,17 @@
 # Benvenuti!
                         
 <div style="text-align: center">
+
+<div class="r-stack">
+<div class="fragment fade-out" data-fragment-index="0">
 <canvas id="canvas" style="margin:auto"></canvas>
+</div>
+<div class="fragment current-visible" data-fragment-index="0">
+
+<figure>
+<img src="/images/labcalc_slides/programmatore_annoiato.png" height=460>
+</figure>
+</div>
 </div>
 
 ---
@@ -26,6 +36,22 @@
 ## Canale A-Ci
 
 ### Lorenzo Rovigatti, Ludovico Vittorio, Lorenzo Caprini
+
+---
+
+# Politica e università
+
+<blockquote class="fragment" style="width:90%">
+Art 2: La Repubblica riconosce e garantisce i diritti inviolabili dell'uomo [...] e richiede l'adempimento dei doveri inderogabili di solidarietà politica, economica e sociale.
+</blockquote>
+
+<blockquote class="fragment" style="width:90%">
+Art 3: È compito della Repubblica rimuovere gli ostacoli di ordine economico e sociale, che, limitando di fatto la libertà e l'eguaglianza dei cittadini, impediscono il pieno sviluppo della persona umana e l'effettiva partecipazione di tutti i lavoratori all'organizzazione politica, economica e sociale del Paese.
+</blockquote>
+
+<blockquote class="fragment" style="width:90%">
+Art 11: L'Italia ripudia la guerra come strumento di offesa alla libertà degli altri popoli e come mezzo di risoluzione delle controversie internazionali; consente, in condizioni di parità con gli altri Stati, alle limitazioni di sovranità necessarie ad un ordinamento che assicuri la pace e la giustizia fra le Nazioni
+</blockquote>
 
 ---
 
@@ -185,13 +211,31 @@ Il sito e-learning del corso contiene un'utilissima <a href="https://elearning.u
 
 # Informazioni pratiche - 5
 
-Tutte queste informazioni (più le slide, il programma svolto, i testi delle esercitazioni e degli esami degli anni passati e molto altro) si trovano sul sito del corso: <a href="https://elearning.uniroma1.it/course/view.php?id=7743">https://elearning.uniroma1.it/course/view.php?id=7743</a>
+Tutte le informazioni (slide, programma svolto, testi di esercitazioni ed esami degli anni passati e molto altro) si trovano sul <a href="https://elearning.uniroma1.it/course/view.php?id=7743">sito del corso</a>, compilate <b>subito</b> il <a href="https://forms.gle/iKqKqghXuVMGk3vP6">questionario </a> che trovate linkato in cima alla pagina!
+
+<div class="flex-container">
+
+<div class="flex-col">
+
+## Sito
 
 <figure>
 <img src="/images/labcalc_slides/qr_code.png" height=300>
 </figure>
 
-<div class="fragment focus">Compilate <b>subito</b> il questionario che trovate linkato in cima alla pagina!</div>
+</div>
+
+<div class="flex-col">
+
+## Questionario
+
+<figure>
+<img src="/images/labcalc_slides/qr_code_questionario.png" height=300>
+</figure>
+
+</div>
+
+</div>
 
 ---
 
@@ -228,41 +272,49 @@ Ormai qualunque ambito scientifico richiede conoscenze di programmazione:
 
 ---
 
-# Esempi: Fisica delle particelle a LHC
+# Esempi: QCD su reticolo
 
-* Collisioni tra fasci di protoni da LHC ogni 25 ns
-* Flusso di dati di circa 100 PB/s (1 PB = 1000 TB = $10^6$ GB)
-* Trigger molto sofisticati analizzano **molto** velocemente i dati: 100 PB/s $\to$ 1.5 GB/s
-* $\approx 10 000$ TB di dati raccolti e salvati ogni anno (salvati in totale circa 100 PB di dati)
-* Dati distribuiti in centinaia di centri di calcolo per essere conservati e analizzati<!-- .element: class="fragment" -->
-  * Tantissimi dati, ma i processi "interessanti" sono pochi: molti segnali di fondo
-  * Complessa analisi dati per osservare segnali molto piccoli in presenza di fondi molto grandi
-  * Il software dell’esperimento ATLAS consta di più di **5 milioni** di righe di codice
+* L'interazione forte determina come interagiscono fra loro i **quark** ed è una della quattro interazioni fondamentali della natura
+* Si studia principalmente tramite simulazioni *su reticolo*
+* I codici altamente ottimizzati girano su supercomputer che possono effettuare fino a un miliardo di miliardi ($10^{18}$) di operazioni al secondo
+* I risultati sono fondamentali per effettuare test di consistenza del Modello Standard delle particelle elementari
 
-<img src="/images/labcalc_slides/LHC.png">
+<img style="margin-right: 50px" src="/images/labcalc_slides/QCD_lattice.png" height=250>
+<img style="margin-right: 50px" src="/images/labcalc_slides/flops.png" height=250>
+<img src="/images/labcalc_slides/QCD.png" height=250>
 
 ---
 
-# Esempi: microrobot guidati da batteri fotocinetici<!-- .element: style="font-size:160%" -->
+# Esempi: comportamento collettivo di sistemi complessi<!-- .element: style="font-size:150%" -->
 
-Questi microbot sono guidati da batteri alimentati da luce verde. Possono essere guidati a raggiungere dei target da un algoritmo di *feedback* che:
+* In natura sono comuni comportamenti collettivi complessi, per cui un gruppo è più della somma degli individui
+* Non esiste una teoria generale per questi sistemi biologici
+* Si usano le simulazioni per esplorare il loro comportamento e i meccanismi fisici che ne sono alla base
+* Esempio: cellule in soluzione
 
-* Acquisisce un'immagine dal microscopio ogni 50ms.
-* Identifica la posizione e l'orientamento di ogni microrobot utilizzando una rete neurale.
-* Calcola la corretta intensità di luce da proiettare su entrambi i lati di ciascun microrobot per farlo girare e spingere dai batteri verso l'obiettivo.
-
-<img src="/images/labcalc_slides/nicola_1.png" height=250>
-<img src="/images/labcalc_slides/nicola_2.png" style="margin-left:50px" height=250>
-
-<video style="margin-left:50px" height=300 controls>
-    <source src="/images/labcalc_slides/nicola.webm">
+<div style="text-align:center">
+<video style="margin-left:50px" height=350 controls>
+    <source src="/images/labcalc_slides/caprini.webm">
 </video>
+</div>
 
 ---
 
 # Esempi: nanotecnologia basata su DNA
 
-<iframe width="840" height="483" src="https://www.youtube.com/embed/W8fw1V_iwg4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+* Principi fisici e algoritmi sofisticati $\to$ nuovi materiali
+* Si può usare il DNA per costruirli in laboratorio<!-- .element: class="fragment" data-fragment-index="0" -->
+
+<div class="r-stack">
+<div class="fragment fade-out" data-fragment-index="0">
+<img src="/images/labcalc_slides/science.png" height=400>
+</div>
+
+<div class="fragment current-visible" data-fragment-index="0">
+<img src="/images/labcalc_slides/science_2.png" height=300>
+</div>
+</div>
+
 
 ---
 
@@ -289,6 +341,10 @@ Vai all'alimentari e compra due bottiglie di latte; se ci sono le uova prendine 
 * I computer sono macchine semplici con cui si comunica tramite operazione logico-matematiche
 
 Da qui la necessità di risolvere i problemi in maniera *algoritmica* e di tradurre queste risoluzioni in maniera da rimuovere **ogni possibile ambiguità**
+
+<div class="focus">
+Le LLM ("IA") non sono (ancora?) una soluzione a questo problema
+</div>
 
 ---
 
@@ -385,9 +441,9 @@ Trovate una soluzione ai seguenti problemi in maniera **algoritmica**:
 2. Dire per ciascun valore contenuto in una lista di numeri se questo è pari o dispari
 3. Ricerca lineare: trovare un numero specifico all'interno di una lista
 
-**Nota Bene:** Operazioni e confronti si vanno fra non più di **due** operandi alla volta!
+**Nota Bene:** Operazioni e confronti si fanno tra non più di **due** operandi alla volta!
 
-**La prova del nove:** "testate" le vostre soluzioni con colleghi/fratelli/amici/fidanzati compiacenti: riescono a risolvere i problemi utilizzando il vostro algoritmo?
+**La prova del nove:** "testate" le vostre soluzioni con colleghi/fratelli/amici/fidanzati/e compiacenti: riescono a risolvere i problemi utilizzando il vostro algoritmo?
 
 ---
 
@@ -409,7 +465,7 @@ Definiamo computer (o *elaboratore*) una macchina che
     * ...
 
 <div class="fragment focus">
-Con questa definizione  smartphone e tablet sono (ovviamente) degli elaboratori!
+Smartphone e tablet sono (ovviamente) degli elaboratori!
 </div>
 
 ---
@@ -441,7 +497,7 @@ In un computer *ogni* informazione è rappresentata da una sequenza di zeri e un
     * *ecc*
 
 <div class="focus fragment"><h2>
-In un computer tutto è rappresentato da numeri
+In un computer tutto è rappresentato da numeri (binari!)
 </h2></div>
 
 ---
@@ -495,7 +551,7 @@ $$
 $0, 1, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010, 1100, 1101, 1110, 1111, \ldots$
 * Sfruttiamo la formula vista prima. Dato un numero $a$ in binario
 $$
-a = \sum_{i = 0}^{M - 1} c_i s^i = c_0 2^0 + c_1 2^1 + \ldots c_{M-1}b^{M-1}
+a = \sum_{i = 0}^{M - 1} c_i b^i = c_0 2^0 + c_1 2^1 + \ldots c_{M-1}b^{M-1}
 $$
 
 <div class="fragment focus">
