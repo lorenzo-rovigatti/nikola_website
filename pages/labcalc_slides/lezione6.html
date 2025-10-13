@@ -81,9 +81,9 @@ Semplificando, possiamo considerare la compilazione come un processo a tre stadi
 
 * Il preprocessore effettua sostituzioni sul codice sorgente prima della compilazione
 * I comandi (*direttive*) del preprocessore cominciano con `#` e **non** finiscono con `;`
-* Oggi vediamo il primo tipo di sostituzione che effettua: l'inclusione di file *header*
-* Ogni volte che appare una riga `#include &lt;qualcosa.h&gt;`, il preprocessore la sostituisce con il contenuto del file `qualcosa.h`
-* Se non trova il file dà errore e il processo di compilazione termina
+* Oggi vediamo il primo tipo di sostituzione: l'inclusione di file *header*
+* Ogni riga `#include &lt;qualcosa.h&gt;` viene sostituita con il contenuto del file `qualcosa.h`
+* Se il file non viene trovato il processo di compilazione termina con un errore
 * Chiediamo a `gcc` di farci vedere l'effetto del preprocessore su questo semplice codice con l'opzione `-E`:
 
 ```C
@@ -179,7 +179,7 @@ printf("a == %d, b == %lf\n", a, b); // stampa "a == 3, b == 10.000000" e va a c
 |`%x` | intero senza segno in base 16 |
 
 <div class="fragment warning">
-Utilizzare il descrittore sbagliato può generare errori anche complicati da debuggare
+Il descrittore sbagliato può dare errori anche complicati da debuggare
 </div>
 
 ---
