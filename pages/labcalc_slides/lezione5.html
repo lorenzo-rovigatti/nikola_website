@@ -14,7 +14,7 @@
 
 # Introduzione al C
                         
-* Il programma si scrive come un insieme di file di testo
+* Il codice sorgente è composto da uno o più file di testo
 * Una volta scritto il codice, il programma va <b>compilato</b>
 
 ```c
@@ -29,6 +29,10 @@ int main() {
     
     return 0;
 }
+```
+
+```bash
+$ gcc -o hello hello.c
 ```
 
 ---
@@ -92,45 +96,11 @@ int main() {
         altra_istruzione;
     }
     
-altra istruzione; // no, indentate o vi boccio!
+altra istruzione; // indentazione errata -> professore triste
 }
 ```
 
 <div class="fragment focus">Se usate editor di testo che supportano il C, l'indentazione è semi-automatica</div>
-
----
-
-# Cenni di sintassi
-
-* Il C lascia molta libertà per quanto riguarda la formattazione (non così Python!)
-
-```C
-int main() {
-  int a = 10, b; // definiamo più variabili dello stesso tipo nella stessa istruzione
-  b = a + 1;
-}
-```
-<!-- .element: class="fragment" -->
-
-```C
-int main() {
-    int a = 10;
-int b; // potete anche non indentare, anche se vi costerà voti all'esame!
-    b = a + 1;
-}
-```
-<!-- .element: class="fragment" -->
-
-```C
-int main()
-{ // la parentesi graffa non deve necessariamente stare sulla riga
-    int a;
-    int b;
-    a = 10;
-    b = a + 1;
-}
-```
-<!-- .element: class="fragment" -->
 
 ---
 
@@ -236,6 +206,40 @@ unsigned int sum2 = a + b;
 
 ---
 
+# Cenni di sintassi - 2
+
+* Il C lascia molta libertà per quanto riguarda la formattazione (non così Python!)
+
+```C
+int main() {
+  int a = 10, b; // definiamo più variabili dello stesso tipo nella stessa istruzione
+  b = a + 1;
+}
+```
+<!-- .element: class="fragment" -->
+
+```C
+int main() {
+    int a = 10;
+int b; // potete anche non indentare, anche se vi costerà voti all'esame!
+    b = a + 1;
+}
+```
+<!-- .element: class="fragment" -->
+
+```C
+int main()
+{ // la parentesi graffa non deve necessariamente stare sulla riga
+    int a;
+    int b;
+    a = 10;
+    b = a + 1;
+}
+```
+<!-- .element: class="fragment" -->
+
+---
+
 # Scegliere i nomi delle variabili
 
 * I nomi possono cominciare per lettera minuscola, maiuscola o "_" (*underscore*)
@@ -285,7 +289,7 @@ int main() {
 <!-- .element: class="fragment" -->
 
 <div class="fragment warning">
-Lo scope può sembrare un concetto molto astratto ma comprenderlo il prima possibile è fondamentale per evitare gravi errori in futuro
+Lo scope può sembrare un concetto astratto, ma è meglio acquisirlo il prima possibile per evitare problemi in futuro
 </div>
 
 ---
@@ -336,7 +340,7 @@ La precedenza è la seguente:
 # Conversione (cast) esplicita
 
 * In C è possibile forzare il tipo di una variabile attraverso l'operazione di *casting*
-* L'operatore di *cast* associa un nuovo tipo alla variabile alla sua destra
+* L'operatore di *cast* converte il valore della variabile alla sua destra
 * L'operatore di cast è `(qualcosa)`, dove `qualcosa` è il nuovo tipo
 
 ```C
