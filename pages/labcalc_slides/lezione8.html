@@ -167,26 +167,30 @@ Utilizzate <code>gcc -E</code> (vedi <a href="../labcalc_lezione6/#/4">lezione</
 # Macro predefinite
 
 * Il compilatore e i file *header* che includete definiscono **tantissime** macro
-* Alcune di queste possono essere usate a scopi di diagnostica o di *log*:
-    * `__FILE__` è il nome del file 
-    * `__LINE__` è il numero della riga del file in cui si trova
+* Alcune di queste possono essere usate a scopi di diagnostica o di *log*. Per esempio:
     * `__DATE__` contiene la data (di compilazione)
     * `__TIME__` contiene l'ora attuale (di compilazione)
+* `math.h` definisce molte costanti utili (non standard ma OK se usate `gcc`):
+    * `M_PI`, `M_E`, `M_LN2`, *etc*
     
 ```C
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-    printf("Questo file è stato compilato il %s alle %s\n", __DATE__, __TIME__);
+    printf("Programma compilato il %s alle %s\n", __DATE__, __TIME__);
+    printf("pi = %lf, e = %lf\n", M_PI, M_E);
     return 0;
 }
 ```
 
 ```bash
 $ ./es_macro_pred
-Questo file è stato compilato il Aug 20 2022 alle 10:25:11
+Programma compilato il Aug 20 2022 alle 10:25:11
+pi = 3.141593, e = 2.718282
 $ ./es_macro_pred
-Questo file è stato compilato il Aug 20 2022 alle 10:25:11
+Programma compilato compilato il Aug 20 2022 alle 10:25:11
+pi = 3.141593, e = 2.718282
 ```
 <!-- .element: class="fragment" -->
 
@@ -213,7 +217,7 @@ Questo file è stato compilato il Aug 20 2022 alle 10:25:11
 
 int main() {
     double T_input, T_output;              
-    double offset = 32;
+    double offset = 32.0;
     double conv = 5. / 9.;
     
     printf("Inserire la temperatura in input:\n");
