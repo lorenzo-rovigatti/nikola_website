@@ -16,7 +16,11 @@
 
 # Building a Python Package with CMake, pybind11, and scikit-build-core
 
+I'm the main developer and maintainer of [oxDNA](https://github.com/lorenzo-rovigatti/oxDNA/), a simulation engine implementing oxDNA and oxRNA, two of the most widely-used coarse-grained models used in nucleic-acid nanotechnology. The software has been used in [hundreds of publications](https://dna.physics.ox.ac.uk/index.php?title=Publications), and it is part of a larger ecosystem (see *e.g.* [the oxDNA.org webserver](https://oxdna.org/), or [oxview](https://sulcgroup.github.io/oxdna-viewer/), a browser-based editing/visualising tool).
+
 This post explains how to create a Python package that includes a C++ extension built with CMake and pybind11, and how to package it cleanly using scikit-build-core. The goal is to produce a wheel that contains the compiled extension and the processed Python sources, not the raw `src/` tree.
+
+A tar file containing all the files described in this post can be downloaded <a href="/oxpy_mwe.tgz">here</a>.
 
 ## Overview
 
@@ -39,8 +43,6 @@ oxpy-mwe/
       ├─ __init__.py
       └─ core.cpp
 ```
-
-A tar file can be downloaded ???
 
 ## pyproject.toml
 
@@ -167,5 +169,5 @@ When using GitHub Actions, make sure the workflow checks out the full repository
 
 ## Conclusion
 
-This minimal working example provides a reproducible reference for creating mixed C++/Python packages with pybind11 and scikit-build-core.  
+This minimal working example provides a reproducible reference for creating mixed C++/Python packages with pybind11 and scikit-build-core.
 It handles building, packaging, and versioning cleanly and integrates smoothly with pip and continuous integration systems.
