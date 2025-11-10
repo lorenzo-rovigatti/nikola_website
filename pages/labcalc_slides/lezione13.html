@@ -53,10 +53,10 @@ multi[3][12][5] = -1;
 
 <ul>
 <li>Consideriamo <code>int multi[N][M]</code></li>
-<li>In memoria l'elemento <span style="color:red"><code>multi[i][j]</code></span> è posto tra <span style="color:blue"><code>multi[i][j - 1]</code></span> e <span style="color:yellow"><code>multi[i][j + 1]</code></span>
+<li>In memoria l'elemento <span style="color:red"><code>multi[i][j]</code></span> è posto tra <span style="color:blue"><code>multi[i][j - 1]</code></span> e <span style="color:yellow;white-space:nowrap;"><code>multi[i][j + 1]</code></span>, a meno che
     <ul>
-    <li class="fragment" data-fragment-index="0"> a meno che <code>j == 0</code>, in quel caso l'elemento precedente è <span style="color:blue"><code>multi[i - 1][M - 1]</code></span></li>
-    <li class="fragment" data-fragment-index="1"> a meno che <code>j == M - 1</code>, in quel caso l'elemento seguente è <span style="color:yellow"><code>multi[i + 1][0]</code></span></li>
+    <li class="fragment" data-fragment-index="0"><code>j == 0</code>, in quel caso l'elemento precedente è <span style="color:blue"><code>multi[i - 1][M - 1]</code></span></li>
+    <li class="fragment" data-fragment-index="1"><code>j == M - 1</code>, in quel caso l'elemento seguente è <span style="color:yellow"><code>multi[i + 1][0]</code></span></li>
     </ul>
 </ul>
     
@@ -320,7 +320,7 @@ Il risultato del prodotto tra matrici è:
 
 <div class="fragment">
 
-1. Modificate il programma in modo che possa agire su matrici `double` (mantendendo la stampa ordinata)
+1. Modificate il programma in modo che possa agire su matrici `double` (mantenendo la stampa ordinata)
 2. Modificate il programma in modo che prenda le matrici $\hat A$ e $\hat B$ dallo standard input
 3. Scrivete un programma che sommi o sottragga due matrici: attenzione alle dimensioni!
 </div>
@@ -339,7 +339,7 @@ Solo se non vi esercitate!
 
 ---
 
-# I puntatori - cosa sono
+# Cosa sono?
 
 * Un puntatore è un tipo di variabile particolare che contiene un indirizzo di memoria
 * Un indirizzo di memoria è un intero positivo, espresso in esadecimale: `0xFF03929A`
@@ -363,7 +363,7 @@ unsigned int *c; // puntatore ad unsigned int
 
 ---
 
-# I puntatori - come si usano
+# Come si usano?
 
 * L'uso dei puntatori è associato a due **operatori unari**:
     * L'operatore di indirizzamento `&` restitusce l'indirizzo di memoria della variabile a cui è applicato: ricordate `scanf("%d", &a);`?
