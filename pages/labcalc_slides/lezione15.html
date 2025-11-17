@@ -226,11 +226,11 @@ int main() {
   double a, b, c;
   int k = 2;
     
-  double *pd = data;// pd punta all'elemento 0 di data
-  a = *(pd + 1);    // prendo il valore dell'elemento 1 di data -> a == 2.10
-  pd++;             // pd = pd + 1 -> adesso pd punta al secondo elemento di data
-  b = *(pd - 1);    // il valore della cella che precede pd -> b == data[0]
-  c = *(pd + k);    // il valore della cella puntata da pd + k -> c == data[3]
+  double *p = data; // p punta all'elemento 0 di data
+  a = *(p + 1);     // prendo il valore dell'elemento 1 di data -> a == 2.10
+  p++;              // p = p + 1 -> adesso p punta al secondo elemento di data
+  b = *(p - 1);     // il valore della cella che precede p -> b == data[0]
+  c = *(p + k);     // il valore della cella puntata da p + k -> c == data[3]
     
   fprintf(stdout,"a = %lf\nb = %lf\nc = %lf\n", a, b, c);
 
@@ -265,7 +265,7 @@ int main(){
   *(pvocali + 4) = 'U';
 
   for (i = 0; i < N_V; i++) {
-    printf("%c ", pvocali[i]); // come "*(pvocali + i)" ma meno comprensibile
+    printf("%c ", pvocali[i]); // come "*(pvocali + i)" ma più comprensibile
   }
   printf("\n");
 
@@ -289,7 +289,7 @@ A E I O U
 
 int main(){
   int i, k, tmp, data[NUM];
-  int *pd;
+  int *p;
 
   printf("INSERIRE I %d VALORI DELL'ARRAY\n", NUM);
   for(i = 0; i < NUM; i++) {
@@ -297,11 +297,11 @@ int main(){
   }
   /* bubblesort */
   for(i = 0; i < NUM - 1; i++) {
-    for(pd = data; pd < (data + NUM - 1 - i); pd++) { // ciclo sugli indirizzi di memoria
-      if(*pd > *(pd + 1)) { // confronta il contenuto di celle vicine
-        tmp = *(pd + 1); // scambia i contenuti usando l'operatore di deferenza
-        *(pd + 1) = *pd;
-        *pd = tmp;
+    for(p = data; p < (data + NUM - 1 - i); p++) { // ciclo sugli indirizzi di memoria
+      if(*p > *(p + 1)) { // confronta il contenuto di celle vicine
+        tmp = *(p + 1); // scambia i contenuti usando l'operatore di deferenza
+        *(p + 1) = *p;
+        *p = tmp;
       }
     }
   }
@@ -325,11 +325,11 @@ Ecco la parte relativa al bubblesort:
 
 ```C [1,9|2,8|3-7]
 for(i = 0; i < NUM - 1; i++) {
-    for(pd = data; pd < (data + NUM - 1 - i); pd++) {
-        if(*pd > *(pd + 1)){
-            tmp = *(pd + 1);
-            *(pd + 1) = *pd;
-            *pd = tmp;
+    for(p = data; p < (data + NUM - 1 - i); p++) {
+        if(*p > *(p + 1)){
+            tmp = *(p + 1);
+            *(p + 1) = *p;
+            *p = tmp;
         }
     }
 }
@@ -513,3 +513,38 @@ $ ./es_multi_uni_puntatori
 ```
 <!-- .element class="fragment" -->
                 
+---
+
+# Simulare array 2D con array 1D
+
+* Gli array multidimensionali sono memorizzati in modo contiguo (riga per riga)
+* Possiamo rappresentare una matrice $M \times N$ con un array di lunghezza $M \cdot N$
+
+```C [|6|8-10|11-12]
+#include <stdio.h>
+#define M 3
+#define N 2
+
+int main() {
+    double arr[M * N] = {0., -2.3, 1.5, -0.01, 0.2, 0.7};
+
+    // Accesso "manuale", come se fosse una array a due dimensioni
+    for(int i = 0; i < M; i++) {
+        for(int j = 0; j < N; j++) {
+            int idx = i * N + j;        // calcola l’indice equivalente
+            printf("%.2lf ", arr[idx]); // stampa l’elemento (i, j)
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+<!-- .element class="fragment" style="font-size: 50%" -->
+
+```text
+$ ./es_array_2d_con_1d
+0.00 -2.30
+1.50 -0.01
+0.20 0.70
+```
+<!-- .element class="fragment" -->
