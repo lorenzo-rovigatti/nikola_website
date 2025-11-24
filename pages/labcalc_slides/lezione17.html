@@ -122,7 +122,7 @@ Una funzione può persino chiamare se stessa!
 * Le funzioni possono restituire un solo valore (tramite il `return`)
 * Cambiare il valore di un parametro all'interno di una funzione **non** ha effetto fuori dalla funzione $\to$ questo concetto si chiama passaggio *by value* (per valore)
 
-```C [3-6|9-10]
+```C [3-6|9-11]
 #include <stdio.h>
 
 double square(double x) {
@@ -133,15 +133,18 @@ double square(double x) {
 int main() {
     double num = 3.0;
     printf("%lf^2 == %lf\n", num, square(num));
+    printf("num ora vale %lf\n", num);
     return 0;
 }
 ```
+<!-- .element style="font-size:50%" -->
 
 ```bash
 $ ./es_passaggio
 3.000000^2 == 9.000000
+num ora vale 3.000000
 ```
-<!-- .element class="fragment" -->
+<!-- .element class="fragment" style="font-size:50%" -->
 
 <div class="warning fragment">Come fa <code>scanf()</code> a modificare il valore delle variabili che gli passiamo?</div>
 
