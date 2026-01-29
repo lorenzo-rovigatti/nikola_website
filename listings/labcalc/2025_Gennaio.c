@@ -4,7 +4,7 @@
 
 #define NMIN 2000
 #define NMAX 16000
-#define B    0.2
+#define B 0.2
 
 void inserimento(const char *msg, int *d, int dmin, int dmax);
 void genera_seq(int N, double xi[]);
@@ -52,7 +52,7 @@ void smussa_seq(int N, int k, const double xi[], double xis[]) {
     int i, j;
     int w = 2 * k + 1;
 
-    for(i = k; i <= N - 1 - k; i++) {
+    for(i = k; i <= N - k - 1; i++) {
         double somma = 0.0;
         for(j = i - k; j <= i + k; j++) {
             somma += xi[j];
@@ -65,11 +65,11 @@ void stampa_seqs(int N, int k, const double xi[], const double xis[]) {
     FILE *fp = fopen("mediamobile.dat", "w");
     if(fp == NULL) {
         printf("Errore: impossibile aprire mediamobile.dat in scrittura.\n");
-        return;
+	exit(1);
     }
 
     int i;
-    for (i = k; i <= N - 1 - k; i++) {
+    for(i = k; i <= N - k - 1; i++) {
         fprintf(fp, "%d %.4lf %.4lf\n", i, xi[i], xis[i]);
     }
 
