@@ -65,7 +65,7 @@ void stampa_seqs(int N, int k, const double xi[], const double xis[]) {
     FILE *fp = fopen("mediamobile.dat", "w");
     if(fp == NULL) {
         printf("Errore: impossibile aprire mediamobile.dat in scrittura.\n");
-	exit(1);
+        exit(1);
     }
 
     int i;
