@@ -49,6 +49,14 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
 
 **Nota Bene:** riporto qui solo le soluzioni relative alla parte in C.
 
+{{% accordion id="2025" label="A.A. 2025/2026" %}}
+<ul>
+    <li>Esercitazione valutata del 16 mattina: <a href="/pdfs/labcalc_exams/2025_valutata_16_mattina.pdf">testo</a> e <a href="link://listing/labcalc/2025_valutata_16_mattina.c">soluzione</a></li>
+    <li>Esercitazione valutata del 16 pomeriggio: <a href="/pdfs/labcalc_exams/2025_valutata_16_pomeriggio.pdf">testo</a> e <a href="link://listing/labcalc/2025_valutata_16_pomeriggio.c">soluzione</a></li>
+    <li>Esercitazione valutata del 22 mattina: <a href="/pdfs/labcalc_exams/2025_valutata_22_mattina.pdf">testo</a> e <a href="link://listing/labcalc/2025_valutata_22_mattina.c">soluzione</a></li>
+</ul>
+{{% /accordion %}}
+
 {{% accordion id="2024" label="A.A. 2024/2025" %}}
 <ul>
     <li>Prima esercitazione valutata: <a href="/pdfs/labcalc_exams/2024_valutata_1.pdf">testo</a> e <a href="link://listing/labcalc/2024_valutata_1.c">soluzione</a></li>
