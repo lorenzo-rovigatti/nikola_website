@@ -81,7 +81,7 @@ Since this is the first year I teach this course, the following outline (as well
 
 # Notes
 
-I'm compiling the course's notes, which can be found [here](https://lorenzo-rovigatti.github.io/comp_bio_notes/). Note that this is a super-early, uncomplete version. You are welcome to use them to guide your study, but please
+The notes for the course can be found [here](https://lorenzo-rovigatti.github.io/comp_bio_notes/). You are welcome to use them to guide your study, but please
 
 1. Use books and/or original articles whenever they are cited
 2. Do not assume that everything it's written is correct. It's probably not.
