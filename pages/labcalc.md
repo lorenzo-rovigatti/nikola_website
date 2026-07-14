@@ -56,6 +56,7 @@ Per avere aggiornamenti sul corso iscrivetevi al [sito elearning](https://elearn
     <li>Esercitazione valutata del 22 mattina: <a href="/pdfs/labcalc_exams/2025_valutata_22_mattina.pdf">testo</a> e <a href="link://listing/labcalc/2025_valutata_22_mattina.c">soluzione</a></li>
     <li>Gennaio: <a href="/pdfs/labcalc_exams/2025_Gennaio.pdf">testo</a> e <a href="link://listing/labcalc/2025_Gennaio.c">soluzione</a></li>
     <li>Febbraio: <a href="/pdfs/labcalc_exams/2025_Febbraio.pdf">testo</a> e <a href="link://listing/labcalc/2025_Febbraio.c">soluzione</a></li>
+    <li>Giugno: <a href="/pdfs/labcalc_exams/2025_Giugno.pdf">testo</a> e <a href="link://listing/labcalc/2025_Giugno.c">soluzione</a></li>
 </ul>
 {{% /accordion %}}
 
