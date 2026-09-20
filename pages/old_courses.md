@@ -10,3 +10,4 @@
 -->
 
 * <b>2018-2024</b>: <a href="link://slug/fisica2">Fisica 2 (Chimica Industriale e Scienze Chimiche)</a>
+* <b>2022-2026</b>: <a href="link://slug/labcalc">Laboratorio di Calcolo (Fisica)</a>

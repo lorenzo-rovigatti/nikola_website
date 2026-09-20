@@ -144,7 +144,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/", "Home"),
         ((
-            ("/labcalc/", "Laboratorio di Calcolo"),
+            ("/lfc/", "Laboratorio di Fisica Computazionale 1"),
             ("/comp-bio/", "Computational Biophysics"),
             ("/old-courses/", "Corsi precedenti"),
         ), "Didattica"),
